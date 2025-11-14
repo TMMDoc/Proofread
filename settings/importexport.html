@@ -1,0 +1,774 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Import/Export</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="103" height="34" /></div>
+        <div><p>Flux Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welcome to Flux</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/install.html">Installing the software</a></li>
+    <li><button class="tree blank"></button><a href="../intro/clarity.html">The user interface</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Part workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cad/index.html">CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cad/2dimport/index.html">2-D Import</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cad/2dimport/2dcleanup.html">2-D Cleanup</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cad/3dimport/index.html">3-D Import</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cad/3dimport/prep3dmodel.html">Import 3D Model</a></li>
+      <li><button class="tree blank"></button><a href="../cad/3dimport/prepassembly.html">Import assembly</a></li>
+      <li><button class="tree blank"></button><a href="../cad/3dimport/formdetect.html">Form detection</a></li>
+      <li><button class="tree blank"></button><a href="../cad/3dimport/componentdetect.html">Component detection</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../cad/sketch.html">Modifying the geometry</a></li>
+    <li><button class="tree blank"></button><a href="../cad/attachments.html">Attachments</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cut/index.html">Laser CAM</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cut/partworkflow/index.html">Part workflow</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../cut/partworkflow/panels/index.html">Editing panels</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../cut/partworkflow/panels/lasercut/index.html">Laser cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/lasercut/approach.html">Approach</a></li>
+          <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/lasercut/withdrawal.html">Withdrawal</a></li>
+          <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/lasercut/microjoint.html">Microjoint</a></li>
+          <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/lasercut/advanced.html">Advanced</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/contour.html">Contour</a></li>
+        <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/scrapcut.html">Scrap cut</a></li>
+        <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/part.html">Part</a></li>
+        <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/cornertreatment.html">Corner treatment</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../cut/partworkflow/quicknest.html">Quick-Nest</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cut/jobworkflow/index.html">Job workflow</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../cut/jobworkflow/jobpanel/index.html">Job panel</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/jobpanel/sheets.html">Sheets tab</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/jobpanel/parts.html">Parts tab</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/jobpanel/layouts.html">Layouts tab</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/jobpanel/summary.html">Summary tab</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../cut/jobworkflow/editlayout/index.html">Edit layout</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/editlayout/nestingmodes.html">Nesting modes</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/editlayout/placementpanel.html">Placement panel</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/editlayout/sequencing.html">Sequencing</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/editlayout/slicesheet.html">Slice sheet</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cut/bevelcut/index.html">Bevel cut</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cut/bevelcut/opencontours.html">Open contours</a></li>
+      <li><button class="tree blank"></button><a href="../cut/bevelcut/variablebevel.html">Variable bevel</a></li>
+      <li><button class="tree blank"></button><a href="../cut/bevelcut/miscellaneous.html">Miscellaneous</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cut/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cut/advanced/finishingrules.html">Finishing rules</a></li>
+      <li><button class="tree blank"></button><a href="../cut/advanced/editltt.html">Edit LTT</a></li>
+      <li><button class="tree blank"></button><a href="../cut/advanced/flyline.html">FlyLine</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../cut/advanced/twinline/index.html">TwinLine</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../cut/advanced/twinline/strategies.html">Strategy</a></li>
+        <li><button class="tree blank"></button><a href="../cut/advanced/twinline/microjoints.html">Microjoints</a></li>
+        <li><button class="tree blank"></button><a href="../cut/advanced/twinline/stability.html">Further settings</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../cut/advanced/detectline.html">DetectLine</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../bend/index.html">Bend CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../bend/createbenddata.html">Create bend data</a></li>
+    <li><button class="tree blank"></button><a href="../bend/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bend/editing/index.html">Edit bend data</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bend/editing/editbend.html">Edit a bend</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/editmount.html">Edit a tool mount</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/editsetup.html">Edit a bend setup</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/editgauge.html">Edit the back-gauges</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/editacb.html">Edit angle measurement</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/bendsheet.html">Bends spreadsheet</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/sequencing.html">Changing the sequence</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/addsetup.html">Adding setups and stations</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bend/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bend/advanced/anglemeasurement.html">Angle measurement</a></li>
+      <li><button class="tree blank"></button><a href="../bend/advanced/batchprocess.html">Batch process</a></li>
+      <li><button class="tree blank"></button><a href="../bend/advanced/recompute.html">Recompute solution</a></li>
+      <li><button class="tree blank"></button><a href="../bend/advanced/tonnage.html">Tonnage check</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../bcell/index.html">BendMaster CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../bcell/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/pickup/fromdispenser.html">Pickup from dispenser</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/bending/extraction.html">Extraction</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/regrip/addregrip.html">Add regrip</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/regrip/editregrip.html">Edit regrip</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/regrip/jawregrip.html">Regrip with jaw</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/deposit/repeat.html">Repeat and sequence</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/deposit/separatorsheet.html">Add separator sheets</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/deposit/lockpartrest.html">Lock part-rest</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/deposit/patterns.html">Deposit pattern types</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/advanced/waypoints.html">Waypoints</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/advanced/cellconfig.html">Cell configuration</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../bcell/advanced/gripperdb/index.html">Gripper database</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../bcell/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+        <li><button class="tree blank"></button><a href="../bcell/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../robotcell-wip/index.html">FlexCell CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../robotcell-wip/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/pickup/centeringtable.html">Centering table</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/bending/extraction.html">Extraction</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/bending/advanced.html">Advanced</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/regrip/addregrip.html">Add/Remove regrip</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/deposit/deposittabs.html">Deposit Tabs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/advanced/waypoints.html">Waypoints</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/advanced/cellconfig.html">Cell configuration</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../robotcell-wip/advanced/gripperdb/index.html">Gripper database</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../robotcell-wip/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+        <li><button class="tree blank"></button><a href="../robotcell-wip/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../robotcell-wip/troubleshoot.html">Troubleshooting</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../fold/index.html">Fold CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../fold/createfolddata.html">Create fold data</a></li>
+    <li><button class="tree blank"></button><a href="../fold/foldview.html">The Fold view</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../fold/editing/index.html">Editing Fold data</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../fold/editing/editbend.html">Edit a bend</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editside.html">Edit a side/section</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editseq.html">Change the sequence</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editbh.html">Edit the blank-holders</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editgauge.html">Edit the gauging</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editblade.html">Edit the blades</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editload.html">Edit the loading</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editunload.html">Edit the unloading</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../fold/toolinventory.html">Tool inventory</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../fold/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../fold/advanced/airgaptables.html">Custom air-gap tables</a></li>
+      <li><button class="tree blank"></button><a href="../fold/advanced/manualbend.html">Manual bend completion</a></li>
+      <li><button class="tree blank"></button><a href="../fold/advanced/minflangelength.html">Required flange length</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Settings</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="drawing/index.html">Drawing</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="drawing/layers.html">Layers</a></li>
+      <li><button class="tree blank"></button><a href="drawing/dimensions.html">Dimensions</a></li>
+      <li><button class="tree blank"></button><a href="drawing/view.html">View</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="bendcam/index.html">Bend CAM</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="bendcam/benddefaults.html">Machine defaults</a></li>
+      <li><button class="tree blank"></button><a href="bendcam/bendoutputs.html">Bend outputs</a></li>
+      <li><button class="tree blank"></button><a href="bendcam/bendview.html">Bend view</a></li>
+      <li><button class="tree blank"></button><a href="bendcam/bendcell.html">Bend cell</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="cutcam/index.html">Cut CAM</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="cutcam/layout/index.html">Layout</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="cutcam/layout/nesting.html">Nest settings</a></li>
+        <li><button class="tree blank"></button><a href="cutcam/layout/sheet.html">Sheet</a></li>
+        <li><button class="tree blank"></button><a href="cutcam/layout/sheethandling.html">Sheet handling</a></li>
+        <li><button class="tree blank"></button><a href="cutcam/layout/skeletoncuts.html">Skeleton cuts</a></li>
+        <li><button class="tree blank"></button><a href="cutcam/layout/worksupport.html">Work support</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="cutcam/lasercam/index.html">Laser CAM</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="cutcam/lasercam/sequence.html">Sequence</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="cutcam/cutoutputs.html">Cut outputs</a></li>
+      <li><button class="tree blank"></button><a href="cutcam/cutview.html">Cut view</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="foldcam/index.html">Panel bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="foldcam/defaults.html">Defaults</a></li>
+      <li><button class="tree blank"></button><a href="foldcam/zbwcarriers.html">ZBW carriers</a></li>
+      <li><button class="tree blank"></button><a href="foldcam/foldoutputs.html">Outputs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="reports/index.html">Reports</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="reports/itemdefaults.html">Item defaults</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a class="active" href="importexport.html">Import/Export</a></li>
+    <li><button class="tree blank"></button><a href="environment.html">Environment</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../database/index.html">Database</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../database/materials.html">Materials</a></li>
+    <li><button class="tree blank"></button><a href="../database/machines.html">Machines</a></li>
+    <li><button class="tree blank"></button><a href="../database/bendtools.html">Bend tools</a></li>
+    <li><button class="tree blank"></button><a href="../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../database/formscomponents.html">Forms and Components</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../report/index.html">Reports</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../report/designer.html">Report designer</a></li>
+    <li><button class="tree blank"></button><a href="../report/fields.html">Fields, pictures and tables</a></li>
+    <li><button class="tree blank"></button><a href="../report/bands.html">Bands (sub-reports)</a></li>
+    <li><button class="tree blank"></button><a href="../report/labels.html">Labels, bitmaps and shapes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../appendix/index.html">Appendix</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../appendix/3dformats.html">Supported 3D formats</a></li>
+    <li><button class="tree blank"></button><a href="../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
+    <li><button class="tree blank"></button><a href="../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Settings</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="importexport.html">Import/Export</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Import/Export</h1>
+<div class="sect1">
+<h2 id="_import_settings">Import settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="img/importsettings.png" alt="Import settings" width="925"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Units for DXF files</strong> - Set to either millimeters or inches here.</p>
+</div>
+<div class="paragraph">
+<p><strong>Stitch together lines/arcs closer than this</strong> - Set this
+value (0 &gt; 1 mm). When importing a part which has lines/arcs closer than the set
+value, the software will automatically stitch together upon import.</p>
+</div>
+<div class="paragraph">
+<p><strong>Maximum thickness for sheet-metal part</strong> - To recognize a
+large sheet-metal part, the sheet-metal recognition threshold would need to be
+increased. (10 &gt; 40 mm) This is automatically set by default to 25 mm or an inch,
+depending on the unit being utilized.</p>
+</div>
+<div class="paragraph">
+<p><strong>Point entities</strong> - Depending on the option selected
+will determine on how points will be imported.</p>
+</div>
+<div class="paragraph">
+<p><em>Import all</em> - All points will be imported
+and displayed.</p>
+</div>
+<div class="paragraph">
+<p><em>Skip points on polylines</em> - This
+skips all points that are detected on polylines.</p>
+</div>
+<div class="paragraph">
+<p><em>Skip all</em> - This skips all points on import,
+and none are shown.</p>
+</div>
+<div class="paragraph">
+<p><strong>Ignore layers in DXF/DWG files</strong> - DXF and DWG drawings are
+usually created on different layers. With this setting, the software ignores
+these layers and moves all objects onto the default layer.</p>
+</div>
+<div class="paragraph">
+<p><strong>Explode blocks in 2D drawing</strong> - Splits groupings during
+importing</p>
+</div>
+<div class="paragraph">
+<p><strong>Convert white entities to black</strong> - Turn this setting on
+to convert white objects into black objects during import.</p>
+</div>
+<div class="paragraph">
+<p><strong>Darken colors during DXF import</strong>- Turn this setting on to
+darken coloured objects during import.</p>
+</div>
+<div class="paragraph">
+<p><strong>Remove duplicate segments</strong> - Turn this setting on to
+remove any duplicate geometry found in the part when importing.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dxf_settings">DXF settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section, we will cover the configuration of <strong>DXF settings</strong>.
+Click on the <strong>Settings</strong> icon. Click on <strong>Import/Export</strong>
+and navigate to the <strong>DXF settings</strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/dxf.png" alt="DXF settings" width="925"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Angles in DXF are interior angles</strong> - Activate this
+setting for the angles in a DXF to be handled as opening angles.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_export_settings">Export settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section, we will cover the configuration of <strong>Export settings</strong>.
+Click on the <strong>Settings</strong> icon. Click on <strong>Import/Export</strong>
+and navigate to the <strong>Export settings</strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/export.png" alt="Export settings" width="925"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>No POLYLINE objects in DXF output</strong> - Usually, closed
+contours are output as polylines when exporting DXFs. Some CAD systems cannot
+process this output. With this setting, the software outputs the DXF with lines
+and arcs. These files are readable everywhere, but the files created are larger
+and the connections between the lines and arcs are lost</p>
+</div>
+<div class="paragraph">
+<p><strong>Output bend-info when saving DXF files</strong> - Turn this setting
+on for an exported DXF to be output with bend information.</p>
+</div>
+<div class="paragraph">
+<p><strong>Bend-info in Starmatik format</strong> - Turn on this switch to
+output the bend information in Starmatik format. This is where a text entity is
+positioned exactly at the middle of each line that is to be a bend line.</p>
+</div>
+<div class="paragraph">
+<p><strong>Convert black to gray on output</strong> - When exporting 2D
+data, the objects in the DXF file are output in black by default. In order to
+be able to better recognize the objects in the CAD programs, the objects are
+output in grey with this setting.</p>
+</div>
+<div class="paragraph">
+<p><strong>Start MetaCAM when PDG files are exported</strong> - Turn this
+setting on for a PDG file to be automatically configured to open in MetaCAM</p>
+</div>
+<div class="paragraph">
+<p><strong>Format for flat pattern</strong> - When exporting a flat
+pattern, this can be set to GEO, DXF, or PDG file format.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_spline_conversion">Spline conversion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section, we will cover the configuration of <strong>Spline conversion</strong>
+settings. Click on the <strong>Settings</strong> icon. Click on
+<strong>Import/Export</strong> and navigate to the <strong>Spline conversion</strong>
+settings.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/splineconvert.png" alt="Spline Conversion" width="925"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Convert splines on import</strong> - Set here whether the spline
+conversion is turned off or set to convert the splines into lines or arcs. In
+either case, each spline will be converted into a single polyline object that
+contains line segments, or arc segments.</p>
+</div>
+<div class="paragraph">
+<p><strong>Node-count computation</strong> - The number of lines or arcs
+that are generated is computed using one of two mechanisms: pitch or deviation.</p>
+</div>
+<div class="paragraph">
+<p><strong>Length of each line or arc segment</strong> - If Pitch is
+chosen in the Node-Count computation, set here the length of each arc or line
+segment to break down the spline using this step-length.</p>
+</div>
+<div class="paragraph">
+<p><strong>Maximum deviation during approximation</strong> - If
+Deviation is chosen in the Node-Count computation, set here the maximum
+deviation that is permitted between the original smooth spline, and the line or
+arc approximation. The polyline is constructed as few segments as possible,
+while still keeping the maximum error to within this limit.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_assembly_explode">Assembly explode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section, we will cover the configuration of <strong>Assembly Explode</strong>
+settings. Click on the <strong>Settings</strong> icon. Click on
+<strong>Import/Export</strong> and navigate to the <strong>Assembly Explode</strong> settings</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/assemblyexplode.png" alt="Assembly explode" width="925"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Skip sheet-metal parts with no bends</strong> - When exploding an
+assembly, turning this switch on will only show the sheet-metal parts with bend
+lines. Turning off will show all parts in the assembly.</p>
+</div>
+<div class="paragraph">
+<p><strong>Components (nuts/bolts etc) to display</strong> - Use this
+setting to select which options to display when exploding an assembly which
+contains other components.</p>
+</div>
+<div class="paragraph">
+<p><em>None</em> - Only the sheet-metal parts are displayed
+after exploding, and other nuts/bolts are not.</p>
+</div>
+<div class="paragraph">
+<p><em>Unidentified</em> - Only components which
+are yet to be identified in the software are displayed.</p>
+</div>
+<div class="paragraph">
+<p><em>All</em> - All components are displayed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_layer_mapping">Layer mapping</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="img/layermapping.png" alt="Layer mapping" width="925"></span></p>
+</div>
+<div class="paragraph">
+<p>In this section, we will cover the configuration of <strong>Layer mapping</strong>.
+Click on the <strong>Settings</strong> icon. Click on <strong>Import/Export</strong>
+and navigate to the <strong>Layer mapping</strong> settings.</p>
+</div>
+<div class="paragraph">
+<p>In this section, layers which are used on parts which are being imported into
+the software can be automatically mapped to its functionality (use).</p>
+</div>
+<div class="paragraph">
+<div class="title">Example</div>
+<p>If an imported part has a MARK layer this can be set to automatically
+use the <strong>Mark layer</strong> in the software.</p>
+</div>
+<div class="paragraph">
+<p><strong>Layer name</strong> - This is the name of the layer which if a part is
+imported with this it will use the functionality set in the 'Use' panel.</p>
+</div>
+<div class="paragraph">
+<p><strong>Use</strong> - This is the functionality of the layer. The different options
+available are:</p>
+</div>
+<div class="paragraph">
+<p><em>Standard</em> - This is the standard layer to be used for
+CAM.</p>
+</div>
+<div class="paragraph">
+<p><em>Auxiliary</em> - An auxiliary layer, not to be used for CAM.</p>
+</div>
+<div class="paragraph">
+<p><em>Mark</em> - Any entities in this layer will be
+marked, not cut.</p>
+</div>
+<div class="paragraph">
+<p><em>Approach marker</em> - Point entities indicating
+laser approach position.</p>
+</div>
+<div class="paragraph">
+<p><em>Sequence marker</em> - Text markers indicating the
+sequence order of contours.</p>
+</div>
+<div class="paragraph">
+<p><em>Forming center</em> - Center mark for forming (point or
+small L).</p>
+</div>
+<div class="paragraph">
+<p><em>Forming foot print</em> - The outline (footprint) of
+a forming.</p>
+</div>
+<div class="paragraph">
+<p><em>Evaporate</em> - This layer would be used to distinguish
+film burning.</p>
+</div>
+<div class="paragraph">
+<p><em>Dot marking</em> - This layer would be used for QR
+codes.</p>
+</div>
+<div class="paragraph">
+<p><em>Info</em> - This is an information only layer.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_import_settings">Import settings</a>
+  </li>
+  <li level="1">
+   <a href="#_dxf_settings">DXF settings</a>
+  </li>
+  <li level="1">
+   <a href="#_export_settings">Export settings</a>
+  </li>
+  <li level="1">
+   <a href="#_spline_conversion">Spline conversion</a>
+  </li>
+  <li level="1">
+   <a href="#_assembly_explode">Assembly explode</a>
+  </li>
+  <li level="1">
+   <a href="#_layer_mapping">Layer mapping</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="reports/itemdefaults.html">Item defaults</a></span>
+ <span class="next"><a href="environment.html">Environment</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,759 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
+  <title>Angle measurement</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="103" height="34" /></div>
+        <div><p>Flux Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welcome to Flux</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../intro/install.html">Installing the software</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/clarity.html">The user interface</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/workflow.html">Part workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cad/index.html">CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cad/2dimport/index.html">2-D Import</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cad/2dimport/2dcleanup.html">2-D Cleanup</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cad/3dimport/index.html">3-D Import</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cad/3dimport/prep3dmodel.html">Import 3D Model</a></li>
+      <li><button class="tree blank"></button><a href="../../cad/3dimport/prepassembly.html">Import assembly</a></li>
+      <li><button class="tree blank"></button><a href="../../cad/3dimport/formdetect.html">Form detection</a></li>
+      <li><button class="tree blank"></button><a href="../../cad/3dimport/componentdetect.html">Component detection</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../cad/sketch.html">Modifying the geometry</a></li>
+    <li><button class="tree blank"></button><a href="../../cad/attachments.html">Attachments</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cut/index.html">Laser CAM</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cut/partworkflow/index.html">Part workflow</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../cut/partworkflow/panels/index.html">Editing panels</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../cut/partworkflow/panels/lasercut/index.html">Laser cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/lasercut/approach.html">Approach</a></li>
+          <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/lasercut/withdrawal.html">Withdrawal</a></li>
+          <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/lasercut/microjoint.html">Microjoint</a></li>
+          <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/lasercut/advanced.html">Advanced</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/contour.html">Contour</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/scrapcut.html">Scrap cut</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/part.html">Part</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/cornertreatment.html">Corner treatment</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../cut/partworkflow/quicknest.html">Quick-Nest</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cut/jobworkflow/index.html">Job workflow</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../cut/jobworkflow/jobpanel/index.html">Job panel</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/jobpanel/sheets.html">Sheets tab</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/jobpanel/parts.html">Parts tab</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/jobpanel/layouts.html">Layouts tab</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/jobpanel/summary.html">Summary tab</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../cut/jobworkflow/editlayout/index.html">Edit layout</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/editlayout/nestingmodes.html">Nesting modes</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/editlayout/placementpanel.html">Placement panel</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/editlayout/sequencing.html">Sequencing</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/editlayout/slicesheet.html">Slice sheet</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cut/bevelcut/index.html">Bevel cut</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cut/bevelcut/opencontours.html">Open contours</a></li>
+      <li><button class="tree blank"></button><a href="../../cut/bevelcut/variablebevel.html">Variable bevel</a></li>
+      <li><button class="tree blank"></button><a href="../../cut/bevelcut/miscellaneous.html">Miscellaneous</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cut/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cut/advanced/finishingrules.html">Finishing rules</a></li>
+      <li><button class="tree blank"></button><a href="../../cut/advanced/editltt.html">Edit LTT</a></li>
+      <li><button class="tree blank"></button><a href="../../cut/advanced/flyline.html">FlyLine</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../cut/advanced/twinline/index.html">TwinLine</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../cut/advanced/twinline/strategies.html">Strategy</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/advanced/twinline/microjoints.html">Microjoints</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/advanced/twinline/stability.html">Further settings</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../cut/advanced/detectline.html">DetectLine</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bend CAM</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../createbenddata.html">Create bend data</a></li>
+    <li><button class="tree blank"></button><a href="../navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../editing/index.html">Edit bend data</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../editing/editbend.html">Edit a bend</a></li>
+      <li><button class="tree blank"></button><a href="../editing/editmount.html">Edit a tool mount</a></li>
+      <li><button class="tree blank"></button><a href="../editing/editsetup.html">Edit a bend setup</a></li>
+      <li><button class="tree blank"></button><a href="../editing/editgauge.html">Edit the back-gauges</a></li>
+      <li><button class="tree blank"></button><a href="../editing/editacb.html">Edit angle measurement</a></li>
+      <li><button class="tree blank"></button><a href="../editing/bendsheet.html">Bends spreadsheet</a></li>
+      <li><button class="tree blank"></button><a href="../editing/sequencing.html">Changing the sequence</a></li>
+      <li><button class="tree blank"></button><a href="../editing/addsetup.html">Adding setups and stations</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Advanced</a>
+     <ul>
+      <li><button class="tree blank"></button><a class="active" href="anglemeasurement.html">Angle measurement</a></li>
+      <li><button class="tree blank"></button><a href="batchprocess.html">Batch process</a></li>
+      <li><button class="tree blank"></button><a href="recompute.html">Recompute solution</a></li>
+      <li><button class="tree blank"></button><a href="tonnage.html">Tonnage check</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../bcell/index.html">BendMaster CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../bcell/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../bcell/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../bcell/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/pickup/fromdispenser.html">Pickup from dispenser</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../bcell/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../bcell/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/bending/extraction.html">Extraction</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../bcell/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../bcell/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/regrip/addregrip.html">Add regrip</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/regrip/editregrip.html">Edit regrip</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/regrip/jawregrip.html">Regrip with jaw</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../bcell/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../bcell/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/deposit/repeat.html">Repeat and sequence</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/deposit/separatorsheet.html">Add separator sheets</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/deposit/lockpartrest.html">Lock part-rest</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/deposit/patterns.html">Deposit pattern types</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../bcell/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../bcell/advanced/waypoints.html">Waypoints</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/advanced/cellconfig.html">Cell configuration</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../bcell/advanced/gripperdb/index.html">Gripper database</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../bcell/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+        <li><button class="tree blank"></button><a href="../../bcell/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../robotcell-wip/index.html">FlexCell CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../robotcell-wip/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/pickup/centeringtable.html">Centering table</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/bending/extraction.html">Extraction</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/bending/advanced.html">Advanced</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/regrip/addregrip.html">Add/Remove regrip</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/deposit/deposittabs.html">Deposit Tabs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/advanced/waypoints.html">Waypoints</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/advanced/cellconfig.html">Cell configuration</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../robotcell-wip/advanced/gripperdb/index.html">Gripper database</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../robotcell-wip/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+        <li><button class="tree blank"></button><a href="../../robotcell-wip/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../robotcell-wip/troubleshoot.html">Troubleshooting</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../fold/index.html">Fold CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../fold/createfolddata.html">Create fold data</a></li>
+    <li><button class="tree blank"></button><a href="../../fold/foldview.html">The Fold view</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../fold/editing/index.html">Editing Fold data</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../fold/editing/editbend.html">Edit a bend</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editside.html">Edit a side/section</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editseq.html">Change the sequence</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editbh.html">Edit the blank-holders</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editgauge.html">Edit the gauging</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editblade.html">Edit the blades</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editload.html">Edit the loading</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editunload.html">Edit the unloading</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../fold/toolinventory.html">Tool inventory</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../fold/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../fold/advanced/airgaptables.html">Custom air-gap tables</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/advanced/manualbend.html">Manual bend completion</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/advanced/minflangelength.html">Required flange length</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../settings/index.html">Settings</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../settings/drawing/index.html">Drawing</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../settings/drawing/layers.html">Layers</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/drawing/dimensions.html">Dimensions</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/drawing/view.html">View</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../settings/bendcam/index.html">Bend CAM</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../settings/bendcam/benddefaults.html">Machine defaults</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/bendcam/bendoutputs.html">Bend outputs</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/bendcam/bendview.html">Bend view</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/bendcam/bendcell.html">Bend cell</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../settings/cutcam/index.html">Cut CAM</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../settings/cutcam/layout/index.html">Layout</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../settings/cutcam/layout/nesting.html">Nest settings</a></li>
+        <li><button class="tree blank"></button><a href="../../settings/cutcam/layout/sheet.html">Sheet</a></li>
+        <li><button class="tree blank"></button><a href="../../settings/cutcam/layout/sheethandling.html">Sheet handling</a></li>
+        <li><button class="tree blank"></button><a href="../../settings/cutcam/layout/skeletoncuts.html">Skeleton cuts</a></li>
+        <li><button class="tree blank"></button><a href="../../settings/cutcam/layout/worksupport.html">Work support</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../settings/cutcam/lasercam/index.html">Laser CAM</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../settings/cutcam/lasercam/sequence.html">Sequence</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../settings/cutcam/cutoutputs.html">Cut outputs</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/cutcam/cutview.html">Cut view</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../settings/foldcam/index.html">Panel bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../settings/foldcam/defaults.html">Defaults</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/foldcam/zbwcarriers.html">ZBW carriers</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/foldcam/foldoutputs.html">Outputs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../settings/reports/index.html">Reports</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../settings/reports/itemdefaults.html">Item defaults</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../settings/importexport.html">Import/Export</a></li>
+    <li><button class="tree blank"></button><a href="../../settings/environment.html">Environment</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../database/index.html">Database</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../database/materials.html">Materials</a></li>
+    <li><button class="tree blank"></button><a href="../../database/machines.html">Machines</a></li>
+    <li><button class="tree blank"></button><a href="../../database/bendtools.html">Bend tools</a></li>
+    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../../database/formscomponents.html">Forms and Components</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../report/index.html">Reports</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../report/designer.html">Report designer</a></li>
+    <li><button class="tree blank"></button><a href="../../report/fields.html">Fields, pictures and tables</a></li>
+    <li><button class="tree blank"></button><a href="../../report/bands.html">Bands (sub-reports)</a></li>
+    <li><button class="tree blank"></button><a href="../../report/labels.html">Labels, bitmaps and shapes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../appendix/index.html">Appendix</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../appendix/3dformats.html">Supported 3D formats</a></li>
+    <li><button class="tree blank"></button><a href="../../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
+    <li><button class="tree blank"></button><a href="../../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bend CAM</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Advanced</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="anglemeasurement.html">Angle measurement</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Angle measurement</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Angle measurement</strong> systems like ACB&#8482;, ACBLaser&#8482;, or LCB&#8482; can be
+used to improve the angle accuracy during bending. These systems measure the
+actual angle achieved during bending and the spring-back of the sheet metal and
+use this information to adjust the beam bottom-dead-center point dynamically to
+achieve the target bending angle.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_disk_and_laser_systems">Disk and Laser systems</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Angle measurement systems are based on <em>sensor disks</em> mounted in the punches, or
+on optical systems using a <em>laser beam</em> projected on the workpiece. Flux
+supports both, and when you configure a machine, there are some option switches
+that you can turn <strong>on</strong>, depending on the machine options you have installed.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/acb-1.png" alt="Machine Settings" width="513">
+</div>
+</div>
+<div class="paragraph">
+<p>The image above shows a settings panel for Trumpf 5085 B23 machine. This machine
+supports two types of disk-based angle measurement (<strong>ACB-Classic</strong> and
+<strong>ACB-Wireless</strong>) as well as the laser based measurement (<strong>ACB-Laser</strong>). This
+particular machine is configured with all three options on.</p>
+</div>
+<div class="paragraph">
+<p>If a press brake has both <em>systems</em> of angle measurement, you may further want
+to prioritize one over the other, or you may want to turn off angle measurement
+for a particular part. You can do that using the <strong>Settings</strong> panel.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/acb-2.png" alt="ACB Settings" width="705">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Angle measurement</strong> section of the <strong>Settings/BendCAM</strong> page has a
+choices list that lets you turn on or off the various angle measurement systems.
+You can prioritize one over the other by selecting it and moving it up or down
+using the up/down arrow buttons alongside. In this particular example, both disk
+and laser based angle-measurement are enabled, and we prioritize laser
+first.<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>The <strong>Use ACB Speed</strong> option decides if the <strong>ACB Speed</strong>
+strategy (available on Touchpoint machines) will be used by default.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_acb_methods">ACB methods</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are different <strong>ACB Methods</strong> that are usable in Flux. Most of these
+are common between disk based and laser based angle measurement, so we discuss
+the different methods first.</p>
+</div>
+<div class="sect2">
+<h3 id="_identify">Identify</h3>
+<div class="paragraph">
+<p>The <strong>Identify</strong> or <strong>Identification</strong> or <strong>Identify Springback</strong> method is the
+canonical use of the ACB system. The press brake uses the angle-measurement
+system to measure the actual angle being formed when the part is bent. After the
+part is fully bent, the machine goes to the <em>decompression</em> state to allow the
+metal to <em>spring back</em>. The spring back is also measured using ACB, and is
+compensated for by a precise over-bending. To avoid the possibility of
+<em>overshooting</em> the target angle during measurement, the machine aims for a
+slight <em>underbending</em> at first, and then does a subsequent re-bending to reach
+the target. This is the most accurate, but also the most time-consuming ACB
+method.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_learn_y">Learn Y</h3>
+<div class="paragraph">
+<p>In the <strong>Learn Y</strong> method, the ACB system is not used at all. The beam Y target
+(bottom dead center) is simply copied from an earlier bend (known as a
+<em>Reference bend</em>) that has already been measured using
+the <strong>Identify</strong> method. This earlier bend must be identical in terms of angle,
+radius and tool usage.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_learn_sb">Learn SB</h3>
+<div class="paragraph">
+<p>In the <strong>Learn SB</strong> or <strong>Learn Springback</strong> method, the ACB
+system uses the spring-back angle from a  previous bend that has been measured
+using the <strong>Identify</strong> method. The ACB system is still used to regulate the
+bending, but since a second measurement after decompression is not required, the
+cycle is faster than a full <strong>Identify</strong> cycle.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enter_sb">Enter SB</h3>
+<div class="paragraph">
+<p>The <strong>Enter SB</strong>, or <strong>Enter Springback</strong> or <strong>Corrected</strong> or
+<strong>ACB Smart</strong> method uses the ACB system to measure the target angle, but uses a
+spring-back value that is entered by the user. In other words, the ACB will
+simply bend the part to the target angle + the user-entered correction value. No
+second measurement is taken after decompression.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_symbols_for_acb">Symbols for ACB</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Flux uses several icons for representing various ACB methods or ACB errors and
+warnings. These are explained in <a href="../navigator.html#_the_acb_row">bend navigator</a> page.</p>
+</div>
+<div class="paragraph">
+<p>These icons, along with other information about the ACB systems and methods
+being used, are all displayed on the <strong>ACB</strong> row of the bend
+navigator:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/acb-3.png" alt="ACB-Navigator" width="333">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_notes_about_angle_measurement">Notes about angle measurement</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_laser_system_names">Laser system names</h3>
+<div class="paragraph">
+<p>The laser based angle measurement system is known by different names like
+<strong>ACB-Laser</strong> or <strong>LCB</strong>. These are all programmed identically in Flux, though
+the actual hardware and machine implementation differ. Most of the Flux
+user interface just uses the word <strong>ACB</strong> or <strong>ACB-Laser</strong>, so we will use this term
+in this discussion as well.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_auto_tooler_behavior">Auto-tooler behavior</h3>
+<div class="paragraph">
+<p>The Flux auto-tooler assigns ACB laser <em>methods</em> to each bend in an optimum
+manner. Initially, it starts with using the <strong>Identify</strong>
+method for the first bend, and then tries to use the <strong>Learn Y</strong> method for
+successive bends where possible. If there is already a bend with the same angle,
+radius, tool-set and with a similar <em>grain orientation</em>, Flux will use the
+<strong>Learn Y</strong> method, rather than doing another Identification.</p>
+</div>
+<div class="paragraph">
+<p>Some bends may be skipped automatically because:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The bending angle is not within the measurement range of the sensor (too acute
+/ too obtuse).</p>
+</li>
+<li>
+<p>This is not an air-bending (for example, coining, Z-bending, hem or fold)</p>
+</li>
+<li>
+<p>This is a pre-bend for another bend (does not need a precise angle)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/acb-4.png" alt="Skipped" width="523">
+</div>
+</div>
+<div class="paragraph">
+<p>The image above shows a part where some bends have no ACB method - these are
+indicated with the hollow circle icons in the ACB row, and the tool-tip for each
+cell indicates a <em>reason</em> why no ACB measurement is performed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_getting_a_valid_measurement">Getting a valid measurement</h3>
+<div class="paragraph">
+<p>When an ACB measurement is performed, Flux will decide whether one, two or
+three measurements are required based on the length of the bend line. The actual
+measurement positions are computed automatically, but can also be modified using
+the <a href="../editing/editacb.html#_acb_panel">ACB panel</a>.</p>
+</div>
+<div class="paragraph">
+<p>Typically, Flux will move both the ACB sensors <em>ganged</em>, and will use both
+front and rear sensors for an ACB measurement, but this can
+also be edited.</p>
+</div>
+<div class="paragraph">
+<p>Flux can evaluate the <em>laser trace length</em> for an ACB measurement.
+This is the length of the projected laser line that is visible to
+the camera. Parts of the line may be obstructed by the die, or by the gauges.
+Some parts may go over holes in the sheet, or over formings. The evaluation
+takes all these into account and can compute the actual length of line available
+to the optical system. Flux compares this available length against a
+machine-defined <em>minimum</em> and <em>ideal</em> length, and raises an appropriate error or
+warning (as shown in the Flux Symbols section above).</p>
+</div>
+<div class="paragraph">
+<p>Flux has some intelligence to move the measurement position to the left or
+right to avoid holes, formings or other factors that can limit the trace length.
+In addition, Flux will also automatically add a retraction to the gauges if
+they come in the way of a laser measurement. In addition, the laser trace length
+evaluation is done continuously, so if you move the ACB sensor positions or
+adjust the gauges, you can see the results immediately in the navigator.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. As with all the settings, use <strong>Application Settings</strong> to configure this globally (for all machines), use <strong>Machine Settings</strong> to set the defaults for a particular machine, and use <strong>Part Settings</strong> to change the defaults for this particular part.
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. Enabling an angle measurement system here has effect only if the machine has that particular type of angle measurement system installed as an option. In other words, you can really use this only to <em>suppress</em> a particular system from being used.
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_disk_and_laser_systems">Disk and Laser systems</a>
+  </li>
+  <li level="1">
+   <a href="#_acb_methods">ACB methods</a>
+  </li>
+  <li level="2">
+   <a href="#_identify">Identify</a>
+  </li>
+  <li level="2">
+   <a href="#_learn_y">Learn Y</a>
+  </li>
+  <li level="2">
+   <a href="#_learn_sb">Learn SB</a>
+  </li>
+  <li level="2">
+   <a href="#_enter_sb">Enter SB</a>
+  </li>
+  <li level="1">
+   <a href="#_symbols_for_acb">Symbols for ACB</a>
+  </li>
+  <li level="1">
+   <a href="#_notes_about_angle_measurement">Notes about angle measurement</a>
+  </li>
+  <li level="2">
+   <a href="#_laser_system_names">Laser system names</a>
+  </li>
+  <li level="2">
+   <a href="#_auto_tooler_behavior">Auto-tooler behavior</a>
+  </li>
+  <li level="2">
+   <a href="#_getting_a_valid_measurement">Getting a valid measurement</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Advanced</a></span>
+ <span class="next"><a href="batchprocess.html">Batch process</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

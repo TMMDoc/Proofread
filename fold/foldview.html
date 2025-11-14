@@ -1,0 +1,896 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>The Fold view</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="103" height="34" /></div>
+        <div><p>Flux Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welcome to Flux</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/install.html">Installing the software</a></li>
+    <li><button class="tree blank"></button><a href="../intro/clarity.html">The user interface</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Part workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cad/index.html">CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cad/2dimport/index.html">2-D Import</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cad/2dimport/2dcleanup.html">2-D Cleanup</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cad/3dimport/index.html">3-D Import</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cad/3dimport/prep3dmodel.html">Import 3D Model</a></li>
+      <li><button class="tree blank"></button><a href="../cad/3dimport/prepassembly.html">Import assembly</a></li>
+      <li><button class="tree blank"></button><a href="../cad/3dimport/formdetect.html">Form detection</a></li>
+      <li><button class="tree blank"></button><a href="../cad/3dimport/componentdetect.html">Component detection</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../cad/sketch.html">Modifying the geometry</a></li>
+    <li><button class="tree blank"></button><a href="../cad/attachments.html">Attachments</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cut/index.html">Laser CAM</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cut/partworkflow/index.html">Part workflow</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../cut/partworkflow/panels/index.html">Editing panels</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../cut/partworkflow/panels/lasercut/index.html">Laser cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/lasercut/approach.html">Approach</a></li>
+          <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/lasercut/withdrawal.html">Withdrawal</a></li>
+          <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/lasercut/microjoint.html">Microjoint</a></li>
+          <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/lasercut/advanced.html">Advanced</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/contour.html">Contour</a></li>
+        <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/scrapcut.html">Scrap cut</a></li>
+        <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/part.html">Part</a></li>
+        <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/cornertreatment.html">Corner treatment</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../cut/partworkflow/quicknest.html">Quick-Nest</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cut/jobworkflow/index.html">Job workflow</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../cut/jobworkflow/jobpanel/index.html">Job panel</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/jobpanel/sheets.html">Sheets tab</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/jobpanel/parts.html">Parts tab</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/jobpanel/layouts.html">Layouts tab</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/jobpanel/summary.html">Summary tab</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../cut/jobworkflow/editlayout/index.html">Edit layout</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/editlayout/nestingmodes.html">Nesting modes</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/editlayout/placementpanel.html">Placement panel</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/editlayout/sequencing.html">Sequencing</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/editlayout/slicesheet.html">Slice sheet</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cut/bevelcut/index.html">Bevel cut</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cut/bevelcut/opencontours.html">Open contours</a></li>
+      <li><button class="tree blank"></button><a href="../cut/bevelcut/variablebevel.html">Variable bevel</a></li>
+      <li><button class="tree blank"></button><a href="../cut/bevelcut/miscellaneous.html">Miscellaneous</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cut/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cut/advanced/finishingrules.html">Finishing rules</a></li>
+      <li><button class="tree blank"></button><a href="../cut/advanced/editltt.html">Edit LTT</a></li>
+      <li><button class="tree blank"></button><a href="../cut/advanced/flyline.html">FlyLine</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../cut/advanced/twinline/index.html">TwinLine</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../cut/advanced/twinline/strategies.html">Strategy</a></li>
+        <li><button class="tree blank"></button><a href="../cut/advanced/twinline/microjoints.html">Microjoints</a></li>
+        <li><button class="tree blank"></button><a href="../cut/advanced/twinline/stability.html">Further settings</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../cut/advanced/detectline.html">DetectLine</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../bend/index.html">Bend CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../bend/createbenddata.html">Create bend data</a></li>
+    <li><button class="tree blank"></button><a href="../bend/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bend/editing/index.html">Edit bend data</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bend/editing/editbend.html">Edit a bend</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/editmount.html">Edit a tool mount</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/editsetup.html">Edit a bend setup</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/editgauge.html">Edit the back-gauges</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/editacb.html">Edit angle measurement</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/bendsheet.html">Bends spreadsheet</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/sequencing.html">Changing the sequence</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/addsetup.html">Adding setups and stations</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bend/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bend/advanced/anglemeasurement.html">Angle measurement</a></li>
+      <li><button class="tree blank"></button><a href="../bend/advanced/batchprocess.html">Batch process</a></li>
+      <li><button class="tree blank"></button><a href="../bend/advanced/recompute.html">Recompute solution</a></li>
+      <li><button class="tree blank"></button><a href="../bend/advanced/tonnage.html">Tonnage check</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../bcell/index.html">BendMaster CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../bcell/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/pickup/fromdispenser.html">Pickup from dispenser</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/bending/extraction.html">Extraction</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/regrip/addregrip.html">Add regrip</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/regrip/editregrip.html">Edit regrip</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/regrip/jawregrip.html">Regrip with jaw</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/deposit/repeat.html">Repeat and sequence</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/deposit/separatorsheet.html">Add separator sheets</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/deposit/lockpartrest.html">Lock part-rest</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/deposit/patterns.html">Deposit pattern types</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/advanced/waypoints.html">Waypoints</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/advanced/cellconfig.html">Cell configuration</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../bcell/advanced/gripperdb/index.html">Gripper database</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../bcell/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+        <li><button class="tree blank"></button><a href="../bcell/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../robotcell-wip/index.html">FlexCell CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../robotcell-wip/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/pickup/centeringtable.html">Centering table</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/bending/extraction.html">Extraction</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/bending/advanced.html">Advanced</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/regrip/addregrip.html">Add/Remove regrip</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/deposit/deposittabs.html">Deposit Tabs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/advanced/waypoints.html">Waypoints</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/advanced/cellconfig.html">Cell configuration</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../robotcell-wip/advanced/gripperdb/index.html">Gripper database</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../robotcell-wip/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+        <li><button class="tree blank"></button><a href="../robotcell-wip/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../robotcell-wip/troubleshoot.html">Troubleshooting</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Fold CAM</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="createfolddata.html">Create fold data</a></li>
+    <li><button class="tree blank"></button><a class="active" href="foldview.html">The Fold view</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="editing/index.html">Editing Fold data</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="editing/editbend.html">Edit a bend</a></li>
+      <li><button class="tree blank"></button><a href="editing/editside.html">Edit a side/section</a></li>
+      <li><button class="tree blank"></button><a href="editing/editseq.html">Change the sequence</a></li>
+      <li><button class="tree blank"></button><a href="editing/editbh.html">Edit the blank-holders</a></li>
+      <li><button class="tree blank"></button><a href="editing/editgauge.html">Edit the gauging</a></li>
+      <li><button class="tree blank"></button><a href="editing/editblade.html">Edit the blades</a></li>
+      <li><button class="tree blank"></button><a href="editing/editload.html">Edit the loading</a></li>
+      <li><button class="tree blank"></button><a href="editing/editunload.html">Edit the unloading</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="toolinventory.html">Tool inventory</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="advanced/airgaptables.html">Custom air-gap tables</a></li>
+      <li><button class="tree blank"></button><a href="advanced/manualbend.html">Manual bend completion</a></li>
+      <li><button class="tree blank"></button><a href="advanced/minflangelength.html">Required flange length</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../settings/index.html">Settings</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../settings/drawing/index.html">Drawing</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../settings/drawing/layers.html">Layers</a></li>
+      <li><button class="tree blank"></button><a href="../settings/drawing/dimensions.html">Dimensions</a></li>
+      <li><button class="tree blank"></button><a href="../settings/drawing/view.html">View</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../settings/bendcam/index.html">Bend CAM</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../settings/bendcam/benddefaults.html">Machine defaults</a></li>
+      <li><button class="tree blank"></button><a href="../settings/bendcam/bendoutputs.html">Bend outputs</a></li>
+      <li><button class="tree blank"></button><a href="../settings/bendcam/bendview.html">Bend view</a></li>
+      <li><button class="tree blank"></button><a href="../settings/bendcam/bendcell.html">Bend cell</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../settings/cutcam/index.html">Cut CAM</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../settings/cutcam/layout/index.html">Layout</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../settings/cutcam/layout/nesting.html">Nest settings</a></li>
+        <li><button class="tree blank"></button><a href="../settings/cutcam/layout/sheet.html">Sheet</a></li>
+        <li><button class="tree blank"></button><a href="../settings/cutcam/layout/sheethandling.html">Sheet handling</a></li>
+        <li><button class="tree blank"></button><a href="../settings/cutcam/layout/skeletoncuts.html">Skeleton cuts</a></li>
+        <li><button class="tree blank"></button><a href="../settings/cutcam/layout/worksupport.html">Work support</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../settings/cutcam/lasercam/index.html">Laser CAM</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../settings/cutcam/lasercam/sequence.html">Sequence</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../settings/cutcam/cutoutputs.html">Cut outputs</a></li>
+      <li><button class="tree blank"></button><a href="../settings/cutcam/cutview.html">Cut view</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../settings/foldcam/index.html">Panel bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../settings/foldcam/defaults.html">Defaults</a></li>
+      <li><button class="tree blank"></button><a href="../settings/foldcam/zbwcarriers.html">ZBW carriers</a></li>
+      <li><button class="tree blank"></button><a href="../settings/foldcam/foldoutputs.html">Outputs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../settings/reports/index.html">Reports</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../settings/reports/itemdefaults.html">Item defaults</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../settings/importexport.html">Import/Export</a></li>
+    <li><button class="tree blank"></button><a href="../settings/environment.html">Environment</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../database/index.html">Database</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../database/materials.html">Materials</a></li>
+    <li><button class="tree blank"></button><a href="../database/machines.html">Machines</a></li>
+    <li><button class="tree blank"></button><a href="../database/bendtools.html">Bend tools</a></li>
+    <li><button class="tree blank"></button><a href="../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../database/formscomponents.html">Forms and Components</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../report/index.html">Reports</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../report/designer.html">Report designer</a></li>
+    <li><button class="tree blank"></button><a href="../report/fields.html">Fields, pictures and tables</a></li>
+    <li><button class="tree blank"></button><a href="../report/bands.html">Bands (sub-reports)</a></li>
+    <li><button class="tree blank"></button><a href="../report/labels.html">Labels, bitmaps and shapes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../appendix/index.html">Appendix</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../appendix/3dformats.html">Supported 3D formats</a></li>
+    <li><button class="tree blank"></button><a href="../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
+    <li><button class="tree blank"></button><a href="../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Fold CAM</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="foldview.html">The Fold view</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>The Fold view</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you switch to the Fold CAM mode, the workspace displays the <em>folding view</em>.
+This shows a 3D image of the panel bender with the workpiece. This is how it would
+look for the <strong>TBC-5030</strong> machine.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/mcisometric.png" alt="Fold View" width="490">
+</div>
+</div>
+<div class="paragraph">
+<p>The panel bender is a large machine with a table that is typically longer than 3
+meters. Displaying the entire machine would dwarf the workpiece and make
+it difficult to visualize the bending process. Thus, the bending view
+displays an <em>abbreviated view</em> of the machine. Various elements like the
+folding blades and lower blank holders are displayed only to the lengths
+required to cover the <em>region of interest</em>. Only the pieces of the upper
+blank-holders that are actually used for processing are displayed. Only
+some spars of the support table and some of the part manipulators are
+displayed. This abbreviated view makes it easier to follow the actual
+processing.</p>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="img/mcsideview.png" alt="C-Frame" width="235">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>C-Frame</strong> on which the blades are mounted is not usually displayed in the 3D
+view, since it would obstruct most of the view of the folding operations.
+However, when you rotate the 3D view to align it to an end-on orientation,
+the C-Frame is displayed as an outline (see image alongside). This makes
+it easy to see how the part geometry fits in relation with the C-Frame.
+When you rotate the 3D view into a different orientation, the C-frame is
+hidden.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="fold-navigator">The Fold navigator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you are in the <em>folding view</em>, the <strong>Fold Navigator</strong> panel appears along the top
+edge of the Flux window. This navigator provides a quick way to navigate
+through various bend operations, and also an instant view into various
+status-checks for every bend. It provides controls to view or stop the
+folding simulation. Here is an example of how the fold navigator looks:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/foldnavigator.png" alt="Navigator" width="550">
+</div>
+</div>
+<div class="paragraph">
+<p>The navigator displays different colors for bends that have some warnings or
+errors. The current bend is displayed with an outlined box, and the thick
+dark lines between some bends represent side boundaries (where the
+operator has to rotate the part around to continue processing).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_simulation_controls">Simulation controls</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you move the mouse near the fold navigator, <strong>simulation controls</strong> appear.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/simcontrols.png" alt="Controls" width="550">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>slider</strong> can be used to move the current bend through various phases of the
+folding operation (feed part to bending position, clamp with
+blank-holder, move folding blade, etc). As the slider is moved, the
+tool-tip displays the current phase of folding, and various parts of
+the machine move in the simulation. If there are any collisions, those
+parts are colored red to clearly highlight the collision.</p>
+</li>
+<li>
+<p>The <strong>play controls</strong> near the left can be used to start the simulation, stop it,
+or rewind to the beginning. (<strong>Tip</strong>: You can also press <kbd>Space</kbd> to
+start or stop playing the fold simulation).</p>
+</li>
+<li>
+<p>The play one button can be used to play just one bend; use this repeatedly to
+view the simulation of all the bends. (<strong>Tip</strong>: you can press
+<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Space</kbd></span> to play just one bend).</p>
+</li>
+<li>
+<p>The downward facing chevron near the middle can be used to expand the fold
+navigator, displaying more detailed information about the errors and
+warnings for various bends. (<strong>Tip</strong>: you can also press <kbd>Z</kbd> to
+expand/collapse the fold navigator display).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fold_navigator_expanded_view">Fold navigator: expanded view</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you open the fold navigator by clicking the open button, or by pressing the
+<kbd>Z</kbd> key, this is how it looks:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/navexpanded.png" alt="Navigator Open" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>For each bend, the navigator now displays a set of status icons. Each colored
+icon represents an error or a warning. Moving the mouse over the colored
+cell displays some more information about what the error or warning is (as
+you can see in the picture above).</p>
+</div>
+<div class="paragraph">
+<p>Clicking on a cell that displays an error positions the simulation so that the
+error is immediately obvious. For example, clicking on a cell that
+displays a <strong>blade-crash</strong> error moves the simulation to the stage of the
+simulation where the blade crashes with the workpiece.</p>
+</div>
+<div class="sect2">
+<h3 id="_status_icons">Status icons</h3>
+<div class="paragraph">
+<p>There are several different status icons displayed in different rows of the Fold
+Navigator. The sections below explain the meanings of these icons. Note that you can
+always get more information about what an icon means by just moving the mouse over
+the icon.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_flange_row">The <strong>Flange</strong> row</h3>
+<div class="paragraph">
+<p>The Flange row of the fold navigator displays information about intra-part
+collisions (one flange of the model colliding with another). Flux will try
+to avoid this where possible by altering the sequence. These are the icons
+you may see in the Flange row:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>Icon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Meaning</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/correct.png" alt="correct" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No error, status OK</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/explosion.png" alt="explosion" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A flange-flange collision happens during the bending</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/skipped-bend.png" alt="skipped bend" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This bend has been skipped (no processing for this bend)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_the_gauging_row">The <strong>Gauging</strong> row</h3>
+<div class="paragraph">
+<p>The <em>Gauging</em> row of the fold navigator displays the gauging status. Since gauging
+is only used for the first bend in a side, all the other bends in a side
+will display a hollow circle icon (indicating that this bend requires no
+gauging operation).</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>Icon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Meaning</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/correct.png" alt="correct" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No error, gauging correctly computed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/explosion.png" alt="explosion" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: The back-gauge collides with the part during gauging</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/exclaim.png" alt="exclaim" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: Gauging could not be computed for this side</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/missing.png" alt="missing" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information</strong>: This is not the first bend in this side;
+  it does not require gauging</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_the_blank_holder_row">The <strong>Blank-holder</strong> row</h3>
+<div class="paragraph">
+<p>This row of the fold navigator displays status information about the
+blank-holder. These are the possible errors or warning icons you may see
+in this column. Some icons are used both for errors or warnings, and the
+distinction between the two is made based on the background color of the
+cell (yellow for warnings, orange-red for errors).</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>Icon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Meaning</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/correct.png" alt="correct" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No error - blank holder is correctly computed, and
+  has no collisions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/explosion.png" alt="explosion" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: The part collides with the blank-holder<br>
+  <strong>Warning</strong>: The part collides with the blank-holder during over-bending</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/span-short.png" alt="span short" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: The blank-holder span is too short (there is more
+  than about 10 mm of overhang of the bend-line beyond the blank-holder).<br>
+  <strong>Warning</strong>: The blank-holder span is slightly short (there is between 5 to 10 mm
+  of overhang of the bend-line beyond the blank-holder)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/enw-tool.png" alt="enw tool" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information</strong>: This bend uses an ENW
+  tool (moving the mouse over the cell provides more details)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_the_blade_row">The <strong>Blade</strong> row</h3>
+<div class="paragraph">
+<p>This row provide information about the folding blade used for this bend. The
+list below shows the possible icons you may see in this column:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>Icon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Meaning</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/correct.png" alt="correct" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No error - the folding blade is correctly
+  computed, and has no collisions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/explosion.png" alt="explosion" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: The part collides with the folding blade</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/span-short.png" alt="span short" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: The blade length span is too short
+  (there is more than about 10 mm of overhang of the bend-line beyond the blade).
+  This happens only when using a ZBW blade.<br>
+  <strong>Warning</strong>: The blade length is slightly short (there is between 5 to 10 mm of overhang
+  of the bend-line beyond the blade).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/airgap.png" alt="airgap" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Warning</strong>: A non-standard air-gap is being used to avoid
+  a blade collision</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/overtravel.png" alt="overtravel" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: ZBW carrier overtravel beyond axis limits</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/overload.png" alt="overload" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: Overload - the required bending force is
+  too high (the air-gap may need to be increased)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_the_part_handling_row">The <strong>Part-handling</strong> row</h3>
+<div class="paragraph">
+<p>This row displays information about the status of part-handling using the vacuum
+grippers or magnetic grippers. These are the icons that could be displayed
+here:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>Icon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Meaning</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/correct.png" alt="correct" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No problems noted with the part handling</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/explosion.png" alt="explosion" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: The part collides with the support table
+  (for example, there is a downward flange that would protrude down into the support table)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/front-grip.png" alt="front grip" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information</strong>: The part is gripped with the
+  front-face of the gripper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/bottom-grip.png" alt="bottom grip" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information</strong>: The part is gripped with the
+  bottom-face of the gripper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/weak-grip.png" alt="weak grip" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Warning</strong>: The gripper may have only a marginal
+  overlap with the part</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/invalid-grip.png" alt="invalid grip" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: No gripping could be computed - there was no
+  surface of the part that was suitable to position the gripper on</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/flip-vertical.png" alt="flip vertical" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Warning</strong>: The part needs to be flipped
+  over by the operator at the start of this side</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/hand.png" alt="hand" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The part needs to be manually extracted at the end of this
+  side (the automatic extraction by the gripper is not possible because of the
+  part fouling with the blank-holder)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>As you make changes in the blank-holder, blades, gripper or back-gauge configurations, the
+fold navigator is immediately updated with the new status. This immediate feedback makes it very
+easy to experiment with different configurations without having to issue a <strong>recompute</strong> command
+each time.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#fold-navigator">The Fold navigator</a>
+  </li>
+  <li level="1">
+   <a href="#_simulation_controls">Simulation controls</a>
+  </li>
+  <li level="1">
+   <a href="#_fold_navigator_expanded_view">Fold navigator: expanded view</a>
+  </li>
+  <li level="2">
+   <a href="#_status_icons">Status icons</a>
+  </li>
+  <li level="2">
+   <a href="#_the_flange_row">The <strong>Flange</strong> row</a>
+  </li>
+  <li level="2">
+   <a href="#_the_gauging_row">The <strong>Gauging</strong> row</a>
+  </li>
+  <li level="2">
+   <a href="#_the_blank_holder_row">The <strong>Blank-holder</strong> row</a>
+  </li>
+  <li level="2">
+   <a href="#_the_blade_row">The <strong>Blade</strong> row</a>
+  </li>
+  <li level="2">
+   <a href="#_the_part_handling_row">The <strong>Part-handling</strong> row</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="createfolddata.html">Create fold data</a></span>
+ <span class="next"><a href="editing/index.html">Editing Fold data</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

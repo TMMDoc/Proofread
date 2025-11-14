@@ -1,0 +1,304 @@
+Version=58
+APPNAME=Flux
+BENDAPP=Flux
+CUTAPP=Flux
+FLAVOR=FLUX
+FLUX=
+FOLDAPP=Flux
+LANGUAGE=EN
+Folders=46
+Pages=181
+UIXlate=False, DebugUIXlate=False, Language=EN
+
+contents.txt • 254205.054236
+Index.adoc • Welcome to {APPNAME}
+manifest.txt • 250014.030044
+Appendix\3DFormats.adoc • Supported 3D formats
+Appendix\BendToolDXF.adoc • Bend tool DXF
+Appendix\BSeparatorDXF.adoc • Separator sheet DXF
+Appendix\contents.txt • 250405.120445
+Appendix\Index.adoc • Appendix
+BCell\contents.txt • 250405.120446
+BCell\Index.adoc • BendMaster CAM
+BCell\Navigator.adoc • Bend navigator
+Bend\contents.txt • 250405.120446
+Bend\CreateBendData.adoc • Create bend data
+Bend\Index.adoc • Bend CAM
+Bend\Navigator.adoc • Bend navigator
+BentoRes\bento.css • 255821.115846
+CAD\Attachments.adoc • Attachments
+CAD\contents.txt • 253415.123426
+CAD\Index.adoc • CAD
+CAD\Sketch.adoc • Modifying the geometry
+Cut\contents.txt • 250405.120447
+Cut\Index.adoc • Laser CAM
+Database\BendGrippers.adoc • Bend Grippers
+Database\BendTools.adoc • Bend tools
+Database\contents.txt • 250405.120447
+Database\FormsComponents.adoc • Forms and Components
+Database\Index.adoc • Database
+Database\Machines.adoc • Machines
+Database\Materials.adoc • Materials
+Fold\contents.txt • 250405.120447
+Fold\CreateFoldData.adoc • Create fold data
+Fold\FoldView.adoc • The Fold view
+Fold\Index.adoc • Fold CAM
+Fold\Summary.adoc • Fold CAM summary
+Fold\ToolInventory.adoc • Tool inventory
+Intro\Clarity.adoc • The user interface
+Intro\contents.txt • 250405.120447
+Intro\Index.adoc • Introduction
+Intro\Install.adoc • Installing the software
+Intro\Workflow.adoc • Part workflow
+Report\Bands.adoc • Bands (sub-reports)
+Report\contents.txt • 255902.115901
+Report\Designer.adoc • Report designer
+Report\Fields.adoc • Fields, pictures and tables
+Report\Index.adoc • Reports
+Report\Labels.adoc • Labels, bitmaps and shapes
+Rewrite\AutomaticPlacement.adoc • Automatic Part Placement
+Rewrite\BendDeductions.adoc • Bend Deductions
+Rewrite\BendDeductions2.adoc • Using Bend Deductions
+Rewrite\contents.txt • 250405.120450
+Rewrite\GAPAdjustment.adoc • Processing Strategies
+Rewrite\Index.adoc • Rewrite
+Rewrite\MeasureDimension.adoc • Measuring and changing Outer Dimension
+Rewrite\Nesting.adoc • Nesting
+Rewrite\Scenarios.adoc • Bevel Cut Examples
+Rewrite\TwinLine.adoc • TwinLine
+RobotCell-DRAFT\contents.txt • 251731.031736
+RobotCell-DRAFT\Index.adoc • FluxRobot CAM
+RobotCell-DRAFT\Navigator.adoc • Bend navigator
+RobotCell-DRAFT\PanelsOverview.adoc • Overview of Robotic Bending Panels
+RobotCell-DRAFT\ShortcutKeys.adoc • Shortcut keys
+RobotCell-WIP\contents.txt • 255912.045925
+RobotCell-WIP\Index.adoc • FlexCell CAM
+RobotCell-WIP\Navigator.adoc • Bend navigator
+RobotCell-WIP\Troubleshoot.adoc • Troubleshooting
+Settings\contents.txt • 250405.120451
+Settings\Environment.adoc • Environment
+Settings\ImportExport.adoc • Import/Export
+Settings\Index.adoc • Settings
+UIXlate\BR.txt
+UIXlate\CHS.txt
+UIXlate\CHT.txt
+UIXlate\CS.txt
+UIXlate\DA.txt
+UIXlate\DE.txt
+UIXlate\EN.txt
+UIXlate\ES.txt
+UIXlate\FI.txt
+UIXlate\FR.txt
+UIXlate\GR.txt
+UIXlate\HU.txt
+UIXlate\ID.txt
+UIXlate\IT.txt
+UIXlate\JP.txt
+UIXlate\KO.txt
+UIXlate\NL.txt
+UIXlate\PL.txt
+UIXlate\Prefixes.txt
+UIXlate\RU.txt
+UIXlate\SK.txt
+UIXlate\SV.txt
+UIXlate\TH.txt
+UIXlate\TR.txt
+BCell\Advanced\CellConfig.adoc • Cell configuration
+BCell\Advanced\contents.txt • 252501.112526
+BCell\Advanced\Index.adoc • Advanced
+BCell\Advanced\Waypoints.adoc • Waypoints
+BCell\Bending\Bending.adoc • Bending
+BCell\Bending\contents.txt • 250405.120446
+BCell\Bending\Extraction.adoc • Extraction
+BCell\Bending\Index.adoc • Robotic bending
+BCell\Bending\Insertion.adoc • Insertion
+BCell\Deposit\contents.txt • 252501.112526
+BCell\Deposit\Deposit.adoc • Deposit panel
+BCell\Deposit\Index.adoc • Part deposit
+BCell\Deposit\LockPartRest.adoc • Lock part-rest
+BCell\Deposit\Patterns.adoc • Deposit pattern types
+BCell\Deposit\Repeat.adoc • Repeat and sequence
+BCell\Deposit\SeparatorSheet.adoc • Add separator sheets
+BCell\Pickup\contents.txt • 250405.120446
+BCell\Pickup\FromDispenser.adoc • Pickup from dispenser
+BCell\Pickup\FromPallet.adoc • Pickup from pallet
+BCell\Pickup\Index.adoc • Part pickup
+BCell\Regrip\AddRegrip.adoc • Add regrip
+BCell\Regrip\contents.txt • 250405.120446
+BCell\Regrip\EditRegrip.adoc • Edit regrip
+BCell\Regrip\Index.adoc • Regripping
+BCell\Regrip\JawRegrip.adoc • Regrip with jaw
+BCell\Regrip\RegripPanel.adoc • Regrip panel
+BCell\Regrip\RGStationPanel.adoc • RG-Stations panel
+Bend\Advanced\AngleMeasurement.adoc • Angle measurement
+Bend\Advanced\BatchProcess.adoc • Batch process
+Bend\Advanced\contents.txt • 252812.092805
+Bend\Advanced\Index.adoc • Advanced
+Bend\Advanced\Recompute.adoc • Recompute solution
+Bend\Advanced\Tonnage.adoc • Tonnage check
+Bend\Editing\AddSetup.adoc • Adding setups and stations
+Bend\Editing\BendSheet.adoc • Bends spreadsheet
+Bend\Editing\contents.txt • 250405.120446
+Bend\Editing\EditACB.adoc • Edit angle measurement
+Bend\Editing\EditBend.adoc • Edit a bend
+Bend\Editing\EditGauge.adoc • Edit the back-gauges
+Bend\Editing\EditMount.adoc • Edit a tool mount
+Bend\Editing\EditSetup.adoc • Edit a bend setup
+Bend\Editing\Index.adoc • Edit bend data
+Bend\Editing\Sequencing.adoc • Changing the sequence
+CAD\2DImport\2DCleanup.adoc • 2-D Cleanup
+CAD\2DImport\contents.txt • 250405.120446
+CAD\2DImport\Index.adoc • 2-D Import
+CAD\3DImport\ComponentDetect.adoc • Component detection
+CAD\3DImport\contents.txt • 250405.120446
+CAD\3DImport\FormDetect.adoc • Form detection
+CAD\3DImport\Index.adoc • 3-D Import
+CAD\3DImport\Prep3DModel.adoc • Import 3D Model
+CAD\3DImport\PrepAssembly.adoc • Import assembly
+Cut\Advanced\contents.txt • 252812.092805
+Cut\Advanced\DetectLine.adoc • DetectLine
+Cut\Advanced\EditLTT.adoc • Edit LTT
+Cut\Advanced\FinishingRules.adoc • Finishing rules
+Cut\Advanced\FlyLine.adoc • FlyLine
+Cut\Advanced\Index.adoc • Advanced
+Cut\BevelCut\contents.txt • 250405.120447
+Cut\BevelCut\Index.adoc • Bevel cut
+Cut\BevelCut\Miscellaneous.adoc • Miscellaneous
+Cut\BevelCut\OpenContours.adoc • Open contours
+Cut\BevelCut\VariableBevel.adoc • Variable bevel
+Cut\JobWorkflow\contents.txt • 250405.120447
+Cut\JobWorkflow\Index.adoc • Job workflow
+Cut\PartWorkflow\contents.txt • 250405.120447
+Cut\PartWorkflow\Index.adoc • Part workflow
+Cut\PartWorkflow\QuickNest.adoc • Quick-Nest
+Fold\Advanced\AirGapTables.adoc • Custom air-gap tables
+Fold\Advanced\contents.txt • 250405.120447
+Fold\Advanced\Index.adoc • Advanced
+Fold\Advanced\ManualBend.adoc • Manual bend completion
+Fold\Advanced\MinFlangeLength.adoc • Required flange length
+Fold\Editing\contents.txt • 255902.115901
+Fold\Editing\EditBend.adoc • Edit a bend
+Fold\Editing\EditBH.adoc • Edit the blank-holders
+Fold\Editing\EditBlade.adoc • Edit the blades
+Fold\Editing\EditGauge.adoc • Edit the gauging
+Fold\Editing\EditLoad.adoc • Edit the loading
+Fold\Editing\EditSeq.adoc • Change the sequence
+Fold\Editing\EditSide.adoc • Edit a side/section
+Fold\Editing\EditUnload.adoc • Edit the unloading
+Fold\Editing\Index.adoc • Editing Fold data
+Fold\Tools\BH.adoc • Upper Blank Holder
+Fold\Tools\BHold.adoc • Bending Beam
+Fold\Tools\contents.txt • 255902.115901
+Fold\Tools\ENW.adoc • ENW Tools
+Fold\Tools\Gripper.adoc • Part Manipulator
+Fold\Tools\Hemming.adoc • Hemming Bar
+Fold\Tools\LB.adoc • Lower Bending Tool
+Fold\Tools\LBH.adoc • Lower Blank Holder
+Fold\Tools\UB.adoc • Upper Bending Tool
+Fold\Tools\ZBW.adoc • ZBW Tools
+RobotCell-DRAFT\Advanced\CellConfig.adoc • Cell configuration
+RobotCell-DRAFT\Advanced\contents.txt • 251531.031533
+RobotCell-DRAFT\Advanced\Index.adoc • Advanced
+RobotCell-DRAFT\Pickup\contents.txt • 251916.031938
+RobotCell-DRAFT\Pickup\FromPallet.adoc • Pickup from pallet
+RobotCell-DRAFT\Pickup\Index.adoc • Part pickup
+RobotCell-WIP\Advanced\CellConfig.adoc • Cell configuration
+RobotCell-WIP\Advanced\contents.txt • 252501.112526
+RobotCell-WIP\Advanced\Index.adoc • Advanced
+RobotCell-WIP\Advanced\Waypoints.adoc • Waypoints
+RobotCell-WIP\Bending\Advanced.adoc • Advanced
+RobotCell-WIP\Bending\Bending.adoc • Bending
+RobotCell-WIP\Bending\contents.txt • 251706.051746
+RobotCell-WIP\Bending\Extraction.adoc • Extraction
+RobotCell-WIP\Bending\Index.adoc • Robotic bending
+RobotCell-WIP\Bending\Insertion.adoc • Insertion
+RobotCell-WIP\Deposit\contents.txt • 250214.030235
+RobotCell-WIP\Deposit\Deposit.adoc • Deposit panel
+RobotCell-WIP\Deposit\DepositTabs.adoc • Deposit Tabs
+RobotCell-WIP\Deposit\Index.adoc • Part deposit
+RobotCell-WIP\Deposit\LockPartRest.adoc • Lock part-rest
+RobotCell-WIP\Deposit\Patterns.adoc • Deposit pattern types
+RobotCell-WIP\Deposit\Repeat.adoc • Repeat and sequence
+RobotCell-WIP\Deposit\SeparatorSheet.adoc • Add separator sheets
+RobotCell-WIP\Pickup\CenteringTable.adoc • Centering table
+RobotCell-WIP\Pickup\contents.txt • 254011.124053
+RobotCell-WIP\Pickup\FromDispenser.adoc • Pickup from dispenser
+RobotCell-WIP\Pickup\FromPallet.adoc • Pickup from pallet
+RobotCell-WIP\Pickup\Index.adoc • Part pickup
+RobotCell-WIP\Regrip\AddRegrip.adoc • Add/Remove regrip
+RobotCell-WIP\Regrip\contents.txt • 254111.124119
+RobotCell-WIP\Regrip\EditRegrip.adoc • Edit regrip
+RobotCell-WIP\Regrip\Index.adoc • Regripping
+RobotCell-WIP\Regrip\JawRegrip.adoc • Regrip with jaw
+RobotCell-WIP\Regrip\RegripPanel.adoc • Regrip panel
+RobotCell-WIP\Regrip\RGStationPanel.adoc • RG-Stations panel
+Settings\BendCAM\BendCell.adoc • Bend cell
+Settings\BendCAM\BendDefaults.adoc • Machine defaults
+Settings\BendCAM\BendOutputs.adoc • Bend outputs
+Settings\BendCAM\BendView.adoc • Bend view
+Settings\BendCAM\contents.txt • 250405.120450
+Settings\BendCAM\Index.adoc • Bend CAM
+Settings\CutCAM\contents.txt • 250405.120451
+Settings\CutCAM\CutOutputs.adoc • Cut outputs
+Settings\CutCAM\CutView.adoc • Cut view
+Settings\CutCAM\Index.adoc • Cut CAM
+Settings\Drawing\contents.txt • 250405.120451
+Settings\Drawing\Dimensions.adoc • Dimensions
+Settings\Drawing\Index.adoc • Drawing
+Settings\Drawing\Layers.adoc • Layers
+Settings\Drawing\View.adoc • View
+Settings\FoldCAM\contents.txt • 250405.120451
+Settings\FoldCAM\Defaults.adoc • Defaults
+Settings\FoldCAM\FoldOutputs.adoc • Outputs
+Settings\FoldCAM\Index.adoc • Panel bending
+Settings\FoldCAM\ZBWCarriers.adoc • ZBW carriers
+Settings\Reports\contents.txt • 250405.120451
+Settings\Reports\Index.adoc • Reports
+Settings\Reports\ItemDefaults.adoc • Item defaults
+BCell\Advanced\GripperDB\contents.txt • 252501.112526
+BCell\Advanced\GripperDB\CreateGripper.adoc • Create a gripper
+BCell\Advanced\GripperDB\ImportGripper.adoc • Import gripper from DXF
+BCell\Advanced\GripperDB\Index.adoc • Gripper database
+Cut\Advanced\Twinline\contents.txt • 252812.092805
+Cut\Advanced\Twinline\index.adoc • TwinLine
+Cut\Advanced\Twinline\Microjoints.adoc • Microjoints
+Cut\Advanced\Twinline\stability.adoc • Further settings
+Cut\Advanced\Twinline\Strategies.adoc • Strategy
+Cut\JobWorkflow\EditLayout\contents.txt • 250405.120447
+Cut\JobWorkflow\EditLayout\Index.adoc • Edit layout
+Cut\JobWorkflow\EditLayout\NestingModes.adoc • Nesting modes
+Cut\JobWorkflow\EditLayout\PlacementPanel.adoc • Placement panel
+Cut\JobWorkflow\EditLayout\Sequencing.adoc • Sequencing
+Cut\JobWorkflow\EditLayout\SliceSheet.adoc • Slice sheet
+Cut\JobWorkflow\JobPanel\contents.txt • 250405.120447
+Cut\JobWorkflow\JobPanel\Index.adoc • Job panel
+Cut\JobWorkflow\JobPanel\Layouts.adoc • Layouts tab
+Cut\JobWorkflow\JobPanel\Parts.adoc • Parts tab
+Cut\JobWorkflow\JobPanel\Sheets.adoc • Sheets tab
+Cut\JobWorkflow\JobPanel\Summary.adoc • Summary tab
+Cut\PartWorkflow\Panels\contents.txt • 250405.120447
+Cut\PartWorkflow\Panels\Contour.adoc • Contour
+Cut\PartWorkflow\Panels\CornerTreatment.adoc • Corner treatment
+Cut\PartWorkflow\Panels\Index.adoc • Editing panels
+Cut\PartWorkflow\Panels\Part.adoc • Part
+Cut\PartWorkflow\Panels\ScrapCut.adoc • Scrap cut
+RobotCell-WIP\Advanced\GripperDB\contents.txt • 252501.112526
+RobotCell-WIP\Advanced\GripperDB\CreateGripper.adoc • Create a gripper
+RobotCell-WIP\Advanced\GripperDB\ImportGripper.adoc • Import gripper from DXF
+RobotCell-WIP\Advanced\GripperDB\Index.adoc • Gripper database
+Settings\CutCAM\LaserCAM\contents.txt • 250405.120451
+Settings\CutCAM\LaserCAM\Index.adoc • Laser CAM
+Settings\CutCAM\LaserCAM\Sequence.adoc • Sequence
+Settings\CutCAM\Layout\contents.txt • 250405.120451
+Settings\CutCAM\Layout\Index.adoc • Layout
+Settings\CutCAM\Layout\Nesting.adoc • Nest settings
+Settings\CutCAM\Layout\Sheet.adoc • Sheet
+Settings\CutCAM\Layout\SheetHandling.adoc • Sheet handling
+Settings\CutCAM\Layout\SkeletonCuts.adoc • Skeleton cuts
+Settings\CutCAM\Layout\WorkSupport.adoc • Work support
+Cut\PartWorkflow\Panels\LaserCut\Advanced.adoc • Advanced
+Cut\PartWorkflow\Panels\LaserCut\Approach.adoc • Approach
+Cut\PartWorkflow\Panels\LaserCut\contents.txt • 250405.120447
+Cut\PartWorkflow\Panels\LaserCut\Index.adoc • Laser cut
+Cut\PartWorkflow\Panels\LaserCut\Microjoint.adoc • Microjoint
+Cut\PartWorkflow\Panels\LaserCut\Withdrawal.adoc • Withdrawal

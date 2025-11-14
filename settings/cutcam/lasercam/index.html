@@ -1,0 +1,944 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../../img/flux-icon.png">
+  <title>Laser CAM</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="103" height="34" /></div>
+        <div><p>Flux Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Welcome to Flux</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../intro/install.html">Installing the software</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/clarity.html">The user interface</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/workflow.html">Part workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../cad/index.html">CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../cad/2dimport/index.html">2-D Import</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../cad/2dimport/2dcleanup.html">2-D Cleanup</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../cad/3dimport/index.html">3-D Import</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../cad/3dimport/prep3dmodel.html">Import 3D Model</a></li>
+      <li><button class="tree blank"></button><a href="../../../cad/3dimport/prepassembly.html">Import assembly</a></li>
+      <li><button class="tree blank"></button><a href="../../../cad/3dimport/formdetect.html">Form detection</a></li>
+      <li><button class="tree blank"></button><a href="../../../cad/3dimport/componentdetect.html">Component detection</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../cad/sketch.html">Modifying the geometry</a></li>
+    <li><button class="tree blank"></button><a href="../../../cad/attachments.html">Attachments</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../cut/index.html">Laser CAM</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../cut/partworkflow/index.html">Part workflow</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../cut/partworkflow/panels/index.html">Editing panels</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../cut/partworkflow/panels/lasercut/index.html">Laser cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../cut/partworkflow/panels/lasercut/approach.html">Approach</a></li>
+          <li><button class="tree blank"></button><a href="../../../cut/partworkflow/panels/lasercut/withdrawal.html">Withdrawal</a></li>
+          <li><button class="tree blank"></button><a href="../../../cut/partworkflow/panels/lasercut/microjoint.html">Microjoint</a></li>
+          <li><button class="tree blank"></button><a href="../../../cut/partworkflow/panels/lasercut/advanced.html">Advanced</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../../cut/partworkflow/panels/contour.html">Contour</a></li>
+        <li><button class="tree blank"></button><a href="../../../cut/partworkflow/panels/scrapcut.html">Scrap cut</a></li>
+        <li><button class="tree blank"></button><a href="../../../cut/partworkflow/panels/part.html">Part</a></li>
+        <li><button class="tree blank"></button><a href="../../../cut/partworkflow/panels/cornertreatment.html">Corner treatment</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../../cut/partworkflow/quicknest.html">Quick-Nest</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../cut/jobworkflow/index.html">Job workflow</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../cut/jobworkflow/jobpanel/index.html">Job panel</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../cut/jobworkflow/jobpanel/sheets.html">Sheets tab</a></li>
+        <li><button class="tree blank"></button><a href="../../../cut/jobworkflow/jobpanel/parts.html">Parts tab</a></li>
+        <li><button class="tree blank"></button><a href="../../../cut/jobworkflow/jobpanel/layouts.html">Layouts tab</a></li>
+        <li><button class="tree blank"></button><a href="../../../cut/jobworkflow/jobpanel/summary.html">Summary tab</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../cut/jobworkflow/editlayout/index.html">Edit layout</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../cut/jobworkflow/editlayout/nestingmodes.html">Nesting modes</a></li>
+        <li><button class="tree blank"></button><a href="../../../cut/jobworkflow/editlayout/placementpanel.html">Placement panel</a></li>
+        <li><button class="tree blank"></button><a href="../../../cut/jobworkflow/editlayout/sequencing.html">Sequencing</a></li>
+        <li><button class="tree blank"></button><a href="../../../cut/jobworkflow/editlayout/slicesheet.html">Slice sheet</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../cut/bevelcut/index.html">Bevel cut</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../cut/bevelcut/opencontours.html">Open contours</a></li>
+      <li><button class="tree blank"></button><a href="../../../cut/bevelcut/variablebevel.html">Variable bevel</a></li>
+      <li><button class="tree blank"></button><a href="../../../cut/bevelcut/miscellaneous.html">Miscellaneous</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../cut/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../cut/advanced/finishingrules.html">Finishing rules</a></li>
+      <li><button class="tree blank"></button><a href="../../../cut/advanced/editltt.html">Edit LTT</a></li>
+      <li><button class="tree blank"></button><a href="../../../cut/advanced/flyline.html">FlyLine</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../cut/advanced/twinline/index.html">TwinLine</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../cut/advanced/twinline/strategies.html">Strategy</a></li>
+        <li><button class="tree blank"></button><a href="../../../cut/advanced/twinline/microjoints.html">Microjoints</a></li>
+        <li><button class="tree blank"></button><a href="../../../cut/advanced/twinline/stability.html">Further settings</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../../cut/advanced/detectline.html">DetectLine</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../bend/index.html">Bend CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../bend/createbenddata.html">Create bend data</a></li>
+    <li><button class="tree blank"></button><a href="../../../bend/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../bend/editing/index.html">Edit bend data</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../bend/editing/editbend.html">Edit a bend</a></li>
+      <li><button class="tree blank"></button><a href="../../../bend/editing/editmount.html">Edit a tool mount</a></li>
+      <li><button class="tree blank"></button><a href="../../../bend/editing/editsetup.html">Edit a bend setup</a></li>
+      <li><button class="tree blank"></button><a href="../../../bend/editing/editgauge.html">Edit the back-gauges</a></li>
+      <li><button class="tree blank"></button><a href="../../../bend/editing/editacb.html">Edit angle measurement</a></li>
+      <li><button class="tree blank"></button><a href="../../../bend/editing/bendsheet.html">Bends spreadsheet</a></li>
+      <li><button class="tree blank"></button><a href="../../../bend/editing/sequencing.html">Changing the sequence</a></li>
+      <li><button class="tree blank"></button><a href="../../../bend/editing/addsetup.html">Adding setups and stations</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../bend/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../bend/advanced/anglemeasurement.html">Angle measurement</a></li>
+      <li><button class="tree blank"></button><a href="../../../bend/advanced/batchprocess.html">Batch process</a></li>
+      <li><button class="tree blank"></button><a href="../../../bend/advanced/recompute.html">Recompute solution</a></li>
+      <li><button class="tree blank"></button><a href="../../../bend/advanced/tonnage.html">Tonnage check</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../bcell/index.html">BendMaster CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../bcell/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../bcell/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../bcell/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../../../bcell/pickup/fromdispenser.html">Pickup from dispenser</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../bcell/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../bcell/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../../../bcell/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../../../bcell/bending/extraction.html">Extraction</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../bcell/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../bcell/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../../../bcell/regrip/addregrip.html">Add regrip</a></li>
+      <li><button class="tree blank"></button><a href="../../../bcell/regrip/editregrip.html">Edit regrip</a></li>
+      <li><button class="tree blank"></button><a href="../../../bcell/regrip/jawregrip.html">Regrip with jaw</a></li>
+      <li><button class="tree blank"></button><a href="../../../bcell/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../bcell/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../bcell/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../../../bcell/deposit/repeat.html">Repeat and sequence</a></li>
+      <li><button class="tree blank"></button><a href="../../../bcell/deposit/separatorsheet.html">Add separator sheets</a></li>
+      <li><button class="tree blank"></button><a href="../../../bcell/deposit/lockpartrest.html">Lock part-rest</a></li>
+      <li><button class="tree blank"></button><a href="../../../bcell/deposit/patterns.html">Deposit pattern types</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../bcell/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../bcell/advanced/waypoints.html">Waypoints</a></li>
+      <li><button class="tree blank"></button><a href="../../../bcell/advanced/cellconfig.html">Cell configuration</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../bcell/advanced/gripperdb/index.html">Gripper database</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../bcell/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+        <li><button class="tree blank"></button><a href="../../../bcell/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../robotcell-wip/index.html">FlexCell CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../robotcell-wip/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../robotcell-wip/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/pickup/centeringtable.html">Centering table</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../robotcell-wip/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/bending/extraction.html">Extraction</a></li>
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/bending/advanced.html">Advanced</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../robotcell-wip/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/regrip/addregrip.html">Add/Remove regrip</a></li>
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../robotcell-wip/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/deposit/deposittabs.html">Deposit Tabs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../robotcell-wip/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/advanced/waypoints.html">Waypoints</a></li>
+      <li><button class="tree blank"></button><a href="../../../robotcell-wip/advanced/cellconfig.html">Cell configuration</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../robotcell-wip/advanced/gripperdb/index.html">Gripper database</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../robotcell-wip/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+        <li><button class="tree blank"></button><a href="../../../robotcell-wip/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../robotcell-wip/troubleshoot.html">Troubleshooting</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../fold/index.html">Fold CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../fold/createfolddata.html">Create fold data</a></li>
+    <li><button class="tree blank"></button><a href="../../../fold/foldview.html">The Fold view</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../fold/editing/index.html">Editing Fold data</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../fold/editing/editbend.html">Edit a bend</a></li>
+      <li><button class="tree blank"></button><a href="../../../fold/editing/editside.html">Edit a side/section</a></li>
+      <li><button class="tree blank"></button><a href="../../../fold/editing/editseq.html">Change the sequence</a></li>
+      <li><button class="tree blank"></button><a href="../../../fold/editing/editbh.html">Edit the blank-holders</a></li>
+      <li><button class="tree blank"></button><a href="../../../fold/editing/editgauge.html">Edit the gauging</a></li>
+      <li><button class="tree blank"></button><a href="../../../fold/editing/editblade.html">Edit the blades</a></li>
+      <li><button class="tree blank"></button><a href="../../../fold/editing/editload.html">Edit the loading</a></li>
+      <li><button class="tree blank"></button><a href="../../../fold/editing/editunload.html">Edit the unloading</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../fold/toolinventory.html">Tool inventory</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../fold/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../fold/advanced/airgaptables.html">Custom air-gap tables</a></li>
+      <li><button class="tree blank"></button><a href="../../../fold/advanced/manualbend.html">Manual bend completion</a></li>
+      <li><button class="tree blank"></button><a href="../../../fold/advanced/minflangelength.html">Required flange length</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">Settings</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../drawing/index.html">Drawing</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../drawing/layers.html">Layers</a></li>
+      <li><button class="tree blank"></button><a href="../../drawing/dimensions.html">Dimensions</a></li>
+      <li><button class="tree blank"></button><a href="../../drawing/view.html">View</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../bendcam/index.html">Bend CAM</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../bendcam/benddefaults.html">Machine defaults</a></li>
+      <li><button class="tree blank"></button><a href="../../bendcam/bendoutputs.html">Bend outputs</a></li>
+      <li><button class="tree blank"></button><a href="../../bendcam/bendview.html">Bend view</a></li>
+      <li><button class="tree blank"></button><a href="../../bendcam/bendcell.html">Bend cell</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">Cut CAM</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../layout/index.html">Layout</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../layout/nesting.html">Nest settings</a></li>
+        <li><button class="tree blank"></button><a href="../layout/sheet.html">Sheet</a></li>
+        <li><button class="tree blank"></button><a href="../layout/sheethandling.html">Sheet handling</a></li>
+        <li><button class="tree blank"></button><a href="../layout/skeletoncuts.html">Skeleton cuts</a></li>
+        <li><button class="tree blank"></button><a href="../layout/worksupport.html">Work support</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree open"></button>
+       <a class="active" href="index.html">Laser CAM</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="sequence.html">Sequence</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../cutoutputs.html">Cut outputs</a></li>
+      <li><button class="tree blank"></button><a href="../cutview.html">Cut view</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../foldcam/index.html">Panel bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../foldcam/defaults.html">Defaults</a></li>
+      <li><button class="tree blank"></button><a href="../../foldcam/zbwcarriers.html">ZBW carriers</a></li>
+      <li><button class="tree blank"></button><a href="../../foldcam/foldoutputs.html">Outputs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../reports/index.html">Reports</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../reports/itemdefaults.html">Item defaults</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../importexport.html">Import/Export</a></li>
+    <li><button class="tree blank"></button><a href="../../environment.html">Environment</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../database/index.html">Database</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../database/materials.html">Materials</a></li>
+    <li><button class="tree blank"></button><a href="../../../database/machines.html">Machines</a></li>
+    <li><button class="tree blank"></button><a href="../../../database/bendtools.html">Bend tools</a></li>
+    <li><button class="tree blank"></button><a href="../../../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../../../database/formscomponents.html">Forms and Components</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../report/index.html">Reports</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../report/designer.html">Report designer</a></li>
+    <li><button class="tree blank"></button><a href="../../../report/fields.html">Fields, pictures and tables</a></li>
+    <li><button class="tree blank"></button><a href="../../../report/bands.html">Bands (sub-reports)</a></li>
+    <li><button class="tree blank"></button><a href="../../../report/labels.html">Labels, bitmaps and shapes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../appendix/index.html">Appendix</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../appendix/3dformats.html">Supported 3D formats</a></li>
+    <li><button class="tree blank"></button><a href="../../../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
+    <li><button class="tree blank"></button><a href="../../../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">Settings</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Cut CAM</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Laser CAM</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Laser CAM</h1>
+<div class="sect1">
+<h2 id="_cutting">Cutting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are three condition based on which a sheet is cut.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/cutting.png" alt="Cutting" width="925">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Choose cutting condition by</strong> - This setting is to define how
+the cutting condition will be selected. The options include Maximum segment
+length, Average segment length and Area.</p>
+</div>
+<div class="paragraph">
+<p><strong>Maximum segment length</strong> - The longest segment is
+used as threshold.</p>
+</div>
+<div class="paragraph">
+<p><strong>Average segment length</strong> - The average length for
+all segments is calculated and used as a threshold. Default setting in Flux.</p>
+</div>
+<div class="paragraph">
+<p><strong>Area</strong> - The area enclosed by the contour is used as
+threshold.</p>
+</div>
+<div class="paragraph">
+<p><strong>Switch to slower cutting condition when approach is constrained</strong> -
+The laser head switches to a slow speed cutting situation when the sheet geometry for the approach
+is complex.</p>
+</div>
+<div class="paragraph">
+<p><strong>Process for open polylines</strong> - When open polylines are found in a part, depending
+on which option is selected, Cut will process the polyline accordingly. The options
+includes <em>Cut</em>, <em>Mark</em>,
+<em>None</em>, and <em>Based on layer</em>.</p>
+</div>
+<div class="paragraph">
+<p><strong>None</strong>: The laser will ignore this line on the part
+drawing.</p>
+</div>
+<div class="paragraph">
+<p><strong>Mark</strong>: The laser will just mark this line,
+i.e. draw a visible line on the sheet metal that does not pierce through.</p>
+</div>
+<div class="paragraph">
+<p><strong>Cut</strong>: Flux will choose the appropriate
+laser condition for this polyline and the laser will cut it accordingly.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For this setting to take effect, tooling must be recomputed changes to
+manual tooling will override any changes made in this setting. If the open
+polyline is manually set to "mark" on the interactive layout, changing it to
+"Cut" in the settings will not take effect.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Cut/Mark open polylines backwards</strong> - The option is to
+cut or mark open polylines backwards. This setting will only apply if cut or
+mark is set for the process for open polylines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Mark forming footprint</strong> - When a counter sink
+situation is detected by Cut, it automatically moves the outer circle to the
+layer Forming footprint. If this option is checked, geometry in Form footprint
+layer will be marked.</p>
+</div>
+<div class="paragraph">
+<p><strong>Stitch cutting threshold distance (0=disable)</strong> - This
+option is to define the maximum distance between two cuts which will be
+considered for stitch cut.</p>
+</div>
+<div class="paragraph">
+<p><strong>Dynamics</strong> - Dynamics dropdown menu includes Normal, High and
+Reduced.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pierce_settings">Pierce settings</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/pierce.png" alt="Pierce settings" width="925">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Allow approach that is more than 0.5 distance to opposite side</strong> -
+This option is to define whether an approach is allowed to cover more than the distance to the
+opposite side.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_corner_processing">Corner processing</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/cornerprocessing.png" alt="Corner processing" width="925">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Rounding tolerance (distance of corner from rounding tip)</strong> -
+This option is to define the maximum distance allowed from the corner to the rounding tip
+as shown in the image below. The distance of the corner from the rounding tip is directly
+proportional to the rounding radius. Based on the value entered here, Cut will select the
+rounding radius in the range of min. and max. If selecting the smallest radius does not
+bring this distance within the tolerance value, then rounding will not be applied
+(looping or cooling might be applied).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/cornerprocess1.png" alt="Cornerprocess1">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Maximum distance of corner from outermost point on loop</strong> -
+This option is to define the maximum extension of the loop from the
+corner. The loop extension is directly proportional to radius. At a sharp
+corner, if selecting smallest radius does not bring this distance within the
+value entered here, looping will not be applied (rounding or cooling might still
+be applied).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/cornerprocess2.png" alt="Cornerprocess2">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_twinline">TwinLine</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/twinline.png" alt="TwinLine" width="925">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Twinline processing strategy</strong> - This drop-down is to define
+the twinline strategy to be used.</p>
+</div>
+<div class="paragraph">
+<p><em>Partwise</em> - The cuts are made partwise. Suitable for
+thick sheets where there is no rick of tipping contours.</p>
+</div>
+<div class="paragraph">
+<p><em>Partwise-Safe</em> - The cuts are made partwise, but
+preparatory cuts are made into adjacent parts. Suitable for thin sheets where
+parts could tip.</p>
+</div>
+<div class="paragraph">
+<p><em>TIO (Twinline-Islands-Outer)</em> - Twinline edges are cut
+first, followed by any islands created between parts and then outer contour.</p>
+</div>
+<div class="paragraph">
+<p><strong>Use TIO strategy of there are no islands</strong> -
+The software will always choose TIO (Twinline-Islands-Outer)
+strategy, if there are no islands created in the twinline block. This option is
+checked by default.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_scrap_cutting">Scrap cutting</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/scrap.png" alt="Scrap cutting" width="925">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Scrap grid width</strong> - This is the width of each cell in the
+grid that is created by the tooling. The value entered here must be such that
+the resultant square is guaranteed to fall through the slats irrespective of its
+position.</p>
+</div>
+<div class="paragraph">
+<p><strong>Approach length for separating cuts</strong> - This is the
+length of the approached desired on scrap cuts.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vaporization">Vaporization</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/vaporization.png" alt="Vaporization" width="925">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Vaporize</strong> - This setting will control if vaporization must be
+done or not. And, if it must be done, which portions of the laser cutting path
+must be vaporized.</p>
+</div>
+<div class="paragraph">
+<p><em>None</em> - No vaporization</p>
+</div>
+<div class="paragraph">
+<p><em>Pierce</em> - Only the pierce points will be vaporized</p>
+</div>
+<div class="paragraph">
+<p><em>Pierce &amp; approach</em> - Pierce and
+approach portions of the laser cut path will be vaporized.</p>
+</div>
+<div class="paragraph">
+<p><em>Full laser path</em> - The entire cutting path
+including the pierce, approach and contour will be vaporized.</p>
+</div>
+<div class="paragraph">
+<p><strong>Pierce point vaporization circle radius</strong> - If a value
+greater than zero is entered here, the software will move the laser head in a
+small circle around the pierce point with the vaporizing laser on (circle
+vaporization). The value decides the radius of this circle. If this value is
+zero, vaporizing laser will be turned on exactly on top of the piercing point
+and then immediately turned off (point vaporization).</p>
+</div>
+<div class="paragraph">
+<p><strong>Vaporize marking</strong> - This option is to enable or disable
+vaporization. Note that laser text markings which are etched using TC_WRITE
+macro are never vaporized.</p>
+</div>
+<div class="paragraph">
+<p>When these settings are modified, there will be no visible change in Cut UI
+except that the NC-code icon will get re-enabled if it was disabled earlier.
+This is because these settings have an impact on code generation. Generated
+vaporizing code for different cuts is described in the table below.</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Cut</th>
+<th class="tableblock halign-left valign-top">Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Laser Cut</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is the usual cut item to cut a contour of the part.<br>
+If Vaporize = Full laser path,
+the entire contour, including pierce and
+approach will be vaporized. However, during the vaporizing pass, beam
+compensation is turned off. It is not necessary that the cut is
+performed immediately after vaporization. If a contour has more than
+1 microjoint and hence multiple lasers cut pieces, all the cut pieces of
+that contour are vaporized first. Then, the cutting of the contour starts.
+This vaporization sequence is called contour-wise, as each contour is
+vaporized before it is cut. This usually leads to efficient head
+movement.</p>
+<p class="tableblock"><span class="image"><img src="img/scraplasercut.png" alt="ScrapLaserCut"></span></p>
+<p class="tableblock">If Vaporize = Pierce &amp; approach,
+Only the pierce point and approach
+path are vaporized first and at once following that, the laser head will
+reposition over the pierce point and start actual cutting. For this
+vaporizing option and for Vaporize = Pierce, the pierce and approach
+are always vaporized just before executing the cut. This type of
+vaporization sequence is called cut-wise, as each cut piece is vaporized
+before it is cut.</p>
+<p class="tableblock">Behavior of Vaporize = Pierce,
+is like the above except that only the
+pierce points are vaporized.</p>
+<p class="tableblock">If Vaporize = None, there is no change in generated code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Scrap Cut</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If Vaporize =
+Full laser path, the vaporizing and cutting sequence would be
+as follows:<br></p>
+<p class="tableblock">-  The entire scrap grid will be vaporized first, in the same way as
+it would be cut.</p>
+<p class="tableblock">- The contour along with its pierce and approach will be
+vaporized.</p>
+<p class="tableblock">- The scrap grid will be cut.</p>
+<p class="tableblock">- The contour will be cut.</p>
+<p class="tableblock">So, the grid and the contour, both are vaporized and then they are cut.
+If Vaporize = Pierce &amp; approach
+or Pierce, the pierce and approach
+segments for scrap and contour will be vaporized just before they are
+cut.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Sheet Cut</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A sheet cut will always be vaporized just before it is cut.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">FlyLine Cut</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">These cuts are never vaporized, irrespective of the vaporize settings.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Point Cut</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This will be vaporized just before it is cut.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_laser_marking">Laser marking</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/lasermarking.png" alt="Laser marking" width="925">
+</div>
+</div>
+<div class="paragraph">
+<p>Rules for adding one or more text markings on the part can be
+defined in <strong>Settings &#8594; Cut CAM &#8594; Laser CAM &#8594; Laser marking</strong>.
+In the table shown below,
+user can add multiple rules, each rule leading to placement of a single line of text.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/lasermarking1.png" alt="Laser marking" width="834">
+</div>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Column</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Checkbox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">You can enable or disable a rule using the checkbox in the first column.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The text that must be inserted on the part. This text can
+contain following tokens that will be replaced with the corresponding
+value from Part info. These tokens are not case sensitive.</p>
+<p class="tableblock">$PARTNAME - Name of the part.</p>
+<p class="tableblock">$FILENAME - Name of the FX file.</p>
+<p class="tableblock">$ROOTFILE - Name of the original CAD file.</p>
+<p class="tableblock">$PARTID - Part identifier.</p>
+<p class="tableblock">$CUSTOMER - Customer.</p>
+<p class="tableblock">$AUTHOR - Author.</p>
+<p class="tableblock">$JOBNUMBER - Job number from Part&#8594;Info.</p>
+<p class="tableblock">These variables are indicated in a tooltip.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Height</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is the font height (from baseline to ascent line.)
+in mm or inch units. When inserting this text, it might be possible that
+there is not enough space to insert the text at prescribed font height.
+In such situations, Flux will automatically shrink the text size in
+steps of 10% until it is feasible to place it. This stepping down in
+currently allowed up-to 2 mm.</p>
+<p class="tableblock">Minimum has been set to 2 mm.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This column determines the text orientation.
+Following values are possible:</p>
+<p class="tableblock"><em>Horizontal</em> - Text will be horizontal.</p>
+<p class="tableblock"><em>Vertical</em> - Text will be vertical.</p>
+<p class="tableblock"><em>Along longer side</em>: Text will be aligned with the
+longer side of the part. If the part is landscape, it will be horizontal
+and vertical if the part is portrait.</p>
+<p class="tableblock"><em>Along shorter side</em>: Text will be aligned with
+shorter side of the part (opposite of the above.) When adding two texts
+to the part, this and the previous option can be used together to
+minimize the risk of overlapping text.</p>
+<p class="tableblock"><em>Along longest segment</em>:
+Text will be aligned with
+the longest linear segment of the outer contour. In this case the text
+might not be axis aligned. Whether the text is placed horizontal,
+vertical or oblique, Flux will always orient the text such that the user
+finds the text in right direction when looking at the part from the side
+closest to the text. That is, horizontal text placed to bottom-center
+will run left-to-right and when placed to top-center will run
+right-to-left.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Horizontal pos</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Horizontal alignment of text. Possible values are
+<em>center</em>, <em>left</em>
+&amp; <em>right</em>. This setting is not relevant if
+<em>Along longest segment</em> is chosen
+as the required orientation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Vertical pos</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vertical alignment of text. Possible values are
+<em>center</em>, <em>bottom</em>
+&amp; <em>top</em>. This setting is not relevant if
+<em>Along longest segment</em> is chosen
+as the required orientation.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>When adding these marks, Flux always ensures that the added
+text does not collide with any part contour. For very tiny parts or
+parts with little open space, it will automatically scale down the font
+size by the required amount to fit the text inside the part and away
+from any holes.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_cutting">Cutting</a>
+  </li>
+  <li level="1">
+   <a href="#_pierce_settings">Pierce settings</a>
+  </li>
+  <li level="1">
+   <a href="#_corner_processing">Corner processing</a>
+  </li>
+  <li level="1">
+   <a href="#_twinline">TwinLine</a>
+  </li>
+  <li level="1">
+   <a href="#_scrap_cutting">Scrap cutting</a>
+  </li>
+  <li level="1">
+   <a href="#_vaporization">Vaporization</a>
+  </li>
+  <li level="1">
+   <a href="#_laser_marking">Laser marking</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../layout/worksupport.html">Work support</a></span>
+ <span class="next"><a href="sequence.html">Sequence</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

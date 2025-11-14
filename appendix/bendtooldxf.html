@@ -1,0 +1,1572 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Bend tool DXF</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="103" height="34" /></div>
+        <div><p>Flux Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welcome to Flux</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/install.html">Installing the software</a></li>
+    <li><button class="tree blank"></button><a href="../intro/clarity.html">The user interface</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Part workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cad/index.html">CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cad/2dimport/index.html">2-D Import</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cad/2dimport/2dcleanup.html">2-D Cleanup</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cad/3dimport/index.html">3-D Import</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cad/3dimport/prep3dmodel.html">Import 3D Model</a></li>
+      <li><button class="tree blank"></button><a href="../cad/3dimport/prepassembly.html">Import assembly</a></li>
+      <li><button class="tree blank"></button><a href="../cad/3dimport/formdetect.html">Form detection</a></li>
+      <li><button class="tree blank"></button><a href="../cad/3dimport/componentdetect.html">Component detection</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../cad/sketch.html">Modifying the geometry</a></li>
+    <li><button class="tree blank"></button><a href="../cad/attachments.html">Attachments</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cut/index.html">Laser CAM</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cut/partworkflow/index.html">Part workflow</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../cut/partworkflow/panels/index.html">Editing panels</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../cut/partworkflow/panels/lasercut/index.html">Laser cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/lasercut/approach.html">Approach</a></li>
+          <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/lasercut/withdrawal.html">Withdrawal</a></li>
+          <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/lasercut/microjoint.html">Microjoint</a></li>
+          <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/lasercut/advanced.html">Advanced</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/contour.html">Contour</a></li>
+        <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/scrapcut.html">Scrap cut</a></li>
+        <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/part.html">Part</a></li>
+        <li><button class="tree blank"></button><a href="../cut/partworkflow/panels/cornertreatment.html">Corner treatment</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../cut/partworkflow/quicknest.html">Quick-Nest</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cut/jobworkflow/index.html">Job workflow</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../cut/jobworkflow/jobpanel/index.html">Job panel</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/jobpanel/sheets.html">Sheets tab</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/jobpanel/parts.html">Parts tab</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/jobpanel/layouts.html">Layouts tab</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/jobpanel/summary.html">Summary tab</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../cut/jobworkflow/editlayout/index.html">Edit layout</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/editlayout/nestingmodes.html">Nesting modes</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/editlayout/placementpanel.html">Placement panel</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/editlayout/sequencing.html">Sequencing</a></li>
+        <li><button class="tree blank"></button><a href="../cut/jobworkflow/editlayout/slicesheet.html">Slice sheet</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cut/bevelcut/index.html">Bevel cut</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cut/bevelcut/opencontours.html">Open contours</a></li>
+      <li><button class="tree blank"></button><a href="../cut/bevelcut/variablebevel.html">Variable bevel</a></li>
+      <li><button class="tree blank"></button><a href="../cut/bevelcut/miscellaneous.html">Miscellaneous</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cut/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cut/advanced/finishingrules.html">Finishing rules</a></li>
+      <li><button class="tree blank"></button><a href="../cut/advanced/editltt.html">Edit LTT</a></li>
+      <li><button class="tree blank"></button><a href="../cut/advanced/flyline.html">FlyLine</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../cut/advanced/twinline/index.html">TwinLine</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../cut/advanced/twinline/strategies.html">Strategy</a></li>
+        <li><button class="tree blank"></button><a href="../cut/advanced/twinline/microjoints.html">Microjoints</a></li>
+        <li><button class="tree blank"></button><a href="../cut/advanced/twinline/stability.html">Further settings</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../cut/advanced/detectline.html">DetectLine</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../bend/index.html">Bend CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../bend/createbenddata.html">Create bend data</a></li>
+    <li><button class="tree blank"></button><a href="../bend/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bend/editing/index.html">Edit bend data</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bend/editing/editbend.html">Edit a bend</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/editmount.html">Edit a tool mount</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/editsetup.html">Edit a bend setup</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/editgauge.html">Edit the back-gauges</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/editacb.html">Edit angle measurement</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/bendsheet.html">Bends spreadsheet</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/sequencing.html">Changing the sequence</a></li>
+      <li><button class="tree blank"></button><a href="../bend/editing/addsetup.html">Adding setups and stations</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bend/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bend/advanced/anglemeasurement.html">Angle measurement</a></li>
+      <li><button class="tree blank"></button><a href="../bend/advanced/batchprocess.html">Batch process</a></li>
+      <li><button class="tree blank"></button><a href="../bend/advanced/recompute.html">Recompute solution</a></li>
+      <li><button class="tree blank"></button><a href="../bend/advanced/tonnage.html">Tonnage check</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../bcell/index.html">BendMaster CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../bcell/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/pickup/fromdispenser.html">Pickup from dispenser</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/bending/extraction.html">Extraction</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/regrip/addregrip.html">Add regrip</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/regrip/editregrip.html">Edit regrip</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/regrip/jawregrip.html">Regrip with jaw</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/deposit/repeat.html">Repeat and sequence</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/deposit/separatorsheet.html">Add separator sheets</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/deposit/lockpartrest.html">Lock part-rest</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/deposit/patterns.html">Deposit pattern types</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../bcell/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bcell/advanced/waypoints.html">Waypoints</a></li>
+      <li><button class="tree blank"></button><a href="../bcell/advanced/cellconfig.html">Cell configuration</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../bcell/advanced/gripperdb/index.html">Gripper database</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../bcell/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+        <li><button class="tree blank"></button><a href="../bcell/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../robotcell-wip/index.html">FlexCell CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../robotcell-wip/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/pickup/centeringtable.html">Centering table</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/bending/extraction.html">Extraction</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/bending/advanced.html">Advanced</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/regrip/addregrip.html">Add/Remove regrip</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/deposit/deposittabs.html">Deposit Tabs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotcell-wip/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotcell-wip/advanced/waypoints.html">Waypoints</a></li>
+      <li><button class="tree blank"></button><a href="../robotcell-wip/advanced/cellconfig.html">Cell configuration</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../robotcell-wip/advanced/gripperdb/index.html">Gripper database</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../robotcell-wip/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+        <li><button class="tree blank"></button><a href="../robotcell-wip/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../robotcell-wip/troubleshoot.html">Troubleshooting</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../fold/index.html">Fold CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../fold/createfolddata.html">Create fold data</a></li>
+    <li><button class="tree blank"></button><a href="../fold/foldview.html">The Fold view</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../fold/editing/index.html">Editing Fold data</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../fold/editing/editbend.html">Edit a bend</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editside.html">Edit a side/section</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editseq.html">Change the sequence</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editbh.html">Edit the blank-holders</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editgauge.html">Edit the gauging</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editblade.html">Edit the blades</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editload.html">Edit the loading</a></li>
+      <li><button class="tree blank"></button><a href="../fold/editing/editunload.html">Edit the unloading</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../fold/toolinventory.html">Tool inventory</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../fold/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../fold/advanced/airgaptables.html">Custom air-gap tables</a></li>
+      <li><button class="tree blank"></button><a href="../fold/advanced/manualbend.html">Manual bend completion</a></li>
+      <li><button class="tree blank"></button><a href="../fold/advanced/minflangelength.html">Required flange length</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../settings/index.html">Settings</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../settings/drawing/index.html">Drawing</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../settings/drawing/layers.html">Layers</a></li>
+      <li><button class="tree blank"></button><a href="../settings/drawing/dimensions.html">Dimensions</a></li>
+      <li><button class="tree blank"></button><a href="../settings/drawing/view.html">View</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../settings/bendcam/index.html">Bend CAM</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../settings/bendcam/benddefaults.html">Machine defaults</a></li>
+      <li><button class="tree blank"></button><a href="../settings/bendcam/bendoutputs.html">Bend outputs</a></li>
+      <li><button class="tree blank"></button><a href="../settings/bendcam/bendview.html">Bend view</a></li>
+      <li><button class="tree blank"></button><a href="../settings/bendcam/bendcell.html">Bend cell</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../settings/cutcam/index.html">Cut CAM</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../settings/cutcam/layout/index.html">Layout</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../settings/cutcam/layout/nesting.html">Nest settings</a></li>
+        <li><button class="tree blank"></button><a href="../settings/cutcam/layout/sheet.html">Sheet</a></li>
+        <li><button class="tree blank"></button><a href="../settings/cutcam/layout/sheethandling.html">Sheet handling</a></li>
+        <li><button class="tree blank"></button><a href="../settings/cutcam/layout/skeletoncuts.html">Skeleton cuts</a></li>
+        <li><button class="tree blank"></button><a href="../settings/cutcam/layout/worksupport.html">Work support</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../settings/cutcam/lasercam/index.html">Laser CAM</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../settings/cutcam/lasercam/sequence.html">Sequence</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../settings/cutcam/cutoutputs.html">Cut outputs</a></li>
+      <li><button class="tree blank"></button><a href="../settings/cutcam/cutview.html">Cut view</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../settings/foldcam/index.html">Panel bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../settings/foldcam/defaults.html">Defaults</a></li>
+      <li><button class="tree blank"></button><a href="../settings/foldcam/zbwcarriers.html">ZBW carriers</a></li>
+      <li><button class="tree blank"></button><a href="../settings/foldcam/foldoutputs.html">Outputs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../settings/reports/index.html">Reports</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../settings/reports/itemdefaults.html">Item defaults</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../settings/importexport.html">Import/Export</a></li>
+    <li><button class="tree blank"></button><a href="../settings/environment.html">Environment</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../database/index.html">Database</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../database/materials.html">Materials</a></li>
+    <li><button class="tree blank"></button><a href="../database/machines.html">Machines</a></li>
+    <li><button class="tree blank"></button><a href="../database/bendtools.html">Bend tools</a></li>
+    <li><button class="tree blank"></button><a href="../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../database/formscomponents.html">Forms and Components</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../report/index.html">Reports</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../report/designer.html">Report designer</a></li>
+    <li><button class="tree blank"></button><a href="../report/fields.html">Fields, pictures and tables</a></li>
+    <li><button class="tree blank"></button><a href="../report/bands.html">Bands (sub-reports)</a></li>
+    <li><button class="tree blank"></button><a href="../report/labels.html">Labels, bitmaps and shapes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Appendix</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="3dformats.html">Supported 3D formats</a></li>
+    <li><button class="tree blank"></button><a href="bseparatordxf.html">Separator sheet DXF</a></li>
+    <li><button class="tree blank"></button><a class="active" href="bendtooldxf.html">Bend tool DXF</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Appendix</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="bendtooldxf.html">Bend tool DXF</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Bend tool DXF</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Flux ships with a wide variety of bend tool catalogs (like Trumpf, Wila,
+Wilson, Rolleri, Amada etc). If you are using tools from any of the
+approximately 40 different tool catalogs that Flux provides, you can simply
+install the catalog and start using the tools. Occasionally, it is necessary to
+model a custom tool, or a tool that is from a catalog not represented in
+Flux.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Bend-Tool DXF Format</strong> is the standard mechanism by which this is done.
+Flux can now export bend tools to DXF format, and can also import bend
+tools from a DXF format. The DXF files used to represent bend tools must follow
+certain rules so Flux can gather all the information it needs. Very often,
+a quick way of creating a bend tool is to use the Export to DXF function to
+create a DXF file from an existing tool. Then, the DXF can be edited (either in
+Flux, or in any other 2D CAD system). Finally, the modified DXF can be fed
+back into Flux using the Import from DXF function.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_example_dxf">Example DXF</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here is an example of a bend tool DXF that was created using the Export to DXF
+command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/name2013.png" alt="DXF example" width="500">
+</div>
+</div>
+<div class="paragraph">
+<p>The tool DXF must contain:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>One closed shape (made of lines, arcs, polylines) that defines the <em>side-profile</em>
+of the tool. This profile pline must be the left-most closed POLYLINE in the
+drawing (see figure above).</p>
+</li>
+<li>
+<p>A POINT entity marking the reference point of the tool. This point entity must lie
+somewhere within the closed profile polyline, and indicates the point from
+which the height of the tool is measured (see image above).</p>
+</li>
+<li>
+<p>For each tool piece that is not a simple rectangle in the front view, a <em>front-view drawing</em>
+is required. These are typically left or right-ear pieces, but could also be
+custom pieces, including <em>window</em> pieces.</p>
+</li>
+<li>
+<p>Each front view drawing must appear to the right of the profile drawing and must
+be horizontally aligned with it. Each front view must have exactly the same
+height as the side-profile drawing; else it will not be considered. The image
+above shows a typical example with a left-ear and a right-ear piece.</p>
+</li>
+<li>
+<p>Other information about the tool is indicated using text strings (see the
+notes below).</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_metadata_in_text_entities">Metadata in text entities</h3>
+<div class="paragraph">
+<p>Any text strings that are in the format <strong>KEY=value</strong> are read by the
+tool-exporter and parsed to obtain additional information about the tool. These
+are the keys that are supported now:</p>
+</div>
+<div class="paragraph">
+<p><strong>NAME=OW200/K R3.2/86 CUSTOM-A</strong><br>
+Specifies the name of the tool. This is mandatory.</p>
+</div>
+<div class="paragraph">
+<p><strong>TONNAGE=800</strong><br>
+Specifies the maximum loading of the tool, in kN/m. This is mandatory, if you want to
+avoid spurious tool-overload errors from being displayed.</p>
+</div>
+<div class="paragraph">
+<p><strong>UPPER=PTrumpf</strong><br>
+This is necessary for punches, and specifies the connector type (the mounting type of this
+tool on the press beam). The connection types supported are listed below:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PTrumpf</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trumpf punch (Modufix connector)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PAmada</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amada punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PWila</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wila classic punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PWilaNS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wila New-Standard punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PAmerican</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">American (US type) punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PEHT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EHT punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLVDA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LVD size A punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLVDB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LVD size B punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLVDC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LVD size C punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLVDD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LVD size D punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PGasparini</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gasparini punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PBayelerR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bayeler R-type punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PBayelerS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bayeler S-type punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PUrsviken</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ursviken OEM punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PBayelerEuro</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bayeler Euro punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PColgar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Colgar punch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PKomatsu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komatsu punch</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>LOWER=DTrumpf</strong><br>
+This is necessary for dies, and specifies the connector type (the mounting
+type of this tool on the die bed). The connection types supported are listed below:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DTrumpf</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trumpf Die</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAmada30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amada die, 30 mm wide</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAmada60</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amada die, 60 mm wide</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAmadaF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amada die, flat</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAmada2V</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amada 2-V die</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAmadaQuick</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amada quick-change die</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAmada90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amada die, 90 mm wide</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEHT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EHT die</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAmada120</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amada die, 120 mm wide</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DWeinbrenner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Weinbrenner die</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DWila</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wila die</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DKomatsu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komatsu die</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DBeyeler110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beyeler 110 mm die</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DLVD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LVD die</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>PIECES=2x25,30,45,50,2x100,200,4x500</strong><br>
+This specifies the standard pieces for this tool (the left-ear and right-ear
+pieces are already specified by drawing their profiles). The list is a set of
+comma separated piece-lengths, and optionally each length may have a <em>quantity
+multiplier</em> in front of it. So, the list above defines that there are 2 pieces
+of 25 mm, 1 piece of 30 mm, 4 pieces of 500 mm etc.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you want a quantity multiplier for the special shaped pieces (like the
+ear pieces), just add a text entity of the form 2x inside that piece&#8217;s outline:
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/name20132.png" alt="Tool quantity" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>VWIDTHTYPE=Sharp</strong><br>
+This is necessary for dies whose V-width definition does not match with Trumpf (see the
+image below):</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sharp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Theoretical-sharp of the die</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tangent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Top-tangent point</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="img/vwidthtype.png" alt="V-Width type" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>ISUPPERTOOL=0</strong><br>
+Specifies if the tool is an upper or lower tool. For upper tool the value should be 1
+and for lower tool it should be zero. This is necessary for tools that have to be
+imported with zero height (see the image below):</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/isuppertool.png" alt="Tool type" width="250">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_shape_recognition">Shape recognition</h3>
+<div class="paragraph">
+<p>In the bend tool DXF format, note that it is not necessary to specify some
+critical parameters of the punch/die such as the height, radius, angle or
+V-width. Flux analyzes the tool drawing and extracts these parameters
+automatically. For a punch, Flux expects to find a curved segment at the
+bottom (bc) flanked by straight lines (ab and cd).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/name20133.png" alt="Shape recognition" width="350">
+</div>
+</div>
+<div class="paragraph">
+<p>From these three segments, the angle and radius of the punch are automatically
+recognized. For a die, Flux examines the left shoulder to extract the
+parameters. It expects to find a curved shoulder segment (bc) flanked by a
+horizontal top (ab) and the inclined angle segment (cd).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/name20134.png" alt="Shape recognition" width="350">
+</div>
+</div>
+<div class="paragraph">
+<p>If the punch or die do not meet these shape-recognition requirements, Flux
+will not be able to recognize the shape as a punch or a die.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_additional_information">Additional information:</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The tool profile may appear anywhere in the drawing - the precise location is not
+important since the point marker entity is used to provide the reference point
+of the tool.</p>
+</li>
+<li>
+<p>In addition to the entities mentioned above, there should not be any other entities in
+the drawing. In particular, there should not be a title block, or any closed
+polylines in the drawing.</p>
+</li>
+<li>
+<p>The drawing should always be in metric units (regardless of the current operating
+unit of Flux).</p>
+</li>
+<li>
+<p>While the command says Import from DXF, Flux will also accept a GEO file instead,
+provided it follows the same conventions listed above.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_special_tools">Special tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The tool importer can recognize certain types of <em>special tools</em>. These need to
+be identified using a text in the form of <strong>FLAVOR=XYX</strong> in the DXF file.</p>
+</div>
+<div class="sect2">
+<h3 id="_hem_punches">Hem punches</h3>
+<div class="paragraph">
+<p>For a hem punch, the following additional entries are required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>FLAVOR=HemPunch</strong> marks this as a hemming tool.</p>
+</li>
+<li>
+<p>The text <strong>PARAMS=-1,12.15,70</strong> provides some metrics that are required for correct
+simulation.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/hempunch.png" alt="Hem punch" width="300">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/hempunch2.png" alt="Hem punch" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>There are three parameters required to define the hemming process. These can be
+seen as the A, B and C values in the image above. The first (-1 mm in this
+example) defines how far behind the bending line the flat vertical-face of the
+punch is. In this case, since the flat vertical face is ahead of the bending
+line, the value is -1. The second parameter (12.15 mm here) defines how far
+ahead of the bending line the hemming tip is. The final parameter (70 mm here)
+is the vertical distance from the punch tip to the hemming tip point.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hem_block_dies">Hem block dies</h3>
+<div class="paragraph">
+<p>A hemming block is an attachment that is mounted in front of a die, or behind a
+die for hemming. This provides a flat surface against which a hemming may
+engage, in order to do a clean hem.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/hemblock.png" alt="HemBlock" width="270">
+</div>
+</div>
+<div class="paragraph">
+<p>For a hem block, the following additional entries are required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>FLAVOR=HemBlock</strong> marks this as a hem block.</p>
+</li>
+<li>
+<p>The text <strong>PARAMS=0,13.9</strong> provides some metrics that are required for correct simulation.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/hemblock2.png" alt="Hem block" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>Two parameters are required to define the hemming block. The first parameter
+defines the hemming position whether this block should be used in front of the
+die or behind the die. 0 = front and 1 = back. The above example shows that the
+block can be used in front of the die. The other parameter is the hemming
+displacement which is the I axis movement. This is shown as B in the image
+above.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_z_bend_dies">Z-Bend dies</h3>
+<div class="paragraph">
+<p>For a Z-Bend die, there should be a text entry like this in the DXF file:
+<strong>FLAVOR=ZBendDie</strong></p>
+</div>
+<div class="paragraph">
+<p>In addition, the tool should be drawn so that the central flat span goes from
+bottom-left to top-right. In other words, the orientation should be as shown in
+the image below, and not the <em>flipped</em> orientation of this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/zdie.png" alt="Z-Bend die" width="350">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_z_bend_punches">Z-Bend punches</h3>
+<div class="paragraph">
+<p>For a Z-Bend punch, there should be a text entry like this in the DXF file:
+<strong>FLAVOR=ZBendPunch</strong></p>
+</div>
+<div class="paragraph">
+<p>In addition, the tool should be drawn so that the central flat span goes from
+bottom-left to top-right. In other words, the orientation should be as shown in
+the image below, and not the <em>flipped</em> orientation of this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/zpunch.png" alt="Z-Bend punch" width="350">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_radius_punches">Radius punches</h3>
+<div class="paragraph">
+<p>This is a radius shaft that needs a radius holder.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/radiuspunch.png" alt="Radius punch" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>For such punches, the following additional entries are required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>FLAVOR=RShaft</strong> marks this as a radius-shaft.</p>
+</li>
+<li>
+<p>The text <strong>PARAMS=80</strong> is the height of the tool to be output in the NC program.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The POINT entity is the reference point of the tool. The tool should be
+drawn so that the reference point is where the tip of inverted V of the holder
+is.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Draw the radius insert with the relevant holder as it is mounted in the
+machine as shown below:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/radiuspunch3.png" alt="Radius punch" width="250">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Remove the holder pline and save the radius insert dxf. Only the POINT entity at
+the tip of inverted V of the holder and the insert pline, little down from the
+POINT will be the profile dxf for this insert.</p>
+</li>
+<li>
+<p>Height of this tool is measured from the POINT entity. This is shown as A in the
+image below.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/radiuspunch2.png" alt="Radius punch" width="250">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ev_f_hem_dies">EV-F hem dies</h3>
+<div class="paragraph">
+<p>These are EV-F tools which are used to do hemming without displacement. Such a
+die is called an I0HemDie.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/i0hemdie.png" alt="IO hem die" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>For such dies, the following additional entries are required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>FLAVOR=I0HemDie</strong> marks this as I0HemDie.</p>
+</li>
+<li>
+<p>The text <strong>PARAMS=8.5,95.5</strong> provides some metrics that are required for correct
+simulation.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/i0hemdie2.png" alt="IO hem die" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>There are two parameters defining this hemming die. These can be seen as the A
+and B values in the image above. The first parameter (8.5 mm in this example)
+defines how far the part is during hemming from center line. The second
+parameter (95.5 mm here) defines the vertical distance from where the part lies
+during hemming to the bottom of the die.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ev_f_hem_punches">EV-F hem punches</h3>
+<div class="paragraph">
+<p>These are EV-F punches which are used to do hemming without displacement. Such a
+punch is called I0HemPunch.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/i0hempunch.png" alt="IO hem punch" width="450">
+</div>
+</div>
+<div class="paragraph">
+<p>For such punches, the following additional entries are required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>FLAVOR=I0HemPunch</strong> which marks this as a I0HemPunch.</p>
+</li>
+<li>
+<p>The text <strong>PARAMS=-8,16,57.5</strong> provides some metrics that are required for correct
+simulation.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/i0hempunch2.png" alt="IO hem punch" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>There are three parameters required to define the hemming process. These can be
+seen as the A, B and C values in the image above. These parameters are same as
+that defined in HemPunch.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_roll_bend_dies">Roll-Bend dies</h3>
+<div class="paragraph">
+<p>Roll-bend die is called as wing die.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rollbenddie.png" alt="Roll bend die" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>This tool requires the following additional entries:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>FLAVOR=WingDie</strong> which marks this as a wing tool.</p>
+</li>
+<li>
+<p>The text <strong>PARAMS=10.49,100</strong> provides some metrics that are required for correct
+simulation of the wings.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rollbenddie2.png" alt="Roll bend die" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>There are two parameters defining the movement of the wing-bend pieces. The
+first parameter is the horizontal distance from the center-line of the die to
+the center-point of rotation of one of the wings. This is shown as A in the
+picture above. The second parameter is the vertical distance from the bottom of
+the die to the center-point of rotation of the wings. This is shown as B in the
+picture above. Normally, B and Height will be the same.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_self_hem_dies">Self hem dies</h3>
+<div class="paragraph">
+<p>These are V-dies that also have a separate hemming table like the image below.
+For this die, there should be a text entry like this in the DXF file:
+<strong>FLAVOR=SelfHemDie</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/selfhemdie.png" alt="Self hem die" width="200">
+</div>
+</div>
+<div class="paragraph">
+<p>In addition, the <strong>PARAMS</strong> entry is required which has two values.
+These two parameters are same as that of I0HemDie.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/selfhemdie2.png" alt="Self hem die" width="200">
+</div>
+</div>
+<div class="paragraph">
+<p>These can be seen as the A and B values in the image above. The first parameter
+defines how far the part is during hemming from center line. The second
+parameter defines the vertical distance from where the part lies during hemming
+to the bottom of the die.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_double_v_dies">Double V dies</h3>
+<div class="paragraph">
+<p>Dies that have multiple V widths which need IAxis to use the other V are
+referred as double V dies. There are few rules to follow:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create dxfs for dies with the <strong>FLAVOR=DoubleV</strong> setting one for each V-width</p>
+</li>
+<li>
+<p>Set the same <strong>ORDERNO</strong> for both the dies (this can be any non-empty string)</p>
+</li>
+<li>
+<p>Set the <strong>YSHIFT</strong> value to the correct IAxis value to use</p>
+</li>
+<li>
+<p>Draw a point marker at the bottom of the die, centered under the V to indicate
+where the forming geometry is</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, a die with V-widths 12 and 6, has to be created as two DXFs as
+shown in the image below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/doublevdie.png" alt="Double V die" width="300">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_spring_loaded_hemming_dies_feather_hemming_dies">Spring-loaded hemming dies (feather-hemming-dies)</h3>
+<div class="paragraph">
+<p>For a spring-loaded hemming die, there should be a text entry like this in the
+DXF file: <strong>FLAVOR=SpringHem</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/springhemdie.png" alt="Spring loaded hem die" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>In addition, the following additional entry is required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>PARAMS=-2,30,10</strong> provides some metrics that are required for correct
+simulation.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/springhemdie2.png" alt="Spring loaded hem die" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>This die is a two-piece die which has a top part that moves downwards to flatten
+the hem. There are three parameters that define the flattening notch. The first
+parameter is the distance from the center-line of the die for the part during
+hemming. A +ve value means that it is to the front of the center-line and -ve
+value means that it is to the back of the center-line. This is shown as A in the
+picture above. The second parameter is the location of the flattening notch from
+the base of the die for the part during hemming. This is shown as B in the
+picture above. The third parameter is the spring gap which is the height of the
+notch. This is shown as C in the picture above.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_flat_dies">Flat dies</h3>
+<div class="paragraph">
+<p>Flat dies along with flat punches have a flat surface against which a hemming
+may engage, in order to do a clean hem.<br>
+Helper / auxiliary bend can also be flattened by these tools.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/flatdie.png" alt="Flat die" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>For a flat die, the following additional entries are required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>FLAVOR=FlatDie</strong> marks this as a flat die.</p>
+</li>
+<li>
+<p>The text <strong>PARAMS=-20</strong> provides some metrics that are required for correct simulation.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/flatdie2.png" alt="Flat die" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>This parameter defines how far the part is during hemming from center line. This
+is shown as A in the image above.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_flat_punches">Flat punches</h3>
+<div class="paragraph">
+<p>For a flat punch, there should be a text entry like this in the DXF file:
+<strong>FLAVOR=FlatPunch</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/flatpunch.png" alt="Flat punch" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>In addition, the following entry is required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>PARAMS=20</strong> provides some metrics that are required for correct
+simulation. This parameter defines how far the part is during hemming from
+center line similar to the flat die.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For some flat punches the height might not be the total profile length. Hence
+for these punches, height has to be mentioned specifically as shown in the image
+below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/flatpunch2.png" alt="Flat punch" width="250">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_flat_inserts">Flat inserts</h3>
+<div class="paragraph">
+<p>Flat inserts (dies / punches) which need IAxis to do a clean hem can also be
+imported into Flux.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/flatinsert.png" alt="Flat insert" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>In addition to the <strong>FLAVOR</strong> and <strong>PARAMS</strong> entries for flat die / flat punch,
+<strong>YSHIFT</strong> value should be set, so that correct IAxis value can be used. Refer the
+image below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/flatinsert2.png" alt="Flat insert" width="250">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_punch_adapters">Punch Adapters</h3>
+<div class="paragraph">
+<p>The tool importer can import <em>punch adapters</em>. For Flux to recognize
+correctly that the drawing is a punch adapter, there should be the following
+text entities in the file:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A text like <strong>UPPER=PTrumpf</strong> marking the upper mounting type (typically, this is
+PTrumpf if the adapter is to be mounted on a Trumpf machine).</p>
+</li>
+<li>
+<p>A text like <strong>LOWER=PEHT</strong> marking the lower mounting type (this is the type of punch
+that can be mounted on the adapter).</p>
+</li>
+<li>
+<p>A text like <strong>HEIGHT=64</strong> that maps the effective working height of the adapter. This
+is necessary, since Flux cannot infer the height of adapter automatically.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here is an image of a punch adapter that can be imported from DXF:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/padapter.png" alt="P Adapter" width="300">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_blade_holders">Blade Holders</h3>
+<div class="paragraph">
+<p>The tool importer can import <em>blade holders</em>. Some blade holders (for example, the
+ones similar to OW209/S) are also hemming punches used to flatten a hem. For such
+blade holders, some additional data is required</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/bholder1.png" alt="Blade holder" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>The mandatory parameters UPPER, LOWER, HEIGHT are explained in the section above
+on Punch Adapters, and they have the same meaning. In addition, to help Flux to
+use the holder as a hemming tool, the following additional entries are required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>SPLFLAVOR=HemPunch</strong> marks the adapter as a hemming tool.</p>
+</li>
+<li>
+<p>The text <strong>PARAMS=-6,18,60</strong> provides some metrics that are required for correct
+simulation of the hemming process.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/bholder2.png" alt="Blade holder" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>There are three parameters required to define the hemming process. These can be
+seen as the A, B and C values in the image above. The first (-6 mm in this
+example) defines how far behind the bending line the flat vertical-face of the
+punch is. In this case, since the flat vertical face is ahead of the bending
+line, the value is -6. The second parameter (18 mm here) defines how far ahead
+of the bending line the hemming tip is. The final parameter (60 mm here) is the
+vertical distance from the punch tip to the hemming tip point.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_radius_holders">Radius holders</h3>
+<div class="paragraph">
+<p>This is the holder for radius-shaft tools.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rholder.png" alt="Radius holder" width="220">
+</div>
+</div>
+<div class="paragraph">
+<p>The following additional entries are required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>FLAVOR=RHolder</strong> marks the adapter as a radius-shaft holder.</p>
+</li>
+<li>
+<p>The text <strong>PARAMS=100</strong> is the height of the tool to be output in the NC program.</p>
+</li>
+<li>
+<p>Height of this tool is measured from the origin to the inverted V of the holder.
+This is shown as A in the image below.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rholder2.png" alt="Radius holder" width="220">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_double_v_holders">Double V holders</h3>
+<div class="paragraph">
+<p>These are die holders that can hold 2 dies.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/dvholder.png" alt="Double V holder" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>The following additional entries are required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>FLAVOR=DVHolder</strong> marks the adapter as a DVHolder.</p>
+</li>
+<li>
+<p>The text <strong>PARAMS=0,36.2</strong> provides metrics to shift die to the other slot in the holder.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/dvholder2.png" alt="Double V holder" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>There are two parameters required to define this tool. The first (0 mm in this
+example) defines how far first slot, relative to holder reference is. In this
+case, since the first slot is aligned to the reference point the value is 0. The
+second parameter (36.2 mm here) which is shown as A in the image above, defines
+how far the second slot is from the reference point of holder.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_example_dxf">Example DXF</a>
+  </li>
+  <li level="2">
+   <a href="#_metadata_in_text_entities">Metadata in text entities</a>
+  </li>
+  <li level="2">
+   <a href="#_shape_recognition">Shape recognition</a>
+  </li>
+  <li level="2">
+   <a href="#_additional_information">Additional information:</a>
+  </li>
+  <li level="1">
+   <a href="#_special_tools">Special tools</a>
+  </li>
+  <li level="2">
+   <a href="#_hem_punches">Hem punches</a>
+  </li>
+  <li level="2">
+   <a href="#_hem_block_dies">Hem block dies</a>
+  </li>
+  <li level="2">
+   <a href="#_z_bend_dies">Z-Bend dies</a>
+  </li>
+  <li level="2">
+   <a href="#_z_bend_punches">Z-Bend punches</a>
+  </li>
+  <li level="2">
+   <a href="#_radius_punches">Radius punches</a>
+  </li>
+  <li level="2">
+   <a href="#_ev_f_hem_dies">EV-F hem dies</a>
+  </li>
+  <li level="2">
+   <a href="#_ev_f_hem_punches">EV-F hem punches</a>
+  </li>
+  <li level="2">
+   <a href="#_roll_bend_dies">Roll-Bend dies</a>
+  </li>
+  <li level="2">
+   <a href="#_self_hem_dies">Self hem dies</a>
+  </li>
+  <li level="2">
+   <a href="#_double_v_dies">Double V dies</a>
+  </li>
+  <li level="2">
+   <a href="#_spring_loaded_hemming_dies_feather_hemming_dies">Spring-loaded hemming dies (feather-hemming-dies)</a>
+  </li>
+  <li level="2">
+   <a href="#_flat_dies">Flat dies</a>
+  </li>
+  <li level="2">
+   <a href="#_flat_punches">Flat punches</a>
+  </li>
+  <li level="2">
+   <a href="#_flat_inserts">Flat inserts</a>
+  </li>
+  <li level="2">
+   <a href="#_punch_adapters">Punch Adapters</a>
+  </li>
+  <li level="2">
+   <a href="#_blade_holders">Blade Holders</a>
+  </li>
+  <li level="2">
+   <a href="#_radius_holders">Radius holders</a>
+  </li>
+  <li level="2">
+   <a href="#_double_v_holders">Double V holders</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="bseparatordxf.html">Separator sheet DXF</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

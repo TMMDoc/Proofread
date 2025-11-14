@@ -1,0 +1,884 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
+  <title>Edit a tool mount</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="103" height="34" /></div>
+        <div><p>Flux Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welcome to Flux</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../intro/install.html">Installing the software</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/clarity.html">The user interface</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/workflow.html">Part workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cad/index.html">CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cad/2dimport/index.html">2-D Import</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cad/2dimport/2dcleanup.html">2-D Cleanup</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cad/3dimport/index.html">3-D Import</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cad/3dimport/prep3dmodel.html">Import 3D Model</a></li>
+      <li><button class="tree blank"></button><a href="../../cad/3dimport/prepassembly.html">Import assembly</a></li>
+      <li><button class="tree blank"></button><a href="../../cad/3dimport/formdetect.html">Form detection</a></li>
+      <li><button class="tree blank"></button><a href="../../cad/3dimport/componentdetect.html">Component detection</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../cad/sketch.html">Modifying the geometry</a></li>
+    <li><button class="tree blank"></button><a href="../../cad/attachments.html">Attachments</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cut/index.html">Laser CAM</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cut/partworkflow/index.html">Part workflow</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../cut/partworkflow/panels/index.html">Editing panels</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../cut/partworkflow/panels/lasercut/index.html">Laser cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/lasercut/approach.html">Approach</a></li>
+          <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/lasercut/withdrawal.html">Withdrawal</a></li>
+          <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/lasercut/microjoint.html">Microjoint</a></li>
+          <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/lasercut/advanced.html">Advanced</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/contour.html">Contour</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/scrapcut.html">Scrap cut</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/part.html">Part</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/partworkflow/panels/cornertreatment.html">Corner treatment</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../cut/partworkflow/quicknest.html">Quick-Nest</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cut/jobworkflow/index.html">Job workflow</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../cut/jobworkflow/jobpanel/index.html">Job panel</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/jobpanel/sheets.html">Sheets tab</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/jobpanel/parts.html">Parts tab</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/jobpanel/layouts.html">Layouts tab</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/jobpanel/summary.html">Summary tab</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../cut/jobworkflow/editlayout/index.html">Edit layout</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/editlayout/nestingmodes.html">Nesting modes</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/editlayout/placementpanel.html">Placement panel</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/editlayout/sequencing.html">Sequencing</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/jobworkflow/editlayout/slicesheet.html">Slice sheet</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cut/bevelcut/index.html">Bevel cut</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cut/bevelcut/opencontours.html">Open contours</a></li>
+      <li><button class="tree blank"></button><a href="../../cut/bevelcut/variablebevel.html">Variable bevel</a></li>
+      <li><button class="tree blank"></button><a href="../../cut/bevelcut/miscellaneous.html">Miscellaneous</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cut/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cut/advanced/finishingrules.html">Finishing rules</a></li>
+      <li><button class="tree blank"></button><a href="../../cut/advanced/editltt.html">Edit LTT</a></li>
+      <li><button class="tree blank"></button><a href="../../cut/advanced/flyline.html">FlyLine</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../cut/advanced/twinline/index.html">TwinLine</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../cut/advanced/twinline/strategies.html">Strategy</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/advanced/twinline/microjoints.html">Microjoints</a></li>
+        <li><button class="tree blank"></button><a href="../../cut/advanced/twinline/stability.html">Further settings</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../cut/advanced/detectline.html">DetectLine</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bend CAM</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../createbenddata.html">Create bend data</a></li>
+    <li><button class="tree blank"></button><a href="../navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Edit bend data</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="editbend.html">Edit a bend</a></li>
+      <li><button class="tree blank"></button><a class="active" href="editmount.html">Edit a tool mount</a></li>
+      <li><button class="tree blank"></button><a href="editsetup.html">Edit a bend setup</a></li>
+      <li><button class="tree blank"></button><a href="editgauge.html">Edit the back-gauges</a></li>
+      <li><button class="tree blank"></button><a href="editacb.html">Edit angle measurement</a></li>
+      <li><button class="tree blank"></button><a href="bendsheet.html">Bends spreadsheet</a></li>
+      <li><button class="tree blank"></button><a href="sequencing.html">Changing the sequence</a></li>
+      <li><button class="tree blank"></button><a href="addsetup.html">Adding setups and stations</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../advanced/anglemeasurement.html">Angle measurement</a></li>
+      <li><button class="tree blank"></button><a href="../advanced/batchprocess.html">Batch process</a></li>
+      <li><button class="tree blank"></button><a href="../advanced/recompute.html">Recompute solution</a></li>
+      <li><button class="tree blank"></button><a href="../advanced/tonnage.html">Tonnage check</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../bcell/index.html">BendMaster CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../bcell/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../bcell/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../bcell/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/pickup/fromdispenser.html">Pickup from dispenser</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../bcell/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../bcell/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/bending/extraction.html">Extraction</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../bcell/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../bcell/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/regrip/addregrip.html">Add regrip</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/regrip/editregrip.html">Edit regrip</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/regrip/jawregrip.html">Regrip with jaw</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../bcell/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../bcell/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/deposit/repeat.html">Repeat and sequence</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/deposit/separatorsheet.html">Add separator sheets</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/deposit/lockpartrest.html">Lock part-rest</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/deposit/patterns.html">Deposit pattern types</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../bcell/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../bcell/advanced/waypoints.html">Waypoints</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/advanced/cellconfig.html">Cell configuration</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../bcell/advanced/gripperdb/index.html">Gripper database</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../bcell/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+        <li><button class="tree blank"></button><a href="../../bcell/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../robotcell-wip/index.html">FlexCell CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../robotcell-wip/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/pickup/centeringtable.html">Centering table</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/bending/extraction.html">Extraction</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/bending/advanced.html">Advanced</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/regrip/addregrip.html">Add/Remove regrip</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/deposit/deposittabs.html">Deposit Tabs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/advanced/waypoints.html">Waypoints</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/advanced/cellconfig.html">Cell configuration</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../robotcell-wip/advanced/gripperdb/index.html">Gripper database</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../robotcell-wip/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+        <li><button class="tree blank"></button><a href="../../robotcell-wip/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../robotcell-wip/troubleshoot.html">Troubleshooting</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../fold/index.html">Fold CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../fold/createfolddata.html">Create fold data</a></li>
+    <li><button class="tree blank"></button><a href="../../fold/foldview.html">The Fold view</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../fold/editing/index.html">Editing Fold data</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../fold/editing/editbend.html">Edit a bend</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editside.html">Edit a side/section</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editseq.html">Change the sequence</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editbh.html">Edit the blank-holders</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editgauge.html">Edit the gauging</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editblade.html">Edit the blades</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editload.html">Edit the loading</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/editing/editunload.html">Edit the unloading</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../fold/toolinventory.html">Tool inventory</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../fold/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../fold/advanced/airgaptables.html">Custom air-gap tables</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/advanced/manualbend.html">Manual bend completion</a></li>
+      <li><button class="tree blank"></button><a href="../../fold/advanced/minflangelength.html">Required flange length</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../settings/index.html">Settings</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../settings/drawing/index.html">Drawing</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../settings/drawing/layers.html">Layers</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/drawing/dimensions.html">Dimensions</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/drawing/view.html">View</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../settings/bendcam/index.html">Bend CAM</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../settings/bendcam/benddefaults.html">Machine defaults</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/bendcam/bendoutputs.html">Bend outputs</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/bendcam/bendview.html">Bend view</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/bendcam/bendcell.html">Bend cell</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../settings/cutcam/index.html">Cut CAM</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../settings/cutcam/layout/index.html">Layout</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../settings/cutcam/layout/nesting.html">Nest settings</a></li>
+        <li><button class="tree blank"></button><a href="../../settings/cutcam/layout/sheet.html">Sheet</a></li>
+        <li><button class="tree blank"></button><a href="../../settings/cutcam/layout/sheethandling.html">Sheet handling</a></li>
+        <li><button class="tree blank"></button><a href="../../settings/cutcam/layout/skeletoncuts.html">Skeleton cuts</a></li>
+        <li><button class="tree blank"></button><a href="../../settings/cutcam/layout/worksupport.html">Work support</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../settings/cutcam/lasercam/index.html">Laser CAM</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../settings/cutcam/lasercam/sequence.html">Sequence</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../settings/cutcam/cutoutputs.html">Cut outputs</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/cutcam/cutview.html">Cut view</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../settings/foldcam/index.html">Panel bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../settings/foldcam/defaults.html">Defaults</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/foldcam/zbwcarriers.html">ZBW carriers</a></li>
+      <li><button class="tree blank"></button><a href="../../settings/foldcam/foldoutputs.html">Outputs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../settings/reports/index.html">Reports</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../settings/reports/itemdefaults.html">Item defaults</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../settings/importexport.html">Import/Export</a></li>
+    <li><button class="tree blank"></button><a href="../../settings/environment.html">Environment</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../database/index.html">Database</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../database/materials.html">Materials</a></li>
+    <li><button class="tree blank"></button><a href="../../database/machines.html">Machines</a></li>
+    <li><button class="tree blank"></button><a href="../../database/bendtools.html">Bend tools</a></li>
+    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../../database/formscomponents.html">Forms and Components</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../report/index.html">Reports</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../report/designer.html">Report designer</a></li>
+    <li><button class="tree blank"></button><a href="../../report/fields.html">Fields, pictures and tables</a></li>
+    <li><button class="tree blank"></button><a href="../../report/bands.html">Bands (sub-reports)</a></li>
+    <li><button class="tree blank"></button><a href="../../report/labels.html">Labels, bitmaps and shapes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../appendix/index.html">Appendix</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../appendix/3dformats.html">Supported 3D formats</a></li>
+    <li><button class="tree blank"></button><a href="../../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
+    <li><button class="tree blank"></button><a href="../../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bend CAM</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Edit bend data</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="editmount.html">Edit a tool mount</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Edit a tool mount</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you click on a tool mount, the <strong>Bend Mount</strong> panel is displayed, and can be
+used to edit various settings of the bend mount, and to perform several operations.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_bend_mount_panel">The Bend mount panel</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/editmount.png" alt="Bend Mount" width="136">
+</div>
+</div>
+<div class="paragraph">
+<p>The Bend Mount panel looks like the image alongside. The exact settings and operations
+available will vary, depending on whether you are clicking on a punch, die or
+adapter mount. In addition, some settings may be available or not depending on
+machine capabilities.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click the <strong>Change Tool</strong> button to replace the tool used for the
+selected mount with a different tool. (See the section below for more details on
+the <em>tool selector</em> that is used to select a replacement tool).</p>
+</li>
+<li>
+<p>The <strong>Length</strong> input is used to adjust the length of the station. When
+you type in a new value here, Flux will compose the station again using an
+appropriate set of <em>segments</em> to try and match the requested length as closely
+as possible. You can visually inspect the segments being used by looking at the
+segment boundary lines displayed on the bend mount.</p>
+</li>
+<li>
+<p>The <strong>Position</strong> input is used to set the position of the <em>left edge</em>
+of the mount, along the machine&#8217;s table or beam. The position can also be adjusted
+by <em>dragging</em> the mount left or right. (See the section below on dragging the mount).</p>
+</li>
+<li>
+<p>The <strong>Ear</strong> selector (displayed only for punch mounts) can be used to
+force Flux to use the left and/or right ear<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> pieces in the composition.</p>
+</li>
+<li>
+<p>The <strong>Flip Tool</strong> is used to flip the tool (front to back). It is
+displayed when you are editing a mount that uses an <em>assymmetric</em> tool (like a
+gooseneck tool, for example). The flip operation is intelligent enough to figure
+out if additional holders and tools need to be flipped to maintain consistency.
+For example, in the image below, flipping the <strong>OW_Z4</strong> punch (used for Z-bending)
+also flips the die, the holder and even the part to maintain process consistency:<br>
+<span class="image"><img src="img/fliptool.png" alt="Flip Tool" width="819"></span></p>
+</li>
+<li>
+<p>The <strong>Add Adapter</strong> is used to add an <em>extender</em> to increase the height
+of the punch or die. When you add an adapter, the adapter become selected and
+the panel for the adapter is displayed (this allows you to change the actual adapter
+being used, or to remove it).<br>
+<span class="image"><img src="img/addadapter.png" alt="Add Adapter" width="460"></span></p>
+</li>
+<li>
+<p>The <strong>Add Gap</strong> is used to add a gap into the tool mount to allow a flange
+to pass through without collisions (see the section below on Adding a Gap for more
+details on this).</p>
+</li>
+<li>
+<p><strong>Taller tool</strong> is used to replace the selected tools with different
+taller tools from the same family.</p>
+</li>
+<li>
+<p>Click the <strong>Remove</strong> to remove the tool mount. There will be a <em>missing punch</em>
+or <em>missing die</em> error displayed in the bend navigator for bends that are using this
+station, and this can be fixed by using the <strong>Add</strong> on the command bar on the
+left to add a new mount.</p>
+</li>
+<li>
+<p>The <strong>ACB Sensor</strong> selector is used to cycle through the different ACB
+sensor disk pairs that can be used for this part. The selection depends on the
+sheet thickness, and the punch being used.</p>
+</li>
+<li>
+<p>If the <strong>Inventory check</strong> checkbox is selected, the segments
+used are checked against the available <em>inventory</em> of pieces (which can be edited
+by clicking on the <strong>Inventor</strong> link). If segments that are not in
+the inventory are used, a special trefoil symbol is drawn on them, as you can see
+in the image below for the 40 mm and 45 mm pieces near the center of the punch
+below:<br>
+<span class="image"><img src="img/inventoryerror.png" alt="Inventory Error" width="253"></span></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When you edit a tool mount using any of these settings and operations, Flux
+immediately validates the status of all bend operations, performing various checks
+like collision, tool usability etc. The bend navigator status updates immediately and
+in real-time, making it very easy to experiment with various settings with immediate
+and accurate feedback.</p>
+</div>
+<div class="sect2">
+<h3 id="_the_replace_tool_window">The Replace tool window</h3>
+<div class="paragraph">
+<p>When you click on the <strong>Change Tool</strong> button, the <strong>Replace Tool</strong>
+window is displayed:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolreplace.png" alt="Tool replacer" width="750">
+</div>
+</div>
+<div class="paragraph">
+<p>This window displays all the possible replacement tools.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the hierarchy on the left to narrow down the choices - for example, you could
+choose to display only Gooseneck tools, to make the selection easier.</p>
+</li>
+<li>
+<p>Use the <strong>Sort</strong> selector on the top to sort the tools by name, height, radius or
+other sort criteria (the exact set of sort criteria depends on whether you are
+replacing a punch, die or adapter).</p>
+</li>
+<li>
+<p>You can type in a tool name (or short-name) into the <strong>Search</strong> box to quickly
+narrow down the list. Typing in a partial tool name is fine too - using <strong>OW200</strong>
+for example will match both OW200, OW200/S and OW200/K tools.</p>
+</li>
+<li>
+<p>Use the <strong>Scale</strong> slider to adjust the sizes of the tool images. The tool that is
+currently used has a blue fill and a thick outline. The light-blue cross-hatch
+indicates <em>other tools</em> that are used in this part.</p>
+</li>
+<li>
+<p>Clear the <strong>Filter</strong> checkbox to have an unrestricted view of all tools (regardless
+of whether they are suitable or not). In this view, the tools that are not suitable
+are grayed out, and moving the mouse over one of these tools indicates <em>why</em> it is
+not available for selection:<br>
+<span class="image"><img src="img/toolreplace2.png" alt="Tool error" width="650"></span></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As you move the mouse over the tool images, Flux <em>immediately</em> re-computes the
+selected tool mounts using the newly selected tool, and you can see in real-time
+whether the tool you are considering will cause any collision problems or not (the
+corresponding bends in the bend-navigator will instantly light up in red if there
+is a collision). This real-time preview makes it very easy for you to experiment
+with various tool choices until you find one that works.</p>
+</div>
+<div class="paragraph">
+<p>If you <strong>click</strong> on one of the tools, the choice is made and the new tool is applied
+to the part. If you press <kbd>Esc</kbd> instead, the preview choices you made are
+reverted back and the original tool is left unchanged.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_navigation_and_selection">Navigation and selection</h3>
+<div class="paragraph">
+<p>The bend-mount panel displays various buttons in the <em>navigation</em> and <em>selection</em>
+sub-panels.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Setup</strong> navigation button to move up to editing the entire
+bend setup. See the <a href="editsetup.html">setup editor</a> page for more details on this.</p>
+</li>
+<li>
+<p>Use the <strong>Prev</strong> and <strong>Next</strong> buttons to cycle through editing the
+different tool mounts in this setup.</p>
+</li>
+<li>
+<p>Use the <strong>Segments</strong> navigation button to move down one level
+and edit the <em>individual segments</em> making up this mount. The section below on
+editing tool-mount segments provides more information on this.</p>
+</li>
+<li>
+<p>Use the <strong>Tool Station</strong> selector to select all the tool-mounts
+making up this <em>station</em>. This will select all the punches, dies and holders
+that are aligned with the selected mount, so they can all be edited or moved together.</p>
+</li>
+<li>
+<p>Use the <strong>Same Tool</strong> selector to select other tool mounts that
+use the same tool. This is often useful before using a <em>tool change</em> operation;
+selecting all the stations using the specified tool broadens the available selection
+of replacement tools.<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_editing_multiple_mounts">Editing multiple mounts</h3>
+<div class="imageblock right">
+<div class="content">
+<img src="img/editmounts.png" alt="Multiple mounts" width="138">
+</div>
+</div>
+<div class="paragraph">
+<p>If you select multiple mounts by using <kbd>Shift</kbd>+Click on all of them, they can be
+edited together. Only settings and operations that are common to all the mounts are
+available for editing.</p>
+</div>
+<div class="paragraph">
+<p>Fields such as <strong>Length</strong> or <strong>Position</strong> are displayed for
+editing, only if they are the same for all the mounts.</p>
+</div>
+<div class="paragraph">
+<p>If you have multiple stations, it is useful to select all the punches or all the
+dies before doing a <strong>Change tool</strong> operation. In this case, the choice of available
+replacement tools is more extensive (since there is no danger of different-height
+punches and dies causing a collision).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dragging_a_bend_tool_mount">Dragging a bend-tool mount</h3>
+<div class="imageblock right">
+<div class="content">
+<img src="img/dragmount.png" alt="Dragging a mount" width="450">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Position</strong> input can be used to set a precise position for a mount.
+Sometimes, it is easier to just drag a bend-mount to a new position. To do this:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the bend mount to select it (select multiple mounts using <kbd>Shift</kbd>+Click)</p>
+</li>
+<li>
+<p>Click and start dragging left/right to move the selected mount.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As the image above shows, when you move the mouse over a selected mount, the
+arrow-head is displayed indicating that you can drag the selected mount. When
+you are dragging the mount, snap indicators let you easily align the mount to
+other existing mounts.</p>
+</div>
+<div class="paragraph">
+<p>If you <em>pick up</em> a mount near its left edge, then the left edges of all mounts
+are used for snapping. If you pick up a mount by the center, then the center-line
+is used for snapping, and so on.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_advanced_operations">Advanced operations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here are some more advanced operations with the Bend Mount editor panel.</p>
+</div>
+<div class="sect2">
+<h3 id="_editing_tool_mount_segments">Editing tool-mount segments</h3>
+<div class="paragraph">
+<p>Clicking on the <strong>Segments</strong> navigation button when a bend tool mount is being edited
+opens up the <em>Tool Segment</em> panel, which looks like the image alongside.
+<span class="image right"><img src="img/editmount2.png" alt="Edit tool Segments" width="525"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Segment</strong> selector is used to replace the selected tool segment
+with a longer or shorter piece, or a different type of piece.</p>
+</li>
+<li>
+<p>The <strong>&lt; Shift</strong> and <strong>Shift &gt;</strong> buttons are used to
+shift the selected segment left or right in the composition. This does not change
+the overall length of the composition, but is useful to move a gauging sensor piece
+left or right to avoid holes, for example.</p>
+</li>
+<li>
+<p>The <strong>Add</strong> and <strong>Remove</strong> buttons are used to add
+new segments into the composition, or to remove the selected segment out.</p>
+</li>
+<li>
+<p>The <strong>Prev</strong> and <strong>Next</strong> navigation buttons are used to cycle
+through editing the different segments in the bend mount. As the image above shows,
+the tool segment being edited is highlighted in blue.</p>
+</li>
+<li>
+<p>The <strong>Mount</strong> navigation button is used to move up one level, and
+edit the entire bend mount, rather than individual segments.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adding_a_gap_in_a_mount">Adding a gap in a mount</h3>
+<div class="paragraph">
+<p>It is sometimes useful to add a narrow <em>gap</em> in a tool mount, usually to allow a
+flange to pass through without a collision. To do this, click on the
+<strong>Add Gap</strong> button (which appears if the tool mount is long enough). A
+small section opens up in the panel, with a set of inter-linked inputs to set the
+left-margin, right-margin and actual gap. Since the sum of these three must add
+up to the tool mount length, editing two of these will set the third one
+automatically.</p>
+</div>
+<div class="paragraph">
+<p>The image below shows this operation in progress. We have a flange that collides
+with the punch, and we adjusting the Left/Right margins until the proposed gap is
+aligned with where the flange intersects the punch (you can see the proposed gap
+being displayed as two orange lines traced on the bend-mount).<br>
+<span class="image"><img src="img/addgap1.png" alt="Adding a gap" width="914"></span></p>
+</div>
+<div class="paragraph">
+<p>When you click on the <strong>Ok</strong> button in this sub-panel, the gap is created and you can see
+that the collision error is now resolved:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When editing a station that uses a punch holder, Flux asks if the gap
+should be introduced for only the <strong>Punch holder</strong> or both the <strong>Punch + Punch holder</strong>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_a_double_v_adapter">Using a Double-V adapter</h3>
+<div class="paragraph">
+<p>It is possible to use a double-V adapter to mount two dies next to each other. To
+do this manually, use the <strong>Add Adapter</strong> button to add an adapter
+to a die, and then use the <strong>Change Tool</strong> button to change that
+adapter to a  double-V adapter. Now, it is possible to add a second die to the other
+slot of the double-V adapter using the <strong>Add</strong> command from the command-bar and
+choosing a die mount.</p>
+</div>
+<div class="paragraph">
+<p>When you have a die mounted one slot of a double-V holder, you can shift it to the
+other slot by clicking on the <strong>DV Shift</strong> button that is displayed:<br>
+<span class="image"><img src="img/dvshift.png" alt="Double-V Shift" width="396"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. These are sometimes also known as <em>shoulder</em> pieces.
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. For example, if you are doing a <strong>Change tool</strong> operation on only one punch station, and there are multiple punch stations, then you will be restricted to choosing only other punch tools that are the <em>same height</em>, to avoid punch-die collisions because of uneven gaps.
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_the_bend_mount_panel">The Bend mount panel</a>
+  </li>
+  <li level="2">
+   <a href="#_the_replace_tool_window">The Replace tool window</a>
+  </li>
+  <li level="2">
+   <a href="#_navigation_and_selection">Navigation and selection</a>
+  </li>
+  <li level="2">
+   <a href="#_editing_multiple_mounts">Editing multiple mounts</a>
+  </li>
+  <li level="2">
+   <a href="#_dragging_a_bend_tool_mount">Dragging a bend-tool mount</a>
+  </li>
+  <li level="1">
+   <a href="#_advanced_operations">Advanced operations</a>
+  </li>
+  <li level="2">
+   <a href="#_editing_tool_mount_segments">Editing tool-mount segments</a>
+  </li>
+  <li level="2">
+   <a href="#_adding_a_gap_in_a_mount">Adding a gap in a mount</a>
+  </li>
+  <li level="2">
+   <a href="#_using_a_double_v_adapter">Using a Double-V adapter</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="editbend.html">Edit a bend</a></span>
+ <span class="next"><a href="editsetup.html">Edit a bend setup</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>
