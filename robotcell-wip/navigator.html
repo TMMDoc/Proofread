@@ -498,7 +498,7 @@ simulation stage where those specific error/warning occurs.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Pickup (P)</strong> - The column marked P represents the part pickup operation. Before
-bending starts, the FlexCell CAM picks up a flat sheet from a pallet, or from a
+bending starts, the robot picks up a flat sheet from a pallet, or from a
 part dispenser. This column represents this operation. You can click on it and
 use the slider to view a simulation of the pickup operation.</p>
 </div>
@@ -508,32 +508,26 @@ bending operations. You can click on these columns to view a simulation of the
 bending process.</p>
 </div>
 <div class="paragraph">
-<p><strong>Regrip (R)</strong> - The columns marked with tags like R1, R2 represent regrip
+<p><strong>Regrip (R)</strong> - The columns marked with tags like R1 represent regrip
 operations. During pickup, the gripper will pick up the part by gripping it
 along a particular plane, in a particular orientation. Sometimes, not all the
 bends in the part can be processed with this same orientation, and the gripper
-may need to regrip the part to continue. In this example above, the gripper had
-to pick up the part with a different orientation between bends 2 and 3 using a
-regrip operation. The R1 column can be used to simulate this regrip operation,
-or to monitor that operation for collisions or other errors.</p>
+may need to regrip the part to continue. This column represents such regrip
+operations.</p>
 </div>
 <div class="paragraph">
-<p><strong>Deposit (D)</strong> - The columns marked with tags like D1, D2 represent the part
-deposit operations on the final pallet, conveyor or basket. Each of the deposit
-columns represents a particular orientation of the part on the deposit stack and
-there may be several such orientations depending on the deposit pattern being
-used.</p>
+<p><strong>Deposit (D)</strong> - The columns marked with tags like D1 represent the part
+deposit operations on the final pallet, conveyor or basket.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_robot_gripper_and_cell_rows">Robot, gripper and cell rows</h2>
+<h2 id="_bend_navigator_rows">Bend Navigator Rows</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There are new rows added for the <strong>Clamps</strong>, <strong>Robot</strong>, the
-<strong>Gripper</strong> and the <strong>Cell</strong> components. As like
-the other similar rows found in the <strong>Bend CAM</strong>
-<a href="../bend/navigator.html">navigator</a>, these rows are also used to signal
+<p>Bend navigator rows in FlexCell CAM are similar to <a href="../bend/navigator.html">Bend
+CAM navigator</a> rows. Additional rows have been introduced in FlexCell CAM for
+Clamps, Robot, Gripper, and Cell components. These rows are also used to signal
 collisions or other errors.</p>
 </div>
 </div>
@@ -543,7 +537,7 @@ collisions or other errors.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>These shortcut keys can help speed up navigation between the different modes and
-panels in Flux.</p>
+panels in FlexCell CAM.</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
 <colgroup>
@@ -552,7 +546,7 @@ panels in Flux.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Navigator shortcuts</p></td>
+<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Navigator shortcuts</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>PgUp</kbd> <kbd>PgDn</kbd></p></td>
@@ -574,7 +568,7 @@ panels in Flux.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Expand/collapse the navigator panel.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Panel shortcuts (keyboard)</p></td>
+<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Panel shortcuts (keyboard)</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>E</kbd> <kbd>E</kbd></p></td>
@@ -603,7 +597,7 @@ panels in Flux.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Open the <strong>Waypoints</strong> panel for the current stage</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Panel shortcuts (mouse)</p></td>
+<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Panel shortcuts (mouse)</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/mouse50.png" alt="Left click" width="20"></span> twice on navigator header</p></td>
@@ -673,7 +667,7 @@ panels in Flux.</p>
    <a href="#_bend_navigator_columns">Bend Navigator Columns</a>
   </li>
   <li level="1">
-   <a href="#_robot_gripper_and_cell_rows">Robot, gripper and cell rows</a>
+   <a href="#_bend_navigator_rows">Bend Navigator Rows</a>
   </li>
   <li level="1">
    <a href="#_shortcut_keys">Shortcut keys</a>

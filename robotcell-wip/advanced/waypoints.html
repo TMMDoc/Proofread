@@ -526,20 +526,18 @@ phase reflects a particular robot operation like pickup, bend, regrip and deposi
 <div class="ulist">
 <ul>
 <li>
-<p>Grip Point</p>
+<p>Grip Point - The X, Y, Z, W, P, R of Tool Center Point (TCP) are
+displayed and can be edited</p>
 </li>
 <li>
-<p>Wrist Point</p>
+<p>Wrist Point - The X, Y, Z, W, P, R of End of Arm Tool (EOAT) are
+displayed and can be edited</p>
 </li>
 <li>
-<p>Robot Axes</p>
+<p>Robot Axes - The robot joint axes values are displayed and can be edited.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>The position and angle of the wrist or gripper are displayed and can be edited. If
-the robot axes is selected, the robot axes values are displayed and can be edited.</p>
 </li>
 <li>
 <p>The yellow trace shows the path from the previous step to this one, and from this
@@ -552,8 +550,8 @@ the previous phase to the next phase. If this is in the middle, that is the
 actual phase we are editing.</p>
 </li>
 <li>
-<p><mark>The <strong>Configuration</strong> section shows the current configuration of the robot at
-this step.</mark></p>
+<p>The <strong>Configuration</strong> section shows the current configuration of the robot. It
+represents the robot&#8217;s attitude.</p>
 </li>
 <li>
 <p>The <strong>Interpolate</strong> setting is used to switch between
@@ -588,55 +586,15 @@ If required, these attributes can be changed.</p>
 <div class="paragraph">
 <p>These settings are controlled in the Advanced section of the waypoint panel.</p>
 </div>
+<div class="paragraph">
+<div class="title">Configuration</div>
+<p><span class="image"><img src="img/waypointconfigpanel.png" alt="waypointconfigpanel"></span></p>
+</div>
+<div class="paragraph">
+<p>These are the joint placements that specify the placement of the wrist and arm.</p>
+</div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 1. Configuration</caption>
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Configuration type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NUT</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">FUT</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NUB</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">FUB</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NDT</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">FDT</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NDB</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">FDB</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 2. Interpolate</caption>
+<caption class="title">Table 1. Interpolate</caption>
 <colgroup>
 <col>
 <col>
@@ -661,7 +619,7 @@ No TCP linear movement.</p></td>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 3. Speed</caption>
+<caption class="title">Table 2. Speed</caption>
 <colgroup>
 <col>
 <col>
@@ -696,7 +654,7 @@ No TCP linear movement.</p></td>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 4. Rounding</caption>
+<caption class="title">Table 3. Rounding</caption>
 <colgroup>
 <col>
 <col>

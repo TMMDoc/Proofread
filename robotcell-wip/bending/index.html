@@ -458,9 +458,8 @@
 </div>
 </div>
 <div class="paragraph">
-<p>Many of the settings on this panel are the same as for manual press brakes, and
-they are explained in the page on <a href="../../bend/editing/editbend.html">Editing a Bend</a>.
-The robotic bending process has several additional settings and controls that have
+<p>Many of the settings on this panel are the same as for manual press brakes. The
+robotic bending process has several additional settings and controls that have
 their own panels.</p>
 </div>
 <div class="imageblock">
@@ -470,27 +469,23 @@ their own panels.</p>
 </div>
 <div class="paragraph">
 <p>The image above shows the panels that can be accessed from the
-<strong>Bend</strong> panel to configure the added functionality of the FluxBeta.</p>
+<strong>Bend</strong> panel to configure the added functionality of the robot.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p>The <strong>Position</strong> input is used to move the bend along the
-machine. The value displayed here is the position of the <em>left end</em> of the bend
-on the machine&#8217;s scale. (You can also drag the bend to interactively set the
-position, see the section below).</p>
+machine.</p>
 </li>
 <li>
 <p>The <strong>Turn Part</strong> button is used to <em>flip</em> the part (insert it
-with the other side into the machine). The image below shows the effect of
-clicking this button (clicking this button again will restore the
-original orientation):</p>
+with the other side into the machine).</p>
 <div class="paragraph">
 <p><span class="image"><img src="img/flippart.png" alt="Flip Part" width="561"></span></p>
 </div>
 </li>
 <li>
-<p>Turn on the <strong>Coining</strong> check-box to tell Flux to use a coining
+<p>Turn on the <strong>Coining</strong> check-box to tell FlexCell CAM to use a coining
 operation. This is enabled only if a coining would be possible (typically, this
 means there is a coining-capable punch and die that can be used). Coining
 requires more press force but can result in a tighter bending radius than an
@@ -499,10 +494,10 @@ exact angle that is required for this bend operation.</p>
 </li>
 <li>
 <p>Turn on the <strong>Pre-bending</strong> option to split this bend into two
-separate operations&#8201;&#8212;&#8201;a pre-bend, and the finishing bend. By default, Flux
+separate operations&#8201;&#8212;&#8201;a pre-bend, and the finishing bend. By default, FlexCell CAM
 will move the finishing bend to a position that is just after the <em>next</em> bend in
 the sequence. Refer <a href="../../bend/editing/editbend.html#_advanced_operations">Editing
-a Bend</a> for more on using a pre-bend.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+a Bend</a> for more on using a pre-bend.</p>
 </li>
 <li>
 <p>The <strong>Robot Strategy</strong> link takes you to the <strong>Strategy</strong> panel where
@@ -525,12 +520,12 @@ of each bending operation.</p>
 <li>
 <p>The <strong>Waypoints</strong> link takes you to the <a href="../advanced/waypoints.html">Waypoints</a>
 panel where you can have precise control over the robot <em>trajectory</em> during the
-bending process<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>.</p>
+bending process.</p>
 </li>
 <li>
 <p>The <strong>RG-Stations</strong> link takes you to the
 <a href="../regrip/rgstationpanel.html">Regrip Stations</a> panel, where you can configure
-the position of the regrip stations <em>during</em> this bending cycle<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>.</p>
+the position of the regrip stations <em>during</em> this bending cycle.</p>
 </li>
 <li>
 <p>The <strong>Gauges</strong> link takes you to the <a href="../../bend/editing/editgauge.html">Editing
@@ -544,18 +539,6 @@ bending like insert part first, BG: Z before X are explained in the
 the different bends in the part.</p>
 </li>
 </ul>
-</div>
-<div id="footnotes">
-<hr>
-<div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. Usually, Flux can determine automatically when a pre-bend can be used to avoid such collisions, and will turn on the pre-bending option for such a bend. This switch provides a manual override for this (to turn <strong>on/off</strong> a pre-bend).
-</div>
-<div class="footnote" id="_footnotedef_2">
-<a href="#_footnoteref_2">2</a>. The goal of Flux is to minimize the need for you to have to micro-manage the robot trajectory with the <strong>Waypoints</strong> panel. However, there are rare situations where it becomes necessary.
-</div>
-<div class="footnote" id="_footnotedef_3">
-<a href="#_footnoteref_3">3</a>. This is rarely needed, except when you are handling very large parts or using a large gripper, and need to move the regrip station out of the way to prevent a collision.
-</div>
 </div>
 
                     </article>

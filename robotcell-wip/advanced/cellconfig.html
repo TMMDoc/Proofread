@@ -456,88 +456,262 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Cell configuration</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>Flux needs to know the exact position of the BendMaster relative to the machine
-<strong>zero-point</strong>, and also needs to know the extents of the robot linear movement track.
-Since these are critical parameters that should not be changed by mistake, Flux
-must be in <strong>admin</strong> mode before you can make these changes.</p>
+<p>This chapter explains how to configure the machine cell and update robot and pallet
+calibration values so FlexCell CAM can generate correct NC output.</p>
+</div>
+<div class="paragraph">
+<p>Follow the steps below carefully - incorrect values may produce wrong NC code and
+cause collisions or damage.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_calibration_tool">Calibration Tool</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Start FlexCell CAM.</p>
+</li>
+<li>
+<p>Navigate to View &#8594; Calibration Tool.</p>
+</li>
+<li>
+<p>Update the following calibration values in the Calibration Tool window.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/calibproxy.png" alt="Calibproxy"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_machine_in_robot_coordinate_system_minr">Machine in Robot coordinate system (MInR)</h3>
+<div class="paragraph">
+<p><span class="image"><img src="img/minr.png" alt="MInR"></span></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Start Flux in administrator mode by running the command <code>Flux.exe -admin</code>.
-This displays a notification on the document tab, as shown below:<br>
-<span class="image"><img src="img/admin.png" alt="Admin"></span></p>
+<p>By using the three point calibration method, the machine&#8217;s X, Y, Z, W, P, R
+are calibrated with respect to the robot&#8217;s world coordinate system.</p>
 </li>
 <li>
-<p>Install the required BendMaster machine using the
-<strong>Database &#8594; Machines</strong> option
-from the command bar on the left.<br>
-<span class="image"><img src="img/dbmachine.png" alt="DBMachine"></span></p>
-</li>
-<li>
-<p>Open a simple part and tool it up for BendMaster.</p>
-</li>
-<li>
-<p>Once the bending solution is displayed, go to the installed machine and
-select <strong>Cell Configuration</strong>.<br>
-<span class="image"><img src="img/dbcellconfig.png" alt="Cell Configuration" width="961"></span></p>
-</li>
-<li>
-<p>Use the values in this page to set up the track length, and also the position of
-the robot, relative to the bend machine (see the image below to understand these
-values better).</p>
-</li>
-<li>
-<p><strong>Save</strong> the values and restart Flux for the changes to take effect.</p>
+<p>The X, Y, Z, W, P, R values recorded in the Teach Pendant has to be entered in
+MInR.</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Software limits of Robot-A, B, C and D are in degree of rotation.
-</td>
-</tr>
-</table>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Do not change these settings unless you are sure; entering the wrong values
-  here will result in an incorrect NC program, which can cause unexpected collisions or
-  damage!
-</td>
-</tr>
-</table>
+<div class="sect2">
+<h3 id="_robot_in_machine_coordinate_system_rinm">Robot in machine coordinate system (RInM)</h3>
+<div class="paragraph">
+<p><span class="image"><img src="img/rinm.png" alt="RInM"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Once you enter MInR values, RInM values are generated automatically.</p>
+</li>
+<li>
+<p>Update these values:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>X, Y, Z → in Cell Configuration settings (Track X, Y, Z Positions).</p>
+</li>
+<li>
+<p>W, P, R → in Machine Defaults settings (Robot X, Y, Z Rot).</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The following illustration explains the different measurements used in the cell configuration
-settings page:</p>
+<p>Update these RInM values to let FlexCell CAM know the exact position of
+the robot origin relative to the machine zero-point.</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="img/trackpos.png" alt="Track Position" width="950">
+<div class="sect3">
+<h4 id="_update_cell_configuration_settings">Update Cell Configuration Settings</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Start FlexCell CAM.</p>
+</li>
+<li>
+<p>Install the required machine via <strong>Database &#8594;
+Machines</strong> option from the command bar on the left.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/dbmachine.png" alt="DBMachine"></span></p>
+</div>
+</li>
+<li>
+<p>Go to the installed machine and select <strong>Cell Configuration</strong>.</p>
+</li>
+<li>
+<p>Update RInM&#8217;s X, Y, Z values in Track X, Y, Z Positions.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/dbcellconfig.png" alt="Cell Configuration" width="961"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Save</strong> the values and restart FlexCell CAM for the changes to take effect.</p>
+</li>
+</ul>
 </div>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="img/trackpos2.png" alt="Track Position" width="700">
+<div class="sect3">
+<h4 id="_machine_default_settings">Machine Default Settings</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Start FlexCell CAM.</p>
+</li>
+<li>
+<p>Open a simple part and tool it up.</p>
+</li>
+<li>
+<p>Go to Settings &#8594; Machine Defaults from the side menu.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/machinedefsettings.png" alt="machinedefsettings"></span></p>
+</div>
+</li>
+<li>
+<p>Under Bend Cell settings, update the RInM&#8217;s W, P and R values in Robot X,
+Y, Z Rot.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/machinedefaults.png" alt="machinedefaults"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Save</strong> the values and restart FlexCell CAM.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pallet_in_robot_coordinate_system_pinr">Pallet in Robot coordinate system (PInR)</h3>
+<div class="paragraph">
+<p><span class="image"><img src="img/pinr.png" alt="PInR"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>By using the three point calibration method, the pallet&#8217;s X, Y, Z, W, P, R are
+calibrated with respect to the robot&#8217;s world coordinate system.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The pallet could be any user component (i.e, Pickup pallet or Centering table,
+Chute etc).
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>The X, Y, Z, W, P, R values recorded in the Teach pendant has to be entered in
+PInM.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pallet_in_machine_coordinate_system_pinm">Pallet in machine coordinate system (PInM)</h3>
+<div class="paragraph">
+<p><span class="image"><img src="img/pinm.png" alt="PInM"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>After entering PInR values, PInM values are generated automatically.</p>
+</li>
+<li>
+<p>Update these PInM values in the corresponding pallet panel (Pickup Pallet,
+Centering Table, Chute) in order to let FlexCell CAM know the exact position of
+the pallet origin relative to the machine zero-point.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_updating_pallet_position">Updating Pallet Position</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Start FlexCell CAM.</p>
+</li>
+<li>
+<p>Open a simple part and tool it up.</p>
+</li>
+<li>
+<p>Select the specific Pallet panel (i.e, Pickup Pallet, Centering Table, Chute
+etc) and update the corresponding PInM&#8217;s X, Y, Z, W, P, R values.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/palletposition.png" alt="palletposition"></span></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Do not change these settings unless you are sure; entering the wrong
+values here will result in an incorrect NC program, which can cause unexpected
+collisions or damage.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 </div>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc"></aside>
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_calibration_tool">Calibration Tool</a>
+  </li>
+  <li level="2">
+   <a href="#_machine_in_robot_coordinate_system_minr">Machine in Robot coordinate system (MInR)</a>
+  </li>
+  <li level="2">
+   <a href="#_robot_in_machine_coordinate_system_rinm">Robot in machine coordinate system (RInM)</a>
+  </li>
+  <li level="3">
+   <a href="#_update_cell_configuration_settings">Update Cell Configuration Settings</a>
+  </li>
+  <li level="3">
+   <a href="#_machine_default_settings">Machine Default Settings</a>
+  </li>
+  <li level="2">
+   <a href="#_pallet_in_robot_coordinate_system_pinr">Pallet in Robot coordinate system (PInR)</a>
+  </li>
+  <li level="2">
+   <a href="#_pallet_in_machine_coordinate_system_pinm">Pallet in machine coordinate system (PInM)</a>
+  </li>
+  <li level="3">
+   <a href="#_updating_pallet_position">Updating Pallet Position</a>
+  </li>
+ </ul>
+</aside>
+
                 </div>
             </div>
             <nav class="pagination">
