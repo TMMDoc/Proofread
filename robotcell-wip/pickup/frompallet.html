@@ -267,6 +267,7 @@
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../regrip/regrippanel.html">Regrip panel</a></li>
       <li><button class="tree blank"></button><a href="../regrip/addregrip.html">Add/Remove regrip</a></li>
+      <li><button class="tree blank"></button><a href="../regrip/gripperpanel.html">Gripper Panel</a></li>
       <li><button class="tree blank"></button><a href="../regrip/rgstationpanel.html">RG-Stations panel</a></li>
      </ul>
     </li>
@@ -459,7 +460,12 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>When flat parts are picked up from a pallet, the following parameters influence this process:</p>
+<p>Combi gripper uses its Vacuum suction feature for picking the part from the <strong>Pickup pallet</strong>
+to placing it on the <strong>Centering table</strong>.</p>
+</div>
+<div class="paragraph">
+<p>When flat parts are picked up from a pallet, the following parameters influence
+this process:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -478,6 +484,11 @@ and what type of cups are mounted in each socket).</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_panels">Panels</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The panels used to edit all these settings are displayed below - they are all
 interconnected by up/down navigation links leading to other panels in a logical
@@ -507,11 +518,8 @@ the gripper.</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_pallet_panel">Pallet panel</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_pallet_panel">Pallet Panel</h3>
 <div class="paragraph">
 <p>The <strong>Pallet</strong> panel is used to select a pallet and position it in the cell. You
 can open this panel by just clicking on a pallet; FlexCell CAM will also position the
@@ -520,7 +528,7 @@ part from the pallet.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="img/pallet.png" alt="Pallet" width="472">
+<img src="img/pallet.png" alt="Pallet" width="400">
 </div>
 </div>
 <div class="ulist">
@@ -571,10 +579,8 @@ this machine.</p>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_pickup_panel">Pickup panel</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_pickup_panel">Pickup Panel</h3>
 <div class="paragraph">
 <p>The <strong>Pickup</strong> panel is used to edit the position of the part-stack on the pallet.
 You can open this panel directly by clicking on the stack of blanks lying on the pallet.
@@ -601,10 +607,6 @@ this will usually mean that an additional <em>regripping</em> operation will be
 necessary before the first bend can be processed (this will be added by FluxBeta
 CAM automatically).</p>
 </li>
-</ul>
-</div>
-<div class="ulist">
-<ul>
 <li>
 <p>The <strong>Waypoints</strong> link brings up the
 <a href="../advanced/waypoints.html">Waypoints</a> editor where you can fine-tune the robot
@@ -626,17 +628,15 @@ that the material is correctly oriented for the bending operation. See
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_gripper_panel">Gripper panel</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_gripper_panel">Gripper Panel</h3>
 <div class="paragraph">
 <p>The <strong>Gripper</strong> panel is used to select a different gripper, or to change the position
 and orientation at which the gripper picks up the part.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="img/gripper.png" alt="Gripper" width="585">
+<img src="img/gripper.png" alt="Gripper" width="460">
 </div>
 </div>
 <div class="ulist">
@@ -650,6 +650,7 @@ to the part&#8217;s orientation.</p>
 </div>
 </div>
 </div>
+</div>
 
                     </article>
                 </div>
@@ -658,13 +659,16 @@ to the part&#8217;s orientation.</p>
  <h3>Contents</h3>
  <ul>
   <li level="1">
-   <a href="#_pallet_panel">Pallet panel</a>
+   <a href="#_panels">Panels</a>
   </li>
-  <li level="1">
-   <a href="#_pickup_panel">Pickup panel</a>
+  <li level="2">
+   <a href="#_pallet_panel">Pallet Panel</a>
   </li>
-  <li level="1">
-   <a href="#_gripper_panel">Gripper panel</a>
+  <li level="2">
+   <a href="#_pickup_panel">Pickup Panel</a>
+  </li>
+  <li level="2">
+   <a href="#_gripper_panel">Gripper Panel</a>
   </li>
  </ul>
 </aside>

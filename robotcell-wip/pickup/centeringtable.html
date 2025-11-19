@@ -267,6 +267,7 @@
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../regrip/regrippanel.html">Regrip panel</a></li>
       <li><button class="tree blank"></button><a href="../regrip/addregrip.html">Add/Remove regrip</a></li>
+      <li><button class="tree blank"></button><a href="../regrip/gripperpanel.html">Gripper Panel</a></li>
       <li><button class="tree blank"></button><a href="../regrip/rgstationpanel.html">RG-Stations panel</a></li>
      </ul>
     </li>
@@ -456,13 +457,30 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Centering table</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once the part picked from the Pickup Pallet is positioned on the Centering
+table, the Combi gripper uses its jaw-type feature to take the part from the
+Centering table for bending and then deposition.</p>
+</div>
+<div class="paragraph">
+<p>Prior to performing the bending operation, it is essential to ensure that the
+part is accurately centered and oriented on the centering table. This step is
+crucial for achieving precise bending results.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pallet_panel">Pallet Panel</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The Pallet panel will be open when you directly click on the centering table
 component. This panel is used to select a Centering table and position it in the cell.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="img/centeringtable.png" alt="Pallet" width="472">
+<img src="img/centeringtable.png" alt="Pallet" width="400">
 </div>
 </div>
 <div class="ulist">
@@ -516,11 +534,96 @@ this machine.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gripper_panel">Gripper Panel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>Gripper</strong> panel is used to select a different gripper, or to change the position
+and orientation at which the gripper picks up the part.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/centeringgripper.png" alt="Gripper" width="400">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Name</strong> choice to select a different gripper.</p>
+</li>
+<li>
+<p>Use the <strong>Next Heading</strong> button to rotate the gripper around
+to another side of the part (it rotates in 90° steps).</p>
+</li>
+<li>
+<p>Use the <strong>Position</strong> inputs to move the gripper-center relative to
+the part-center, and use the <strong>Angle</strong> input to rotate the gripper, relative
+to the part&#8217;s orientation.</p>
+</li>
+<li>
+<p>Use the <strong>Swivel Neck</strong> option to rotate the Jaw Neck with
+180° rotation.</p>
+</li>
+<li>
+<p>Enabling <strong>Alt Pickup</strong> option helps to use an alternative pickup point on the part.</p>
+</li>
+<li>
+<p>Use the <strong>Set Grip Plane</strong> to select a different plane to
+grip. When this option is selected, the mouse pointer will change to a blue
+color plus symbol. Hover around to see the plus symbol showing different plane
+orientation and select a desired plane.</p>
+</li>
+<li>
+<p>Use <strong>Vacuum Grip</strong> option to enable vacuum suction feature for picking the part from
+the centering table.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_part_panel">Part Panel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>Part</strong> panel is used to edit the part position on the centering table.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/centeringpart.png" alt="Part" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Position</strong> inputs to position the part on the centering
+centering table; these coordinates specify the center of the part in Z and X,
+relative to the corner of the centering table, and are in the centering table&#8217;s
+local coordinate space.</p>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Angle</strong> input to rotate the part around in the centering table.</p>
+</div>
+</div>
+</div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc"></aside>
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_pallet_panel">Pallet Panel</a>
+  </li>
+  <li level="1">
+   <a href="#_gripper_panel">Gripper Panel</a>
+  </li>
+  <li level="1">
+   <a href="#_part_panel">Part Panel</a>
+  </li>
+ </ul>
+</aside>
+
                 </div>
             </div>
             <nav class="pagination">

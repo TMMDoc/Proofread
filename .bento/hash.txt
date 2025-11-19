@@ -7,7 +7,7 @@ FLUX=
 FOLDAPP=Flux
 LANGUAGE=EN
 Folders=46
-Pages=181
+Pages=182
 UIXlate=False, DebugUIXlate=False, Language=EN
 
 contents.txt • 254205.054236
@@ -66,11 +66,6 @@ Rewrite\MeasureDimension.adoc • Measuring and changing Outer Dimension
 Rewrite\Nesting.adoc • Nesting
 Rewrite\Scenarios.adoc • Bevel Cut Examples
 Rewrite\TwinLine.adoc • TwinLine
-RobotCell-DRAFT\contents.txt • 251731.031736
-RobotCell-DRAFT\Index.adoc • FluxRobot CAM
-RobotCell-DRAFT\Navigator.adoc • Bend navigator
-RobotCell-DRAFT\PanelsOverview.adoc • Overview of Robotic Bending Panels
-RobotCell-DRAFT\ShortcutKeys.adoc • Shortcut keys
 RobotCell-WIP\contents.txt • 255912.045925
 RobotCell-WIP\Index.adoc • FlexCell CAM
 RobotCell-WIP\Navigator.adoc • Bend navigator
@@ -196,12 +191,6 @@ Fold\Tools\LB.adoc • Lower Bending Tool
 Fold\Tools\LBH.adoc • Lower Blank Holder
 Fold\Tools\UB.adoc • Upper Bending Tool
 Fold\Tools\ZBW.adoc • ZBW Tools
-RobotCell-DRAFT\Advanced\CellConfig.adoc • Cell configuration
-RobotCell-DRAFT\Advanced\contents.txt • 251531.031533
-RobotCell-DRAFT\Advanced\Index.adoc • Advanced
-RobotCell-DRAFT\Pickup\contents.txt • 251916.031938
-RobotCell-DRAFT\Pickup\FromPallet.adoc • Pickup from pallet
-RobotCell-DRAFT\Pickup\Index.adoc • Part pickup
 RobotCell-WIP\Advanced\CellConfig.adoc • Cell configuration
 RobotCell-WIP\Advanced\contents.txt • 252501.112526
 RobotCell-WIP\Advanced\Index.adoc • Advanced
@@ -226,7 +215,7 @@ RobotCell-WIP\Pickup\FromDispenser.adoc • Pickup from dispenser
 RobotCell-WIP\Pickup\FromPallet.adoc • Pickup from pallet
 RobotCell-WIP\Pickup\Index.adoc • Part pickup
 RobotCell-WIP\Regrip\AddRegrip.adoc • Add/Remove regrip
-RobotCell-WIP\Regrip\contents.txt • 254318.014353
+RobotCell-WIP\Regrip\contents.txt • 255919.115952
 RobotCell-WIP\Regrip\EditRegrip.adoc • Edit regrip
 RobotCell-WIP\Regrip\GripperPanel.adoc • Gripper Panel
 RobotCell-WIP\Regrip\Index.adoc • Regripping
