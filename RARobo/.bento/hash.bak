@@ -1,0 +1,45 @@
+Version=56
+LANGUAGE=EN
+Folders=15
+Pages=15
+UIXlate=False, DebugUIXlate=False, Language=EN
+
+contents.txt • 251124.111111
+contents_.txt
+index.adoc • Right Angle roboter interface (Option)
+manifest.txt • 251224.111203
+raw.adoc • [width="100%",cols=">74%,>26%",options="header",]
+x.txt
+10_Alwayspullthetransmi\contents.txt • 251124.111111
+10_Alwayspullthetransmi\index.adoc • Always pull the transmitter and receiver of the Bend guard system to the top position.Safety functions
+11_Descriptionofconnect\contents.txt • 251124.111111
+11_Descriptionofconnect\index.adoc • Description of connecting plug XS7
+12_Signalcourseinrobotm\contents.txt • 251124.111111
+12_Signalcourseinrobotm\index.adoc • Signal course in robot mode
+13_Machineconfiguration\contents.txt • 251124.111111
+13_Machineconfiguration\index.adoc • Machine configuration
+14_Importantnotesforcre\contents.txt • 251124.111111
+14_Importantnotesforcre\index.adoc • Important notes for creating a bending program for robot mode
+1_Organizationalmeasur\contents.txt • 251124.111111
+1_Organizationalmeasur\index.adoc • Organizational measures to be taken by the user
+2_General\contents.txt • 251124.111111
+2_General\index.adoc • General
+3_Operatingmodes\contents.txt • 251124.111111
+3_Operatingmodes\index.adoc • Operating modes
+4_Reference\contents.txt • 251124.111111
+4_Reference\index.adoc • Reference
+5_Operatingmodekeyswit\contents.txt • 251124.111111
+5_Operatingmodekeyswit\index.adoc • Operating mode key switch
+6_Thirdpartprovidersen\contents.txt • 251124.111111
+6_Thirdpartprovidersen\index.adoc • Third part provider sensor backgauge fingers
+7_Robotinterfacewithou\contents.txt • 251124.111111
+7_Robotinterfacewithou\index.adoc • Robot interface without sensor backgauge fingers
+8_Gaugefinger\contents.txt • 251124.111111
+8_Gaugefinger\index.adoc • Gauge finger
+9_BendGuard\contents.txt • 251124.111111
+9_BendGuard\index.adoc • BendGuard
+2_General\img\image3.GIF
+9_BendGuard\img\image19.GIF
+9_BendGuard\img\image3.GIF
+extracted-media\media\image19.GIF
+extracted-media\media\image3.GIF
