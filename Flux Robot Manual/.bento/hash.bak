@@ -1,0 +1,193 @@
+Version=58
+LANGUAGE=EN
+Folders=27
+Pages=127
+UIXlate=False, DebugUIXlate=False, Language=EN
+
+contents.txt • 253725.113741
+copyNetwork.bat
+Index.adoc • Welcome to FluxRobot
+manifest.txt • 252705.032700
+pushHTML.bat
+CellConfig\contents.txt • 253325.113309
+CellConfig\cups.adoc • Trumpf standard vacuum cups
+CellConfig\Grippertool.adoc • Gripper tool
+CellConfig\Index.adoc • Cell Components
+DEV_Devnotes\contents.txt • 251208.121216
+DEV_Devnotes\DefOfRotation.adoc • Definition of rotations
+DEV_Devnotes\DH.adoc • Denavit–Hartenberg parameters
+DEV_Devnotes\DigitalIO.adoc • Aacessing Digital IO' in robot:
+DEV_Devnotes\fanucdhvisu.m
+DEV_Devnotes\FanucDHvisualization.m
+DEV_Devnotes\FanucFrames.adoc • Frame concept (RACell)
+DEV_Devnotes\Index.adoc • DEV: Developer notes
+DEV_Devnotes\IOoutput.adoc • Use the IO outputs
+electricalwiring\contents.txt • 251208.121216
+electricalwiring\Index.adoc • Electrical wiring
+electricalwiring\RobBack.adoc • Wiring robot back hub
+electricalwiring\RobWrist.adoc • Wiring robot wrist
+electricalwiring\wiring.adoc • Wiring of the Fanuc cabinet
+Fence\contents.txt • 254701.094751
+Fence\Fence.adoc • Fence
+Fence\Index.adoc • Safety
+Fence\light.adoc • Stack Light
+Fence\Robomode.adoc • Robot mode
+Frames\contents.txt • 253325.113309
+Frames\Framecoord.adoc • Use of frame coords
+Frames\Frame_FlexCell.adoc • UF Starmatik FlexCell
+Frames\Frame_RA25.adoc • UF RA 25kg 45deg
+Frames\Frame_RACell.adoc • UF RA FlexCell
+Frames\Index.adoc • Frames
+LSProgramming\Coding.adoc • Fanuc Code Snippets
+LSProgramming\contents.txt • 251208.121216
+LSProgramming\HMI.adoc • Cell HMI
+LSProgramming\Index.adoc • FluxRobot NC-Code
+LSProgramming\Nomenclature.adoc • Nomenclature and Variables
+LSProgramming\PostC2.adoc • Post Processor
+LSProgramming\Post_C.adoc • Postprocessor C#
+LSProgramming\RNC.adoc • Flux .RNC output
+MotionSequences\BendPos.adoc • BendPositioning
+MotionSequences\Centering.adoc • CenteringTable
+MotionSequences\contents.txt • 251208.121216
+MotionSequences\deposit.adoc • Deposit
+MotionSequences\Doublesheet.adoc • DoublesheetDetector
+MotionSequences\GripperChanger.adoc • GripperChanger
+MotionSequences\Index.adoc • Motion sequences
+MotionSequences\PartSeparator.adoc • PartSeparator
+MotionSequences\Pickup_pinch.adoc • PickupDispenser
+MotionSequences\Pickup_vac.adoc • PickupPallet
+MotionSequences\Regrip.adoc • Regrip
+MotionSequences\ToolChanger.adoc • ToolChanger
+Operation\Calib.adoc • Calibration calibration
+Operation\calib_gauge.adoc • Calibrate Gauge
+Operation\Centering.adoc • Setup CenteringTable
+Operation\ConnectionHMI.adoc • HMI PC -> Robot
+Operation\contents.txt • 253325.113309
+Operation\Deposit.adoc • Setup Deposit
+Operation\Dispenser.adoc • Setup Dispenser
+Operation\Doublesheet.adoc • Setup DoublesheetDetector
+Operation\GripperChanger.adoc • GripperChanger
+Operation\Index.adoc • Operation
+Operation\pallet.adoc • Setup Pallet
+Operation\PartSeparator.adoc • Setup PartSeparator
+Operation\PinchGripper.adoc • Calibrate Pinch Gripper
+Operation\Pointer.adoc • Calibrate Pointer
+Operation\Regrip.adoc • Setup Regrip
+Operation\setupRobot.adoc • Setup Robot to Machine
+Operation\startup.adoc • Startup of the robot
+Operation\ToolChanger.adoc • ToolChanger
+Operation\VacuumGripper.adoc • Calibrate Vacuum Gripper
+Operation\workflow.adoc • Workflow
+RBasics\contents.txt • 253325.113309
+RBasics\CoordSystems.adoc • Basic Coordinate Systems
+RBasics\FanucAxlimits.adoc • Fanuc Axlimits
+RBasics\Fanuccoords.adoc • Robot Coordinates
+RBasics\Fanuccordmove.adoc • Fanuc Motion commands
+RBasics\FanucToolFrames.adoc • Tool frames
+RBasics\FanucUserFrames.adoc • User frames
+RBasics\Index.adoc • Basics
+RBasics-DRAFT\contents.txt • 253608.023627
+RBasics-DRAFT\CoordSystems.adoc • Basic Coordinate Systems
+RBasics-DRAFT\Index.adoc • Basics - DRAFT
+RBasics-DRAFT\MotionCommands.adoc • Motion commands
+RBasics-DRAFT\RobotCoordinates.adoc • Robot Coordinates
+RBasics-DRAFT\SOP.adoc • Standard Operating Procedure (SOP)
+Run\advanced.adoc • 
+Run\contents.txt • 251208.121216
+Run\Fluxload.adoc • Program Flux and load robot
+Run\index.adoc • Run a Program
+Schematics\contents.txt • 251208.121216
+Schematics\index.adoc • Schematics
+Schematics\Safety.adoc • Safety
+Schematics\schematics.adoc • Schematics
+Troubleshootflux\Collision-while-Insertion-Extraction.adoc • Collisions while Insertion and Extraction
+Troubleshootflux\Collisions-with-machine.adoc • Collisions with Machine
+Troubleshootflux\contents.txt • 251208.121216
+Troubleshootflux\Index.adoc • Troubleshooting Flux
+Troubleshootflux\Modification-of-Waypoints.adoc • Modifications of Waypoints
+Troubleshootflux\Overtravel-of-Axis.adoc • Overtravel of Axis
+Troubleshootflux\Part-Pickup.adoc • Part Pickup Error
+Troubleshootrobot\accuracy.adoc • Accuracy
+Troubleshootrobot\contents.txt • 251208.121216
+Troubleshootrobot\Errormessages.adoc • Troubleshoot robot
+Troubleshootrobot\Index.adoc • Troubleshoot robot
+CellConfig\ConfigureGripper\contents.txt • 251208.121215
+CellConfig\DEV_Components\cellcomponents.adoc • Flux: Cell components
+CellConfig\DEV_Components\contents.txt • 251208.121215
+CellConfig\DEV_Components\Dispenser.adoc • Change dispenser geometry
+CellConfig\DEV_Components\gripper.adoc • Tweak a gripper CAD geometry
+CellConfig\DEV_Components\Index.adoc • Flux: Tweeak Components
+CellConfig\DEV_Components\pinch.adoc • Adjust Pinch gripper offset
+electricalwiring\DevicePanel\AnalogIO.adoc • Analog IO's
+electricalwiring\DevicePanel\contents.txt • 251208.121216
+electricalwiring\DevicePanel\diginp.adoc • Digital input
+electricalwiring\DevicePanel\DigIO.adoc • Digital IO
+electricalwiring\DevicePanel\Index.adoc • Device panel
+electricalwiring\DevicePanel\Manifold.adoc • Manifold
+electricalwiring\DevicePanel\Relay.adoc • Relay station
+electricalwiring\DevicePanel\terminals.adoc • 0v and 24v terminal
+electricalwiring\DevicePanel\UserIO.adoc • UserIO
+electricalwiring\DevicePanel\vacuum.adoc • Vacuum generator
+electricalwiring\Grippers\contents.txt • 251208.121216
+electricalwiring\Grippers\index.adoc • Gripper
+electricalwiring\img\w2.svg
+electricalwiring\img\w3.svg
+LSProgramming\FanucHW\communication.adoc • Communication
+LSProgramming\FanucHW\contents.txt • 251208.121216
+LSProgramming\FanucHW\FR_bgAllign.adoc • FR_BgAllign
+LSProgramming\FanucHW\FR_GRipClose.adoc • FR_GRipClose
+LSProgramming\FanucHW\FR_Scale.adoc • FFR_Scale
+LSProgramming\FanucHW\FR_StackSearch.adoc • FR_StackSearch
+LSProgramming\FanucHW\Index.adoc • Fanuc functions & macros
+LSProgramming\FanucHW\Operation.adoc • General operation procedure
+LSProgramming\FanucHW\turn.adoc • Turn a part into the BG
+LSProgramming\Framecycles\contents.txt • 251208.121216
+LSProgramming\Framecycles\Dispenser.adoc • Sub_Dispenser
+LSProgramming\Framecycles\General.adoc • General
+LSProgramming\Framecycles\index.adoc • Flux Sub structure
+LSProgramming\Framecycles\PalletAB13.adoc • Sub_PalletAB13
+LSProgramming\Framecycles\PalletCenter.adoc • Sub_PalletCenter
+LSProgramming\Framecycles\Palletimage.adoc • Sub_PalletImage
+LSProgramming\Framecycles\SubBendXcycle.adoc • Sub_BendXCycle
+LSProgramming\RA_interface\contents.txt • 251208.121216
+LSProgramming\RA_interface\Index.adoc • RA interface
+LSProgramming\RA_interface\safety.adoc • Safety first !
+RBasics\bestpractise\Adjustments.adoc • Improve accuracy
+RBasics\bestpractise\contents.txt • 253325.113309
+RBasics\bestpractise\corrections.adoc • Manual Corrections
+RBasics\bestpractise\gripper.adoc • Gripper usage
+RBasics\bestpractise\index.adoc • Best practices
+RBasics\bestpractise\Layout.adoc • Basic Layout concept
+RBasics\bestpractise\reach.adoc • Components
+RBasics\bestpractise\tilted.adoc • Tilted robot
+RBasics-DRAFT\Frames\contents.txt • 251403.121409
+RBasics-DRAFT\Frames\FramesCalibProcedure.adoc • Frames Calibration Procedure
+RBasics-DRAFT\Frames\Index.adoc • Frames
+RBasics-DRAFT\Frames\JogFrame.adoc • Jog Frame
+RBasics-DRAFT\Frames\ToolFrame.adoc • Tool Frame
+RBasics-DRAFT\Frames\UserFrame.adoc • User Frame
+Schematics\img\Scheme-1.pdf
+Schematics\img\Scheme-2.pdf
+Schematics\img\Scheme-3.pdf
+Schematics\img\Scheme-4.pdf
+Schematics\img\Scheme-5.pdf
+Schematics\img\Scheme-6.pdf
+Schematics\img\Scheme-7.pdf
+Schematics\img\Scheme-8.pdf
+Schematics\img\Scheme-9.pdf
+LSProgramming\RA_interface\1_Generalinformation\contents.txt • 251208.121216
+LSProgramming\RA_interface\1_Generalinformation\index.adoc • Types of robot couplings
+LSProgramming\RA_interface\2_Descriptionofhardware\contents.txt • 251208.121216
+LSProgramming\RA_interface\2_Descriptionofhardware\DigitalIngerface.adoc • Digital interface
+LSProgramming\RA_interface\2_Descriptionofhardware\Ethercat.adoc • Ethercat
+LSProgramming\RA_interface\2_Descriptionofhardware\index.adoc • Description of the hardware
+LSProgramming\RA_interface\2_Descriptionofhardware\RAinterface.adoc • RA interface
+LSProgramming\RA_interface\2_Descriptionofhardware\security_network.adoc • Network security
+LSProgramming\RA_interface\4_Bendingprogram\contents.txt • 251208.121216
+LSProgramming\RA_interface\4_Bendingprogram\index.adoc • Run a FluxRobot program
+LSProgramming\RA_interface\1_Generalinformation\DigitalIOcoupling\contents.txt • 251208.121216
+LSProgramming\RA_interface\1_Generalinformation\DigitalIOcoupling\index.adoc • Digital coupling
+LSProgramming\RA_interface\1_Generalinformation\Loosesyncronizedcoupling\contents.txt • 251208.121216
+LSProgramming\RA_interface\1_Generalinformation\Loosesyncronizedcoupling\index.adoc • Loose syncronized coupling
+LSProgramming\RA_interface\1_Generalinformation\Thightsyncronized\contents.txt • 251208.121216
+LSProgramming\RA_interface\1_Generalinformation\Thightsyncronized\index.adoc • Thight syncronized coupling with FluxRobot

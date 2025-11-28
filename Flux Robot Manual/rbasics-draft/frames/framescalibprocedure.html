@@ -1,0 +1,708 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Frames Calibration Procedure</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="123" height="50" /></div>
+        <div><p>FluxRobot Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welcome to FluxRobot</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../rbasics/index.html">Basics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../rbasics/coordsystems.html">Basic Coordinate Systems</a></li>
+    <li><button class="tree blank"></button><a href="../../rbasics/fanuccoords.html">Robot Coordinates</a></li>
+    <li><button class="tree blank"></button><a href="../../rbasics/fanuctoolframes.html">Tool frames</a></li>
+    <li><button class="tree blank"></button><a href="../../rbasics/fanucuserframes.html">User frames</a></li>
+    <li><button class="tree blank"></button><a href="../../rbasics/fanuccordmove.html">Fanuc Motion commands</a></li>
+    <li><button class="tree blank"></button><a href="../../rbasics/fanucaxlimits.html">Fanuc Axlimits</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../rbasics/bestpractise/index.html">Best practices</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../rbasics/bestpractise/layout.html">Basic Layout concept</a></li>
+      <li><button class="tree blank"></button><a href="../../rbasics/bestpractise/tilted.html">Tilted robot</a></li>
+      <li><button class="tree blank"></button><a href="../../rbasics/bestpractise/gripper.html">Gripper usage</a></li>
+      <li><button class="tree blank"></button><a href="../../rbasics/bestpractise/reach.html">Components</a></li>
+      <li><button class="tree blank"></button><a href="../../rbasics/bestpractise/corrections.html">Manual Corrections</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Basics - DRAFT</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../sop.html">Standard Operating Procedure (SOP)</a></li>
+    <li><button class="tree blank"></button><a href="../coordsystems.html">Basic Coordinate Systems</a></li>
+    <li><button class="tree blank"></button><a href="../robotcoordinates.html">Robot Coordinates</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Frames</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="toolframe.html">Tool Frame</a></li>
+      <li><button class="tree blank"></button><a href="userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="jogframe.html">Jog Frame</a></li>
+      <li><button class="tree blank"></button><a class="active" href="framescalibprocedure.html">Frames Calibration Procedure</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../motioncommands.html">Motion commands</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../motionsequences/index.html">Motion sequences</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../motionsequences/pickup_pinch.html">PickupDispenser</a></li>
+    <li><button class="tree blank"></button><a href="../../motionsequences/pickup_vac.html">PickupPallet</a></li>
+    <li><button class="tree blank"></button><a href="../../motionsequences/partseparator.html">PartSeparator</a></li>
+    <li><button class="tree blank"></button><a href="../../motionsequences/doublesheet.html">DoublesheetDetector</a></li>
+    <li><button class="tree blank"></button><a href="../../motionsequences/regrip.html">Regrip</a></li>
+    <li><button class="tree blank"></button><a href="../../motionsequences/centering.html">CenteringTable</a></li>
+    <li><button class="tree blank"></button><a href="../../motionsequences/bendpos.html">BendPositioning</a></li>
+    <li><button class="tree blank"></button><a href="../../motionsequences/deposit.html">Deposit</a></li>
+    <li><button class="tree blank"></button><a href="../../motionsequences/toolchanger.html">ToolChanger</a></li>
+    <li><button class="tree blank"></button><a href="../../motionsequences/gripperchanger.html">GripperChanger</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cellconfig/index.html">Cell Components</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../cellconfig/grippertool.html">Gripper tool</a></li>
+    <li><button class="tree blank"></button><a href="../../cellconfig/cups.html">Trumpf standard vacuum cups</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cellconfig/dev_components/index.html">Flux: Tweeak Components</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cellconfig/dev_components/cellcomponents.html">Flux: Cell components</a></li>
+      <li><button class="tree blank"></button><a href="../../cellconfig/dev_components/pinch.html">Adjust Pinch gripper offset</a></li>
+      <li><button class="tree blank"></button><a href="../../cellconfig/dev_components/gripper.html">Tweak a gripper CAD geometry</a></li>
+      <li><button class="tree blank"></button><a href="../../cellconfig/dev_components/dispenser.html">Change dispenser geometry</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../lsprogramming/index.html">FluxRobot NC-Code</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../lsprogramming/rnc.html">Flux .RNC output</a></li>
+    <li><button class="tree blank"></button><a href="../../lsprogramming/nomenclature.html">Nomenclature and Variables</a></li>
+    <li><button class="tree blank"></button><a href="../../lsprogramming/postc2.html">Post Processor</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../lsprogramming/framecycles/index.html">Flux Sub structure</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../lsprogramming/framecycles/general.html">General</a></li>
+      <li><button class="tree blank"></button><a href="../../lsprogramming/framecycles/palletcenter.html">Sub_PalletCenter</a></li>
+      <li><button class="tree blank"></button><a href="../../lsprogramming/framecycles/palletimage.html">Sub_PalletImage</a></li>
+      <li><button class="tree blank"></button><a href="../../lsprogramming/framecycles/palletab13.html">Sub_PalletAB13</a></li>
+      <li><button class="tree blank"></button><a href="../../lsprogramming/framecycles/dispenser.html">Sub_Dispenser</a></li>
+      <li><button class="tree blank"></button><a href="../../lsprogramming/framecycles/subbendxcycle.html">Sub_BendXCycle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../lsprogramming/fanuchw/index.html">Fanuc functions & macros</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../lsprogramming/fanuchw/operation.html">General operation procedure</a></li>
+      <li><button class="tree blank"></button><a href="../../lsprogramming/fanuchw/fr_bgallign.html">FR_BgAllign</a></li>
+      <li><button class="tree blank"></button><a href="../../lsprogramming/fanuchw/fr_stacksearch.html">FR_StackSearch</a></li>
+      <li><button class="tree blank"></button><a href="../../lsprogramming/fanuchw/fr_scale.html">FFR_Scale</a></li>
+      <li><button class="tree blank"></button><a href="../../lsprogramming/fanuchw/fr_gripclose.html">FR_GRipClose</a></li>
+      <li><button class="tree blank"></button><a href="../../lsprogramming/fanuchw/communication.html">Communication</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../lsprogramming/coding.html">Fanuc Code Snippets</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../lsprogramming/ra_interface/index.html">RA interface</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../lsprogramming/ra_interface/safety.html">Safety first !</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../lsprogramming/ra_interface/2_descriptionofhardware/index.html">Description of the hardware</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../lsprogramming/ra_interface/2_descriptionofhardware/digitalingerface.html">Digital interface</a></li>
+        <li><button class="tree blank"></button><a href="../../lsprogramming/ra_interface/2_descriptionofhardware/ethercat.html">Ethercat</a></li>
+        <li><button class="tree blank"></button><a href="../../lsprogramming/ra_interface/2_descriptionofhardware/rainterface.html">RA interface</a></li>
+        <li><button class="tree blank"></button><a href="../../lsprogramming/ra_interface/2_descriptionofhardware/security_network.html">Network security</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../lsprogramming/ra_interface/1_generalinformation/index.html">Types of robot couplings</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../lsprogramming/ra_interface/1_generalinformation/digitaliocoupling/index.html">Digital coupling</a></li>
+        <li><button class="tree blank"></button><a href="../../lsprogramming/ra_interface/1_generalinformation/loosesyncronizedcoupling/index.html">Loose syncronized coupling</a></li>
+        <li><button class="tree blank"></button><a href="../../lsprogramming/ra_interface/1_generalinformation/thightsyncronized/index.html">Thight syncronized coupling with FluxRobot</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../lsprogramming/ra_interface/4_bendingprogram/index.html">Run a FluxRobot program</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../lsprogramming/hmi.html">Cell HMI</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../frames/index.html">Frames</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../frames/frame_ra25.html">UF RA 25kg 45deg</a></li>
+    <li><button class="tree blank"></button><a href="../../frames/frame_racell.html">UF RA FlexCell</a></li>
+    <li><button class="tree blank"></button><a href="../../frames/frame_flexcell.html">UF Starmatik FlexCell</a></li>
+    <li><button class="tree blank"></button><a href="../../frames/framecoord.html">Use of frame coords</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../operation/index.html">Operation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../operation/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/startup.html">Startup of the robot</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/pointer.html">Calibrate Pointer</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/pinchgripper.html">Calibrate Pinch Gripper</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/vacuumgripper.html">Calibrate Vacuum Gripper</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/calib_gauge.html">Calibrate Gauge</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/setuprobot.html">Setup Robot to Machine</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/pallet.html">Setup Pallet</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/dispenser.html">Setup Dispenser</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/partseparator.html">Setup PartSeparator</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/doublesheet.html">Setup DoublesheetDetector</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/regrip.html">Setup Regrip</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/centering.html">Setup CenteringTable</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/deposit.html">Setup Deposit</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/toolchanger.html">ToolChanger</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/gripperchanger.html">GripperChanger</a></li>
+    <li><button class="tree blank"></button><a href="../../operation/connectionhmi.html">HMI PC -> Robot</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../fence/index.html">Safety</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../fence/fence.html">Fence</a></li>
+    <li><button class="tree blank"></button><a href="../../fence/light.html">Stack Light</a></li>
+    <li><button class="tree blank"></button><a href="../../fence/robomode.html">Robot mode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../electricalwiring/index.html">Electrical wiring</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../electricalwiring/wiring.html">Wiring of the Fanuc cabinet</a></li>
+    <li><button class="tree blank"></button><a href="../../electricalwiring/robwrist.html">Wiring robot wrist</a></li>
+    <li><button class="tree blank"></button><a href="../../electricalwiring/robback.html">Wiring robot back hub</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../electricalwiring/devicepanel/index.html">Device panel</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../electricalwiring/devicepanel/digio.html">Digital IO</a></li>
+      <li><button class="tree blank"></button><a href="../../electricalwiring/devicepanel/analogio.html">Analog IO's</a></li>
+      <li><button class="tree blank"></button><a href="../../electricalwiring/devicepanel/diginp.html">Digital input</a></li>
+      <li><button class="tree blank"></button><a href="../../electricalwiring/devicepanel/manifold.html">Manifold</a></li>
+      <li><button class="tree blank"></button><a href="../../electricalwiring/devicepanel/vacuum.html">Vacuum generator</a></li>
+      <li><button class="tree blank"></button><a href="../../electricalwiring/devicepanel/userio.html">UserIO</a></li>
+      <li><button class="tree blank"></button><a href="../../electricalwiring/devicepanel/relay.html">Relay station</a></li>
+      <li><button class="tree blank"></button><a href="../../electricalwiring/devicepanel/terminals.html">0v and 24v terminal</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../electricalwiring/grippers/index.html">Gripper</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../schematics/index.html">Schematics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../schematics/safety.html">Safety</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../troubleshootflux/index.html">Troubleshooting Flux</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../troubleshootflux/part-pickup.html">Part Pickup Error</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshootflux/collisions-with-machine.html">Collisions with Machine</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshootflux/overtravel-of-axis.html">Overtravel of Axis</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshootflux/modification-of-waypoints.html">Modifications of Waypoints</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshootflux/collision-while-insertion-extraction.html">Collisions while Insertion and Extraction</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../troubleshootrobot/index.html">Troubleshoot robot</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../troubleshootrobot/errormessages.html">Troubleshoot robot</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshootrobot/accuracy.html">Accuracy</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Basics - DRAFT</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Frames</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="framescalibprocedure.html">Frames Calibration Procedure</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Frames Calibration Procedure</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This procedure describes how to calibrate frames for robotic applications to
+ensure accurate tool positioning and reliable operation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tool_frame_calibration">Tool Frame calibration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Setting the TCP ensures accurate tool movement and rotation. The
+following procedure is used to find the TCP:</p>
+</div>
+<div class="sect2">
+<h3 id="_prerequisites_for_tcp_calibration">Prerequisites for TCP Calibration</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Mounting Plane</strong>: A fixed surface to hold the reference tool during
+calibration. In our setup, we used a stable table as the mounting plane surface.</p>
+</li>
+<li>
+<p><strong>Reference Tool</strong>: A pointed-end tool mounted on the mounting plane. This tool
+helps define the exact tip of the tool (TCP). We used a pointed screwdriver for
+accuracy.(Using a sharp, well-defined tool is important for precise TCP
+calculation.)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Methods For Setting TCP:
+1.	Six - point (XY) method
+2.	Three - point method
+3.	Direct Entry of TCP</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Fanuc supports additional methods for TCP setup. We have explored only the
+most commonly used ones above. Refer to the robot manual for other available
+methods.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_six_point_method_for_tool_frame">Six-Point Method For Tool Frame</h3>
+<div class="paragraph">
+<p>In six-point method, you will teach a total of six points to calculate the Tool
+Center Point (TCP):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Three Approach Points - Touch the same point(TCP) in space from different
+angles to define the TCP position.</p>
+</li>
+<li>
+<p>Orient Origin Point - A reference point for orientation.</p>
+</li>
+<li>
+<p>X-Direction Point - Defines the direction of the tool&#8217;s X-axis.</p>
+</li>
+<li>
+<p>Y-Direction Point - Defines the direction of the tool&#8217;s Y-axis.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This method calculates both the position and orientation of the tool.</p>
+</div>
+<div class="paragraph">
+<p><strong>Advantage</strong>:</p>
+</div>
+<div class="paragraph">
+<p>The user can decide and set any direction as X and Y (or X and Z),
+based on how the tool is mounted. This makes it ideal for tools that are tilted,
+rotated, or mounted in unique orientations.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Before recording any TCP points, make sure the correct pre-setup is done —
+otherwise, the calibration will be incorrect.</p>
+</li>
+<li>
+<p>Set Tool Frame to Zero tool.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Select a tool frame that has no offset values (all X, Y, Z, W, P, R = 0)</p>
+</li>
+<li>
+<p>This ensures the robot calculates the TCP from the robot flange, not from an
+existing offset.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you select a tool frame that already has values, the robot will
+calculate the new TCP relative to the old one, not from the base of the robot
+arm. For Example: In our robot, Tool Frame 9 is the zero tool (all values are
+zero).
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To set Tool frame as zero: Press SHIFT + COORD in TP, then select Tool and
+Press  9 to set the zero tool.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Approach points</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Manually jog the robot to reach the approach point and
+position the TCP on the reference tool tip. Then, press SHIFT + RECORD on the TP
+to record the approach point. A confirmation message will appear stating that a
+new point has been recorded.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Orient Origin point</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A reference point for orientation.</p>
+</li>
+<li>
+<p>The tool tip should touch the mounting surface perpendicularly.</p>
+</li>
+<li>
+<p>The orient origin helps define the tool&#8217;s base direction (Z-axis), and it
+must be perpendicular to the plane.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note : The orient origin point has to be touched using the tip of the tool,
+pointing straight down toward the mounting plane, which makes the tool&#8217;s Z-axis
+perpendicular to the surface.</p>
+</div>
+<div class="paragraph">
+<p><strong>X - Direction point</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Defines the tool&#8217;s X-axis direction for the tool.</p>
+</li>
+<li>
+<p>The user can choose any direction for X or Y, depending on their application
+or preferred orientation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Y - Direction point</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Defines the Y-axis direction for the tool.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After setting the TCP, set the Tool Frame to the correct tool number which was
+chosen to find TCP by pressing SHIFT + COORD on the Teach Pendant and using
+number keys in TP set the tool number. Then press COORD to switch to Tool.
+Jogging in the Tool Frame will now move the robot in the tool&#8217;s direction, and
+the displayed coordinates will match the tool&#8217;s orientation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_three_point_method_for_tool_frame">Three Point Method for Tool Frame</h3>
+<div class="paragraph">
+<p>In the three-point method, only three approach points are needed. The user
+cannot define the tool&#8217;s orientation manually, so the robot calculates the
+direction based on its existing coordinate system and assumes the tool is
+aligned with the default Z-axis.</p>
+</div>
+<div class="paragraph">
+<p><strong>Important Notes &amp; Prerequisites</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Always use a known tool with TCP or a Calibration tool with TCP (properly set
+Tool Frame) to ensure accurate frame calculation.</p>
+</li>
+<li>
+<p>Before starting, set the Tool Frame using SHIFT + COORD to select the
+correct tool.</p>
+</li>
+<li>
+<p>Use SHIFT + RECORD to save each point.</p>
+</li>
+<li>
+<p>Use SHIFT + MOVETO to return to previously recorded points for accurate
+relative positioning.</p>
+</li>
+<li>
+<p>Typically, after recording the origin and X-direction points, you move back
+to the origin and then jog in the Y direction before recording the final point.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Key Differences in Usage</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>User Frame: Affects all programmed motions. Use this when programming
+relative to a part, fixture, or table.</p>
+</li>
+<li>
+<p>Jog Frame: Affects only manual jogging. Useful during setup or when jogging
+in a frame aligned to the tool or a different plane.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Jog Frame does not affect robot programs, while User Frame does.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_direct_entry_of_frames">Direct Entry of Frames</h3>
+<div class="paragraph">
+<p>This method allows you to manually input the coordinate values for the Tool
+Frame or User Frame.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can enter the origin position (X, Y, Z) and the orientation (W, P, R)
+directly into the frame.</p>
+</li>
+<li>
+<p>Use this when the exact TCP position or user frame orientation is already
+known through CAD models, measurements, or prior calculations.</p>
+</li>
+<li>
+<p>Access the frame setup menu, choose the desired Tool or User frame, and
+enter the values using the function keys and numeric/alphabet input.</p>
+</li>
+<li>
+<p>Press ENTER to save the frame after all values are entered.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Ensure no unnecessary tool or user frame is active when performing direct
+entry to avoid compounding offsets. Use SHIFT + COORD to switch to the desired
+frame.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The teach pendant allows direct input of TCP values when the design data
+already contains the tool offset.</p>
+</li>
+<li>
+<p>For example, consider a cylindrical tool concentric with the robot flange
+and 100 mm in length along the Z-axis.</p>
+</li>
+<li>
+<p>In this case, you can directly enter Z = 100 mm in the TCP direct entry
+screen, which shifts the TCP from the flange center to the tool tip.</p>
+</li>
+<li>
+<p>In image we have used to set the zero as tool and user frame.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_user_frame_calibration">User Frame calibration</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_three_point_method_for_user_jog_frame">Three Point Method For User &amp; Jog Frame :</h3>
+<div class="paragraph">
+<p>The Three-Point Method allows you to define a custom coordinate system by
+teaching three key points. The same procedure is used for both User Frame and
+Jog Frame. You will record:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Origin Point (ORIENT ORIGIN): Place the known TCP or a calibration tool tip
+precisely at the origin of the desired frame (usually a corner on a flat
+surface).</p>
+</li>
+<li>
+<p>X-Direction Point: Move the TCP approximately 100 mm along the desired X
+direction and record this point.</p>
+</li>
+<li>
+<p>Y-Direction Point: Return to the origin point (Shift + MOVETO), then move
+approximately 100 mm along the desired Y direction and record the third point.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The robot will automatically calculate the frame orientation based on these
+three points.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_tool_frame_calibration">Tool Frame calibration</a>
+  </li>
+  <li level="2">
+   <a href="#_prerequisites_for_tcp_calibration">Prerequisites for TCP Calibration</a>
+  </li>
+  <li level="2">
+   <a href="#_six_point_method_for_tool_frame">Six-Point Method For Tool Frame</a>
+  </li>
+  <li level="2">
+   <a href="#_three_point_method_for_tool_frame">Three Point Method for Tool Frame</a>
+  </li>
+  <li level="2">
+   <a href="#_direct_entry_of_frames">Direct Entry of Frames</a>
+  </li>
+  <li level="1">
+   <a href="#_user_frame_calibration">User Frame calibration</a>
+  </li>
+  <li level="2">
+   <a href="#_three_point_method_for_user_jog_frame">Three Point Method For User &amp; Jog Frame :</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jogframe.html">Jog Frame</a></span>
+ <span class="next"><a href="../motioncommands.html">Motion commands</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2023 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

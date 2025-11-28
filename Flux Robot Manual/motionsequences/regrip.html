@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Regrip</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="123" height="50" /></div>
+        <div><p>FluxRobot Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welcome to FluxRobot</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../rbasics/index.html">Basics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../rbasics/coordsystems.html">Basic Coordinate Systems</a></li>
+    <li><button class="tree blank"></button><a href="../rbasics/fanuccoords.html">Robot Coordinates</a></li>
+    <li><button class="tree blank"></button><a href="../rbasics/fanuctoolframes.html">Tool frames</a></li>
+    <li><button class="tree blank"></button><a href="../rbasics/fanucuserframes.html">User frames</a></li>
+    <li><button class="tree blank"></button><a href="../rbasics/fanuccordmove.html">Fanuc Motion commands</a></li>
+    <li><button class="tree blank"></button><a href="../rbasics/fanucaxlimits.html">Fanuc Axlimits</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../rbasics/bestpractise/index.html">Best practices</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../rbasics/bestpractise/layout.html">Basic Layout concept</a></li>
+      <li><button class="tree blank"></button><a href="../rbasics/bestpractise/tilted.html">Tilted robot</a></li>
+      <li><button class="tree blank"></button><a href="../rbasics/bestpractise/gripper.html">Gripper usage</a></li>
+      <li><button class="tree blank"></button><a href="../rbasics/bestpractise/reach.html">Components</a></li>
+      <li><button class="tree blank"></button><a href="../rbasics/bestpractise/corrections.html">Manual Corrections</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../rbasics-draft/index.html">Basics - DRAFT</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../rbasics-draft/sop.html">Standard Operating Procedure (SOP)</a></li>
+    <li><button class="tree blank"></button><a href="../rbasics-draft/coordsystems.html">Basic Coordinate Systems</a></li>
+    <li><button class="tree blank"></button><a href="../rbasics-draft/robotcoordinates.html">Robot Coordinates</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../rbasics-draft/frames/index.html">Frames</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../rbasics-draft/frames/toolframe.html">Tool Frame</a></li>
+      <li><button class="tree blank"></button><a href="../rbasics-draft/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="../rbasics-draft/frames/jogframe.html">Jog Frame</a></li>
+      <li><button class="tree blank"></button><a href="../rbasics-draft/frames/framescalibprocedure.html">Frames Calibration Procedure</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../rbasics-draft/motioncommands.html">Motion commands</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Motion sequences</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="pickup_pinch.html">PickupDispenser</a></li>
+    <li><button class="tree blank"></button><a href="pickup_vac.html">PickupPallet</a></li>
+    <li><button class="tree blank"></button><a href="partseparator.html">PartSeparator</a></li>
+    <li><button class="tree blank"></button><a href="doublesheet.html">DoublesheetDetector</a></li>
+    <li><button class="tree blank"></button><a class="active" href="regrip.html">Regrip</a></li>
+    <li><button class="tree blank"></button><a href="centering.html">CenteringTable</a></li>
+    <li><button class="tree blank"></button><a href="bendpos.html">BendPositioning</a></li>
+    <li><button class="tree blank"></button><a href="deposit.html">Deposit</a></li>
+    <li><button class="tree blank"></button><a href="toolchanger.html">ToolChanger</a></li>
+    <li><button class="tree blank"></button><a href="gripperchanger.html">GripperChanger</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cellconfig/index.html">Cell Components</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../cellconfig/grippertool.html">Gripper tool</a></li>
+    <li><button class="tree blank"></button><a href="../cellconfig/cups.html">Trumpf standard vacuum cups</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cellconfig/dev_components/index.html">Flux: Tweeak Components</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cellconfig/dev_components/cellcomponents.html">Flux: Cell components</a></li>
+      <li><button class="tree blank"></button><a href="../cellconfig/dev_components/pinch.html">Adjust Pinch gripper offset</a></li>
+      <li><button class="tree blank"></button><a href="../cellconfig/dev_components/gripper.html">Tweak a gripper CAD geometry</a></li>
+      <li><button class="tree blank"></button><a href="../cellconfig/dev_components/dispenser.html">Change dispenser geometry</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../lsprogramming/index.html">FluxRobot NC-Code</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../lsprogramming/rnc.html">Flux .RNC output</a></li>
+    <li><button class="tree blank"></button><a href="../lsprogramming/nomenclature.html">Nomenclature and Variables</a></li>
+    <li><button class="tree blank"></button><a href="../lsprogramming/postc2.html">Post Processor</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../lsprogramming/framecycles/index.html">Flux Sub structure</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../lsprogramming/framecycles/general.html">General</a></li>
+      <li><button class="tree blank"></button><a href="../lsprogramming/framecycles/palletcenter.html">Sub_PalletCenter</a></li>
+      <li><button class="tree blank"></button><a href="../lsprogramming/framecycles/palletimage.html">Sub_PalletImage</a></li>
+      <li><button class="tree blank"></button><a href="../lsprogramming/framecycles/palletab13.html">Sub_PalletAB13</a></li>
+      <li><button class="tree blank"></button><a href="../lsprogramming/framecycles/dispenser.html">Sub_Dispenser</a></li>
+      <li><button class="tree blank"></button><a href="../lsprogramming/framecycles/subbendxcycle.html">Sub_BendXCycle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../lsprogramming/fanuchw/index.html">Fanuc functions & macros</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../lsprogramming/fanuchw/operation.html">General operation procedure</a></li>
+      <li><button class="tree blank"></button><a href="../lsprogramming/fanuchw/fr_bgallign.html">FR_BgAllign</a></li>
+      <li><button class="tree blank"></button><a href="../lsprogramming/fanuchw/fr_stacksearch.html">FR_StackSearch</a></li>
+      <li><button class="tree blank"></button><a href="../lsprogramming/fanuchw/fr_scale.html">FFR_Scale</a></li>
+      <li><button class="tree blank"></button><a href="../lsprogramming/fanuchw/fr_gripclose.html">FR_GRipClose</a></li>
+      <li><button class="tree blank"></button><a href="../lsprogramming/fanuchw/communication.html">Communication</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../lsprogramming/coding.html">Fanuc Code Snippets</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../lsprogramming/ra_interface/index.html">RA interface</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../lsprogramming/ra_interface/safety.html">Safety first !</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../lsprogramming/ra_interface/2_descriptionofhardware/index.html">Description of the hardware</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../lsprogramming/ra_interface/2_descriptionofhardware/digitalingerface.html">Digital interface</a></li>
+        <li><button class="tree blank"></button><a href="../lsprogramming/ra_interface/2_descriptionofhardware/ethercat.html">Ethercat</a></li>
+        <li><button class="tree blank"></button><a href="../lsprogramming/ra_interface/2_descriptionofhardware/rainterface.html">RA interface</a></li>
+        <li><button class="tree blank"></button><a href="../lsprogramming/ra_interface/2_descriptionofhardware/security_network.html">Network security</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../lsprogramming/ra_interface/1_generalinformation/index.html">Types of robot couplings</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../lsprogramming/ra_interface/1_generalinformation/digitaliocoupling/index.html">Digital coupling</a></li>
+        <li><button class="tree blank"></button><a href="../lsprogramming/ra_interface/1_generalinformation/loosesyncronizedcoupling/index.html">Loose syncronized coupling</a></li>
+        <li><button class="tree blank"></button><a href="../lsprogramming/ra_interface/1_generalinformation/thightsyncronized/index.html">Thight syncronized coupling with FluxRobot</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../lsprogramming/ra_interface/4_bendingprogram/index.html">Run a FluxRobot program</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../lsprogramming/hmi.html">Cell HMI</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../frames/index.html">Frames</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../frames/frame_ra25.html">UF RA 25kg 45deg</a></li>
+    <li><button class="tree blank"></button><a href="../frames/frame_racell.html">UF RA FlexCell</a></li>
+    <li><button class="tree blank"></button><a href="../frames/frame_flexcell.html">UF Starmatik FlexCell</a></li>
+    <li><button class="tree blank"></button><a href="../frames/framecoord.html">Use of frame coords</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../operation/index.html">Operation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../operation/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../operation/startup.html">Startup of the robot</a></li>
+    <li><button class="tree blank"></button><a href="../operation/pointer.html">Calibrate Pointer</a></li>
+    <li><button class="tree blank"></button><a href="../operation/pinchgripper.html">Calibrate Pinch Gripper</a></li>
+    <li><button class="tree blank"></button><a href="../operation/vacuumgripper.html">Calibrate Vacuum Gripper</a></li>
+    <li><button class="tree blank"></button><a href="../operation/calib_gauge.html">Calibrate Gauge</a></li>
+    <li><button class="tree blank"></button><a href="../operation/setuprobot.html">Setup Robot to Machine</a></li>
+    <li><button class="tree blank"></button><a href="../operation/pallet.html">Setup Pallet</a></li>
+    <li><button class="tree blank"></button><a href="../operation/dispenser.html">Setup Dispenser</a></li>
+    <li><button class="tree blank"></button><a href="../operation/partseparator.html">Setup PartSeparator</a></li>
+    <li><button class="tree blank"></button><a href="../operation/doublesheet.html">Setup DoublesheetDetector</a></li>
+    <li><button class="tree blank"></button><a href="../operation/regrip.html">Setup Regrip</a></li>
+    <li><button class="tree blank"></button><a href="../operation/centering.html">Setup CenteringTable</a></li>
+    <li><button class="tree blank"></button><a href="../operation/deposit.html">Setup Deposit</a></li>
+    <li><button class="tree blank"></button><a href="../operation/toolchanger.html">ToolChanger</a></li>
+    <li><button class="tree blank"></button><a href="../operation/gripperchanger.html">GripperChanger</a></li>
+    <li><button class="tree blank"></button><a href="../operation/connectionhmi.html">HMI PC -> Robot</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../fence/index.html">Safety</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../fence/fence.html">Fence</a></li>
+    <li><button class="tree blank"></button><a href="../fence/light.html">Stack Light</a></li>
+    <li><button class="tree blank"></button><a href="../fence/robomode.html">Robot mode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../electricalwiring/index.html">Electrical wiring</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../electricalwiring/wiring.html">Wiring of the Fanuc cabinet</a></li>
+    <li><button class="tree blank"></button><a href="../electricalwiring/robwrist.html">Wiring robot wrist</a></li>
+    <li><button class="tree blank"></button><a href="../electricalwiring/robback.html">Wiring robot back hub</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../electricalwiring/devicepanel/index.html">Device panel</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../electricalwiring/devicepanel/digio.html">Digital IO</a></li>
+      <li><button class="tree blank"></button><a href="../electricalwiring/devicepanel/analogio.html">Analog IO's</a></li>
+      <li><button class="tree blank"></button><a href="../electricalwiring/devicepanel/diginp.html">Digital input</a></li>
+      <li><button class="tree blank"></button><a href="../electricalwiring/devicepanel/manifold.html">Manifold</a></li>
+      <li><button class="tree blank"></button><a href="../electricalwiring/devicepanel/vacuum.html">Vacuum generator</a></li>
+      <li><button class="tree blank"></button><a href="../electricalwiring/devicepanel/userio.html">UserIO</a></li>
+      <li><button class="tree blank"></button><a href="../electricalwiring/devicepanel/relay.html">Relay station</a></li>
+      <li><button class="tree blank"></button><a href="../electricalwiring/devicepanel/terminals.html">0v and 24v terminal</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../electricalwiring/grippers/index.html">Gripper</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../schematics/index.html">Schematics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../schematics/safety.html">Safety</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshootflux/index.html">Troubleshooting Flux</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshootflux/part-pickup.html">Part Pickup Error</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshootflux/collisions-with-machine.html">Collisions with Machine</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshootflux/overtravel-of-axis.html">Overtravel of Axis</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshootflux/modification-of-waypoints.html">Modifications of Waypoints</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshootflux/collision-while-insertion-extraction.html">Collisions while Insertion and Extraction</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshootrobot/index.html">Troubleshoot robot</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshootrobot/errormessages.html">Troubleshoot robot</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshootrobot/accuracy.html">Accuracy</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Motion sequences</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="regrip.html">Regrip</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Regrip</h1>
+<div class="paragraph">
+<p>content</p>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="doublesheet.html">DoublesheetDetector</a></span>
+ <span class="next"><a href="centering.html">CenteringTable</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2023 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>
