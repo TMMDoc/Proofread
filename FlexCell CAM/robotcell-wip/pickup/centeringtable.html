@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
-  <title>Pickup from pallet</title>
+  <title>Centering table</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -247,8 +247,8 @@
      <button class="tree open"></button>
      <a href="index.html">Part pickup</a>
      <ul>
-      <li><button class="tree blank"></button><a class="active" href="frompallet.html">Pickup from pallet</a></li>
-      <li><button class="tree blank"></button><a href="centeringtable.html">Centering table</a></li>
+      <li><button class="tree blank"></button><a href="frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a class="active" href="centeringtable.html">Centering table</a></li>
      </ul>
     </li>
     <li>
@@ -449,127 +449,82 @@
  </div>
  <div>/</div>
  <div>
-  <a href="frompallet.html">Pickup from pallet</a>
+  <a href="centeringtable.html">Centering table</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Pickup from pallet</h1>
+                        <h1>Centering table</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Combi gripper uses its Vacuum suction feature for picking the part from the <strong>Pickup pallet</strong>
-to placing it on the <strong>Centering table</strong>.</p>
+<p>Once the part picked from the Pickup Pallet is positioned on the Centering
+table, the Combi gripper uses its jaw-type feature to take the part from the
+Centering table for bending and then deposition.</p>
 </div>
 <div class="paragraph">
-<p>When flat parts are picked up from a pallet, the following parameters influence
-this process:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The position of the pallet in the machine cell.</p>
-</li>
-<li>
-<p>The position and orientation of the part stack on the pallet.</p>
-</li>
-<li>
-<p>The position and orientation of the suction gripper on the part.</p>
-</li>
-<li>
-<p>The suction cup configuration of the gripper (which cups are turned on/off,
-and what type of cups are mounted in each socket).</p>
-</li>
-</ul>
+<p>Prior to performing the bending operation, it is essential to ensure that the
+part is accurately centered and oriented on the centering table. This step is
+crucial for achieving precise bending results.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_panels">Panels</h2>
+<h2 id="_pallet_panel">Pallet panel</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The panels used to edit all these settings are displayed below - they are all
-interconnected by up/down navigation links leading to other panels in a logical
-sequence.</p>
+<p>The Pallet panel will be open when you directly click on the centering table
+component. This panel is used to select a Centering table and position it in the cell.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="img/palletnav.png" alt="Pallet Navigation" width="827">
-</div>
-</div>
-<div class="paragraph">
-<p>As the image above shows, these panels can also be accessed easily by just clicking
-on various objects in the simulation:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>To open the <strong>Pallet</strong> panel, click on a pallet.</p>
-</li>
-<li>
-<p>To edit the part-stack on a pallet (the <strong>Pickup</strong> panel), click on the blanks
-lying on the pallet.</p>
-</li>
-<li>
-<p>To edit the gripper position on the blank (the <strong>Gripper</strong> panel), click on
-the gripper.</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_pallet_panel">Pallet Panel</h3>
-<div class="paragraph">
-<p>The <strong>Pallet</strong> panel is used to select a pallet and position it in the cell. You
-can open this panel by just clicking on a pallet; FlexCell CAM will also position the
-simulation timeline so that the robot is posed at the point of picking up the
-part from the pallet.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/pallet.png" alt="Pallet" width="400">
+<img src="img/centeringtable.png" alt="Pallet" width="400">
 </div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Use the <strong>Name</strong> choice to select a different pallet. Normally, only
-pallets that are usable for this blank are listed, but you can turn off the
-<strong>Filtered</strong> check and then all available pallets are listed.</p>
+<p>Use the <strong>Name</strong> choice to select a required component. Turn off the
+<strong>Filtered</strong> check to see all available list.</p>
 </li>
 <li>
-<p>Moving the mouse over a name in the names list displays a quick summary of
-that pallet, along with a thumbnail:</p>
+<p>Moving the mouse over a name in the names list displays a quick summary
+of that components, along with a thumbnail:</p>
 <div class="paragraph">
 <p><span class="image"><img src="img/palletthumbnail.png" alt="Pallet thumbnail" width="200"></span></p>
 </div>
 </li>
 <li>
-<p>Use the <strong>Position</strong> inputs to position the pallet in <strong>X</strong> and <strong>Y</strong>
-(in cell coordinates) and use <strong>Lift</strong> input to position the pallet in <strong>Z</strong>.</p>
+<p>Use the <strong>Position</strong> inputs to position the centering table in <strong>X</strong>
+and <strong>Y</strong> (in cell coordinates) and use <strong>Lift</strong> input to position the centering table in
+<strong>Z</strong>.</p>
 </li>
 <li>
-<p>Use the <strong>Angle</strong> input to rotate the pallet in <strong>R</strong> (in cell
+<p>Use the <strong>Angle</strong> input to rotate the centering table in <strong>R</strong> (in cell
 coordinates).</p>
 </li>
 <li>
-<p>Use <strong>Tilt X angle</strong> and <strong>Tilt Y angle</strong> to tilt the pallet about the <strong>X</strong> and <strong>Y</strong>
-axes respectively. As you move or rotate the pallet, the part stack on the
-pallet, and the gripper/robot all follow the movement.</p>
+<p>Use <strong>Tilt X angle</strong> and <strong>Tilt Y angle</strong> to tilt the centering table about the <strong>X</strong> and <strong>Y</strong>
+axes respectively. As you move or rotate the centering table, the part stack on the
+centering table, and the gripper/robot all follow the movement.</p>
 </li>
 <li>
-<p>Use <strong>Align corner</strong> to align the part to the origin of the pallet (the
-corner used for positioning the pallet in the cell). The parts may align to
-the origin corner depending on the part size and shape.</p>
-</li>
-<li>
-<p>Use the <strong>Next</strong> and <strong>Prev</strong> buttons to navigate to the <em>other</em>
-pallets in the cell; for example the pallet with the part deposit operations.</p>
+<p>Use the <strong>Next</strong> and <strong>Prev</strong> buttons to navigate
+to the other pallets in the cell.</p>
 </li>
 <li>
 <p>Use the <strong>Pickup</strong> navigation button to edit the position of the
 part-stack on the pallet.</p>
+</li>
+<li>
+<p><strong>Use for Pickup</strong> option disables the pickup pallet component and uses the centering
+table to perform the pickup operation.</p>
+</li>
+<li>
+<p><strong>Use for Centering</strong> option enables the pickup pallet component and uses
+the centering table to perform the centering operation.</p>
 </li>
 <li>
 <p>Use the <strong>Save Config</strong> button under the <strong>Advanced</strong>
@@ -579,75 +534,77 @@ this machine.</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_pickup_panel">Pickup Panel</h3>
-<div class="paragraph">
-<p>The <strong>Pickup</strong> panel is used to edit the position of the part-stack on the pallet.
-You can open this panel directly by clicking on the stack of blanks lying on the pallet.
-(You can also access it using the <strong>Pickup</strong> link from the Pallet panel).</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="img/stack.png" alt="Stack" width="447">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Use the <strong>Position</strong> inputs to position the stack on the pallet;
-these coordinates specify the center of the part in <strong>Z</strong> and <strong>X</strong>, relative to the
-corner of the pallet, and are in the pallet&#8217;s local coordinate space.</p>
-</li>
-<li>
-<p>Use the <strong>Angle</strong> input to rotate the part around in the pallet.</p>
-</li>
-<li>
-<p>Use the <strong>Flip part</strong> checkbox to flip the part over. Note that
-this will usually mean that an additional <em>regripping</em> operation will be
-necessary before the first bend can be processed (this will be added by FluxBeta
-CAM automatically).</p>
-</li>
-<li>
-<p>The <strong>Waypoints</strong> link brings up the
-<a href="../advanced/waypoints.html">Waypoints</a> editor where you can fine-tune the robot
-trajectory during pickup.</p>
-</li>
-<li>
-<p>The <strong>RG-Stations</strong> link brings up the
-<a href="../regrip/rgstationpanel.html">Regrip Station</a> panel where you can configure the
-position of the regrip station during the pickup operation. As the part is moved
-around on the pallet, the gripper remains <em>stuck</em> to the part and the robot
-follows the movements.</p>
-</li>
-<li>
-<p>Enable the <strong>Centering Table</strong> checkbox (if required) to align and position the
-sheet metal accurately before the robot picks it up for bending. This ensures
-that the material is correctly oriented for the bending operation. See
-<a href="../pickup/centeringtable.html">Centering table</a> for more details.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_gripper_panel">Gripper Panel</h3>
+<div class="sect1">
+<h2 id="_gripper_panel">Gripper panel</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <strong>Gripper</strong> panel is used to select a different gripper, or to change the position
 and orientation at which the gripper picks up the part.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="img/gripper.png" alt="Gripper" width="460">
+<img src="img/centeringgripper.png" alt="Gripper" width="400">
 </div>
 </div>
 <div class="ulist">
 <ul>
 <li>
+<p>Use the <strong>Name</strong> choice to select a different gripper.</p>
+</li>
+<li>
+<p>Use the <strong>Next Heading</strong> button to rotate the gripper around
+to another side of the part (it rotates in 90° steps).</p>
+</li>
+<li>
 <p>Use the <strong>Position</strong> inputs to move the gripper-center relative to
 the part-center, and use the <strong>Angle</strong> input to rotate the gripper, relative
 to the part&#8217;s orientation.</p>
 </li>
+<li>
+<p>Use the <strong>Swivel Neck</strong> option to rotate the Jaw Neck with
+180° rotation.</p>
+</li>
+<li>
+<p>Enabling <strong>Alt Pickup</strong> option helps to use an alternative pickup point on the part.</p>
+</li>
+<li>
+<p>Use the <strong>Set Grip Plane</strong> to select a different plane to
+grip. When this option is selected, the mouse pointer will change to a blue
+color plus symbol. Hover around to see the plus symbol showing different plane
+orientation and select a desired plane.</p>
+</li>
+<li>
+<p>Use <strong>Vacuum Grip</strong> option to enable vacuum suction feature for picking the part from
+the centering table.</p>
+</li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_part_panel">Part panel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>Part</strong> panel is used to edit the part position on the centering table.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/centeringpart.png" alt="Part" width="400">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Position</strong> inputs to position the part on the centering
+centering table; these coordinates specify the center of the part in Z and X,
+relative to the corner of the centering table, and are in the centering table&#8217;s
+local coordinate space.</p>
+</li>
+<li>
+<p>Use the <strong>Angle</strong> input to rotate the part around in the centering table.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -659,16 +616,13 @@ to the part&#8217;s orientation.</p>
  <h3>Contents</h3>
  <ul>
   <li level="1">
-   <a href="#_panels">Panels</a>
+   <a href="#_pallet_panel">Pallet panel</a>
   </li>
-  <li level="2">
-   <a href="#_pallet_panel">Pallet Panel</a>
+  <li level="1">
+   <a href="#_gripper_panel">Gripper panel</a>
   </li>
-  <li level="2">
-   <a href="#_pickup_panel">Pickup Panel</a>
-  </li>
-  <li level="2">
-   <a href="#_gripper_panel">Gripper Panel</a>
+  <li level="1">
+   <a href="#_part_panel">Part panel</a>
   </li>
  </ul>
 </aside>
@@ -676,8 +630,8 @@ to the part&#8217;s orientation.</p>
                 </div>
             </div>
             <nav class="pagination">
- <span class="prev"><a href="index.html">Part pickup</a></span>
- <span class="next"><a href="centeringtable.html">Centering table</a></span>
+ <span class="prev"><a href="frompallet.html">Pickup from pallet</a></span>
+ <span class="next"><a href="../bending/index.html">Robotic bending</a></span>
 </nav>
 
         </div>
