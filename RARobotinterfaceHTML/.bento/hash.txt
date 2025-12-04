@@ -1,0 +1,63 @@
+Version=56
+LANGUAGE=EN
+Folders=22
+Pages=22
+UIXlate=False, DebugUIXlate=False, Language=EN
+
+contents.txt • 250004.060039
+index.adoc • Right Angle roboter interface
+manifest.txt • 254304.024350
+raw.adoc • [width="100%",cols=">74%,>26%",options="header",]
+Robot Interface Implementation.pdf
+Roboter_en_20251107.docx
+11_Descriptionofconnect\contents.txt • 254304.024350
+11_Descriptionofconnect\index.adoc • Description of connecting plug XS7
+12_Signalcourseinrobotm\contents.txt • 254304.024350
+12_Signalcourseinrobotm\index.adoc • Signal course in robot mode
+13_Machineconfiguration\contents.txt • 254304.024350
+13_Machineconfiguration\index.adoc • Machine configuration
+14_Importantnotesforcre\contents.txt • 254304.024350
+14_Importantnotesforcre\index.adoc • Important notes for creating a bending program for robot mode
+1_Organizationalmeasur\contents.txt • 254304.024350
+1_Organizationalmeasur\index.adoc • Organizational measures
+2_General\contents.txt • 254304.024350
+2_General\index.adoc • General
+3_Operatingmodes\contents.txt • 254304.024350
+3_Operatingmodes\index.adoc • Operating modes
+4_Reference\contents.txt • 254304.024350
+4_Reference\index.adoc • Reference
+5_Operatingmodekeyswit\contents.txt • 254304.024350
+5_Operatingmodekeyswit\index.adoc • Operating mode key switch
+6_connect\contents.txt • 255104.055138
+6_connect\index.adoc • Robot - RA
+71_Fanuc\contents.txt • 251904.031932
+71_Fanuc\index.adoc • FANUC system
+72_ESTUN\contents.txt • 251904.031932
+72_ESTUN\index.adoc • ESTUN system
+9_BendGuard\contents.txt • 254304.024350
+9_BendGuard\index.adoc • BendGuard
+2_General\img\image3.GIF
+6_connect\Digital\contents.txt • 254304.024350
+6_connect\Digital\index.adoc • Digital connection
+6_connect\Ethercat\contents.txt • 254304.024350
+6_connect\Ethercat\index.adoc • EtherCAT connection
+6_connect\PLC\contents.txt • 254304.024350
+6_connect\PLC\index.adoc • PLC logic implementation
+71_Fanuc\6_BG\contents.txt • 252404.032404
+71_Fanuc\6_BG\index.adoc • Sensor backgauge fingers
+72_ESTUN\6_BG\contents.txt • 252404.032404
+72_ESTUN\6_BG\index.adoc • Sensor backgauge fingers
+9_BendGuard\img\image19.GIF
+9_BendGuard\img\image3.GIF
+extracted-media\media\image19.GIF
+extracted-media\media\image3.GIF
+71_Fanuc\6_BG\BG_Analog\contents.txt • 254304.024350
+71_Fanuc\6_BG\BG_Analog\index.adoc • Analog backgauge sensor
+71_Fanuc\6_BG\BG_Dig\contents.txt • 254304.024350
+71_Fanuc\6_BG\BG_Dig\index copy.adoc • Analog backgauge sensor
+71_Fanuc\6_BG\BG_Dig\index.adoc • Digital backgauge sensor
+72_ESTUN\6_BG\BG_Analog\contents.txt • 254304.024350
+72_ESTUN\6_BG\BG_Analog\index.adoc • Analog backgauge sensor
+72_ESTUN\6_BG\BG_Dig\contents.txt • 254304.024350
+72_ESTUN\6_BG\BG_Dig\index copy.adoc • Analog backgauge sensor
+72_ESTUN\6_BG\BG_Dig\index.adoc • Digital backgauge sensor

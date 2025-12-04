@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>PLC logic implementation</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="123" height="50" /></div>
+        <div><p>RA Robot manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Right Angle roboter interface</a></li>
+  <li><button class="tree blank"></button><a href="../../1_organizationalmeasur/index.html">Organizational measures</a></li>
+  <li><button class="tree blank"></button><a href="../../2_general/index.html">General</a></li>
+  <li><button class="tree blank"></button><a href="../../3_operatingmodes/index.html">Operating modes</a></li>
+  <li><button class="tree blank"></button><a href="../../4_reference/index.html">Reference</a></li>
+  <li><button class="tree blank"></button><a href="../../5_operatingmodekeyswit/index.html">Operating mode key switch</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Robot - RA</a>
+   <ul>
+    <li><button class="tree blank"></button><a class="active" href="index.html">PLC logic implementation</a></li>
+    <li><button class="tree blank"></button><a href="../digital/index.html">Digital connection</a></li>
+    <li><button class="tree blank"></button><a href="../ethercat/index.html">EtherCAT connection</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../71_fanuc/index.html">FANUC system</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../71_fanuc/6_bg/index.html">Sensor backgauge fingers</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../71_fanuc/6_bg/bg_analog/index.html">Analog backgauge sensor</a></li>
+      <li><button class="tree blank"></button><a href="../../71_fanuc/6_bg/bg_dig/index.html">Digital backgauge sensor</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../72_estun/index.html">ESTUN system</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../72_estun/6_bg/index.html">Sensor backgauge fingers</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../72_estun/6_bg/bg_analog/index.html">Analog backgauge sensor</a></li>
+      <li><button class="tree blank"></button><a href="../../72_estun/6_bg/bg_dig/index.html">Digital backgauge sensor</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../9_bendguard/index.html">BendGuard</a></li>
+  <li><button class="tree blank"></button><a href="../../11_descriptionofconnect/index.html">Description of connecting plug XS7</a></li>
+  <li><button class="tree blank"></button><a href="../../12_signalcourseinrobotm/index.html">Signal course in robot mode</a></li>
+  <li><button class="tree blank"></button><a href="../../13_machineconfiguration/index.html">Machine configuration</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Robot - RA</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">PLC logic implementation</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>PLC logic implementation</h1>
+<div class="paragraph">
+<p>&#8201;&#8212;&#8201;here comes the chapter from the Robot Interface Implementation.pdf</p>
+</div>
+<div class="olist upperalpha">
+<ol class="upperalpha">
+<li>
+<p>Input / Output Configurations:
+The above-mentioned Robot Interface signals are mapped in PLC Digital In/Out as shown below:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/p1.png" alt="p1"></span></p>
+</div>
+<div class="paragraph">
+<p>Figure 1 Digital Input Configuration
+It may be noted that the NO/NC configuration of Inputs are selected in Parameter page of Robot Interface.</p>
+</div>
+<div class="paragraph">
+<p>Figure 2 Digital Output Configuration
+B. Robot Logic:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The complete Robot Logic will be active, if the license for “Robot Interface” is activated and then the
+parameter “Robot Option” is ON in the PLC options page.</p>
+</li>
+<li>
+<p>When the “Robot Option” is selected in the PLC, then the input “Robot Auto Mode” will activate the robot
+functions. If Laser Safe is connected, then the Bend Guard mute is also activated.</p>
+</li>
+<li>
+<p>If all the axes are homed and “Robot Auto Mode” input is active, a message “Robot mode key is active”
+will be displayed, then the controller goes to “Stop Mode” and “Start Button” control in the machine is
+transferred to Robot control of “Program Start” input.</p>
+</li>
+<li>
+<p>The input “UDP_MoveEnable” from the Robot will be used as “Foot Pedal Open” signal in order to reset
+the errors, move the RAM to UDP under error condition etc., except during “Opening Phase”.</p>
+</li>
+<li>
+<p>The “Press OK” output signal from the NC will be ON, if Homing of all the axes are completed, no errors,
+Program in Auto mode and “Robot Auto Mode” is active.</p>
+</li>
+<li>
+<p>The “NC Start” output signal from the NC will be ON, if “Program Start” input from Robot controller is ON
+and the controller goes to “Start Mode” (Green Colour LED is ON in the Panel).</p>
+</li>
+<li>
+<p>During this step, if “Program Start” input from Robot controller is ON, there are 3 possibilities of errors as
+follows:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha">
+<li>
+<p>If program in Semi mode, then there is error message “Machine not in Auto Mode”:</p>
+</li>
+<li>
+<p>If below the UDP position, then there is error message “Move RAM to UDP position”:</p>
+</li>
+<li>
+<p>If start axes is not selected as “TDC External”, then there is error message “Step Change
+External not selected”:</p>
+<div class="literalblock">
+<div class="content">
+<pre>..</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../index.html">Robot - RA</a></span>
+ <span class="next"><a href="../digital/index.html">Digital connection</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>
