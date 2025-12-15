@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title>Sensor backgauge fingers</title>
+  <title>Digital backgauge sensor</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -39,10 +39,10 @@
   </li>
   <li>
    <button class="tree open"></button>
-   <a class="active" href="index.html">Sensor backgauge fingers</a>
+   <a href="index.html">Sensor backgauge fingers</a>
    <ul>
     <li><button class="tree blank"></button><a href="bg_analog.html">Analog backgauge sensor</a></li>
-    <li><button class="tree blank"></button><a href="bg_dig.html">Digital backgauge sensor</a></li>
+    <li><button class="tree blank"></button><a class="active" href="bg_dig.html">Digital backgauge sensor</a></li>
    </ul>
   </li>
   <li>
@@ -77,22 +77,37 @@
  <div>
   <a href="index.html">Sensor backgauge fingers</a>
  </div>
+ <div>/</div>
+ <div>
+  <a href="bg_dig.html">Digital backgauge sensor</a>
+ </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Sensor backgauge fingers</h1>
-<div class="paragraph">
-<p>Following consultation with TRUMPF, integrators may also install third party
-sensor backgauge fingers. The integrator is thereby responsible for ensuring
-that the appropriate finger geometries and dimensions are set and selected in
-the press control system. The dynamics of the backgauge axes, in particular the
-Z1 and Z2 axes, must be reduced if the dimensions of the special sensor
-backgauge finger are significantly greater than the dimensions of the standard
-backgauge finger. If this is not done, the backgauge axes controllers will
-notify an overload and switch off. The robot interface signal courses are not
-dependent on the sensor backgauge fingers and therefore remain the same.</p>
+                        <h1>Digital backgauge sensor</h1>
+<div class="ulist">
+<ul>
+<li>
+<p>The digital backgauge sensor is designed to detect when the sheet metal
+makes physical contact with the backgauge.</p>
+</li>
+<li>
+<p>Each backgauge is equipped with an independent touch-based sensor.</p>
+</li>
+<li>
+<p>When the sheet touches the sensor, it immediately activates the
+corresponding Digital Input (DI) assigned to that backgauge.</p>
+</li>
+<li>
+<p>If there is no contact, the DI remains OFF.</p>
+</li>
+<li>
+<p>Each backgauge operates separately, allowing the system to identify which
+side has been touched.</p>
+</li>
+</ul>
 </div>
 
                     </article>
@@ -102,8 +117,8 @@ dependent on the sensor backgauge fingers and therefore remain the same.</p>
                 </div>
             </div>
             <nav class="pagination">
- <span class="prev"><a href="../6_connect/ethercat/index.html">EtherCAT connection</a></span>
- <span class="next"><a href="bg_analog.html">Analog backgauge sensor</a></span>
+ <span class="prev"><a href="bg_analog.html">Analog backgauge sensor</a></span>
+ <span class="next"><a href="../72_estun/index.html">ESTUN system</a></span>
 </nav>
 
         </div>
