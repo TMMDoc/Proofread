@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>EtherCAT Interface</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="45" height="15" /></div>
+        <div><p>RA Robot manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Right Angle roboter interface</a></li>
+  <li><button class="tree blank"></button><a href="../1_organizationalmeasur/index.html">Organizational measures</a></li>
+  <li><button class="tree blank"></button><a href="../2_general/index.html">General</a></li>
+  <li><button class="tree blank"></button><a href="../3_operatingmodes/index.html">Operating modes</a></li>
+  <li><button class="tree blank"></button><a href="../4_reference/index.html">Reference</a></li>
+  <li><button class="tree blank"></button><a href="../5_operatingmodekeyswit/index.html">Operating mode key switch</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Robot - RA</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="plc/index.html">PLC logic implementation</a></li>
+    <li><button class="tree blank"></button><a href="digitalconnecttion.html">Digital Robot Interface</a></li>
+    <li><button class="tree blank"></button><a class="active" href="ethercat.html">EtherCAT Interface</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../71_fanuc/index.html">FANUC system</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../71_fanuc/6_bg/index.html">Sensor backgauge fingers</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../71_fanuc/6_bg/bg_analog/index.html">Analog backgauge sensor</a></li>
+      <li><button class="tree blank"></button><a href="../71_fanuc/6_bg/bg_dig/index.html">Digital backgauge sensor</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../72_estun/index.html">ESTUN system</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../72_estun/6_bg/index.html">Sensor backgauge fingers</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../72_estun/6_bg/bg_analog/index.html">Analog backgauge sensor</a></li>
+      <li><button class="tree blank"></button><a href="../72_estun/6_bg/bg_dig/index.html">Digital backgauge sensor</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../9_bendguard/index.html">BendGuard</a></li>
+  <li><button class="tree blank"></button><a href="../11_descriptionofconnect/index.html">Description of connecting plug XS7</a></li>
+  <li><button class="tree blank"></button><a href="../12_signalcourseinrobotm/index.html">Signal course in robot mode</a></li>
+  <li><button class="tree blank"></button><a href="../13_machineconfiguration/index.html">Machine configuration</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Robot - RA</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="ethercat.html">EtherCAT Interface</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>EtherCAT Interface</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document contains details about the EtherCat interface between RA control
+and FANUC Robot with EtherCat slave function.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ethercat_digital_interface">EtherCAT Digital Interface</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="digitalconnecttion.html#ethercat_digitalinterface">Signal Interfaces &amp;
+Description</a> image in the <strong>Digital Robot Interface</strong> chapter shows the universal
+robot interface signals avalilable in RA Control, to interface with the robot.
+These signals provide basic operation of Robotic bending with RA control.</p>
+</li>
+<li>
+<p>These IO&#8217;s are to be mapped to the EtherCat IO mapping in the codesys
+interface.</p>
+</li>
+<li>
+<p>To enable/communicate the RA controller with Fanuc Robot, the ESI file from
+the robot is loaded into the EtherCat interface as slave node.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_downloading_esi_file_from_the_fanuc_robot">Downloading ESI file from the FANUC Robot</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Navigate to Menu &#8594; Setup &#8594; EtherCAT, you will see the following screen.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/ethercatimg1.png" alt="EthercatImg1" width="200"></span></p>
+</div>
+</li>
+<li>
+<p>Select option <strong>Output ESI File to &lt;Execute&gt;</strong>. The “fanuc _rs_esi0002.xml” is
+saved in the selected folder.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/ethercatimg2.png" alt="EthercatImg2" width="500"></span></p>
+</div>
+</li>
+<li>
+<p>This file can be imported in to the Codesys environment to add the FANUC
+robot as slave node.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_fanuc_robot_as_slave_node_in_codesys_environment">Adding FANUC Robot as slave node in Codesys Environment</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Open the Codesys environment with RA control project file.</p>
+</li>
+<li>
+<p>Navigate to Tools &#8594; Device Repository, the Device repository window opens.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/ethercatimg3.png" alt="EthercatImg3"></span></p>
+</div>
+</li>
+<li>
+<p>In <strong>Device Repository</strong> expand FieldBuses &#8594; EtherCAT &#8594; Slave, you can find list
+of available slave devices. Now click on <strong>Install</strong> button and navigate to the
+folder where the ESI file is stored and select the file and click on OK.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/ethercatimg4.png" alt="EthercatImg4"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/ethercatimg5.png" alt="EthercatImg5"></span></p>
+</div>
+</li>
+<li>
+<p>Once Installed, the file is shown in tree menu of slave as shown above. Now
+click on close button to close the <strong>Device Repository</strong> window.</p>
+</li>
+<li>
+<p>Navigate to EtherCAT &#8594; EtherCAT_Master, in the Devices Menu.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/ethercatimg6.png" alt="EthercatImg6" width="282"></span></p>
+</div>
+</li>
+<li>
+<p>Right click on the <strong>EtherCAT_Master</strong>, to open the tab as shown and navigate to
+<strong>Add Device</strong> option.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/ethercatimg7.png" alt="EthercatImg7" width="325"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Add Device</strong> window appears, here under Fieldbus &#8594; EtherCAT &#8594; FANUC ETHERCAT
+ROBOT SLAVE the Robot&#8217;s slave can be found.</p>
+</li>
+<li>
+<p>Click on the + symbol to access the device as shown. Select the device and
+click on the <strong>Add Device</strong> button to add the device as the last node of the
+ETHERCAT Master - Slave.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/ethercatimg8.png" alt="EthercatImg8"></span></p>
+</div>
+</li>
+<li>
+<p>The device is added as shown below.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/ethercatimg9.png" alt="EthercatImg9"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ethercat_io_mapping">EtherCAT IO Mapping</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Double click on the added fanuc slave node, the slave configuration window
+opens, Navigate to <strong>EtherCAT I/O Mapping</strong> option. Here all the available bytes
+are shown and the tags can be mapped according to the IO assignment done in the
+Robot.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/ethercatimg10.png" alt="EthercatImg10"></span></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Here the IO&#8217;s apart from the standard interface is also mapped, in case of
+FANUC robot the UOP&#8217;s and the GI/GO&#8217;s are also mapped in this menu based on the
+asignment done in the robot&#8217;s end.
+The interface sequance follows the same procedure as the Digital IO interface
+mentioned in the previous topic.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_ethercat_digital_interface">EtherCAT Digital Interface</a>
+  </li>
+  <li level="1">
+   <a href="#_downloading_esi_file_from_the_fanuc_robot">Downloading ESI file from the FANUC Robot</a>
+  </li>
+  <li level="1">
+   <a href="#_adding_fanuc_robot_as_slave_node_in_codesys_environment">Adding FANUC Robot as slave node in Codesys Environment</a>
+  </li>
+  <li level="1">
+   <a href="#_ethercat_io_mapping">EtherCAT IO Mapping</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="digitalconnecttion.html">Digital Robot Interface</a></span>
+ <span class="next"><a href="../71_fanuc/index.html">FANUC system</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

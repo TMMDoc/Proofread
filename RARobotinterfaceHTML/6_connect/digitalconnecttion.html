@@ -1,0 +1,504 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Digital Robot Interface</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="45" height="15" /></div>
+        <div><p>RA Robot manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Right Angle roboter interface</a></li>
+  <li><button class="tree blank"></button><a href="../1_organizationalmeasur/index.html">Organizational measures</a></li>
+  <li><button class="tree blank"></button><a href="../2_general/index.html">General</a></li>
+  <li><button class="tree blank"></button><a href="../3_operatingmodes/index.html">Operating modes</a></li>
+  <li><button class="tree blank"></button><a href="../4_reference/index.html">Reference</a></li>
+  <li><button class="tree blank"></button><a href="../5_operatingmodekeyswit/index.html">Operating mode key switch</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Robot - RA</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="plc/index.html">PLC logic implementation</a></li>
+    <li><button class="tree blank"></button><a class="active" href="digitalconnecttion.html">Digital Robot Interface</a></li>
+    <li><button class="tree blank"></button><a href="ethercat.html">EtherCAT Interface</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../71_fanuc/index.html">FANUC system</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../71_fanuc/6_bg/index.html">Sensor backgauge fingers</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../71_fanuc/6_bg/bg_analog/index.html">Analog backgauge sensor</a></li>
+      <li><button class="tree blank"></button><a href="../71_fanuc/6_bg/bg_dig/index.html">Digital backgauge sensor</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../72_estun/index.html">ESTUN system</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../72_estun/6_bg/index.html">Sensor backgauge fingers</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../72_estun/6_bg/bg_analog/index.html">Analog backgauge sensor</a></li>
+      <li><button class="tree blank"></button><a href="../72_estun/6_bg/bg_dig/index.html">Digital backgauge sensor</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../9_bendguard/index.html">BendGuard</a></li>
+  <li><button class="tree blank"></button><a href="../11_descriptionofconnect/index.html">Description of connecting plug XS7</a></li>
+  <li><button class="tree blank"></button><a href="../12_signalcourseinrobotm/index.html">Signal course in robot mode</a></li>
+  <li><button class="tree blank"></button><a href="../13_machineconfiguration/index.html">Machine configuration</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Robot - RA</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="digitalconnecttion.html">Digital Robot Interface</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Digital Robot Interface</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes the Digital signal interface between Smart Core Press Brake
+controller and Robot controller for the automation of bending operation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_signal_interfaces_description">Signal Interfaces &amp; Description</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">S.No.</th>
+<th class="tableblock halign-center valign-top">Signal Name</th>
+<th class="tableblock halign-center valign-top">Signal flow</th>
+<th class="tableblock halign-center valign-top">Description</th>
+<th class="tableblock halign-center valign-top">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NC - Start</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowright.png" alt="bluearrowright" width="30"></span> Robot control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press Brake (PB) machine is ready for bending operation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Output 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backguage In Position</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowright.png" alt="bluearrowright" width="30"></span> Robot
+control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All the Backguage axes are in “In-Position” &amp; Standstill</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig
+Output 2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First Bend Active</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowright.png" alt="bluearrowright" width="30"></span> Robot
+control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First Bend is active in series of Bend steps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Output 3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Last Bend Active</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowright.png" alt="bluearrowright" width="30"></span> Robot control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First Bend is active in series of Bend steps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Output 4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Movement of the Press beam</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowright.png" alt="bluearrowright" width="30"></span>
+Robot control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RAM is in “Discrete Motion” (Not Standstill)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Output 5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clamping Point</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowright.png" alt="bluearrowright" width="30"></span> Robot control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RAM reaches the Clamping (Pinch) position</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Output 6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lower Dead Point (LDP)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowright.png" alt="bluearrowright" width="30"></span> Robot
+control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RAM reaches the LDP position</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Output 7</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decompression End (EoD)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowright.png" alt="bluearrowright" width="30"></span> Robot
+control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RAM retracts up and End of Decompression</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Output 8</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Upper Dead Point (UDP)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowright.png" alt="bluearrowright" width="30"></span> Robot
+control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RAM reaches the UDP position</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Output 9</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Below Mute Point</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowright.png" alt="bluearrowright" width="30"></span> Robot
+control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RAM position is below the mute point</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Output 10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press OK</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowright.png" alt="bluearrowright" width="30"></span> Robot control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot is selected and control is in Run Mode (no error)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Output 11</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot Automatic Operation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowleft.png" alt="bluearrowleft" width="30"></span>
+Robot control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot in Auto mode - Switch Bend guard to Mute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Input 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start of Program</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowleft.png" alt="bluearrowleft" width="30"></span> Robot
+control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot program is started - Start button in Panel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Input 2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Abort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowleft.png" alt="bluearrowleft" width="30"></span> Robot control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot program is aborted - Stop button in Panel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Input 3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable Press Beam Movement Down</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core
+<span class="image"><img src="img/bluearrowleft.png" alt="bluearrowleft" width="30"></span> Robot control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To enable the RAM  Fast Down
+movement in SC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Input 4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Move to Clamping Point</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowleft.png" alt="bluearrowleft" width="30"></span> Robot
+control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To enable the RAM movement to Clamping point in SC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Input 5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Move to Lower Dead Point (LDP)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core
+<span class="image"><img src="img/bluearrowleft.png" alt="bluearrowleft" width="30"></span> Robot control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To enable the RAM movement to LDP
+in SC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Input 6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Move to Upper Dead Point (UDP)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core
+<span class="image"><img src="img/bluearrowleft.png" alt="bluearrowleft" width="30"></span> Robot control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To enable the RAM movement to UDP
+in SC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Input 7</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Step Change</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Core <span class="image"><img src="img/bluearrowleft.png" alt="bluearrowleft" width="30"></span> Robot control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To enable the next step in the bend program</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dig Input 8</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plc_logic_implementation">PLC Logic Implementation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_a_input_output_configurations">A. Input / Output Configurations</h3>
+<div class="paragraph">
+<p>The above-mentioned Robot Interface signals are mapped in PLC Digital In/Out as
+shown below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/digitalinputconfiguration.png" alt="DigitalInputConfiguration" width="600"></span></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+It may be noted that the NO/NC configuration of Inputs are selected in Parameter
+page of Robot Interface.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/digitaloutputconfiguration.png" alt="DigitalOutputConfiguration" width="600"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_b_robot_logic">B. Robot Logic</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The complete Robot Logic will be active, if the license for “<strong>Robot Interface</strong>” is activated and then the
+parameter “<strong>Robot Option</strong>” is ON in the PLC options page.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/robotlogicimg1.png" alt="RobotLogicImg1" width="250"></span>
+<span class="image"><img src="img/robotlogicimg2.png" alt="RobotLogicImg2" width="550"></span></p>
+</div>
+</li>
+<li>
+<p>When the “<strong>Robot Option</strong>” is selected in the PLC, then the input “<strong>Robot Auto
+Mode</strong>” will activate the robot functions. If Laser Safe is connected, then the
+Bend Guard mute is also activated.</p>
+</li>
+<li>
+<p>If all the axes are homed and “<strong>Robot Auto Mode</strong>” input is active, a message
+“<strong>Robot mode key is active</strong>” will be displayed, then the controller goes to “<strong>Stop
+Mode</strong>” and “<strong>Start Button</strong>” control in the machine is transferred to Robot control
+of “<strong>Program Start</strong>” input.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/robotlogicimg3.png" alt="RobotLogicImg3" width="600"></span></p>
+</div>
+</li>
+<li>
+<p>The input “<strong>UDP_MoveEnable</strong>” from the Robot will be used as “<strong>Foot Pedal Open</strong>”
+signal in order to reset the errors, move the RAM to UDP under error condition
+etc., except during “<strong>Opening Phase</strong>”.</p>
+</li>
+<li>
+<p>The “<strong>Press OK</strong>” output signal from the NC will be ON, if Homing of all the axes
+are completed, no errors, Program in Auto mode and “<strong>Robot Auto Mode</strong>” is active.</p>
+</li>
+<li>
+<p>The “<strong>NC Start</strong>” output signal from the NC will be ON, if “<strong>Program Start</strong>” input
+from Robot controller is ON and the controller goes to “Start Mode” (Green
+Colour LED is ON in the Panel).</p>
+</li>
+<li>
+<p>During this step, if “<strong>Program Start</strong>” input from Robot controller is ON, there
+are 3 possibilities of errors as follows:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha">
+<li>
+<p>If program in Semi mode, then there is error message “<strong>Machine not in Auto
+Mode</strong>”:</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/robotlogicimg4.png" alt="RobotLogicImg4" width="600"></span></p>
+</div>
+</li>
+<li>
+<p>If below the UDP position, then there is error message “<strong>Move RAM to UDP
+position</strong>”:</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/robotlogicimg5.png" alt="RobotLogicImg5" width="600"></span></p>
+</div>
+</li>
+<li>
+<p>If start axes is not selected as “<strong>TDC External</strong>”, then there is error message
+“<strong>Step Change External not selected</strong>”:</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/robotlogicimg6.png" alt="RobotLogicImg6" width="600"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Once all the above conditions are met and the machine is in start mode, the
+Foot pedal “<strong>Close &amp; Open</strong>” signals are not valid hereafter and the machine waits
+for the Robot move signals.</p>
+<div class="paragraph">
+<p>Foot pedal Close Deactive = “<strong>NC Start</strong>” is active;<br>
+Foot pedal Open Deactive = “<strong>NC Start</strong>” is active</p>
+</div>
+</li>
+<li>
+<p>Now the program will be waiting for “<strong>Step change</strong>” signal from the Robot
+controller to initiate the Backguage movements.</p>
+</li>
+<li>
+<p>If this bend cycle is the first bend, then “<strong>First Bend Active</strong>” signal is
+high, else if last bend then “<strong>Last Bend Active</strong>” signal is high, else both the
+signals will be low. If the program consist only one bend,  then both the
+signals are active.</p>
+</li>
+<li>
+<p>When the “<strong>Step change</strong>” signal is ON, then the Backguage axes are positioned
+and the “<strong>Backguage InPos</strong>” signal is set to High, now the machine will be waiting
+for the “<strong>Fast Down Enable</strong>” or “<strong>Clamp Move Enable</strong>” signal from the robot
+controller. In this step, the “<strong>RAM Moving</strong>” signal will be always low.</p>
+</li>
+<li>
+<p>When the “<strong>Fast Down Enable</strong>” signal is ON, the RAM moves to mute point and the
+“<strong>Below Mute point</strong>” signal is set to High, now the machine will be waiting for
+the “<strong>Clamp Move Enable</strong>” signal from the robot controller.</p>
+</li>
+<li>
+<p>When the “<strong>Clamp Move Enable</strong>” signal is ON, the RAM moves to pinch point and
+the “<strong>Clamping point</strong>” signal is set to High, now the machine will be waiting for
+the “<strong>LDP Move Enable</strong>” signal from the robot controller.</p>
+</li>
+<li>
+<p>When the “<strong>LDP Move Enable</strong>” signal is ON, the RAM moves to LDP point and the
+“<strong>LDP reached</strong>” signal is set to High, now the machine will go to dwell state and
+waits here until the completion of Dwell time set in the current bend cycle.</p>
+</li>
+<li>
+<p>When the dwell time is completed and “<strong>LDP Move Enable</strong>” signal is again ON, the
+RAM is moved up to the decompression point and the “<strong>EoD_Point</strong>” signal is set to
+High, now the machine will be waiting for the “<strong>UDP Move Enable</strong>” signal from
+the robot controller.</p>
+</li>
+<li>
+<p>When the “<strong>UDP Move Enable</strong>” signal is ON, the RAM moves to UDP point and the
+“<strong>UDP reached</strong>” signal is set to High, now the machine will be waiting for “<strong>Step
+change</strong>” signal from the Robot controller to initiate the Backguage movements for
+next bend cycle and continuous from step 6 to step 11.</p>
+</li>
+<li>
+<p>From step 7 to step 11, the “<strong>RAM Moving</strong>” signal will be high during Ram
+movement and low at the end of each step, to enable the Robot controller to
+issue the different steps of move command to machine.</p>
+</li>
+<li>
+<p>During any of the above bend step, if the “<strong>Program Abort</strong>” signal from Robot
+controller is set High, then all the moving axes (including RAM) are quick
+stopped and the “<strong>Press OK</strong>” &amp; “<strong>NC Start</strong>” signal is deactivated, with the
+following message display:</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/robotlogicimg7.png" alt="RobotLogicImg7" width="600"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_signal_interfaces_description">Signal Interfaces &amp; Description</a>
+  </li>
+  <li level="1">
+   <a href="#_plc_logic_implementation">PLC Logic Implementation</a>
+  </li>
+  <li level="2">
+   <a href="#_a_input_output_configurations">A. Input / Output Configurations</a>
+  </li>
+  <li level="2">
+   <a href="#_b_robot_logic">B. Robot Logic</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="plc/index.html">PLC logic implementation</a></span>
+ <span class="next"><a href="ethercat.html">EtherCAT Interface</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>
