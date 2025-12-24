@@ -1,0 +1,506 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Program Creation and Loading Part</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="45" height="15" /></div>
+        <div><p>RA Robot manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Right Angle roboter interface</a></li>
+  <li><button class="tree blank"></button><a href="../1_organizationalmeasur/index.html">Organizational measures</a></li>
+  <li><button class="tree blank"></button><a href="../2_general/index.html">General</a></li>
+  <li><button class="tree blank"></button><a href="../3_operatingmodes/index.html">Operating modes</a></li>
+  <li><button class="tree blank"></button><a href="../4_reference/index.html">Reference</a></li>
+  <li><button class="tree blank"></button><a href="../5_operatingmodekeyswit/index.html">Operating mode key switch</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Robot - RA</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="plc/index.html">PLC logic implementation</a></li>
+    <li><button class="tree blank"></button><a href="digitalconnecttion.html">Digital Robot Interface</a></li>
+    <li><button class="tree blank"></button><a href="ethercat.html">EtherCAT Interface</a></li>
+    <li><button class="tree blank"></button><a class="active" href="programcreation.html">Program Creation and Loading Part</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../71_fanuc/index.html">FANUC system</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../71_fanuc/6_bg/index.html">Sensor backgauge fingers</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../71_fanuc/6_bg/bg_analog/index.html">Analog backgauge sensor</a></li>
+      <li><button class="tree blank"></button><a href="../71_fanuc/6_bg/bg_dig/index.html">Digital backgauge sensor</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../72_estun/index.html">ESTUN system</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../72_estun/6_bg/index.html">Sensor backgauge fingers</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../72_estun/6_bg/bg_analog/index.html">Analog backgauge sensor</a></li>
+      <li><button class="tree blank"></button><a href="../72_estun/6_bg/bg_dig/index.html">Digital backgauge sensor</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../9_bendguard/index.html">BendGuard</a></li>
+  <li><button class="tree blank"></button><a href="../11_descriptionofconnect/index.html">Description of connecting plug XS7</a></li>
+  <li><button class="tree blank"></button><a href="../12_signalcourseinrobotm/index.html">Signal course in robot mode</a></li>
+  <li><button class="tree blank"></button><a href="../13_machineconfiguration/index.html">Machine configuration</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Robot - RA</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="programcreation.html">Program Creation and Loading Part</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Program Creation and Loading Part</h1>
+<div class="sect1">
+<h2 id="_1_homing_the_axes">1. Homing the Axes:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image right"><img src="img/pgrmcrimg1.png" alt="PgrmCrImg1" width="250"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open RA on the machine controller (HMI).</p>
+</li>
+<li>
+<p>Check the Machine ID, it should be 84 while bending. To change the machine,
+modify it in the path “C:\ProgramData\Metamation\RA\RData\Middleware”</p>
+</li>
+<li>
+<p>Navigate to Settings → Jog Axes and start the homing process.</p>
+</li>
+<li>
+<p>If the emergency stop is pressed, an error will appear on the HMI. Reset the
+E-Stop button and Press the Up pedal on the foot pedal to reset the error.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>After clearing the error and when the machine is ready for homing a pop-up
+message will appear on the HMI: "Press Start to complete homing process."</p>
+</li>
+<li>
+<p>Press the green illuminated Start button on the controller panel to initiate
+homing. Homing will proceed for each axis one by one.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/pgrmcrimg3.png" alt="PgrmCrImg3" width="250"></span></p>
+</div>
+</li>
+<li>
+<p>The '*' symbol in front of all axis values indicates that    the respective
+axes are not yet homed.</p>
+</li>
+<li>
+<p>Once homing is complete, the '*' symbols will disappear for all axes.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/pgrmcrimg4.png" alt="PgrmCrImg4" width="250"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_robot_mode_activation">2. Robot Mode Activation:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Switch ON the Robot Mode in the bending machine after successful homing.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/pgrmcrimg5.png" alt="PgrmCrImg5" width="250"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_loading_and_running_the_program">3. Loading and Running the Program:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Open the Run page in RA.</p>
+</li>
+<li>
+<p>Click Transfer then Import and open the required .fx file of the robot bend
+operation in RA.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/pgrmcrimg6.png" alt="PgrmCrImg6" width="300"></span></p>
+</div>
+</li>
+<li>
+<p>Verify the punch and die tooling by next tool and prev tool; modify them as
+per user requirements if necessary, in edit page.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/pgrmcrimg7.png" alt="PgrmCrImg7" width="300"></span></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Before running the program, ensure that in the robot teach pendant no
+previous bending programs are active. If any are open, close them and open a
+non-relevant robot bending program to ensure proper robot program loading.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_tooling_and_bend_sequence_modifications">4. Tooling and Bend Sequence Modifications:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In RA, go to Edit Page:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In <strong>Sequence</strong>, Change the bending sequence if required. It is advisable to
+change when using multiple bends if it causes any errors.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/pgrmcrimg8.png" alt="PgrmCrImg8" width="300"></span></p>
+</div>
+</li>
+<li>
+<p>In <strong>Gauges</strong>, Adjust the flat (1 or 2) gauge settings accordingly.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/pgrmcrimg9.png" alt="PgrmCrImg9" width="300"></span></p>
+</div>
+</li>
+<li>
+<p>In <strong>Tooling</strong>, select or modify or delete the punch and die tools as per
+bending requirements.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/pgrmcrimg10.png" alt="PgrmCrImg10" width="300"></span></p>
+</div>
+</li>
+<li>
+<p>After making changes view the <strong>Simulation</strong>, to verify bending operations.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/pgrmcrimg11.png" alt="PgrmCrImg11" width="300"></span></p>
+</div>
+</li>
+<li>
+<p>Click <strong>Done</strong> after all adjustments.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5_running_the_program">5. Running the Program:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Go to the Run page and click Run. Then Program page opens.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/pgrmcrimg12.png" alt="PgrmCrImg12" width="400"></span></p>
+</div>
+</li>
+<li>
+<p>Auto mode should selected when running the program.</p>
+</li>
+<li>
+<p>In <strong>Edit Cycle</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Modify the Pinch Adjustment (Pinch Adj.) value if necessary to adjust the
+pinch point.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/pgrmcrimg13.png" alt="PgrmCrImg13" width="400"></span></p>
+</div>
+</li>
+<li>
+<p>Set Step Change to TDC+External if the program includes more than one bend.</p>
+</li>
+<li>
+<p>Copy these settings to all bends.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In <strong>Correction</strong>:</p>
+<div class="paragraph">
+<p>After bending measure the bend angle and verify if the actual and expected bend
+values are same if any changes required directly give the angle in measured
+interior angle then it will automatically calculate the correction which needs
+to be given.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/pgrmcrimg14.png" alt="PgrmCrImg14" width="400"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_tooling_verification_and_setup">6. Tooling Verification and Setup:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_check_machine_tooling">Check Machine Tooling:</h3>
+<div class="paragraph">
+<p><span class="image right"><img src="img/pgrmcrimg15.png" alt="PgrmCrImg15" width="150"></span></p>
+</div>
+<div class="paragraph">
+<p>Ensure the punch and die is clamped properly and  match the tooling defined in
+the program.
+If changes are required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open the side view bar in RA.</p>
+</li>
+<li>
+<p>Select Clamp/Unclamp Punch.</p>
+</li>
+<li>
+<p>Use the Up pedal to perform the clamping or unclamping process.</p>
+</li>
+<li>
+<p>Ensure tools are properly clamped and secured in the rail before starting the
+bending.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7_manual_run_for_testing_program_in_robot">7. Manual Run for Testing program in Robot:</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Verify Tool Number</strong>: Ensure the correct tool number is set in the program.</p>
+</li>
+<li>
+<p><strong>Robot Mode Settings</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Set the robot to T1 Mode and activate Step Mode in the Teach Pendant (TP).</p>
+</li>
+<li>
+<p>Maintain a low robot speed during manual operation for safety.</p>
+</li>
+<li>
+<p>Check for any errors in TP, if exist reset all the errors. Then start the
+program.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Deadman Switch Requirement</strong>: The Deadman Switch must be pressed (enabled)
+while operating manually.</p>
+</li>
+<li>
+<p><strong>Clearing System Messages</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Clear any pop-up messages such as "Robot Mode Active" or "Robot Mode
+Inactive" displayed on the HMI.</p>
+</li>
+<li>
+<p>These messages appear when the Deadman Switch is enabled/disabled.</p>
+</li>
+<li>
+<p>Reset them using the Foot Pedal before proceeding.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Error Check Before Program Start</strong>:
+Ensure all system messages and errors are cleared before starting the robot
+program.</p>
+</li>
+<li>
+<p><strong>Program Execution</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>On the machine HMI, confirm the pop-up message: "Program not started in the
+robot."</p>
+</li>
+<li>
+<p>Manually start the robot bending program from the Teach Pendant (TP).</p>
+</li>
+<li>
+<p>Open and run the Main Bending Program in Step Mode which will have the same
+name as the .fx file.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Machine Status Check</strong>: Verify that there are no errors displayed on the
+machine HMI before running the robot program.</p>
+</li>
+<li>
+<p><strong>Position Verification</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Check the initial approach point, contact point, and ensure the sheet is
+being properly picked by the gripper.</p>
+</li>
+<li>
+<p>Verify the mute point and apply back gauge corrections in the HMI if
+necessary.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Ram Movement Control</strong>: For ram movement, press the Up Pedal as the machine
+will pause at the clamping point, waiting for the user confirmation to proceed.</p>
+</li>
+<li>
+<p><strong>Bend Completion and Return</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Turn OFF Step Mode during the bending operation to allow the robot to move
+smoothly and simultaneously for accurate results.</p>
+</li>
+<li>
+<p>Once the bend is completed, turn ON Step Mode again.</p>
+</li>
+<li>
+<p>From there, the robot will transition to the Deposit Sub-Program, place the
+part down, and return to the Home Position, with each step executed manually via
+the Teach Pendant.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_1_homing_the_axes">1. Homing the Axes:</a>
+  </li>
+  <li level="1">
+   <a href="#_2_robot_mode_activation">2. Robot Mode Activation:</a>
+  </li>
+  <li level="1">
+   <a href="#_3_loading_and_running_the_program">3. Loading and Running the Program:</a>
+  </li>
+  <li level="1">
+   <a href="#_4_tooling_and_bend_sequence_modifications">4. Tooling and Bend Sequence Modifications:</a>
+  </li>
+  <li level="1">
+   <a href="#_5_running_the_program">5. Running the Program:</a>
+  </li>
+  <li level="1">
+   <a href="#_6_tooling_verification_and_setup">6. Tooling Verification and Setup:</a>
+  </li>
+  <li level="2">
+   <a href="#_check_machine_tooling">Check Machine Tooling:</a>
+  </li>
+  <li level="1">
+   <a href="#_7_manual_run_for_testing_program_in_robot">7. Manual Run for Testing program in Robot:</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="ethercat.html">EtherCAT Interface</a></span>
+ <span class="next"><a href="../71_fanuc/index.html">FANUC system</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>
