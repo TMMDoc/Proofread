@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="res/bento.css">
+  <link rel="stylesheet" href="res/site.css">
+  <link rel="stylesheet" href="res/tree.css">
+  <link rel="stylesheet" href="res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Operating Mode Key Switch</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="img/logo.png" width="45" height="15" /></div>
+        <div><p>RA Robot manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="index.html">Right Angle Robot Interface</a></li>
+  <li><button class="tree blank"></button><a href="orgmeasure.html">Organizational Measures</a></li>
+  <li><button class="tree blank"></button><a href="general.html">General</a></li>
+  <li><button class="tree blank"></button><a href="operatingmodes.html">Operating Modes</a></li>
+  <li><button class="tree blank"></button><a href="reference.html">Reference</a></li>
+  <li><button class="tree blank"></button><a class="active" href="operatingkey.html">Operating Mode Key Switch</a></li>
+  <li><button class="tree blank"></button><a href="footswitch.html">Foot Switch</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="connect/index.html">Robot - RA</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="connect/digitalconnecttion.html">Digital Robot Interface</a></li>
+    <li><button class="tree blank"></button><a href="connect/ethercat.html">EtherCAT Interface</a></li>
+    <li><button class="tree blank"></button><a href="connect/programcreation.html">Program Creation and Part Loading</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="fanuc/index.html">Sensor backgauge fingers</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="fanuc/sensorbackgauge/index.html">Analog Backgauge Sensor</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="fanuc/sensorbackgauge/bg_dig.html">Digital Backgauge Sensor</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="estun/index.html">ESTUN system</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="estun/6_bg/index.html">Sensor backgauge fingers</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="estun/6_bg/bg_analog/index.html">Analog backgauge sensor</a></li>
+      <li><button class="tree blank"></button><a href="estun/6_bg/bg_dig/index.html">Digital backgauge sensor</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="bendguard.html">BendGuard</a></li>
+  <li><button class="tree blank"></button><a href="descriptofconnect.html">Description of Connecting Plug XS7</a></li>
+  <li><button class="tree blank"></button><a href="signalcourseinrobot.html">Signal Course In Robot Mode</a></li>
+  <li><button class="tree blank"></button><a href="machineconfig.html">Machine Configuration</a></li>
+  <li><button class="tree blank"></button><a href="importantnotes.html">Creating a Bending Program for Robot Mode</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="operatingkey.html">Operating Mode Key Switch</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Operating Mode Key Switch</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The key switch for the robot operating mode has the ID. 1367012, the label
+for the key switch has the ID no. 1766724.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The key switch is mounted externally on the left of the electrical cabinet. With
+the robot interface (option), the robot can be activated/deactivated using the
+key switch.</p>
+</div>
+<div class="paragraph">
+<p>The key switch has the following positions:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Position</th>
+<th class="tableblock halign-center valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Manual mode</strong>: stroke triggering by means of the foot switch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot mode</strong>: stroke release by the robot and subsequent stroke triggering
+at the press brake. Teach mode and automatic mode are possible.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image"><img src="img/image10.png" alt="image10" width="395" height="223"></span></p>
+</div>
+<div class="paragraph">
+<p>In manual mode, the operator triggers the downward movement of the press beam
+using the <strong>Press Beam Down</strong> foot switch. The bending program run is advanced
+manually by the operator as required.</p>
+</div>
+<div class="paragraph">
+<p>In robot mode, the downward movement of the press beam is triggered
+simultaneously by the industrial robot and the press brake. The entire bending
+program is started fully automatically and is executed synchronously. Robot mode
+is selected in the automatic mode and in the teach mode of the work cell. The
+bending program of the press brake and the travel program of the robot are
+synchronized so that they can work together. The foot switch remains connected
+to the press brake.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_robot_mode">Robot mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In robot mode, the programs should be setup.</p>
+</div>
+<div class="sect2">
+<h3 id="_step_change_setting">Step change setting</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to Run Program &#8594; Edit cycle.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/image11.png" alt="image11" width="581" height="465"></span></p>
+</div>
+</li>
+<li>
+<p>Select <strong><em>TDC + External</em></strong> in step change.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/image12.png" alt="image12" width="593" height="473"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_work_mode_setting">Work mode setting</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to Run Program &#8594; Corrections</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/image13.png" alt="image13" width="596" height="477"></span></p>
+</div>
+</li>
+<li>
+<p>Click the icon <span class="image"><img src="img/image14.png" alt="image14" width="25"></span>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/image15.png" alt="image15" width="602" height="480"></span></p>
+</div>
+</li>
+<li>
+<p>Choose <strong>Field muted</strong> in Work mode.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/image16.png" alt="image16" width="602" height="482"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_manual_mode">Manual mode</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_step_change_setting_2">Step change setting</h3>
+<div class="paragraph">
+<p><strong>Do not</strong> choose <strong>TDC + External</strong> in <em>Step change</em>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The operator must ensure that the industrial robot is positioned in a safe
+parking position in manual mode, cannot be operated and cannot be switched back
+on.</p>
+</li>
+<li>
+<p>Always leave the foot switch plugged in while the robot is in operation. The
+Emergency Stop is active, so the Emergency Stop push-button is fully functional.
+If a second foot switch is connected, then this Emergency Stop switch is also
+always active, as all Emergency Stop push-buttons in a circuit are wired in
+series. For a TruBend press brake, the second foot switch is always connected in
+the same way, with or without a robot interface.</p>
+</li>
+<li>
+<p>Correct and problem-free functioning of the TruBend press brake with an
+industrial robot is only possible if the robot is wired correctly (see section
+<a href="./descriptofconnect.html#_defaults_for_the_xS7_plug">Defaults for the XS7 plug</a>
+and
+<a href="./descriptofconnect.html#_section_xs_7_plug_and_xs_7.1_plug_signal_assignment">Section
+XS 7 plug and XS 7.1 plug signal assignment</a>). If no robot is plugged in, then
+the Emergency Shutdown circuits of the robot interface must be bridged with the
+dummy plug XS7.1 (Plug Shell: 1836632, Plug insert 0142923, Contact 0093905,
+Cable 2372482).<br>
+<span class="image"><img src="img/image17.png" alt="image17" width="398" height="397"></span></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The automatic circuit breaker with tripping characteristic C4 must be switched
+through for the robot interface to function. If this automatic circuit breaker
+triggers, a short circuit in the interface and/or a short circuit in the
+industrial robot&#8217;s connected peripheral circuit can be assumed.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_robot_mode">Robot mode</a>
+  </li>
+  <li level="2">
+   <a href="#_step_change_setting">Step change setting</a>
+  </li>
+  <li level="2">
+   <a href="#_work_mode_setting">Work mode setting</a>
+  </li>
+  <li level="1">
+   <a href="#_manual_mode">Manual mode</a>
+  </li>
+  <li level="2">
+   <a href="#_step_change_setting_2">Step change setting</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="reference.html">Reference</a></span>
+ <span class="next"><a href="footswitch.html">Foot Switch</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="res/index.js"></script>
+    <script src="res/files.js"></script>
+    <script src="res/site.js"></script>
+
+    
+</body>
+</html>

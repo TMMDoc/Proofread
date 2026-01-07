@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Analog Backgauge Sensor</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="45" height="15" /></div>
+        <div><p>RA Robot manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Right Angle Robot Interface</a></li>
+  <li><button class="tree blank"></button><a href="../../orgmeasure.html">Organizational Measures</a></li>
+  <li><button class="tree blank"></button><a href="../../general.html">General</a></li>
+  <li><button class="tree blank"></button><a href="../../operatingmodes.html">Operating Modes</a></li>
+  <li><button class="tree blank"></button><a href="../../reference.html">Reference</a></li>
+  <li><button class="tree blank"></button><a href="../../operatingkey.html">Operating Mode Key Switch</a></li>
+  <li><button class="tree blank"></button><a href="../../footswitch.html">Foot Switch</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../connect/index.html">Robot - RA</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../connect/digitalconnecttion.html">Digital Robot Interface</a></li>
+    <li><button class="tree blank"></button><a href="../../connect/ethercat.html">EtherCAT Interface</a></li>
+    <li><button class="tree blank"></button><a href="../../connect/programcreation.html">Program Creation and Part Loading</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Sensor backgauge fingers</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a class="active" href="index.html">Analog Backgauge Sensor</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="bg_dig.html">Digital Backgauge Sensor</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../estun/index.html">ESTUN system</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../estun/6_bg/index.html">Sensor backgauge fingers</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../estun/6_bg/bg_analog/index.html">Analog backgauge sensor</a></li>
+      <li><button class="tree blank"></button><a href="../../estun/6_bg/bg_dig/index.html">Digital backgauge sensor</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../bendguard.html">BendGuard</a></li>
+  <li><button class="tree blank"></button><a href="../../descriptofconnect.html">Description of Connecting Plug XS7</a></li>
+  <li><button class="tree blank"></button><a href="../../signalcourseinrobot.html">Signal Course In Robot Mode</a></li>
+  <li><button class="tree blank"></button><a href="../../machineconfig.html">Machine Configuration</a></li>
+  <li><button class="tree blank"></button><a href="../../importantnotes.html">Creating a Bending Program for Robot Mode</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Sensor backgauge fingers</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Analog Backgauge Sensor</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Analog Backgauge Sensor</h1>
+<div class="sect1">
+<h2 id="_analog_backgauge_connection_diagram">Analog Backgauge Connection Diagram</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The wiring diagram illustrates how two potentiometer-based analog sensors are
+connected to the robot controller&#8217;s analog input module.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/bganalogwiringdiag.png" alt="BGAnalogWiringDiag" width="400"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Channel 1 - Connected to Z1 BG</p>
+</li>
+<li>
+<p>Channel 2 - Connected to Z2 BG</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_backgauge_measurement_principle">Backgauge - Measurement Principle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each back gauge protruder is mechanically coupled to a potentiometer. As the
+protruder moves, the potentiometer varies its resistance and produces a
+proportional analog signal and gives raw analog values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Z1: Potentiometer reading for Backgauge 1</p>
+</li>
+<li>
+<p>Z2: Potentiometer reading for Backgauge 2</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The typical protruder length is approximately 7.5 mm.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_raw_register_assignment">Raw Register Assignment</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>R[1] → Raw value from analog input Z1</p>
+</li>
+<li>
+<p>R[4] → Raw value from analog input Z2</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_analog_value_scaling_logic">Analog Value Scaling Logic</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A background logic program named A_SCALE continuously processes the raw analog
+inputs and converts them into length (in mm).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_scaled_register_assignment">Scaled Register Assignment</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>R[2] → Scaled length value for R[1] Backgauge 1</p>
+</li>
+<li>
+<p>R[5] → Scaled length value for R[4]  Backgauge 2</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/scaledregassign.png" alt="ScaledRegAssign"></span></p>
+</div>
+<div class="paragraph">
+<p>This logic performs the following functions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reads raw analog input counts from AI channels</p>
+</li>
+<li>
+<p>Divides the raw values by predefined scaling factors</p>
+</li>
+<li>
+<p>Stores the final backgauge position in millimetres.</p>
+</li>
+<li>
+<p>The scaling constant (e.g., 209 or 212) is determined during calibration to
+match the mechanical range of the protruder to the analog signal range.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_analog_backgauge_connection_diagram">Analog Backgauge Connection Diagram</a>
+  </li>
+  <li level="1">
+   <a href="#_backgauge_measurement_principle">Backgauge - Measurement Principle</a>
+  </li>
+  <li level="1">
+   <a href="#_raw_register_assignment">Raw Register Assignment</a>
+  </li>
+  <li level="1">
+   <a href="#_analog_value_scaling_logic">Analog Value Scaling Logic</a>
+  </li>
+  <li level="1">
+   <a href="#_scaled_register_assignment">Scaled Register Assignment</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../index.html">Sensor backgauge fingers</a></span>
+ <span class="next"><a href="bg_dig.html">Digital Backgauge Sensor</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>
