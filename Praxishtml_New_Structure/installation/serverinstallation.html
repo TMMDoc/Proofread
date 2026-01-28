@@ -1,0 +1,812 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Server installation</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welcome to Praxis</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Introduction</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a class="active" href="serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="changelic.html">Change license</a></li>
+    <li><button class="tree blank"></button><a href="userinterface.html">The user interface</a></li>
+    <li><button class="tree blank"></button><a href="workflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Add/Remove machine</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Configure users</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Language</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Add new material and sheet</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Replace material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Map material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Map CAM pages</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Map fields from CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../partpreparation/index.html">Library</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../partpreparation/partlibrary.html">Library view</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partimport.html">Part import</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partstatus.html">Part status</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/toolingstatus.html">Tooling status</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partvalidation.html">Part validation</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/toolingvalidation.html">Tooling validation</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partpanel.html">Part panel</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partfilters.html">Part filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobworkflow/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobview.html">Job view</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobpanel.html">Job panel</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/edit.html">Job edit</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobautoplan.html">Plan job</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobstatus.html">Job status</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobworkflow/layoutcommands/index.html">Nests</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/nestview.html">Layout view</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/layoutpanel.html">Layout panel</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobworkflow/remnantmanagement/index.html">Remnant management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobworkflow/remnantmanagement/autoremnant.html">Auto remnant management</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/remnantmanagement/manualremnant.html">Manual remnant management</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/importexport.html">Import / Export</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/resetpartjob.html">Reset part/job</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/outdate.html">Out-of-date</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../orders/index.html">Orders</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD extensions</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Save parts</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Save assembly</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Check feasibility</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Factory settings</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Misc enhancements</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Introduction</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="serverinstallation.html">Server installation</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Server installation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Follow the instructions to install Praxis Server installation along with
+SQL.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Administrator Rights</div>
+<div class="paragraph">
+<p><strong>To execute this installation, user must have administrative privileges.</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Execute <strong>Setup.Praxis.&lt;version&gt;.exe</strong> to begin the installation.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Version is a number.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Read the license agreement and choose <strong>I accept the agreement</strong> and then Click
+<strong>Next</strong>
+.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s02praxislicenseagreement.png" alt="Praxis License Agreement">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_1_install_location">Step 1 : Install Location</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Mention the installation directory or accept the installation default
+<code>C:\Program Files\Metamation\Praxis</code> and click <strong>Next</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>C:\Program Files\Metamation\Praxis</code> - Install folder will have following
+folders : Bin, MetaCAM, Samples and Tracker.</p>
+</li>
+<li>
+<p><code>C:\Program Data\Metamation</code> - Data Folder will have following folders :
+Praxis, Flux and MetaCAM.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s03installationpath.png" alt="Installation Path">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_2_components_selection">Step 2 : Components Selection</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Installation Type</th>
+<th class="tableblock halign-left valign-top">Components</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client + Engine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desktop Client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Picks all Stations Terminal like Flux, MetaCAM, RightAngle(Bend Controller),
+Vulcan(Laser Machine Controller)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Picks by user choice.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Choose Full Installation. Pick <strong>Code Senders</strong> and <strong>Bend Code Senders</strong> from
+Praxis Tools. Now the Installation type changes to <strong>Custom</strong>. Click
+<strong>Next</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s04serverinstallation.png" alt="Server Installation">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_3_choose_install_sql_server">Step 3 : Choose Install SQL Server</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>SQL Express 2022 installation is needed only for the Praxis Server.  This
+option is not available for Client and Sync Installations.  Also this is
+Checked ON and installed for the first time and can be ignored thereafter. If
+already SQL installed in Praxis server, user can ignore Step 3.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In Select Additional Tasks : Click <strong>Install SQL Express</strong> and Click
+Next.</p>
+</li>
+<li>
+<p>In Ready to Install : Summarize all install features and Click Install.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s05sqlinstall.png" alt="Install SQL">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_4_sql_server_installation">Step 4 : SQL Server Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once Praxis components are installed, the installer proceeds with the SQL
+server installation. Accept the License Agreement to proceed and install SQL
+express with the default options.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s06sqlserver.png" alt="SQLServer Install">
+</div>
+</div>
+<div class="paragraph">
+<p>Once the installation is completed Click Close and complete the installation.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s07sqlservercomplete.png" alt="SQL Server Complete">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Depending on the Windows version, closing the SQL installation may prompt
+a restart.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_5_windows_desktop_shortcuts">Step 5 : Windows Desktop shortcuts</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>After SQL install, if System not restarts, then select the <strong>Launch Praxis</strong>
+checkbox and Click <strong>Finish</strong>.</p>
+</li>
+<li>
+<p>If System restarts, then Launch Praxis shortcut icon in Desktop or type
+Praxis in Windows Start Program and <strong>Run as administrator</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>Server installation</em> : Praxis and Praxis License Shortcut icons are
+available in Desktop. + <em>Client/SYNC Installation</em> : Only Praxis shortcut
+icon available in Desktop.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s08launchpraxis.png" alt="Launch Praxis">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_6_license_registration">Step 6 : License Registration</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>In <em>Serial Number</em> field, type the <em>Praxis Serial key</em> provided by Trumpf
+Metamation Service Team. Type <strong>&lt;Company Name&gt;</strong> in "Registered to" field and
+E-Mail. Click <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s09praxisregister.png" alt="PraxisRegister">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In case of Network firewall blocks the license registration or No internet in
+the Praxis Server PC, then Praxis license is done by Offline activation. Email
+the <strong><em>Prax.request</em></strong> from <em>C:\ProgramData\Metamation\Praxis</em> Folder to Trumpf
+Metamation Service Team. Trumpf Metamation Team will provide the <strong><em>Prax.lock</em></strong>
+which needs to be dropped in this folder.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_7_initial_one_time_configuration">Step 7 : Initial one time Configuration</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Type Database Name and Set Data Storage Location. Select
+<strong>Use SQL Server</strong> checkbox and select the SQL server name
+to connect to the Database. Click <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s10usedatabase.png" alt="Use Database">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Praxis Desktop Client opens showing <strong>Database Connection Succeeded</strong> at the
+lower bottom.</p>
+</li>
+<li>
+<p>Praxis, Flux and MetaCAM Configuration files were created with default config
+machines or against Praxis license machines. The same config will be shared
+across all Praxis Clients.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s11databaseconnectionsuccess.png" alt="Database Connection Success">
+</div>
+</div>
+<div class="paragraph">
+<p>Welcome screen shows with Windows User LoginName as Praxis Login and Name.
+First Praxis User is considered as <strong>Site Admin</strong>. Provide Email and
+Password. Click <strong>OK</strong>
+.</p>
+</div>
+<div class="paragraph">
+<p>Select <strong>Remember me</strong>
+checkbox to save the login credentials for next time.
+Clear <strong>Remember me</strong> checkbox will prompt for login and
+password dialog whenever praxis application is launched.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s12welcomepraxis.png" alt="Welcome Praxis">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_8_praxis_sign_in">Step 8 : Praxis Sign-in</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Close Praxis and Open praxis which prompts for Praxis Login Credentials.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s13praxislogin.png" alt="Praxis Login Credential Page">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_9_factory_machine_configuration">Step 9 : Factory Machine Configuration</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Praxis License [All machines enables license bit] : Default Praxis Machine
+and Material are considered as Factory Configuration.</p>
+</li>
+<li>
+<p>Praxis License [No demo and few machine bit enabled] : Those Few machines and
+default Material are considered as Factory Configuration.</p>
+</li>
+<li>
+<p>(Open &#8594; Import) a new Part from the <code>C:\Program
+Files\Metamation\Praxis\Samples\Parts</code> and verify if the Part is imported
+successfully.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s14praxiswelcomescreen.png" alt="Praxis Welcome screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_note_1_praxis_monitor">Note 1 : Praxis Monitor</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Praxis Monitor with Engine Installation (Site admin rights):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Praxis Monitor with Engine along with Site Admin Praxis Rights will have
+following options:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Push Praxis configuration, Flux, MetaCAM configuration across all praxis
+Clients. Also have rights to create New Praxis User Login.</p>
+</li>
+<li>
+<p>Show Agents will show the total engine available to do automation task which
+is against the Praxis License.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s15pmonitor.png" alt="Praxis Monitor Status">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Praxis Monitor without Engine Installation (Site admin rights):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s16pmonitorwithoutengine.png" alt="Praxis Monitor without Engine">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Praxis Monitor without Engine Installation (Non Site Admin rights):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s17pmonitorwithprogrammerlogin.png" alt="Praxis with Progrmmer login">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>PC running Praxis application must have the Engine Praxis component installed
+[Server PC or in any Client install]. Engine Praxis component installed PC
+should be running 24x7 to do all automation tasks.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_note_2_lock_tracker">Note 2 : Lock Tracker</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Click <strong>Praxis License</strong> shortcut available in Praxis Server Desktop.
+Alternatively, open <a href="http://localhost:7171/metamation/locktrack" class="bare">http://localhost:7171/metamation/locktrack</a> url in any web
+browser.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This will open Lock Tracker module which have License information, Praxis
+current session information and Log.</p>
+</div>
+<div class="paragraph">
+<p>LockTracker HOME Page : This show the Praxis Serial Number, Serial Expiry
+information and Serial bits available information.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s18locktrack01.png" alt="Lock Track License Home page">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker SESSIONS Page : Current Praxis Server connected information like
+Praxis Desktop client PC, PMonitor, PEngine Status.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s19locktrack02.png" alt="Lock Track Session information">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker LOGs Page : Praxis client start and log off | Pmonitor start and
+PEngine connect/disconnect status etc., can be viewed in this Logs page.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s20locktrack03.png" alt="Praxis Monitor Status">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_note_3_opengl">Note 3 : OpenGL</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Praxis application while opening which gets closed immediately and also
+pmonitor is not shown at the task bar.</p>
+</li>
+<li>
+<p>This represents OpenGl issue.</p>
+</li>
+<li>
+<p>Another way to confirm this: Open C:\Program
+Files\Metamation\Praxis\Bin\Flux.exe which displays error dialog about the
+OpenGL issue.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s21opengl.png" alt="OpenGL Issue">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Update <em>C:\ProgramData\Metamation\Praxis\Prax.ini</em>, options section with
+<strong>GLVersion=1</strong> make praxis application open successfully.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[Options]
+GLVersion=1.0</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_step_1_install_location">Step 1 : Install Location</a>
+  </li>
+  <li level="1">
+   <a href="#_step_2_components_selection">Step 2 : Components Selection</a>
+  </li>
+  <li level="1">
+   <a href="#_step_3_choose_install_sql_server">Step 3 : Choose Install SQL Server</a>
+  </li>
+  <li level="1">
+   <a href="#_step_4_sql_server_installation">Step 4 : SQL Server Installation</a>
+  </li>
+  <li level="1">
+   <a href="#_step_5_windows_desktop_shortcuts">Step 5 : Windows Desktop shortcuts</a>
+  </li>
+  <li level="1">
+   <a href="#_step_6_license_registration">Step 6 : License Registration</a>
+  </li>
+  <li level="1">
+   <a href="#_step_7_initial_one_time_configuration">Step 7 : Initial one time Configuration</a>
+  </li>
+  <li level="1">
+   <a href="#_step_8_praxis_sign_in">Step 8 : Praxis Sign-in</a>
+  </li>
+  <li level="1">
+   <a href="#_step_9_factory_machine_configuration">Step 9 : Factory Machine Configuration</a>
+  </li>
+  <li level="1">
+   <a href="#_note_1_praxis_monitor">Note 1 : Praxis Monitor</a>
+  </li>
+  <li level="1">
+   <a href="#_note_2_lock_tracker">Note 2 : Lock Tracker</a>
+  </li>
+  <li level="1">
+   <a href="#_note_3_opengl">Note 3 : OpenGL</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="prerequisites.html">Prerequisites</a></span>
+ <span class="next"><a href="clientinstallation.html">Client installation</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

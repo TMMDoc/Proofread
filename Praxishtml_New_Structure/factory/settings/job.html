@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Job</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welcome to Praxis</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Change license</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/userinterface.html">The user interface</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/workflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Add/Remove machine</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configure users</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Language</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Add new material and sheet</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Replace material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Map material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Map CAM pages</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Map fields from CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../partpreparation/index.html">Library</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../partpreparation/partlibrary.html">Library view</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/partimport.html">Part import</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/partstatus.html">Part status</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/toolingstatus.html">Tooling status</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/partvalidation.html">Part validation</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/toolingvalidation.html">Tooling validation</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/partpanel.html">Part panel</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/partfilters.html">Part filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobworkflow/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobworkflow/jobview.html">Job view</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/jobpanel.html">Job panel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/edit.html">Job edit</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/jobautoplan.html">Plan job</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/jobstatus.html">Job status</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobworkflow/layoutcommands/index.html">Nests</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobworkflow/layoutcommands/nestview.html">Layout view</a></li>
+      <li><button class="tree blank"></button><a href="../../jobworkflow/layoutcommands/layoutpanel.html">Layout panel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobworkflow/layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobworkflow/remnantmanagement/index.html">Remnant management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobworkflow/remnantmanagement/autoremnant.html">Auto remnant management</a></li>
+      <li><button class="tree blank"></button><a href="../../jobworkflow/remnantmanagement/manualremnant.html">Manual remnant management</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/importexport.html">Import / Export</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/resetpartjob.html">Reset part/job</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/outdate.html">Out-of-date</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../orders/index.html">Orders</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Factory</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../customers.html">Customers</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Settings</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a class="active" href="job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD extensions</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Save parts</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Save assembly</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Check feasibility</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Factory settings</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Misc enhancements</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Factory</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Settings</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="job.html">Job</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Job</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/job.png" alt="Job settings" width="814">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_output_settings">Output settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Save layout NC and reports</strong> - Enable this option for layout
+NC and reports to be saved.</p>
+</div>
+<div class="paragraph">
+<p><strong>Save layout file</strong> - Enable this option for the layout
+file to be saved.</p>
+</div>
+<div class="paragraph">
+<p><strong>Output simulation preview in reports</strong> - Enable
+this option to generate the tooling simulation preview along with the other
+outputs. This is a short GIF animation for the laser/punch tooling.</p>
+</div>
+<div class="paragraph">
+<p><strong>Do not delete program outputs on layout/job completion</strong> - Enabling this option will skip the delete operation for the
+program outputs when a job/layout is been marked as completed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nest_settings">Nest settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Mix parts from multiple Jobs</strong> - Support mixed
+mode nesting. Parts from multiple jobs should be nested together for better
+packing efficiency.</p>
+</div>
+<div class="paragraph">
+<p><strong>Do not auto-release layouts</strong> - This will stop
+layouts being available for production until all the layouts are in a released
+state.</p>
+</div>
+<div class="paragraph">
+<p><strong>Re-nesting packing cut-off</strong> - This value is
+used to decide whether a nested layout is held in the approval queue and is
+re-nested again when new parts are planned or they are released for production
+and related outputs are exported to the output folder.</p>
+</div>
+<div class="paragraph">
+<p><strong>Interactive sheet-name prefix</strong> - This
+section is used to support interactive nesting where the user has more control
+over the parts being nested and the nest result. Use a naming scheme, different
+from auto-nesting, for the interactively nested layouts.</p>
+</div>
+<div class="paragraph">
+<p><strong>Update sheet inventory on nest (un)release</strong> - If
+this option is enabled, the sheet inventory will update when sending a nest to
+a machine. Also recalling the nest from the machine will return the sheet to
+the inventory.</p>
+</div>
+<div class="paragraph">
+<p><strong>Automate remnant inventory management</strong> - When this switch
+is selected, the software automates the remnant inventory management. If not
+selected, the remnant management becomes interactive.</p>
+</div>
+<div class="paragraph">
+<p><strong>Auto-refresh Out-of-date layouts</strong> - When
+checked, the software refreshes all ui:EGTag.SelectOutOfDate[Out-of-date
+Layouts] linked to a part after its cutting solutions are calculated.</p>
+</div>
+<div class="paragraph">
+<p><strong>Automate twin-line nesting</strong> - Check this option to enable
+twin-line automation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pull_workflow_settings">Pull workflow settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Use 'Pull workflow'</strong> - This option is useful for
+users who need a highly autonomous planning and nesting system. When enabled,
+Praxis plans the nesting on demand.</p>
+</div>
+<div class="paragraph">
+<p><strong>Nests per station</strong> - This value is to set how many
+layouts per station should get created.</p>
+</div>
+<div class="paragraph">
+<p><strong>Maximum sheets per nest</strong> - This value is used to
+control the maximum sheet count against the unique nest. So, for instance, if
+there is an order with a big part (which fills up the whole sheet), needed in
+large quantities (say 500) - Praxis no longer creates a single nest with 500
+copies in pull mode. Instead, it creates 10 copies per nest where 10 is the
+max.</p>
+</div>
+<div class="paragraph">
+<p><strong>Bend programs per station</strong> - This value is to
+set how many bend programs per station should get created.</p>
+</div>
+<div class="paragraph">
+<p><strong>Mark the task completed, when the program outputs are removed</strong> -
+Enable this option for a layout to be marked Done when
+the outputs are removed from the target output destination.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_spreadsheet_import_settings">Spreadsheet import settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>CAD lookup directories</strong> - Praxis will try to
+load the part entry mentioned in the imported CSV from the part library.
+However, if the part is not available in the part library then it will try to
+fetch the parts from look-up directories based on the order of directories set
+in this dialogue.</p>
+</div>
+<div class="paragraph">
+<p><strong>Use recursive CAD search</strong> - Enable this option for
+the search to be repeated for successive results.</p>
+</div>
+<div class="paragraph">
+<p><strong>Create a blank part for the missing CAD files</strong> - If
+parts do not exist in the Praxis library or lookup directories, Praxis will
+create a blank part for those unavailable parts.</p>
+</div>
+<div class="paragraph">
+<p><strong>Do not show New Job dialog if the spreadsheet has no error</strong> -
+If CSV entries are clean i.e. no mismatch of data
+from DB or all fields are listed properly, Praxis will not show the job
+overview window and will process the job as soon the CSV is imported or
+dropped.</p>
+</div>
+<div class="paragraph">
+<p><strong>Prefer Raw-Material column over Material + Thickness</strong> -
+ Supported spreadsheet types:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Pattern 1: PartName, Quantity, DueDate, Priority, RawMaterial</p>
+</li>
+<li>
+<p>Pattern 2: PartName, Quantity, DueDate, Priority, Material, Thickness</p>
+</li>
+<li>
+<p>Pattern 3: PartName, Quantity, DueDate, Priority, Material, Thickness,
+RawMaterial</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If this option is not checked, Pattern 1 will be considered the default
+spreadsheet type. We also support Pattern 3 in case the CSV format is of type
+Pattern 3.</p>
+</div>
+<div class="paragraph">
+<p>If this option is checked and CSV is of type Pattern 2, then Praxis will
+resolve Raw Material from the Material and Thickness fields from CSV.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_spreadsheet_output_settings">Spreadsheet output settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Export Job/Layout completion report (.csv)</strong> -
+Check this option to enable CSV export when a Layout or Job is complete. The
+completed reports are saved at the Reports destination specified at the Factory
+&#8594; Settings &#8594; Reports settings.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_output_settings">Output settings</a>
+  </li>
+  <li level="1">
+   <a href="#_nest_settings">Nest settings</a>
+  </li>
+  <li level="1">
+   <a href="#_pull_workflow_settings">Pull workflow settings</a>
+  </li>
+  <li level="1">
+   <a href="#_spreadsheet_import_settings">Spreadsheet import settings</a>
+  </li>
+  <li level="1">
+   <a href="#_spreadsheet_output_settings">Spreadsheet output settings</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="watch.html">Watch</a></span>
+ <span class="next"><a href="reports.html">Reports</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

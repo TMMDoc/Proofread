@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Save assembly</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welcome to Praxis</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Change license</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/userinterface.html">The user interface</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/workflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Add/Remove machine</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configure users</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Language</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Add new material and sheet</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Replace material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Map material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Map CAM pages</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Map fields from CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../partpreparation/index.html">Library</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../partpreparation/partlibrary.html">Library view</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/partimport.html">Part import</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/partstatus.html">Part status</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/toolingstatus.html">Tooling status</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/partvalidation.html">Part validation</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/toolingvalidation.html">Tooling validation</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/partpanel.html">Part panel</a></li>
+    <li><button class="tree blank"></button><a href="../../partpreparation/partfilters.html">Part filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobworkflow/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobworkflow/jobview.html">Job view</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/jobpanel.html">Job panel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/edit.html">Job edit</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/jobautoplan.html">Plan job</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/jobstatus.html">Job status</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobworkflow/layoutcommands/index.html">Nests</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobworkflow/layoutcommands/nestview.html">Layout view</a></li>
+      <li><button class="tree blank"></button><a href="../../jobworkflow/layoutcommands/layoutpanel.html">Layout panel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobworkflow/layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobworkflow/remnantmanagement/index.html">Remnant management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobworkflow/remnantmanagement/autoremnant.html">Auto remnant management</a></li>
+      <li><button class="tree blank"></button><a href="../../jobworkflow/remnantmanagement/manualremnant.html">Manual remnant management</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/importexport.html">Import / Export</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/resetpartjob.html">Reset part/job</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/outdate.html">Out-of-date</a></li>
+    <li><button class="tree blank"></button><a href="../../jobworkflow/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../orders/index.html">Orders</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">CAD extensions</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">SolidWorks addin</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="savetopraxis.html">Save parts</a></li>
+      <li><button class="tree blank"></button><a class="active" href="saveassembly.html">Save assembly</a></li>
+      <li><button class="tree blank"></button><a href="partfeasibility.html">Check feasibility</a></li>
+      <li><button class="tree blank"></button><a href="factorysettings.html">Factory settings</a></li>
+      <li><button class="tree blank"></button><a href="miscenhancements.html">Misc enhancements</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">CAD extensions</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">SolidWorks addin</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="saveassembly.html">Save assembly</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Save assembly</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Save Assembly feature allows users to export SolidWorks assemblies and
+their component parts directly into the Praxis part library. This ensures that
+all sheet metal parts, raw material information, and part quantities are
+accurately transferred for downstream planning, tooling, and job creation.</p>
+</div>
+<div class="paragraph">
+<p>This functionality is particularly useful for managing complete assemblies such
+as cabinets, enclosures, or structural fabrications that involve multiple sheet
+metal components.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steps_to_save_an_assembly">Steps to save an assembly</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Launch SolidWorks and open the required assembly file.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/saveassembly.png" alt="Save Assembly" width="682">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>On the Praxis toolbar, click <strong>Save Assembly</strong>. The <strong>Save Assembly to Praxis</strong>
+dialog appears, summarizing the assembly details.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/praxisassembly.png" alt="Praxis Assembly" width="350">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The assembly dialog provides the following information:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Assembly Name</strong> - Displays the name of the currently active SolidWorks
+assembly. This name is used as the default reference for the assembly in
+Praxis.</p>
+</li>
+<li>
+<p><strong>Total parts</strong> - Indicates the total number of component instances present in
+the SolidWorks assembly. This includes both sheet metal and non-sheet metal
+parts.</p>
+</li>
+<li>
+<p><strong>Sheetmetal Parts</strong> - Displays the total number of sheet metal components in
+the assembly, along with the count of unique sheet metal parts.</p>
+</li>
+<li>
+<p><strong>Non-sheetmetal Parts</strong> - Lists the total count and unique number of non-sheet
+metal components detected in the assembly.</p>
+</li>
+<li>
+<p><strong>Units to produce</strong> - Specifies the number of assemblies (finished products) to
+be produced. The entered quantity is used to calculate the total part
+requirements in the resulting job or assembly within Praxis.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>After verifying the details, click <strong>OK</strong>.</p>
+</li>
+<li>
+<p>Praxis saves all parts listed in the table to the part library, along with
+their associated material information. (For material mapping details, refer to
+the
+<a href="../../cadextensions/solidworksaddin/savetopraxis.html#_auto_material_resolution">Automaterial
+resolution</a>)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/backcover.png" alt="Back Cover" width="800">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_options">Additional options</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_make_job">Make job</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable this option to create a new Praxis Job directly from the selected
+assembly, allowing immediate job planning and nesting operations.</p>
+</li>
+<li>
+<p>When enabled, the New Job dialog appears, allowing you to specify:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Job Reference</strong> Name (default: assembly name).</p>
+</li>
+<li>
+<p><strong>Customer</strong> and <strong>Comments</strong> (optional).</p>
+</li>
+<li>
+<p><strong>Due Date</strong>, <strong>Priority</strong>, and <strong>Quantity</strong> for each part.</p>
+</li>
+<li>
+<p>Additional parameters such as customer-specific settings or rotation values
+for each part.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong> to create and open the new job in Praxis.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyview.png" alt="AssemblyView" width="800">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_make_assembly">Make assembly</h3>
+<div class="paragraph">
+<p>Enable this option to save the assembly and its correct part quantities to the
+Praxis assembly page. Unlike the Make Job option, this does not open the New
+Job dialog during the process.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/makeassembly.png" alt="Make Assembly" width="682">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblycover.png" alt="Assembly Cover" width="980">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Only these sheet metal parts are processed and imported into the Praxis part library.</p>
+</li>
+<li>
+<p>Non sheet metal parts are displayed for reference but are not imported into
+Praxis, as only manufacturable sheet metal parts are considered for production
+planning.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_steps_to_save_an_assembly">Steps to save an assembly</a>
+  </li>
+  <li level="1">
+   <a href="#_additional_options">Additional options</a>
+  </li>
+  <li level="2">
+   <a href="#_make_job">Make job</a>
+  </li>
+  <li level="2">
+   <a href="#_make_assembly">Make assembly</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="savetopraxis.html">Save parts</a></span>
+ <span class="next"><a href="partfeasibility.html">Check feasibility</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

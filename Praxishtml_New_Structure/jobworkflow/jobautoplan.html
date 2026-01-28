@@ -1,0 +1,386 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Plan job</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welcome to Praxis</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Change license</a></li>
+    <li><button class="tree blank"></button><a href="../installation/userinterface.html">The user interface</a></li>
+    <li><button class="tree blank"></button><a href="../installation/workflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Add/Remove machine</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Configure users</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Language</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Add new material and sheet</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Replace material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Map material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Map CAM pages</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Map fields from CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../partpreparation/index.html">Library</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../partpreparation/partlibrary.html">Library view</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partimport.html">Part import</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partstatus.html">Part status</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/toolingstatus.html">Tooling status</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partvalidation.html">Part validation</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/toolingvalidation.html">Tooling validation</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partpanel.html">Part panel</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partfilters.html">Part filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Jobs</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobview.html">Job view</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Job panel</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">Job edit</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobautoplan.html">Plan job</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="jobstatus.html">Job status</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Nests</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Layout view</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Layout panel</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Remnant management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Auto remnant management</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Manual remnant management</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="importexport.html">Import / Export</a></li>
+    <li><button class="tree blank"></button><a href="resetpartjob.html">Reset part/job</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Out-of-date</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../orders/index.html">Orders</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD extensions</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Save parts</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Save assembly</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Check feasibility</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Factory settings</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Misc enhancements</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Jobs</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobautoplan.html">Plan job</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Plan job</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Auto Plan automates the planning process for bending and cutting operations.
+It helps optimize machine usage, reduce material waste, and manage job
+priorities efficiently.</p>
+</div>
+<div class="paragraph">
+<p>The general workflow is to first plan the parts for the bending machines and
+then plan the parts for the cutting machines.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bend_plan">Bend plan</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A Bend Plan defines how parts are distributed across available bending machines.</p>
+</div>
+<div class="paragraph">
+<p>Example: Bend Plan for 5 Parts (10 units each).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <strong>Plan Job&#8230;&#8203;</strong> option.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>5 parts (50 units) are assigned to TBC-5030 B27</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After planning, the job status is updated to Bend Planned for a total of 50
+units. The work steps are updated with the assigned bending machines and part
+quantities.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan1.png" alt="Plan job for bending" width="1469">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan2.png" alt="Plan job for bending" width="1483">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cutting_plan_nesting">Cutting plan - nesting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After the bending plan, the cutting plan is created by nesting parts on suitable
+cutting machines. There are two ways to nest:</p>
+</div>
+<div class="sect2">
+<h3 id="_plan_job_for_nest_job">Plan job for nest - job</h3>
+<div class="paragraph">
+<p>Use <strong>Plan Job&#8230;&#8203;</strong> to nest all parts in the job together. The
+nesting engine automatically processes all parts based on job priority, due
+date, and material. This is ideal when you want the entire job to be nested and
+sent to the cutting queue at once.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <strong>Plan Job&#8230;&#8203;</strong> and select any machine.</p>
+</li>
+<li>
+<p>The Pmonitor engine starts the nesting job.</p>
+</li>
+<li>
+<p>The engine splits the job as needed to maximize sheet usage.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is not possible to nest by assigning specific materials to specific
+machines. For example, you cannot nest <em>Material1</em> on <em>Machine1</em> and <em>Material2</em>
+on <em>Machine2</em> in the same operation.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan3.png" alt="Plan job for cutting" width="1404">
+</div>
+</div>
+<div class="paragraph">
+<p>Here, the entire job is nested into 5 nests on L49-3kw. The job status is
+updated to 50 : Cutting Queue.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_plan_part_for_nest_order">Plan part for nest - order</h3>
+<div class="paragraph">
+<p>Use Plan Part for order-level nesting — that is, nesting only selected parts
+from the job. Typically, you right-click a part and choose <strong>Same Material</strong>, so
+only parts with the same material are grouped and nested together.</p>
+</div>
+<div class="paragraph">
+<p>This is useful when you want to control which parts are nested — for example,
+parts of the same material or a specific batch.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan4.png" alt="Plan job for cutting" width="831">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan5.png" alt="Plan job for cutting" width="885">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In the Job Detail page, right-click any part and select Same Material. All
+parts with the same material are selected.</p>
+</li>
+<li>
+<p>Click <strong>Plan Part&#8230;&#8203;</strong> and select a machine for nesting.</p>
+</li>
+<li>
+<p>The engine processes only the selected parts and creates the nests.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan6.png" alt="Plan job for cutting" width="1418">
+</div>
+</div>
+<div class="paragraph">
+<p>Here, steel-25 is nested on Mits ML3015.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_bend_plan">Bend plan</a>
+  </li>
+  <li level="1">
+   <a href="#_cutting_plan_nesting">Cutting plan - nesting</a>
+  </li>
+  <li level="2">
+   <a href="#_plan_job_for_nest_job">Plan job for nest - job</a>
+  </li>
+  <li level="2">
+   <a href="#_plan_part_for_nest_order">Plan part for nest - order</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="edit.html">Job edit</a></span>
+ <span class="next"><a href="jobinteractplan.html">Interactive nesting</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

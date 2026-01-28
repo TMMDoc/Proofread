@@ -1,0 +1,394 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Hardware requirement</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welcome to Praxis</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Introduction</a>
+   <ul>
+    <li><button class="tree blank"></button><a class="active" href="hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="changelic.html">Change license</a></li>
+    <li><button class="tree blank"></button><a href="userinterface.html">The user interface</a></li>
+    <li><button class="tree blank"></button><a href="workflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Add/Remove machine</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Configure users</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Language</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Add new material and sheet</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Replace material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Map material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Map CAM pages</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Map fields from CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../partpreparation/index.html">Library</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../partpreparation/partlibrary.html">Library view</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partimport.html">Part import</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partstatus.html">Part status</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/toolingstatus.html">Tooling status</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partvalidation.html">Part validation</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/toolingvalidation.html">Tooling validation</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partpanel.html">Part panel</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partfilters.html">Part filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobworkflow/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobview.html">Job view</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobpanel.html">Job panel</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/edit.html">Job edit</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobautoplan.html">Plan job</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobstatus.html">Job status</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobworkflow/layoutcommands/index.html">Nests</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/nestview.html">Layout view</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/layoutpanel.html">Layout panel</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobworkflow/remnantmanagement/index.html">Remnant management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobworkflow/remnantmanagement/autoremnant.html">Auto remnant management</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/remnantmanagement/manualremnant.html">Manual remnant management</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/importexport.html">Import / Export</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/resetpartjob.html">Reset part/job</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/outdate.html">Out-of-date</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../orders/index.html">Orders</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD extensions</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Save parts</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Save assembly</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Check feasibility</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Factory settings</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Misc enhancements</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Introduction</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="hardwarerequirement.html">Hardware requirement</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Hardware requirement</h1>
+<div class="sect1">
+<h2 id="_server_requirement">Server Requirement</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Standard</th>
+<th class="tableblock halign-left valign-top">High Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPU</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 CPU, 2.5-3GHz in 4 cores</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 CPUs, 2.5-3GHz in 8 cores or more</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Memory(RAM)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16GB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&gt;=32GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HardDisk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500GB-1TB SSD or more</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&gt;=1TB SSD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Video Graphics Card</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2GB with OpenGL 3.2 built in or dedicated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2GB with OpenGL 3.2 built in or dedicated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows Server 2012 or later</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows Server 2012 or later</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SQL Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SQL 2017 or later</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SQL 2017 or later</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows user account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Need a standard user account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Need a standard user account</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A standard user account is required for Praxis Server to Run as
+Service in Task Manager and Monitor to run. It should be set to auto login
+mode.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_client_requirement">Client Requirement</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Programming PC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPU</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 CPU, 2.5-3GHz in 4 cores</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Memory(RAM)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HardDisk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500GB SCGI/SSD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Video Graphics Card</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2GB with OpenGL 3.2 built in or dedicated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows 10</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_port_requirement">Port Requirement</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_praxis_server_7371">Praxis Server : 7371</h3>
+<div class="paragraph">
+<p>Server waits for the client requests on this TCP port. Incoming connections
+should be allowed to this port on the Server Computer.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_floating_license_server_5776">Floating License Server : 5776</h3>
+<div class="paragraph">
+<p>Floating License Server waits for licensing requests on this port. Incoming
+connections should be allowed to this port on the floating license server
+computer (Praxis Server).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_license_connection_to_cloud_7567">License connection to Cloud : 7567</h3>
+<div class="paragraph">
+<p>This port is used by Flux (Bending Software) and Floating License Server to
+send licensing requests to Metamation Cloud. So outgoing connection should be
+allowed on this port for license activations and renewals.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_and_support_requirements">Installation and Support Requirements</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Administrative privileges required to install Praxis application.</p>
+</li>
+<li>
+<p>Remote diagnostic tools via Contractor VPN or a secure connection.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_server_requirement">Server Requirement</a>
+  </li>
+  <li level="1">
+   <a href="#_client_requirement">Client Requirement</a>
+  </li>
+  <li level="1">
+   <a href="#_port_requirement">Port Requirement</a>
+  </li>
+  <li level="2">
+   <a href="#_praxis_server_7371">Praxis Server : 7371</a>
+  </li>
+  <li level="2">
+   <a href="#_floating_license_server_5776">Floating License Server : 5776</a>
+  </li>
+  <li level="2">
+   <a href="#_license_connection_to_cloud_7567">License connection to Cloud : 7567</a>
+  </li>
+  <li level="2">
+   <a href="#_installation_and_support_requirements">Installation and Support Requirements</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Introduction</a></span>
+ <span class="next"><a href="importformats.html">Supported file formats</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

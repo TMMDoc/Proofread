@@ -1,0 +1,126 @@
+Version=58
+APPNAME=Praxis
+BENDAPP=Flux Bend
+CUTAPP=Flux Cut
+FLAVOR=PRAXIS
+LANGUAGE=EN
+PRAXIS=
+TECHNOAPP=Flux
+TECHNOAPP1=MetaCAM
+Folders=13
+Pages=75
+UIXlate=False, DebugUIXlate=False, Language=EN
+
+contents.txt • 261027.071058
+Features.adoc • Features
+Impressum.adoc • Impressum
+Index.adoc • Welcome to {APPNAME}
+Index.JFY.adoc • Welcome to {APPNAME}
+manifest.txt • 261707.021722
+CADExtensions\contents.txt • 260706.060718
+CADExtensions\Index.adoc • CAD extensions
+Configuration\CADMapFields.adoc • Map fields from CAD (lookup keys)
+Configuration\configureUsers.adoc • Configure users
+Configuration\contents.txt • 260706.060718
+Configuration\Index.adoc • Configuration
+Configuration\Language.adoc • Language
+Configuration\MapBendPages.adoc • Map material
+Configuration\MapCAMPages.adoc • Map CAM pages
+Configuration\SetupMachine.adoc • Add/Remove machine
+Configuration\SetupTooling.adoc • Setup tooling
+Factory\contents.txt • 261607.021658
+Factory\Customers.adoc • Customers
+Factory\edit.adoc • Edit
+Factory\Index.adoc • Factory
+Factory\routes.adoc • Routes
+Factory\Settings.adoc • Settings
+Factory\sheets.adoc • Sheets
+Factory\Users.adoc • Users
+Filters\contents.txt • 260706.060718
+Filters\Index.adoc • Filters
+Filters\JOBPageFilter.adoc • Job page filters
+Filters\PartLibraryFilter.adoc • Part library filters
+Filters\SavedFilters.adoc • Saving filters
+Installation\changelic.adoc • Change license
+Installation\ClientInstallation.adoc • Client installation
+Installation\contents.txt • 262008.022008
+Installation\HardwareRequirement.adoc • Hardware requirement
+Installation\importformats.adoc • Supported file formats
+Installation\index.adoc • Introduction
+Installation\Prerequisites.adoc • Prerequisites
+Installation\ServerInstallation.adoc • Server installation
+Installation\UserInterface.adoc • The user interface
+Installation\Workflow.adoc • Workflow
+JOBworkflow\contents.txt • 260927.070920
+JOBworkflow\Edit.adoc • Job edit
+JOBworkflow\ImportExport.adoc • Import / Export
+JOBworkflow\Index.adoc • Jobs
+JOBworkflow\JOBAutoPlan.adoc • Plan job
+JOBworkflow\JOBCreation.adoc • Job planning
+JOBworkflow\JobFilters.adoc • Job filters
+JOBworkflow\JOBInteractPlan.adoc • Interactive nesting
+JOBworkflow\JobPanel.adoc • Job panel
+JOBworkflow\JOBPriority.adoc • Job priority
+JOBworkflow\JOBStatus.adoc • Job status
+JOBworkflow\JOBView.adoc • Job view
+JOBworkflow\OutDate.adoc • Out-of-date
+JOBworkflow\ResetPartJob.adoc • Reset part/job
+JOBworkflow\TwinlineNesting.adoc • Twinline nesting
+Orders\contents.txt • 264207.024213
+Orders\Index.adoc • Orders
+PartPreparation\contents.txt • 260827.070814
+PartPreparation\EditTooling.adoc • Edit tooling
+PartPreparation\Index.adoc • Library
+PartPreparation\PartAssignMaterial.adoc • Part assign material
+PartPreparation\PartFilters.adoc • Part filters
+PartPreparation\PartImport.adoc • Part import
+PartPreparation\PartLibrary.adoc • Library view
+PartPreparation\PartPanel.adoc • Part panel
+PartPreparation\PartStatus.adoc • Part status
+PartPreparation\PartValidation.adoc • Part validation
+PartPreparation\Rename.adoc • Rename
+PartPreparation\RollingDirection.adoc • Rolling direction
+PartPreparation\ToolingCheck.adoc • Tooling check
+PartPreparation\ToolingStatus.adoc • Tooling status
+PartPreparation\ToolingValidation.adoc • Tooling validation
+UIXlate\EN.txt
+UIXlate\wEN.txt
+CADExtensions\SolidWorksAddin\contents.txt • 260706.060717
+CADExtensions\SolidWorksAddin\FactorySettings.adoc • Factory settings
+CADExtensions\SolidWorksAddin\Index.adoc • SolidWorks addin
+CADExtensions\SolidWorksAddin\InstallationSteps.adoc • Installation
+CADExtensions\SolidWorksAddin\MiscEnhancements.adoc • Misc enhancements
+CADExtensions\SolidWorksAddin\PartFeasibility.adoc • Check feasibility
+CADExtensions\SolidWorksAddin\SaveAssembly.adoc • Save assembly
+CADExtensions\SolidWorksAddin\SaveToPraxis.adoc • Save parts
+Configuration\AddMaterial\AddNew.adoc • Add new material and sheet
+Configuration\AddMaterial\contents.txt • 250602.060638
+Configuration\AddMaterial\ExportImport.adoc • Export/Import material
+Configuration\AddMaterial\Index.adoc • Material
+Configuration\AddMaterial\ReplaceMaterial.adoc • Replace material
+Factory\Settings\Bend.adoc • Bend
+Factory\Settings\contents.txt • 255501.025552
+Factory\Settings\Cut.adoc • Cut
+Factory\Settings\Environment.adoc • Environment
+Factory\Settings\Import.adoc • Import
+Factory\Settings\Index.adoc • Settings
+Factory\Settings\Job.adoc • Job
+Factory\Settings\Notification.adoc • Notifications
+Factory\Settings\Reports.adoc • Reports
+Factory\Settings\Watch.adoc • Watch
+JOBworkflow\LayoutCommands\AdaptCompact.adoc • Adapt and Compact
+JOBworkflow\LayoutCommands\AddParts.adoc • Add parts
+JOBworkflow\LayoutCommands\contents.txt • 263627.063606
+JOBworkflow\LayoutCommands\Delete.adoc • Delete
+JOBworkflow\LayoutCommands\ExportOutputs.adoc • Export outputs
+JOBworkflow\LayoutCommands\Index.adoc • Nests
+JOBworkflow\LayoutCommands\LayoutPanel.adoc • Layout panel
+JOBworkflow\LayoutCommands\MarkComplete.adoc • Mark complete
+JOBworkflow\LayoutCommands\NCCodeSend.adoc • Send/Recall NC
+JOBworkflow\LayoutCommands\NestView.adoc • Layout view
+JOBworkflow\LayoutCommands\ReportSender.adoc • Report sender
+JOBworkflow\LayoutCommands\SplitLayout.adoc • Splitting a Layout
+JOBworkflow\RemnantManagement\AutoRemnant.adoc • Auto remnant management
+JOBworkflow\RemnantManagement\contents.txt • 255501.025550
+JOBworkflow\RemnantManagement\Index.adoc • Remnant management
+JOBworkflow\RemnantManagement\ManualRemnant.adoc • Manual remnant management

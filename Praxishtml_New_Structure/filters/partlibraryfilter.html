@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Part library filters</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welcome to Praxis</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Change license</a></li>
+    <li><button class="tree blank"></button><a href="../installation/workflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Add/Remove machine</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Configure users</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Language</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Add new material and sheet</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Replace material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Map material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Map CAM pages</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Map fields from CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../partpreparation/index.html">Library</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../partpreparation/partimport.html">Part import</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partlibrary.html">Part library</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partstatus.html">Tooling status</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partassignmaterial.html">Part assign material</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/partvalidation.html">Part validation</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/edittooling.html">Edit tooling</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/toolingcheck.html">Tooling check</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/rename.html">Rename</a></li>
+    <li><button class="tree blank"></button><a href="../partpreparation/rollingdirection.html">Rolling direction</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobworkflow/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobcreation.html">Create job</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobview.html">Job view</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobautoplan.html">Auto plan</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobpriority.html">Priority</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/jobstatus.html">Status</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobworkflow/layoutcommands/index.html">Nest management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/nestview.html">Layout view</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/nccodesend.html">Send/Recall NC</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/delete.html">Delete</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/addparts.html">Add parts</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/adaptcompact.html">Adapt and Compact</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/splitlayout.html">Splitting a Layout</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/exportoutputs.html">Export outputs</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/markcomplete.html">Mark complete</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobworkflow/remnantmanagement/index.html">Remnant management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobworkflow/remnantmanagement/autoremnant.html">Auto remnant management</a></li>
+      <li><button class="tree blank"></button><a href="../jobworkflow/remnantmanagement/manualremnant.html">Manual remnant management</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/importexport.html">Import / Export</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/resetpartjob.html">Reset part/job</a></li>
+    <li><button class="tree blank"></button><a href="../jobworkflow/outdate.html">Out-of-date</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Filters</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="savedfilters.html">Saving filters</a></li>
+    <li><button class="tree blank"></button><a class="active" href="partlibraryfilter.html">Part library filters</a></li>
+    <li><button class="tree blank"></button><a href="jobpagefilter.html">Job page filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD extensions</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Save parts</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Save assembly</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Check feasibility</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Factory settings</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Misc enhancements</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Filters</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partlibraryfilter.html">Part library filters</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Part library filters</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Part Library Filters let you quickly search for and locate parts in the
+library by applying specific conditions. By narrowing results to only the parts
+that meet your criteria, these filters make it easier to manage and access
+relevant parts efficiently.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/partlibrary.png" alt="Part Library" width="170">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_status">Status</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Status</strong> filter to search parts based on tooling status.</p>
+</li>
+<li>
+<p>The dropdown displays tooling states as colored boxes and all available
+machines and their applicable errors.</p>
+</li>
+<li>
+<p>The colored boxes represent the following states:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>White: Tooling OK</p>
+</li>
+<li>
+<p>Orange: Tooling has error</p>
+</li>
+<li>
+<p>Yellow: Tooling has warning</p>
+</li>
+<li>
+<p>Grey: Tooling suppressed</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If a part has narrow flange or tooling not assigned errors, selecting these
+will display the respective parts.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/status2.png" alt="Status" width="1233">
+</div>
+</div>
+</li>
+<li>
+<p>Parts with suppressed tooling on the selected machine will be displayed by clicking on the grey colored box.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/supressed.png" alt="Suppressed" width="990">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bend_mounts">Bend mounts</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Bend mounts</strong> filter to search parts based on the bend tool used.</p>
+</li>
+<li>
+<p>The dropdown shows all available bend tools and can be filtered by tool name,
+type (punch, gooseneck, radius, etc.) or description.</p>
+</li>
+<li>
+<p>Select multiple tools and click <strong>Match all</strong> to sort the tools which use
+both the selected tools.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/bendmount.png" alt="Bend Mount" width="990">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_used_tools">Used tools</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Filtering by <strong>Used tools</strong> works similar to filtering by
+<strong>Bend mounts</strong>.</p>
+</li>
+<li>
+<p>Tool icons are shown in proportional sizes (not exact, but relative).</p>
+</li>
+<li>
+<p>When the tooling preview is open, hovering the mouse over a tool in the
+filter list highlights that tool in the preview pane.</p>
+</li>
+<li>
+<p>Multiple tools can be selected and applied using
+<strong>Match all</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/usedtool.png" alt="Used Tool" width="912">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_state">State</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>State</strong> filter to search parts based on their current
+state.</p>
+</li>
+<li>
+<p>The dropdown displays all applicable states depending on the library parts
+available.</p>
+</li>
+<li>
+<p>The list of states changes dynamically according to the selected parts and
+their status.</p>
+</li>
+<li>
+<p>For example, select <strong>Material Missing</strong> to view parts in an unresolved
+material state.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/state.png" alt="State" width="990">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_status">Status</a>
+  </li>
+  <li level="1">
+   <a href="#_bend_mounts">Bend mounts</a>
+  </li>
+  <li level="1">
+   <a href="#_used_tools">Used tools</a>
+  </li>
+  <li level="1">
+   <a href="#_state">State</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="savedfilters.html">Saving filters</a></span>
+ <span class="next"><a href="jobpagefilter.html">Job page filters</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>
