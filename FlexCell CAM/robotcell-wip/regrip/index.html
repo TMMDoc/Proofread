@@ -174,6 +174,7 @@
       <li><button class="tree blank"></button><a href="../../bend/advanced/tonnage.html">Tonnage check</a></li>
      </ul>
     </li>
+    <li><button class="tree blank"></button><a href="../../bend/bendingaids.html">Bending Aids</a></li>
    </ul>
   </li>
   <li>
@@ -406,7 +407,8 @@
     <li><button class="tree blank"></button><a href="../../database/materials.html">Materials</a></li>
     <li><button class="tree blank"></button><a href="../../database/machines.html">Machines</a></li>
     <li><button class="tree blank"></button><a href="../../database/bendtools.html">Bend tools</a></li>
-    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../../database/benddeductions.html">Bend deductions</a></li>
+    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend grippers</a></li>
     <li><button class="tree blank"></button><a href="../../database/formscomponents.html">Forms and Components</a></li>
    </ul>
   </li>
@@ -427,6 +429,7 @@
     <li><button class="tree blank"></button><a href="../../appendix/3dformats.html">Supported 3D formats</a></li>
     <li><button class="tree blank"></button><a href="../../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
     <li><button class="tree blank"></button><a href="../../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+    <li><button class="tree blank"></button><a href="../../appendix/adaptgeometry.html">The Adapt Geometry feature</a></li>
    </ul>
   </li>
  </ul>
@@ -511,23 +514,30 @@ that regrip operation, and a second click opens up the
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Regrip during bend</strong>: The regrip happens during the bending operation, and
+the part is held by the punch and die during the regrip. The gripper releases
+the part, moves to the new location and picks up the part, while the punch is
+still down and holding the part in place.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/atstation.png" alt="At Station" width="20"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Regrip at Station</strong>: Part is placed on a <em>regrip station</em> which uses
-    suction to hold the part securely while the gripper releases the part,
-    moves and picks up the part at a different plane, position or orientation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Regrip at Station</strong>: Part is placed on a <em>regrip station</em> which uses suction
+to hold the part securely while the gripper releases the part, moves and picks
+up the part at a different plane, position or orientation.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/atclamp.png" alt="At Clamp" width="20"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Regrip at Clamping</strong>: The punch and the die are used to hold the part during
-    the regrip, which happens as soon as the punch comes down and <em>clamps</em> the part,
-    and before the bending operation.</p></td>
+the regrip, which happens as soon as the punch comes down and <em>clamps</em> the part,
+and before the bending operation.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/atpostbend.png" alt="At Post-Bend" width="20"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Regrip Post-Bend</strong>: The punch and die are used to hold the part during regrip.
-    The bending is completed as usual, but the punch remains in place and does not
-    move up to decompress and release the part. Instead, the gripper releases the
-    part, moves to the new location and picks up the part.</p></td>
+The bending is completed as usual, but the punch remains in place and does not
+move up to decompress and release the part. Instead, the gripper releases the
+part, moves to the new location and picks up the part.</p></td>
 </tr>
 </tbody>
 </table>
@@ -565,7 +575,7 @@ or is clamped between the punch and the die.</p>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

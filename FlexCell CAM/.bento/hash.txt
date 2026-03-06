@@ -7,21 +7,23 @@ FLUX=
 FOLDAPP=Flux
 LANGUAGE=EN
 Folders=46
-Pages=182
+Pages=185
 UIXlate=False, DebugUIXlate=False, Language=EN
 
-contents.txt • 254205.054236
+contents.txt • 264305.094317
 Index.adoc • Welcome to {APPNAME}
-manifest.txt • 250014.030044
+manifest.txt • 263027.033050
 Appendix\3DFormats.adoc • Supported 3D formats
+Appendix\AdaptGeometry.adoc • The Adapt Geometry feature
 Appendix\BendToolDXF.adoc • Bend tool DXF
 Appendix\BSeparatorDXF.adoc • Separator sheet DXF
-Appendix\contents.txt • 250405.120445
+Appendix\contents.txt • 263027.033050
 Appendix\Index.adoc • Appendix
 BCell\contents.txt • 250405.120446
 BCell\Index.adoc • BendMaster CAM
 BCell\Navigator.adoc • Bend navigator
-Bend\contents.txt • 250405.120446
+Bend\BendingAids.adoc • Bending Aids
+Bend\contents.txt • 263027.033050
 Bend\CreateBendData.adoc • Create bend data
 Bend\Index.adoc • Bend CAM
 Bend\Navigator.adoc • Bend navigator
@@ -32,9 +34,10 @@ CAD\Index.adoc • CAD
 CAD\Sketch.adoc • Modifying the geometry
 Cut\contents.txt • 250405.120447
 Cut\Index.adoc • Laser CAM
-Database\BendGrippers.adoc • Bend Grippers
+Database\BendDeductions.adoc • Bend deductions
+Database\BendGrippers.adoc • Bend grippers
 Database\BendTools.adoc • Bend tools
-Database\contents.txt • 250405.120447
+Database\contents.txt • 263027.033050
 Database\FormsComponents.adoc • Forms and Components
 Database\Index.adoc • Database
 Database\Machines.adoc • Machines
@@ -66,7 +69,7 @@ Rewrite\MeasureDimension.adoc • Measuring and changing Outer Dimension
 Rewrite\Nesting.adoc • Nesting
 Rewrite\Scenarios.adoc • Bevel Cut Examples
 Rewrite\TwinLine.adoc • TwinLine
-RobotCell-WIP\contents.txt • 255912.045925
+RobotCell-WIP\contents.txt • 264305.094317
 RobotCell-WIP\Index.adoc • FlexCell CAM
 RobotCell-WIP\Navigator.adoc • Bend navigator
 RobotCell-WIP\Troubleshoot.adoc • Troubleshooting
@@ -192,16 +195,16 @@ Fold\Tools\LBH.adoc • Lower Blank Holder
 Fold\Tools\UB.adoc • Upper Bending Tool
 Fold\Tools\ZBW.adoc • ZBW Tools
 RobotCell-WIP\Advanced\CellConfig.adoc • Cell configuration
-RobotCell-WIP\Advanced\contents.txt • 252501.112526
+RobotCell-WIP\Advanced\contents.txt • 264305.094317
 RobotCell-WIP\Advanced\Index.adoc • Advanced
 RobotCell-WIP\Advanced\Waypoints.adoc • Waypoints
 RobotCell-WIP\Bending\Advanced.adoc • Advanced
 RobotCell-WIP\Bending\Bending.adoc • Bending
-RobotCell-WIP\Bending\contents.txt • 251706.051746
+RobotCell-WIP\Bending\contents.txt • 264305.094317
 RobotCell-WIP\Bending\Extraction.adoc • Extraction
 RobotCell-WIP\Bending\Index.adoc • Robotic bending
 RobotCell-WIP\Bending\Insertion.adoc • Insertion
-RobotCell-WIP\Deposit\contents.txt • 250214.030235
+RobotCell-WIP\Deposit\contents.txt • 264305.094317
 RobotCell-WIP\Deposit\Deposit.adoc • Deposit panel
 RobotCell-WIP\Deposit\DepositTabs.adoc • Deposit Tabs
 RobotCell-WIP\Deposit\Index.adoc • Part deposit
@@ -210,12 +213,12 @@ RobotCell-WIP\Deposit\Patterns.adoc • Deposit pattern types
 RobotCell-WIP\Deposit\Repeat.adoc • Repeat and sequence
 RobotCell-WIP\Deposit\SeparatorSheet.adoc • Add separator sheets
 RobotCell-WIP\Pickup\CenteringTable.adoc • Centering table
-RobotCell-WIP\Pickup\contents.txt • 254011.124053
+RobotCell-WIP\Pickup\contents.txt • 264305.094317
 RobotCell-WIP\Pickup\FromDispenser.adoc • Pickup from dispenser
 RobotCell-WIP\Pickup\FromPallet.adoc • Pickup from pallet
 RobotCell-WIP\Pickup\Index.adoc • Part pickup
 RobotCell-WIP\Regrip\AddRegrip.adoc • Add/Remove regrip
-RobotCell-WIP\Regrip\contents.txt • 255919.115952
+RobotCell-WIP\Regrip\contents.txt • 264305.094317
 RobotCell-WIP\Regrip\EditRegrip.adoc • Edit regrip
 RobotCell-WIP\Regrip\GripperPanel.adoc • Gripper Panel
 RobotCell-WIP\Regrip\Index.adoc • Regripping
@@ -272,7 +275,7 @@ Cut\PartWorkflow\Panels\CornerTreatment.adoc • Corner treatment
 Cut\PartWorkflow\Panels\Index.adoc • Editing panels
 Cut\PartWorkflow\Panels\Part.adoc • Part
 Cut\PartWorkflow\Panels\ScrapCut.adoc • Scrap cut
-RobotCell-WIP\Advanced\GripperDB\contents.txt • 252501.112526
+RobotCell-WIP\Advanced\GripperDB\contents.txt • 264305.094315
 RobotCell-WIP\Advanced\GripperDB\CreateGripper.adoc • Create a gripper
 RobotCell-WIP\Advanced\GripperDB\ImportGripper.adoc • Import gripper from DXF
 RobotCell-WIP\Advanced\GripperDB\Index.adoc • Gripper database

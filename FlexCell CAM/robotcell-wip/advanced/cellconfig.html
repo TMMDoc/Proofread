@@ -174,6 +174,7 @@
       <li><button class="tree blank"></button><a href="../../bend/advanced/tonnage.html">Tonnage check</a></li>
      </ul>
     </li>
+    <li><button class="tree blank"></button><a href="../../bend/bendingaids.html">Bending Aids</a></li>
    </ul>
   </li>
   <li>
@@ -406,7 +407,8 @@
     <li><button class="tree blank"></button><a href="../../database/materials.html">Materials</a></li>
     <li><button class="tree blank"></button><a href="../../database/machines.html">Machines</a></li>
     <li><button class="tree blank"></button><a href="../../database/bendtools.html">Bend tools</a></li>
-    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../../database/benddeductions.html">Bend deductions</a></li>
+    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend grippers</a></li>
     <li><button class="tree blank"></button><a href="../../database/formscomponents.html">Forms and Components</a></li>
    </ul>
   </li>
@@ -427,6 +429,7 @@
     <li><button class="tree blank"></button><a href="../../appendix/3dformats.html">Supported 3D formats</a></li>
     <li><button class="tree blank"></button><a href="../../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
     <li><button class="tree blank"></button><a href="../../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+    <li><button class="tree blank"></button><a href="../../appendix/adaptgeometry.html">The Adapt Geometry feature</a></li>
    </ul>
   </li>
  </ul>
@@ -496,11 +499,11 @@ cause collisions or damage.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>By using the three point calibration method, the machine&#8217;s X, Y, Z, W, P, R
-are calibrated with respect to the robot&#8217;s world coordinate system.</p>
+<p>By using the three point calibration method, the machine&#8217;s positions are
+calibrated with respect to the robot&#8217;s world coordinate system.</p>
 </li>
 <li>
-<p>The X, Y, Z, W, P, R values recorded in the Teach Pendant has to be entered in
+<p>The coordinate values obtained by three point calibration should be entered in
 MInR.</p>
 </li>
 </ul>
@@ -514,7 +517,7 @@ MInR.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Once you enter MInR values, RInM values are generated automatically.</p>
+<p>Once you enter MInR values, RInM values are computed automatically.</p>
 </li>
 <li>
 <p>Update these values:</p>
@@ -602,7 +605,7 @@ Y, Z Rot.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>By using the three point calibration method, the pallet&#8217;s X, Y, Z, W, P, R are
+<p>By using the three point calibration method, the pallet&#8217;s positions are
 calibrated with respect to the robot&#8217;s world coordinate system.</p>
 <div class="admonitionblock note">
 <table>
@@ -619,8 +622,8 @@ Chute etc).
 </div>
 </li>
 <li>
-<p>The X, Y, Z, W, P, R values recorded in the Teach pendant has to be entered in
-PInM.</p>
+<p>The coordinate values obtained by three point calibration should be entered in
+PInR.</p>
 </li>
 </ul>
 </div>
@@ -633,7 +636,7 @@ PInM.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>After entering PInR values, PInM values are generated automatically.</p>
+<p>After entering PInR values, PInM values are computed automatically.</p>
 </li>
 <li>
 <p>Update these PInM values in the corresponding pallet panel (Pickup Pallet,
@@ -728,7 +731,7 @@ collisions or damage.
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

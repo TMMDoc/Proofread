@@ -174,6 +174,7 @@
       <li><button class="tree blank"></button><a href="../bend/advanced/tonnage.html">Tonnage check</a></li>
      </ul>
     </li>
+    <li><button class="tree blank"></button><a href="../bend/bendingaids.html">Bending Aids</a></li>
    </ul>
   </li>
   <li>
@@ -406,7 +407,8 @@
     <li><button class="tree blank"></button><a class="active" href="materials.html">Materials</a></li>
     <li><button class="tree blank"></button><a href="machines.html">Machines</a></li>
     <li><button class="tree blank"></button><a href="bendtools.html">Bend tools</a></li>
-    <li><button class="tree blank"></button><a href="bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="benddeductions.html">Bend deductions</a></li>
+    <li><button class="tree blank"></button><a href="bendgrippers.html">Bend grippers</a></li>
     <li><button class="tree blank"></button><a href="formscomponents.html">Forms and Components</a></li>
    </ul>
   </li>
@@ -427,6 +429,7 @@
     <li><button class="tree blank"></button><a href="../appendix/3dformats.html">Supported 3D formats</a></li>
     <li><button class="tree blank"></button><a href="../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
     <li><button class="tree blank"></button><a href="../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+    <li><button class="tree blank"></button><a href="../appendix/adaptgeometry.html">The Adapt Geometry feature</a></li>
    </ul>
   </li>
  </ul>
@@ -453,96 +456,94 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Materials</h1>
+<div class="paragraph">
+<p>Flux come with default materials that can be assigned to parts while
+processing them for sheet metal processing. To access the materials, go to
+database and select <strong>Materials</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="img/material.png" alt="Materia10" width="500">
+<img src="img/material.png" alt="Materia10" width="471">
 </div>
+</div>
+<div class="paragraph">
+<p>You can also create your own materials with specific properties.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To add a new material, click on the <strong>Add</strong> button.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A message will appear prompting you to add an alias for an existing.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addmaterial.png" alt="AddMaterial" width="431">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If you wish to create a new material, click <strong>Yes</strong> and fill in the
+properties for the new material.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/newmaterial.png" alt="New Material" width="471">
+</div>
+</div>
+</li>
+</ul>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
 <colgroup>
 <col>
 <col>
-<col>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">No</th>
+<th class="tableblock halign-left valign-top">Property</th>
 <th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All materials are displayed here.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The designation of the selected
-material.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The designation of the new material.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Display name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The selected material is
-displayed under this name.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The new material is displayed under this name.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tensile strength</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This function is used
-to specify the tensile strength of the selected material.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This function is used to specify the tensile strength of the new material.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Density</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This function is used to
-specify the density of the selected material.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This function is used to specify the density of the new material.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Springback factor</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This function is used to
-specify the spring-back of the selected material.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This function is used to specify the spring-back of the new material.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Magnetic</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This function is used to set
-whether the selected material is magnetic.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This function is used to set whether the new material is magnetic.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">K-Factors</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This function is
-used to add or delete correction factors <strong>'k'</strong> for the selected material.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This function is used to add or delete correction factors <strong>'k'</strong> for the new material.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ri/T ratio</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This function is used to specify the inner radius to sheet thickness ratio for the new material.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Aliases</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The selected material is
-also known under this name.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Add</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This
-function is used to add a new materialThe properties can then be
-specified.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delete</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This function is used to
-delete the selected materialThis does not work with the standard
-materials.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Close</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Closes the <strong>Materials</strong> window.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The new material is also known under this name.</p></td>
 </tr>
 </tbody>
 </table>
@@ -566,7 +567,7 @@ materials.</p></td>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

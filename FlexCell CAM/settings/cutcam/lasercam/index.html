@@ -174,6 +174,7 @@
       <li><button class="tree blank"></button><a href="../../../bend/advanced/tonnage.html">Tonnage check</a></li>
      </ul>
     </li>
+    <li><button class="tree blank"></button><a href="../../../bend/bendingaids.html">Bending Aids</a></li>
    </ul>
   </li>
   <li>
@@ -406,7 +407,8 @@
     <li><button class="tree blank"></button><a href="../../../database/materials.html">Materials</a></li>
     <li><button class="tree blank"></button><a href="../../../database/machines.html">Machines</a></li>
     <li><button class="tree blank"></button><a href="../../../database/bendtools.html">Bend tools</a></li>
-    <li><button class="tree blank"></button><a href="../../../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../../../database/benddeductions.html">Bend deductions</a></li>
+    <li><button class="tree blank"></button><a href="../../../database/bendgrippers.html">Bend grippers</a></li>
     <li><button class="tree blank"></button><a href="../../../database/formscomponents.html">Forms and Components</a></li>
    </ul>
   </li>
@@ -427,6 +429,7 @@
     <li><button class="tree blank"></button><a href="../../../appendix/3dformats.html">Supported 3D formats</a></li>
     <li><button class="tree blank"></button><a href="../../../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
     <li><button class="tree blank"></button><a href="../../../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+    <li><button class="tree blank"></button><a href="../../../appendix/adaptgeometry.html">The Adapt Geometry feature</a></li>
    </ul>
   </li>
  </ul>
@@ -497,15 +500,15 @@ includes <em>Cut</em>, <em>Mark</em>,
 <em>None</em>, and <em>Based on layer</em>.</p>
 </div>
 <div class="paragraph">
-<p><strong>None</strong>: The laser will ignore this line on the part
+<p><em>None</em> - The laser will ignore this line on the part
 drawing.</p>
 </div>
 <div class="paragraph">
-<p><strong>Mark</strong>: The laser will just mark this line,
+<p><em>Mark</em> - The laser will just mark this line,
 i.e. draw a visible line on the sheet metal that does not pierce through.</p>
 </div>
 <div class="paragraph">
-<p><strong>Cut</strong>: Flux will choose the appropriate
+<p><em>Cut</em> - Flux will choose the appropriate
 laser condition for this polyline and the laser will cut it accordingly.</p>
 </div>
 <div class="admonitionblock note">
@@ -542,6 +545,44 @@ considered for stitch cut.</p>
 <div class="paragraph">
 <p><strong>Dynamics</strong> - Dynamics dropdown menu includes Normal, High and
 Reduced.</p>
+</div>
+<div class="paragraph">
+<p><strong>Mark bend lines</strong> - When this option is checked, bend lines created using
+the bend line tool will be marked/etched on the sheet using laser marking. This
+marking is useful for subsequent bending operations.</p>
+</div>
+<div class="paragraph">
+<p><em>None</em> - No marking is applied for bend lines.</p>
+</div>
+<div class="paragraph">
+<p><em>Full</em> - Marks the entire length of the bend line. When the laser
+technology is processed in Flux, the bend line color changes to deep maroon.</p>
+</div>
+<div class="paragraph">
+<p><em>Partial</em> - Creates markings at the beginning and end of each bend line
+segment, with each mark being 10 mm in length.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<div class="title">Bend direction indicator</div>
+<p>For a positive bend angle, marking is displayed
+as a <strong>solid</strong> line. For a negative bend angle, marking is displayed as a <strong>dashed</strong>
+line.</p>
+</div>
+<div class="paragraph">
+<div class="title">Bend line feasibility check</div>
+<p>Flux will issue a warning and leave the bend line unmarked if it contains
+infeasible bend information.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -923,7 +964,7 @@ from any holes.</p>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

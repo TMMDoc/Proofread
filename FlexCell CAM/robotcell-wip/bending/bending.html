@@ -174,6 +174,7 @@
       <li><button class="tree blank"></button><a href="../../bend/advanced/tonnage.html">Tonnage check</a></li>
      </ul>
     </li>
+    <li><button class="tree blank"></button><a href="../../bend/bendingaids.html">Bending Aids</a></li>
    </ul>
   </li>
   <li>
@@ -406,7 +407,8 @@
     <li><button class="tree blank"></button><a href="../../database/materials.html">Materials</a></li>
     <li><button class="tree blank"></button><a href="../../database/machines.html">Machines</a></li>
     <li><button class="tree blank"></button><a href="../../database/bendtools.html">Bend tools</a></li>
-    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../../database/benddeductions.html">Bend deductions</a></li>
+    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend grippers</a></li>
     <li><button class="tree blank"></button><a href="../../database/formscomponents.html">Forms and Components</a></li>
    </ul>
   </li>
@@ -427,6 +429,7 @@
     <li><button class="tree blank"></button><a href="../../appendix/3dformats.html">Supported 3D formats</a></li>
     <li><button class="tree blank"></button><a href="../../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
     <li><button class="tree blank"></button><a href="../../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+    <li><button class="tree blank"></button><a href="../../appendix/adaptgeometry.html">The Adapt Geometry feature</a></li>
    </ul>
   </li>
  </ul>
@@ -466,69 +469,9 @@
 </div>
 </div>
 <div class="paragraph">
-<p>You can choose the <strong>Bending</strong> strategy in this section of the
-<strong>Strategy</strong> panel.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <strong>Support+Vacuum</strong> strategy is the default. During the bending, the gripper
-supports the part, and the vacuum remains on, holding the part. The gripper
-executes a carefully calculated trajectory in sync with the position of the
-beam, and follows the flange of the part as it arcs upwards.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/support.png" alt="Support"></span></p>
-</div>
-</li>
-<li>
-<p>With some types of dies, or with certain bending processes, the controller is
-not able to get the robot to track the part trajectory precisely and the
-vacuum gripper may slip or lose grip during the bending. In these situations the
-<strong>No Support</strong> strategy is useful. Once the beam has lowered and clamped the part,
-the gripper <em>lets go</em>, and waits for the bend to be completed before moving up
-and regripping the part:</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/nosupport.png" alt="No Support" width="660"></span></p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_slide_gripper">Slide Gripper</h2>
-<div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="img/slidegripper.png" alt="Slide Gripper">
-</div>
-</div>
-<div class="paragraph">
-<p>Slide Gripper option helps to slide the position of the Gripper so that we get
-the correct bending process.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_adding_a_regrip">Adding a regrip</h2>
-<div class="sectionbody">
-<div class="imageblock right">
-<div class="content">
-<img src="img/addregrip.png" alt="Add Regrip">
-</div>
-</div>
-<div class="paragraph">
-<p>An additional option available in this section of the <strong>Strategy</strong> panel is the
-ability to add a <em>regrip</em>. Clicking on the <strong>Add Regrip</strong> button brings up a menu
-like the one alongside.</p>
-</div>
-<div class="paragraph">
-<p>With this, you can choose to <em>regrip</em> the part (change the position and orientation
-of the gripper, or to even change the <em>holding plane</em> by which the part is held).</p>
-</div>
-<div class="paragraph">
-<p>These regrip options are explained in greater detail in the
-<a href="../regrip/index.html">Regrip</a> section.</p>
+<p><strong>No Support</strong>: The <strong>No Support</strong> strategy is the default. The gripper releases the
+part during the bending operation, and waits for the bend to be completed before
+moving up and regripping the part.</p>
 </div>
 </div>
 </div>
@@ -541,12 +484,6 @@ of the gripper, or to even change the <em>holding plane</em> by which the part i
  <ul>
   <li level="1">
    <a href="#_bending_strategy">Bending strategy</a>
-  </li>
-  <li level="1">
-   <a href="#_slide_gripper">Slide Gripper</a>
-  </li>
-  <li level="1">
-   <a href="#_adding_a_regrip">Adding a regrip</a>
   </li>
  </ul>
 </aside>
@@ -566,7 +503,7 @@ of the gripper, or to even change the <em>holding plane</em> by which the part i
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

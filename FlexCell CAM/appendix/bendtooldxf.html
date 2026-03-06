@@ -174,6 +174,7 @@
       <li><button class="tree blank"></button><a href="../bend/advanced/tonnage.html">Tonnage check</a></li>
      </ul>
     </li>
+    <li><button class="tree blank"></button><a href="../bend/bendingaids.html">Bending Aids</a></li>
    </ul>
   </li>
   <li>
@@ -406,7 +407,8 @@
     <li><button class="tree blank"></button><a href="../database/materials.html">Materials</a></li>
     <li><button class="tree blank"></button><a href="../database/machines.html">Machines</a></li>
     <li><button class="tree blank"></button><a href="../database/bendtools.html">Bend tools</a></li>
-    <li><button class="tree blank"></button><a href="../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../database/benddeductions.html">Bend deductions</a></li>
+    <li><button class="tree blank"></button><a href="../database/bendgrippers.html">Bend grippers</a></li>
     <li><button class="tree blank"></button><a href="../database/formscomponents.html">Forms and Components</a></li>
    </ul>
   </li>
@@ -427,6 +429,7 @@
     <li><button class="tree blank"></button><a href="3dformats.html">Supported 3D formats</a></li>
     <li><button class="tree blank"></button><a href="bseparatordxf.html">Separator sheet DXF</a></li>
     <li><button class="tree blank"></button><a class="active" href="bendtooldxf.html">Bend tool DXF</a></li>
+    <li><button class="tree blank"></button><a href="adaptgeometry.html">The Adapt Geometry feature</a></li>
    </ul>
   </li>
  </ul>
@@ -909,8 +912,34 @@ above.</p>
 <div class="sect2">
 <h3 id="_z_bend_dies">Z-Bend dies</h3>
 <div class="paragraph">
-<p>For a Z-Bend die, there should be a text entry like this in the DXF file:
-<strong>FLAVOR=ZBendDie</strong></p>
+<p>For a Z-Bend die, the following additional entries are required in DXF file:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>FLAVOR=ZBendDie</strong> marks this as a Z-Bend die.</p>
+</li>
+<li>
+<p>The text <strong>PARAMS=5.66,2.83,90,90,45</strong> provides some metrics that are required for correct simulation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The 5 parameters defined in <strong>PARAMS</strong> are as per the image below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/zbendtool.png" alt="Z-Bend params" width="350">
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>1 = Total distance (D1+D2)
+2 = Right distance (D2)
+3 = Angle above (A1)
+4 = Angle below (A2, A1==A2 for a symmetrical Z bend tool)
+5 = Slope at center (S0)</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>In addition, the tool should be drawn so that the central flat span goes from
@@ -926,8 +955,17 @@ the image below, and not the <em>flipped</em> orientation of this:</p>
 <div class="sect2">
 <h3 id="_z_bend_punches">Z-Bend punches</h3>
 <div class="paragraph">
-<p>For a Z-Bend punch, there should be a text entry like this in the DXF file:
-<strong>FLAVOR=ZBendPunch</strong></p>
+<p>For a Z-Bend punch, the following additional entries are required in DXF file:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text <strong>FLAVOR=ZBendPunch</strong> marks this as a Z-Bend punch.</p>
+</li>
+<li>
+<p>The text <strong>PARAMS=5.66,2.83,90,90,45</strong> provides some metrics that are required for correct simulation. This is same as the <strong>PARAMS</strong> defined for Z-Bend die.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>In addition, the tool should be drawn so that the central flat span goes from
@@ -1541,6 +1579,7 @@ how far the second slot is from the reference point of holder.</p>
             </div>
             <nav class="pagination">
  <span class="prev"><a href="bseparatordxf.html">Separator sheet DXF</a></span>
+ <span class="next"><a href="adaptgeometry.html">The Adapt Geometry feature</a></span>
 </nav>
 
         </div>
@@ -1551,7 +1590,7 @@ how far the second slot is from the reference point of holder.</p>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

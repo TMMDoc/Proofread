@@ -174,6 +174,7 @@
       <li><button class="tree blank"></button><a href="../../bend/advanced/tonnage.html">Tonnage check</a></li>
      </ul>
     </li>
+    <li><button class="tree blank"></button><a href="../../bend/bendingaids.html">Bending Aids</a></li>
    </ul>
   </li>
   <li>
@@ -406,7 +407,8 @@
     <li><button class="tree blank"></button><a href="../../database/materials.html">Materials</a></li>
     <li><button class="tree blank"></button><a href="../../database/machines.html">Machines</a></li>
     <li><button class="tree blank"></button><a href="../../database/bendtools.html">Bend tools</a></li>
-    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../../database/benddeductions.html">Bend deductions</a></li>
+    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend grippers</a></li>
     <li><button class="tree blank"></button><a href="../../database/formscomponents.html">Forms and Components</a></li>
    </ul>
   </li>
@@ -427,6 +429,7 @@
     <li><button class="tree blank"></button><a href="../../appendix/3dformats.html">Supported 3D formats</a></li>
     <li><button class="tree blank"></button><a href="../../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
     <li><button class="tree blank"></button><a href="../../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+    <li><button class="tree blank"></button><a href="../../appendix/adaptgeometry.html">The Adapt Geometry feature</a></li>
    </ul>
   </li>
  </ul>
@@ -471,15 +474,17 @@ deposit pallet.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Rotate and Pitch</strong>:
-The <strong>Rotate</strong> and <strong>Pitch</strong> options control the orientation of the part at the point of
-drop. The Rotate setting (also known as <strong>yaw</strong>) turns the part around the wrist local
-vector, while the <strong>Pitch</strong> axis rotates the part about the machine Z axis.</p>
+<p><strong>Rotate</strong>: Rotation around the longitudinal axis (X-axis). The tool of the
+robot twists clockwise/counter-clockwise.</p>
 </li>
-</ul>
-</div>
-<div class="ulist">
-<ul>
+<li>
+<p><strong>Pitch</strong>: Rotation around the lateral axis (Y-axis). The tool of the
+robot tilts forward/backward.</p>
+</li>
+<li>
+<p><strong>Yaw</strong>: Rotation around the vertical axis (Z-axis). The tool of the
+robot rotates horizontally.</p>
+</li>
 <li>
 <p><strong>Height</strong>:
 The <strong>Height</strong> parameter controls the height above the stack from
@@ -498,11 +503,8 @@ deposit simulation can be viewed by moving the simulate slider back and forth.</
 </div>
 </div>
 <div class="sect1">
-<h2 id="_repeat_grid_tab_r">Repeat Grid Tab (R)</h2>
+<h2 id="_repeat_grid_tab_r">Repeat Grid Tab (R) <span class="image right"><img src="img/repeattab.png" alt="Repeattab" width="120"></span></h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><span class="image right"><img src="img/repeattab.png" alt="Repeattab" width="120"></span></p>
-</div>
 <div class="paragraph">
 <p>The <strong>D1</strong> tab shown above is used to specify the orientation of the
 first part of the deposit. Then, the settings in the Repeat tab are used to
@@ -573,7 +575,7 @@ settings.</p>
    <a href="#_deposit_position_tab_d1">Deposit Position Tab (D1)</a>
   </li>
   <li level="1">
-   <a href="#_repeat_grid_tab_r">Repeat Grid Tab (R)</a>
+   <a href="#_repeat_grid_tab_r">Repeat Grid Tab (R) <span class="image right"><img src="img/repeattab.png" alt="Repeattab" width="120"></span></a>
   </li>
   <li level="1">
    <a href="#_deposit_sequence_tab_s">Deposit Sequence Tab (S)</a>
@@ -596,7 +598,7 @@ settings.</p>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

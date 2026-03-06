@@ -174,6 +174,7 @@
       <li><button class="tree blank"></button><a href="../advanced/tonnage.html">Tonnage check</a></li>
      </ul>
     </li>
+    <li><button class="tree blank"></button><a href="../bendingaids.html">Bending Aids</a></li>
    </ul>
   </li>
   <li>
@@ -406,7 +407,8 @@
     <li><button class="tree blank"></button><a href="../../database/materials.html">Materials</a></li>
     <li><button class="tree blank"></button><a href="../../database/machines.html">Machines</a></li>
     <li><button class="tree blank"></button><a href="../../database/bendtools.html">Bend tools</a></li>
-    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../../database/benddeductions.html">Bend deductions</a></li>
+    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend grippers</a></li>
     <li><button class="tree blank"></button><a href="../../database/formscomponents.html">Forms and Components</a></li>
    </ul>
   </li>
@@ -427,6 +429,7 @@
     <li><button class="tree blank"></button><a href="../../appendix/3dformats.html">Supported 3D formats</a></li>
     <li><button class="tree blank"></button><a href="../../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
     <li><button class="tree blank"></button><a href="../../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+    <li><button class="tree blank"></button><a href="../../appendix/adaptgeometry.html">The Adapt Geometry feature</a></li>
    </ul>
   </li>
  </ul>
@@ -682,6 +685,33 @@ by holding it near the center, or by holding it near the left edge.</p>
 of the tool station, or with the left edge aligned exactly with the punch and die.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_editing_a_hem_bend">Editing a hem bend</h3>
+<div class="imageblock right">
+<div class="content">
+<img src="img/edithem.png" alt="Hem bend offset" width="141">
+</div>
+</div>
+<div class="paragraph">
+<p>When a hem bend is processed using a bend cell, the hem edge is typically offset
+by a small gap. This gap is provided to prevent the hem edge from butting
+against the punch or die surface.</p>
+</div>
+<div class="paragraph">
+<p>To edit this gap, open the bend panel for the
+hem bend and provide the value in the <strong>Position</strong> input field (in X-axis).</p>
+</div>
+<div class="paragraph">
+<p>The default values is set to 2 mm which can be edited in the
+<a href="../../settings\bendcam\benddefaults.html">Bend defaults</a> settings under Beam
+cycle. The range is from 0.1 to 10 mm.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/hemgap.png" alt="Hem Gap" width="350">
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="footnotes">
@@ -724,6 +754,9 @@ of the tool station, or with the left edge aligned exactly with the punch and di
   <li level="2">
    <a href="#_dragging_a_bend">Dragging a bend</a>
   </li>
+  <li level="2">
+   <a href="#_editing_a_hem_bend">Editing a hem bend</a>
+  </li>
  </ul>
 </aside>
 
@@ -742,7 +775,7 @@ of the tool station, or with the left edge aligned exactly with the punch and di
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

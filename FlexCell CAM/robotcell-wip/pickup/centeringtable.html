@@ -174,6 +174,7 @@
       <li><button class="tree blank"></button><a href="../../bend/advanced/tonnage.html">Tonnage check</a></li>
      </ul>
     </li>
+    <li><button class="tree blank"></button><a href="../../bend/bendingaids.html">Bending Aids</a></li>
    </ul>
   </li>
   <li>
@@ -406,7 +407,8 @@
     <li><button class="tree blank"></button><a href="../../database/materials.html">Materials</a></li>
     <li><button class="tree blank"></button><a href="../../database/machines.html">Machines</a></li>
     <li><button class="tree blank"></button><a href="../../database/bendtools.html">Bend tools</a></li>
-    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend Grippers</a></li>
+    <li><button class="tree blank"></button><a href="../../database/benddeductions.html">Bend deductions</a></li>
+    <li><button class="tree blank"></button><a href="../../database/bendgrippers.html">Bend grippers</a></li>
     <li><button class="tree blank"></button><a href="../../database/formscomponents.html">Forms and Components</a></li>
    </ul>
   </li>
@@ -427,6 +429,7 @@
     <li><button class="tree blank"></button><a href="../../appendix/3dformats.html">Supported 3D formats</a></li>
     <li><button class="tree blank"></button><a href="../../appendix/bseparatordxf.html">Separator sheet DXF</a></li>
     <li><button class="tree blank"></button><a href="../../appendix/bendtooldxf.html">Bend tool DXF</a></li>
+    <li><button class="tree blank"></button><a href="../../appendix/adaptgeometry.html">The Adapt Geometry feature</a></li>
    </ul>
   </li>
  </ul>
@@ -536,6 +539,36 @@ this machine.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_part_panel">Part panel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>Part</strong> panel is used to edit the part position on the centering table.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/centeringpart.png" alt="Part" width="400">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Position</strong> inputs to position the part on the centering
+table; these coordinates specify the center of the part in X and Y, relative to
+the corner of the centering table, and are in the centering table&#8217;s local
+coordinate space.</p>
+</li>
+<li>
+<p>Use the <strong>Angle</strong> input to rotate the part around in the centering table.</p>
+</li>
+<li>
+<p><strong>Rest Part Position</strong> can be changed in X and Y. The corner is taken as
+reference, and it corresponds to 90 degree part rotation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_gripper_panel">Gripper panel</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -566,7 +599,9 @@ to the part&#8217;s orientation.</p>
 180° rotation.</p>
 </li>
 <li>
-<p>Enabling <strong>Alt Pickup</strong> option helps to use an alternative pickup point on the part.</p>
+<p>Enabling <strong>Alt Pickup</strong> option helps to use an alternative pickup point on the
+part. Note that there are only 2 pickup slots in the centering table so, Alt
+Pickup alternates pickup between these two pickup slots.</p>
 </li>
 <li>
 <p>Use the <strong>Set Grip Plane</strong> to select a different plane to
@@ -575,34 +610,8 @@ color plus symbol. Hover around to see the plus symbol showing different plane
 orientation and select a desired plane.</p>
 </li>
 <li>
-<p>Use <strong>Vacuum Grip</strong> option to enable vacuum suction feature for picking the part from
+<p><strong>Use Vacuum Grip</strong> option to enable vacuum suction feature for picking the part from
 the centering table.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_part_panel">Part panel</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The <strong>Part</strong> panel is used to edit the part position on the centering table.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/centeringpart.png" alt="Part" width="400">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Use the <strong>Position</strong> inputs to position the part on the centering
-centering table; these coordinates specify the center of the part in Z and X,
-relative to the corner of the centering table, and are in the centering table&#8217;s
-local coordinate space.</p>
-</li>
-<li>
-<p>Use the <strong>Angle</strong> input to rotate the part around in the centering table.</p>
 </li>
 </ul>
 </div>
@@ -619,10 +628,10 @@ local coordinate space.</p>
    <a href="#_pallet_panel">Pallet panel</a>
   </li>
   <li level="1">
-   <a href="#_gripper_panel">Gripper panel</a>
+   <a href="#_part_panel">Part panel</a>
   </li>
   <li level="1">
-   <a href="#_part_panel">Part panel</a>
+   <a href="#_gripper_panel">Gripper panel</a>
   </li>
  </ul>
 </aside>
@@ -642,7 +651,7 @@ local coordinate space.</p>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 TRUMPF Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">
