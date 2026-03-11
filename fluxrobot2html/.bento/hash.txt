@@ -1,12 +1,14 @@
 Version=58
 LANGUAGE=EN
-Folders=30
-Pages=128
+Folders=32
+Pages=134
 UIXlate=False, DebugUIXlate=False, Language=EN
 
-contents.txt • 261105.111138
+contents.txt • 262511.052504
 Index.adoc • Welcome to FluxRobot
 manifest.txt • 263123.093140
+FluxRobotCAM\contents.txt • 265610.025650
+FluxRobotCAM\Index.adoc • FluxRobot CAM
 ForReference\contents.txt • 263520.013547
 ForReference\doc.txt
 ForReference\DOKUSketches.pptx
@@ -17,6 +19,12 @@ SystemOverview\Architecture.adoc • Architecture
 SystemOverview\contents.txt • 261105.111100
 SystemOverview\FluxRobotCell.adoc • FluxRobot Cell
 SystemOverview\Index.adoc • System Overview
+FluxRobotCAM\Waypoints\BendPos.adoc • Bend Positioning
+FluxRobotCAM\Waypoints\Centering.adoc • CenteringTable
+FluxRobotCAM\Waypoints\contents.txt • 262511.052529
+FluxRobotCAM\Waypoints\deposit.adoc • Deposit
+FluxRobotCAM\Waypoints\index.adoc • Motion sequences
+FluxRobotCAM\Waypoints\Pickup_vac.adoc • PickupPallet
 ForReference\12_Robopack\36_Overview.adoc • Overview
 ForReference\12_Robopack\37_Setup.adoc • Setup
 ForReference\12_Robopack\contents.txt • 263520.013547
@@ -107,7 +115,7 @@ Setup\FluxOfflineSetup\SettingupCell.adoc • Setting Up the Cell
 Setup\RASoftwareSetup\contents.txt • 262505.092542
 Setup\RASoftwareSetup\Index.adoc • RA Software Setup
 Setup\RASoftwareSetup\RobotModeEnable.adoc • Robot Mode Enable
-Setup\Robot\BusConnection.adoc • Field Elements Bus Connection Overview
+Setup\Robot\BusConnection.adoc • Field Bus Connection Overview
 Setup\Robot\contents.txt • 261605.031614
 Setup\Robot\Index.adoc • Robot
 Setup\Robot\RobotBasics.adoc • Robot Basics
