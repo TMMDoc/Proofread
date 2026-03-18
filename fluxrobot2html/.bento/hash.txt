@@ -7,8 +7,11 @@ UIXlate=False, DebugUIXlate=False, Language=EN
 contents.txt • 262216.032228
 Index.adoc • Welcome to FluxRobot
 manifest.txt • 262817.112857
+FluxRobotCAM\BestPractices.adoc • 
 FluxRobotCAM\contents.txt • 265610.025650
 FluxRobotCAM\Index.adoc • FluxRobot CAM
+FluxRobotCAM\PostProcessor.adoc • Post Processor
+FluxRobotCAM\SamplePgrmDscrpt.adoc • Sample LS Program Description
 ForReference\contents.txt • 263520.013547
 ForReference\doc.txt
 ForReference\DOKUSketches.pptx
@@ -19,6 +22,7 @@ SystemOverview\Architecture.adoc • Architecture
 SystemOverview\contents.txt • 261105.111100
 SystemOverview\FluxRobotCell.adoc • FluxRobot Cell
 SystemOverview\Index.adoc • System Overview
+FluxRobotCAM\img\0_Sub_Pickup.LS
 FluxRobotCAM\Waypoints\BendPos.adoc • Bend Positioning
 FluxRobotCAM\Waypoints\Centering.adoc • CenteringTable
 FluxRobotCAM\Waypoints\contents.txt • 262511.052529
