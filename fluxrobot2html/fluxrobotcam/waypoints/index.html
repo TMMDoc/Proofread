@@ -16,7 +16,7 @@
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
         <div id="header-logo"><img src="../../img/logo.png" width="123" height="50" /></div>
-        <div><p>Flux</p></div>
+        <div><p>FluxRobot</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
@@ -85,8 +85,24 @@
    </ul>
   </li>
   <li>
+   <button class="tree open"></button>
+   <a href="../index.html">FluxRobot CAM</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a class="active" href="index.html">Motion sequences</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="pickup_vac.html">PickupPallet</a></li>
+      <li><button class="tree blank"></button><a href="centering.html">CenteringTable</a></li>
+      <li><button class="tree blank"></button><a href="bendpos.html">Bend Positioning</a></li>
+      <li><button class="tree blank"></button><a href="deposit.html">Deposit</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
    <button class="tree closed"></button>
-   <a href="../../forreference/index.html">ONLY FOR REFERENCE</a>
+   <a href="../../forreference/index.html">FOR REFERENCE</a>
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
@@ -280,22 +296,6 @@
     </li>
    </ul>
   </li>
-  <li>
-   <button class="tree open"></button>
-   <a href="../index.html">FluxRobot CAM</a>
-   <ul>
-    <li>
-     <button class="tree open"></button>
-     <a class="active" href="index.html">Motion sequences</a>
-     <ul>
-      <li><button class="tree blank"></button><a href="pickup_vac.html">PickupPallet</a></li>
-      <li><button class="tree blank"></button><a href="centering.html">CenteringTable</a></li>
-      <li><button class="tree blank"></button><a href="bendpos.html">Bend Positioning</a></li>
-      <li><button class="tree blank"></button><a href="deposit.html">Deposit</a></li>
-     </ul>
-    </li>
-   </ul>
-  </li>
  </ul>
 </div>
 
@@ -320,15 +320,17 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Motion sequences</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>The motion sequence starts and ends with the home position
-All motion steps have a unique name that the customer could modify / teach points</p>
+<p>The motion sequence starts and ends with the home position.
+All motion steps have a unique name that the customer could modify / teach points.</p>
 </div>
 <div class="paragraph">
-<p>The home position is the 90 0 -20 0 20 0 Position for the start of each cycle</p>
+<p>The home position is the 90 0 -20 0 20 0 Position for the start of each cycle.</p>
 </div>
 <div class="paragraph">
-<p>When you load a new component with the "add" menu then you could select the usage of the component in the "advanced" section</p>
+<p>When you load a new component with the "add" menu, then you could select the usage of the component in the "advanced" section.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -341,10 +343,10 @@ All motion steps have a unique name that the customer could modify / teach point
 <div class="ulist">
 <ul>
 <li>
-<p>a safe travel to the next motion block</p>
+<p>A safe travel to the next motion block</p>
 </li>
 <li>
-<p>switching of frames</p>
+<p>Switching of frames</p>
 </li>
 </ul>
 </div>
@@ -354,9 +356,11 @@ All motion steps have a unique name that the customer could modify / teach point
 <div class="paragraph">
 <p><span class="image"><img src="img/motion_overview.png" alt="Motion overview"></span></p>
 </div>
-<div class="paragraph">
-<p>Motions</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_motions">Motions</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>It is most safe to do motions in 50mm steps in Joint motions with Joint coordinates (no singularities) but we want to give the operator on the machine the chance to fine adjust pickups etc. Therefore we do the final motion before we close the gripper in a adjusted user / tool coordinate system to adjust.</p>
 </div>
@@ -370,7 +374,7 @@ All motion steps have a unique name that the customer could modify / teach point
 <p>JJ = Joint motion in Joint coordinates</p>
 </div>
 <div class="paragraph">
-<p>LJ Linear motion in Joint coordinates</p>
+<p>LJ = Linear motion in Joint coordinates</p>
 </div>
 <div class="paragraph">
 <p>JC = Joint motion in Cartesian coordinates in</p>
@@ -384,14 +388,49 @@ All motion steps have a unique name that the customer could modify / teach point
 <div class="paragraph">
 <p>TF = ToolFrame</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sub_sequences">Sub-sequences</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>e.g. Pickup from dispenser</p>
+<p>The overall cycle is split into the following sub-sequences, described on the
+pages below:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="pickup_vac.html">Pickup from Pallet</a></p>
+</li>
+<li>
+<p><a href="centering.html">Centering Table</a></p>
+</li>
+<li>
+<p><a href="bendpos.html">Bend Positioning</a></p>
+</li>
+<li>
+<p><a href="deposit.html">Deposit</a></p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc"></aside>
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_motions">Motions</a>
+  </li>
+  <li level="1">
+   <a href="#_sub_sequences">Sub-sequences</a>
+  </li>
+ </ul>
+</aside>
+
                 </div>
             </div>
             <nav class="pagination">

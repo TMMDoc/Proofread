@@ -16,7 +16,7 @@
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
         <div id="header-logo"><img src="../../img/logo.png" width="123" height="50" /></div>
-        <div><p>Flux</p></div>
+        <div><p>FluxRobot</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
@@ -86,7 +86,23 @@
   </li>
   <li>
    <button class="tree closed"></button>
-   <a href="../../forreference/index.html">ONLY FOR REFERENCE</a>
+   <a href="../../fluxrobotcam/index.html">FluxRobot CAM</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../fluxrobotcam/waypoints/index.html">Motion sequences</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/pickup_vac.html">PickupPallet</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/centering.html">CenteringTable</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/bendpos.html">Bend Positioning</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/deposit.html">Deposit</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../forreference/index.html">FOR REFERENCE</a>
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
@@ -280,22 +296,6 @@
     </li>
    </ul>
   </li>
-  <li>
-   <button class="tree closed"></button>
-   <a href="../../fluxrobotcam/index.html">FluxRobot CAM</a>
-   <ul class="hide">
-    <li>
-     <button class="tree closed"></button>
-     <a href="../../fluxrobotcam/waypoints/index.html">Motion sequences</a>
-     <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/pickup_vac.html">PickupPallet</a></li>
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/centering.html">CenteringTable</a></li>
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/bendpos.html">Bend Positioning</a></li>
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/deposit.html">Deposit</a></li>
-     </ul>
-    </li>
-   </ul>
-  </li>
  </ul>
 </div>
 
@@ -321,7 +321,29 @@
                     <article id="article">
                         <h1>Robot</h1>
 <div class="paragraph">
-<p>This sub-chapter describes how the Robot connection is established and configured.</p>
+<p>This chapter describes the physical setup and hardware configuration of the
+robot, including the coordinate frame definitions, connections to all field
+elements, the EtherCAT fieldbus wiring, and the safety fencing layout.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="robotbasics/index.html">Robot Basics</a> — Coordinate systems and frame
+definitions used across the cell</p>
+</li>
+<li>
+<p><a href="wiredconnection.html">Wired Connection</a> — Physical I/O wiring between the
+robot controller and field elements</p>
+</li>
+<li>
+<p><a href="busconnection.html">Field Bus Connection</a> — Digital inputs and outputs mapped
+over the fieldbus</p>
+</li>
+<li>
+<p><a href="safetyconnection.html">Safety Connection</a> — Safety fence, stack light states,
+and emergency stop wiring</p>
+</li>
+</ul>
 </div>
 
                     </article>

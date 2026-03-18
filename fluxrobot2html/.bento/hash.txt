@@ -4,15 +4,15 @@ Folders=32
 Pages=134
 UIXlate=False, DebugUIXlate=False, Language=EN
 
-contents.txt • 262511.052504
+contents.txt • 262216.032228
 Index.adoc • Welcome to FluxRobot
-manifest.txt • 263123.093140
+manifest.txt • 262817.112857
 FluxRobotCAM\contents.txt • 265610.025650
 FluxRobotCAM\Index.adoc • FluxRobot CAM
 ForReference\contents.txt • 263520.013547
 ForReference\doc.txt
 ForReference\DOKUSketches.pptx
-ForReference\index.adoc • ONLY FOR REFERENCE
+ForReference\index.adoc • FOR REFERENCE
 Setup\contents.txt • 261205.111255
 Setup\Index.adoc • Setup
 SystemOverview\Architecture.adoc • Architecture

@@ -16,7 +16,7 @@
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
         <div id="header-logo"><img src="../../img/logo.png" width="123" height="50" /></div>
-        <div><p>Flux</p></div>
+        <div><p>FluxRobot</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
@@ -86,7 +86,23 @@
   </li>
   <li>
    <button class="tree closed"></button>
-   <a href="../../forreference/index.html">ONLY FOR REFERENCE</a>
+   <a href="../../fluxrobotcam/index.html">FluxRobot CAM</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../fluxrobotcam/waypoints/index.html">Motion sequences</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/pickup_vac.html">PickupPallet</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/centering.html">CenteringTable</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/bendpos.html">Bend Positioning</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/deposit.html">Deposit</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../forreference/index.html">FOR REFERENCE</a>
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
@@ -280,22 +296,6 @@
     </li>
    </ul>
   </li>
-  <li>
-   <button class="tree closed"></button>
-   <a href="../../fluxrobotcam/index.html">FluxRobot CAM</a>
-   <ul class="hide">
-    <li>
-     <button class="tree closed"></button>
-     <a href="../../fluxrobotcam/waypoints/index.html">Motion sequences</a>
-     <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/pickup_vac.html">PickupPallet</a></li>
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/centering.html">CenteringTable</a></li>
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/bendpos.html">Bend Positioning</a></li>
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/deposit.html">Deposit</a></li>
-     </ul>
-    </li>
-   </ul>
-  </li>
  </ul>
 </div>
 
@@ -324,14 +324,201 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Safety Connection Overview</h1>
-
+<div class="sect1">
+<h2 id="_stack_light_configuration">Stack Light Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Robot Cell fence is equipped with a stack light to indicate various states
+of the Bending Cell. Stack light outputs are controlled by the Press Brake
+controller based on the current state of the cell.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/safetystacklight.png" alt="SafetyStackLight"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_red_light">Red Light</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Always ON - Machine in Emergency Stop/ Error State.</p>
+</li>
+<li>
+<p>Blinking - Robot in T2 Mode.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_amber_light">Amber Light</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Always ON - ROBOT In Manual Mode (T1).</p>
+</li>
+<li>
+<p>Blinking Alternatively with RED - Robot in T2 Mode.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_green_light">Green Light</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Blinking -  Robot in Auto mode and machine in ready state to start  program.</p>
+</li>
+<li>
+<p>Always ON - Robot Program running in Auto Mode.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_safety_fence">Safety Fence</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Fanuc Robot cell is surrounded by a safety mesh fence equipped with safety
+switches at the doors. These safety switches are wired to the Emergency stop
+circuit board of the Robot controller.</p>
+</div>
+<div class="paragraph">
+<p>For more details refer "FANUC Robot series R-30iB/R-30iB Plus CONTROLLER
+MAINTENANCE MANUAL" .</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/safetyfence.png" alt="SafetyFence"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_safety_fence_operation_configuration">Safety Fence Operation Configuration</h3>
+<div class="sect3">
+<h4 id="_robot_in_manual_mode">Robot in Manual Mode</h4>
+<div class="paragraph">
+<p><strong>T1 Mode</strong>: In manual mode the fence safety switch feedback are ignored, Robot
+can be moved without closing the fence doors.</p>
+</div>
+<div class="paragraph">
+<p>The Stack light turns Amber ON to indicate that robot is operated in manual
+mode. In this mode it is safe to enter the fence and operate because the robot
+speed is limited to 250 mm/sec.</p>
+</div>
+<div class="paragraph">
+<p><strong>T2 Mode</strong>: In T2 mode the fence safety switch feedback are ignored, Robot can
+be moved without closing the fence doors. In this mode it is unsafe to operate
+the robot when inside the cell.</p>
+</div>
+<div class="paragraph">
+<p>The Stack light now blinks with alternating AMBER and RED lights to indicate
+that robot is in T2 mode and precaution is needed in order to operate the robot
+as robot can be moved in full speed in this mode.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_robot_in_auto_mode">Robot in Auto Mode</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>The Robot is not operatable in auto mode when either of the fence doors are
+open.</p>
+</li>
+<li>
+<p>An error message pops up on the status section of the teach pendent
+depending upon the type of error.</p>
+</li>
+<li>
+<p>The safety board expects both chains of the fence switch feedbacks to be ON
+for normal operation.</p>
+</li>
+<li>
+<p>Error Code:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>SRVO 266 FENCE1 status abnormal - Indicates that fence door 1 is open and 2 is
+closed. (Refer SOP manual to ack this error)</p>
+</li>
+<li>
+<p>SRVO 267 FENCE2 status abnormal - Indicates that fence door 2 is open and 1 is
+closed. (Refer SOP manual to ack this error)</p>
+</li>
+<li>
+<p>SRVO 004 FENCE Open - Indicates that both fence doors are open.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>When both fence doors are closed and machine is in ready condition then
+stack light indicates Green light in blinking mode.</p>
+</li>
+<li>
+<p>When the program is started and robot program is running stack light
+indicates Green light in always On mode.</p>
+</li>
+<li>
+<p>When the fence door is opened during operation of the robot the robot motion
+is stopped, program is paused and the stack light turns Red.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_emergency_stop_configuration">Emergency Stop Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Apart from the two emergency stop buttons (one on the teach pendent and one at
+the controller), the UOP - *IMSTP is configured to the Emergency stops present
+in the press brake machine via EtherCat.</p>
+</div>
+<div class="paragraph">
+<p>When Emergency stop is activated in the machine the robot enters Immediate Stop
+mode. This *IMSTP signal is essential to operate the robot in any mode.</p>
+</div>
+<div class="paragraph">
+<p>For Normal operation of robot IMSTP should be always HIGH, when the signal turns
+LOW when either of the emergency stops are activated in Press Brake then an
+error message is shown and robot gets into stop state where it is inoperatable
+untill *IMSTP is HIGH again.</p>
+</div>
+<div class="paragraph">
+<p>When Emergency stop is activated the stack light indicates RED.</p>
+</div>
+</div>
+</div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
                     <aside id="site-toc">
  <h3>Contents</h3>
- <ul></ul>
+ <ul>
+  <li level="1">
+   <a href="#_stack_light_configuration">Stack Light Configuration</a>
+  </li>
+  <li level="2">
+   <a href="#_red_light">Red Light</a>
+  </li>
+  <li level="2">
+   <a href="#_amber_light">Amber Light</a>
+  </li>
+  <li level="2">
+   <a href="#_green_light">Green Light</a>
+  </li>
+  <li level="1">
+   <a href="#_safety_fence">Safety Fence</a>
+  </li>
+  <li level="2">
+   <a href="#_safety_fence_operation_configuration">Safety Fence Operation Configuration</a>
+  </li>
+  <li level="1">
+   <a href="#_emergency_stop_configuration">Emergency Stop Configuration</a>
+  </li>
+ </ul>
 </aside>
 
                 </div>
