@@ -16,7 +16,7 @@
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
         <div id="header-logo"><img src="../../img/logo.png" width="123" height="50" /></div>
-        <div><p>FluxRobot</p></div>
+        <div><p>FluxRobot Reference Manual</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
@@ -92,7 +92,7 @@
      <button class="tree open"></button>
      <a href="index.html">Motion sequences</a>
      <ul>
-      <li><button class="tree blank"></button><a href="pickup_vac.html">PickupPallet</a></li>
+      <li><button class="tree blank"></button><a href="pickup_vac.html">Pickup Pallet</a></li>
       <li><button class="tree blank"></button><a class="active" href="centering.html">CenteringTable</a></li>
       <li><button class="tree blank"></button><a href="bendpos.html">Bend Positioning</a></li>
       <li><button class="tree blank"></button><a href="deposit.html">Deposit</a></li>
@@ -100,11 +100,12 @@
     </li>
     <li><button class="tree blank"></button><a href="../samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="../postprocessor.html">Post Processor</a></li>
+    <li><button class="tree blank"></button><a href="../test.html">Program Sttructure</a></li>
    </ul>
   </li>
   <li>
    <button class="tree closed"></button>
-   <a href="../../forreference/index.html">FOR REFERENCE</a>
+   <a href="../../forreference/index.html">For Reference</a>
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
@@ -332,7 +333,6 @@
 <col>
 <col>
 <col>
-<col>
 </colgroup>
 <thead>
 <tr>
@@ -340,73 +340,64 @@
 <th class="tableblock halign-center valign-top">Image</th>
 <th class="tableblock halign-center valign-top">Flux output</th>
 <th class="tableblock halign-center valign-top">Motion Coordinates</th>
-<th class="tableblock halign-center valign-top">PostProcessor output</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PreCenter safe</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PreCenter Safe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/precentersafe.png" alt="PreCentersafe" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Before approaching centering table, the gripper along with part reaches its centering safe position.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JJ<br>
 (UF-3, TF-3)</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center Approach</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centerapproach.png" alt="CenterApproach" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The gripper begins to approach the centering table.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center Drop</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centerdrop.png" alt="CenterDrop" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Gripper reaches the center drop phase to drop the part on the centering table,
 Vaccum gets turned OFF after it reaches the drop phase, so the part gets
 dropped on the centering table.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center LiftClear</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centerliftclear.png" alt="CenterLiftClear" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">After dropping the part, the gripper moves away from the centering table to a
 certain mm distance in a linear manner.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center Approach 2</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centerapproach2.png" alt="CenterApproach2" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">From lift clear position, the gripper begins to approach the centering table
 again.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center Pickup</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centerpickup.png" alt="CenterPickup" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">After reaching the centering table, the gripper moves to the center pickup
 position and the vaccum gets turned ON and the part gets suctioned.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center LiftClear 2</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centerliftclear2.png" alt="CenterLiftClear2" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">After picking up the part, the gripper moves to lift clear position which is a
 certain mm distance away from the centering table.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center Transition swing</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centertransitionswing.png" alt="CenterTransitionswing" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">From lift clear position, the gripper begins the
 transition from centering table to the machine for bending.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JJ</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
@@ -418,7 +409,7 @@ transition from centering table to the machine for bending.</p></td>
                 </div>
             </div>
             <nav class="pagination">
- <span class="prev"><a href="pickup_vac.html">PickupPallet</a></span>
+ <span class="prev"><a href="pickup_vac.html">Pickup Pallet</a></span>
  <span class="next"><a href="bendpos.html">Bend Positioning</a></span>
 </nav>
 
@@ -430,7 +421,7 @@ transition from centering table to the machine for bending.</p></td>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2023 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

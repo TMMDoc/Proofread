@@ -16,7 +16,7 @@
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
         <div id="header-logo"><img src="img/logo.png" width="123" height="50" /></div>
-        <div><p>FluxRobot</p></div>
+        <div><p>FluxRobot Reference Manual</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
@@ -92,7 +92,7 @@
      <button class="tree closed"></button>
      <a href="fluxrobotcam/waypoints/index.html">Motion sequences</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/pickup_vac.html">PickupPallet</a></li>
+      <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/pickup_vac.html">Pickup Pallet</a></li>
       <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/centering.html">CenteringTable</a></li>
       <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/bendpos.html">Bend Positioning</a></li>
       <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/deposit.html">Deposit</a></li>
@@ -100,11 +100,12 @@
     </li>
     <li><button class="tree blank"></button><a href="fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="fluxrobotcam/postprocessor.html">Post Processor</a></li>
+    <li><button class="tree blank"></button><a href="fluxrobotcam/test.html">Program Sttructure</a></li>
    </ul>
   </li>
   <li>
    <button class="tree closed"></button>
-   <a href="forreference/index.html">FOR REFERENCE</a>
+   <a href="forreference/index.html">For Reference</a>
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
@@ -318,78 +319,40 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Welcome to FluxRobot</h1>
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph">
-<p>FluxRobot is a robotic bending automation cell designed to streamline and
-optimize the bending process. It integrates advanced robotics, precision
-machinery, and intelligent control systems to enhance efficiency, accuracy, and
-safety in bending operations.</p>
+<p>This documentation is the complete reference guide for the FluxRobot bending
+automation cell. It is intended for engineers and operators involved in the
+installation, configuration, and day-to-day use of the system. The guide is
+organized into sections that follow the natural progression from understanding
+the system to putting it into production.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/roboticcell.png" alt="RoboticCell"></span></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_software_requirements">Software Requirements</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following software systems are required to support you on Robot programming
-with RA control to your needs.</p>
+<p>The entire documentation is structured as follows:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Flux</strong>: An offline software for robot-assisted bending. It automates
-the programming of the robot to pick up blanks from input pallets, load them
-into the press brake for bending, and deposit the finished parts on output
-pallets.</p>
+<p><strong><a href="systemoverview/index.html">System Overview</a></strong> - Physical layout and
+architecture of the FluxRobot cell.</p>
 </li>
 <li>
-<p><strong>RA Control</strong>: It comes with interfaces and methods to interact with a robot.</p>
+<p><strong><a href="setup/index.html">Setup</a></strong> - Installation and configuration of the robot
+hardware, Flux offline software, and Right-Angle control software.</p>
+</li>
+<li>
+<p><strong><a href="fluxrobotcam/index.html">FluxRobot CAM</a></strong> - Offline programming environment.</p>
+</li>
+<li>
+<p><strong><a href="rightangle/index.html">Right-Angle Robotic Bending</a></strong> - Setup and operation
+for Right-Angle bending configurations.</p>
 </li>
 </ul>
-</div>
-<hr>
-<div class="paragraph">
-<p>Flux consists of a set of tools to control the robot:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Flux</strong> generates a generic output file <strong>.rnc</strong> with all motions needed.</p>
-</li>
-<li>
-<p>The <strong>Postprocessor</strong> generates a set of <strong>.LS</strong> files for a Fanuc robot.</p>
-</li>
-<li>
-<p><strong>Fanuc Macros</strong> are provided to enhance the Robot for specific operations.</p>
-</li>
-<li>
-<p><strong>Schematics and IO configurations</strong> are provided that the external periphery
-works in the desired way.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/baisc.png" alt="BasicStructure"></span></p>
-</div>
-</div>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc">
- <h3>Contents</h3>
- <ul>
-  <li level="1">
-   <a href="#_software_requirements">Software Requirements</a>
-  </li>
- </ul>
-</aside>
-
+                    <aside id="site-toc"></aside>
                 </div>
             </div>
             <nav class="pagination">
@@ -404,11 +367,11 @@ works in the desired way.</p>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2023 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">
-            <p>Compiled 2026.03.19 by Bento 58</p>
+            <p>Compiled 2026.03.26 by Bento 58</p>
             <img src="res/bento.png" />
         </div>
     </footer>

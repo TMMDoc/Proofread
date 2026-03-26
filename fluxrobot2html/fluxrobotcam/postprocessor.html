@@ -16,7 +16,7 @@
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
         <div id="header-logo"><img src="../img/logo.png" width="123" height="50" /></div>
-        <div><p>FluxRobot</p></div>
+        <div><p>FluxRobot Reference Manual</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
@@ -92,7 +92,7 @@
      <button class="tree closed"></button>
      <a href="waypoints/index.html">Motion sequences</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="waypoints/pickup_vac.html">PickupPallet</a></li>
+      <li><button class="tree blank"></button><a href="waypoints/pickup_vac.html">Pickup Pallet</a></li>
       <li><button class="tree blank"></button><a href="waypoints/centering.html">CenteringTable</a></li>
       <li><button class="tree blank"></button><a href="waypoints/bendpos.html">Bend Positioning</a></li>
       <li><button class="tree blank"></button><a href="waypoints/deposit.html">Deposit</a></li>
@@ -100,11 +100,12 @@
     </li>
     <li><button class="tree blank"></button><a href="samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a class="active" href="postprocessor.html">Post Processor</a></li>
+    <li><button class="tree blank"></button><a href="test.html">Program Sttructure</a></li>
    </ul>
   </li>
   <li>
    <button class="tree closed"></button>
-   <a href="../forreference/index.html">FOR REFERENCE</a>
+   <a href="../forreference/index.html">For Reference</a>
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
@@ -335,7 +336,7 @@ controller.</p>
 <h2 id="_setup_in_flux">Setup in Flux</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Before running the post processor, ensure the following steps are to be completed:</p>
+<p>Ensure these steps are followed to set up the post processor in Flux:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -382,7 +383,7 @@ post processor.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Post processor file package contains the list of files that are required to
-run the post processor. This file package will be provided to the user. The
+run the post processor. <strong>This file package will be provided to the user.</strong> The
 files to be provided are shown below:</p>
 </div>
 <div class="paragraph">
@@ -423,9 +424,8 @@ to take a backup of the original templates before making any changes.</p>
 <div class="sect1">
 <h2 id="_workflow">Workflow</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><strong>1. Input File Acquisition</strong></p>
-</div>
+<div class="sect2">
+<h3 id="_1_input_file_acquisition">1. Input File Acquisition</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -435,9 +435,9 @@ data.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><strong>2. File Parsing</strong></p>
 </div>
+<div class="sect2">
+<h3 id="_2_file_parsing">2. File Parsing</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -454,7 +454,8 @@ data.</p>
 <p><strong>Clamp Regrip Presence</strong> - Checks if clamp regrip is required for the bending operation.</p>
 </li>
 <li>
-<p><strong>Motion Points and their Reference Names</strong> - Extracts all motion points and their reference names for easy identification.</p>
+<p><strong>Motion Points and their Reference Names</strong> - Extracts all motion points and
+their reference names for easy identification.</p>
 </li>
 <li>
 <p><strong>Motion Type</strong> - Classifies each motion as either:</p>
@@ -490,9 +491,9 @@ data.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><strong>3. Hard-Coded Templates</strong></p>
 </div>
+<div class="sect2">
+<h3 id="_3_hard_coded_templates">3. Hard-Coded Templates</h3>
 <div class="paragraph">
 <p><span class="image"><img src="img/hatrdcodefiles.png" alt="Hatrdcodefiles"></span></p>
 </div>
@@ -565,62 +566,248 @@ Despcription</a> section.
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>4. File Generation</strong></p>
+<div class="sect3">
+<h4 id="_hard_code_template_editing">Hard-Code Template Editing</h4>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The user needs to follow the structure of the hard coded templates
+while editing. The user can edit the content in these sections as per their
+requirements but should not change the structure of the template. It is
+recommended to take a backup of the original templates before making any
+changes.
+</td>
+</tr>
+</table>
 </div>
+<div class="sect4">
+<h5 id="_waypoint_editing_in_the_hard_coded_templates">Waypoint Editing in the Hard-Coded Templates</h5>
+<div class="paragraph">
+<p>Given below is an example of the content inside the Hardcode&#8217;s .txt file.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>! Update the contact point           -;<br>
+! for stack search program          -;<br>
+!------------------------------------;<br>
+&lt;PR[63]:=Contact&gt;<br>
+!------------------------------------;<br>
+! Update with req arguments         -;<br>
+! for different gripper usage       -;<br>
+!------------------------------------;<br>
+Call FUNCCombiGripper(&lt;Argument 1&gt;,&lt;Argument 2&gt;,&lt;Argument 3&gt;) ;<br>
+!------------------------------------;<br>
+! To pickup from top of the stack    -;<br>
+!------------------------------------;<br>
+Call Sub_StackSearch;<br>
+/[Contact] <span class="red">&lt;To skip a waypoint, use a backslash before the waypoint&gt;</span> <br>
+R[16:SPD_L]=1000;<br>
+wait 0.25(sec);<br>
+[Separate] <span class="red">&lt;It will write the waypoint in LS since backslash is not used&gt;</span> <br></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_file_generation">4. File Generation</h3>
 <div class="paragraph">
 <p>With the extracted data from the .rbc file, the post processor generates the
 necessary .LS files based on the hard coded templates. The generated .LS files
 are then uploaded to the robot controller.</p>
 </div>
-<div class="paragraph">
-<p><strong>5. File Export</strong></p>
 </div>
+<div class="sect2">
+<h3 id="_5_file_export">5. File Export</h3>
 <div class="paragraph">
 <p>Files can be exported to the robot controller either by FileZilla or by using
 Command Prompt.</p>
 </div>
-<div class="paragraph">
-<p><strong>FileZilla</strong></p>
-</div>
+<div class="sect3">
+<h4 id="_file_transfer_using_filezilla">File transfer using FileZilla</h4>
 <div class="ulist">
 <ul>
 <li>
 <p>Connect the PC to the robot controller using Ethernet. Ensure that PC and
-robot controller IP addresses correctly to establish the connection.</p>
+robot controller IP addresses are correctly configured to establish the
+connection.</p>
 </li>
 <li>
 <p>Download and install FileZilla on the PC if not already installed.</p>
 </li>
 <li>
-<p>Open FileZilla and enter the IP address of the robot controller, along with
-the username and password to connect.</p>
+<p>Open FileZilla, Navigate to File &#8594; Site Manager and do the setup of all the
+tabs in FileZilla as same as shown in the image below:</p>
 </li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/fz1.png" alt="FZ1" width="400"></span> <span class="image"><img src="img/fz2.png" alt="FZ2" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/fz3.png" alt="FZ3" width="400"></span> <span class="image"><img src="img/fz4.png" alt="FZ4" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/fz5.png" alt="FZ5" width="300"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The user needs to provide the actual Robot IP address, FTP&#8217;s username and
+its password of their robot controller to connect with FileZilla.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>Once connected, navigate to the directory on the PC where the .LS files are
 located. Then select all the .LS files and upload them to the robot controller.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><strong>Command Prompt</strong></p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+All the files in the robot controller can also be downloaded to the PC by
+using FileZilla.
+</td>
+</tr>
+</table>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_file_transfer_using_command_prompt">File transfer using Command Prompt</h4>
 <div class="paragraph">
-<p>Go to the location where the .LS files are stored. Open Command prompt on that
-location and use the following command to upload the files to the robot
-controller:</p>
+<p>Go to the location where the .LS files that need to be uploaded to the robot
+controller. Open Command prompt on that location and use the following command
+to upload the files to the robot controller:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>FTP -i &lt;IP_ADDRESS&gt; (replace &lt;IP_ADDRESS&gt; with the actual IP address of the
-robot controller)</p>
-</li>
-<li>
-<p>MPUT &lt;filename&gt;.LS (replace &lt;filename&gt; with the actual name of the .LS file to
-be uploaded)</p>
+<p>Command to establish an FTP connection between PC and robot controller.</p>
 </li>
 </ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>FTP -i &lt;IP_ADDRESS&gt;</strong> (replace &lt;IP_ADDRESS&gt; with the actual IP address of the
+robot controller)</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>After establishing the FTP connection, provide the following credentials for FTP
+login:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>User (192.168.100.175:(none)): <strong><em>&lt;Provide the FTP password of the robot
+controller&gt;</em></strong></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Once logged in, Enter the below commands to change the directory.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>ftp&gt; <strong>cd md:</strong></p>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Command to upload the files from the PC to the robot controller.</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>MPUT &lt;filename&gt;.LS</strong> (replace &lt;filename&gt; with the actual name of the .LS file to
+be uploaded)</p>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Command to download the files from the robot controller to the PC.</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>ftp&gt; <strong>mget Bend1positioning_sub.ls</strong></p>
+</div>
+<div class="paragraph">
+<p>Here, Bend1positioning_sub.ls is an example file. The user needs to provide the
+actual name of the file to be downloaded from the robot controller to the PC.</p>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Command to download all the files from the robot controller to the PC.</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>FTP&gt; <strong>mget *.</strong>*</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+To download a specific file format, use the command <strong>mget *.&lt;file_extension&gt;</strong>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Example: Command <strong>mget *.LS</strong> to download all the .LS files from the robot
+controller to the PC.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_6_sample_command_file">6. Sample Command File</h3>
+<div class="paragraph">
+<p>Sample .txt command file is shown in the image below:</p>
+</div>
+<div class="paragraph">
+<p><mark><span class="image"><img src="img/cmdfile.png" alt="cmdfile"></span></mark></p>
+</div>
 </div>
 </div>
 </div>
@@ -643,6 +830,24 @@ be uploaded)</p>
   <li level="1">
    <a href="#_workflow">Workflow</a>
   </li>
+  <li level="2">
+   <a href="#_1_input_file_acquisition">1. Input File Acquisition</a>
+  </li>
+  <li level="2">
+   <a href="#_2_file_parsing">2. File Parsing</a>
+  </li>
+  <li level="2">
+   <a href="#_3_hard_coded_templates">3. Hard-Coded Templates</a>
+  </li>
+  <li level="2">
+   <a href="#_4_file_generation">4. File Generation</a>
+  </li>
+  <li level="2">
+   <a href="#_5_file_export">5. File Export</a>
+  </li>
+  <li level="2">
+   <a href="#_6_sample_command_file">6. Sample Command File</a>
+  </li>
  </ul>
 </aside>
 
@@ -650,7 +855,7 @@ be uploaded)</p>
             </div>
             <nav class="pagination">
  <span class="prev"><a href="samplepgrmdscrpt.html">Sample LS Program Description</a></span>
- <span class="next"><a href="../forreference/index.html">FOR REFERENCE</a></span>
+ <span class="next"><a href="test.html">Program Sttructure</a></span>
 </nav>
 
         </div>
@@ -661,7 +866,7 @@ be uploaded)</p>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2023 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

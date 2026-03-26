@@ -1,0 +1,40 @@
+!------------------------------------;
+!Update current station as          -;
+! Pickup(Station 1) for             -;
+! homing reference                  -;
+!------------------------------------;
+R[50]=1 ;
+!Set Userframe and                  -;
+! Tool for the pickup               -;
+UFRAME_NUM=AR[1];
+UTOOL_NUM=3;
+;
+[StartHome]
+[PrePickupSafe]
+[Approach]
+R[16:SPD_L]=50;
+;
+!------------------------------------;
+!Update the contact point           -;
+! for stack search program          -;
+!------------------------------------;
+<PR[63]:=Contact>
+;
+!------------------------------------;
+!,Update with req arguments         -;
+! for different gripper usage       -;
+!------------------------------------;
+Call FUNCCombiGripper(<Argument 1>,<Argument 2>,<Argument 3>) ;
+;
+!------------------------------------;
+!To pickup from top of the stack    -;
+!------------------------------------;
+Call Sub_StackSearch;
+;
+/[Contact]
+R[16:SPD_L]=1000;
+wait 0.25(sec);
+[Separate]
+[LiftClear]
+[PickupTransitionSwing]
+;

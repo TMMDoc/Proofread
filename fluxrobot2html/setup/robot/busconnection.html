@@ -16,7 +16,7 @@
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
         <div id="header-logo"><img src="../../img/logo.png" width="123" height="50" /></div>
-        <div><p>FluxRobot</p></div>
+        <div><p>FluxRobot Reference Manual</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
@@ -92,7 +92,7 @@
      <button class="tree closed"></button>
      <a href="../../fluxrobotcam/waypoints/index.html">Motion sequences</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/pickup_vac.html">PickupPallet</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/pickup_vac.html">Pickup Pallet</a></li>
       <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/centering.html">CenteringTable</a></li>
       <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/bendpos.html">Bend Positioning</a></li>
       <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/deposit.html">Deposit</a></li>
@@ -100,11 +100,12 @@
     </li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/postprocessor.html">Post Processor</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxrobotcam/test.html">Program Sttructure</a></li>
    </ul>
   </li>
   <li>
    <button class="tree closed"></button>
-   <a href="../../forreference/index.html">FOR REFERENCE</a>
+   <a href="../../forreference/index.html">For Reference</a>
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
@@ -326,13 +327,6 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Field Bus Connection Overview</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>image:</p>
-</div>
-</div>
-</div>
 <div class="sect1">
 <h2 id="_digital_inputs">Digital Inputs</h2>
 <div class="sectionbody">
@@ -351,109 +345,84 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">33</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Work_TableZone</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">One_Finger_Align</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">35</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SuctionCmd</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">36</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PDISP_UpCmd</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">37</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PDISP_DownCmd</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">49</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_NCStart</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: NC program start signal from press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_BackgaugeInPosition</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Backgauge has reached its target position</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_FirstBendActive</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: First bend of the program is currently active</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_LastBendActive</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Last bend of the program is currently active</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">53</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_RamMoving</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: press brake ram is currently in motion</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">54</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_ClampingPointReach</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Ram has reached the clamping point</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">55</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_LDP_Reached</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Ram has reached the lower dead point (LDP)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">56</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_EoD_Reached</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Ram has reached the end-of-decompression (EoD) position</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">57</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_UDP_Reached</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Ram has reached the upper dead point (UDP)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">58</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_BelowMutePoint</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Ram is currently below the mute point</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">59</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_PressOk</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: press brake is ready and in a safe state</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">60</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_FP_Down</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Foot pedal down feedback from machine</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TL_Green</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Traffic light green signal is active</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">62</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TL_Red</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Traffic light red signal is active</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">63</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TL_Amber</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Traffic light amber signal is active</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">StartAutoHome</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trigger to start the automatic homing sequence</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">65</p></td>
@@ -484,102 +453,87 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">45</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">HMI</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HMI communication handshake output</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">49</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_ClampingPointBit</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Selects the clamping point bit for the current bend</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_MoveToLDP</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Command press brake ram to move to lower dead point</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_MoveToUDP</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Command press brake ram to move to upper dead point</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_StepChange</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Request next bend step on the press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">53</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_StartProgram</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Start the press brake bending program</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">54</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_EnableRamDown</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Enable downward ram movement</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">55</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_RoboUnsafe</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot is operating in machine premises</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">56</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_DcompEnb</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Enable ram decompression</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">57</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_RoboAuto</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EtherCAT: Signals press brake that robot is in automatic mode</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">58</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">T1_Mode</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot is operating in T1 (manual reduced-speed) mode</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">59</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">T2_Mode</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">60</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_PunchClamp</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_PunchUnclamp</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">62</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ECAT_ToolChangeEnb</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot is operating in T2 (manual full-speed) mode</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">63</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FECAT_AutoHoming</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feedback of homing operation</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">67</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FENCE</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fence open close feedback</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">68</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Z2Side</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backgauge alignment Z2 side feedback</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">69</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Call_BGFrame</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initiates backgauge frame offset computation</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">70</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Call_ShTCP</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initiates shifted TCP computation</p></td>
 </tr>
 </tbody>
 </table>
@@ -605,92 +559,92 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">*IMSTP</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Immediate stop — halts all motion instantly (active low)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">*Hold</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hold — pauses program execution (active low)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">*SFSPD</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Safe speed — limits robot speed while signal is low</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cycle stop</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stops the current program cycle at the next safe point</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Fault reset</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clears active robot faults</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Start</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starts or resumes program execution</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Home</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Commands robot to move to the home position</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Enable</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables robot servo power and motion</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RSR1/PNS1/STYLE1</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program/style selection bit 1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RSR2/PNS2/STYLE2</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program/style selection bit 2</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RSR3/PNS3/STYLE3</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program/style selection bit 3</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RSR4/PNS4/STYLE4</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program/style selection bit 4</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RSR5/PNS5/STYLE5</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program/style selection bit 5</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RSR6/PNS6/STYLE6</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program/style selection bit 6</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RSR7/PNS7/STYLE7</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program/style selection bit 7</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RSR8/PNS8/STYLE8</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program/style selection bit 8</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">PNS strobe</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latches the program number select (PNS) input bits</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Prod start</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Production start — initiates the production cycle</p></td>
 </tr>
 </tbody>
 </table>
@@ -716,97 +670,97 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cmd enabled</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot controller is ready to accept external commands</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">System ready</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot system has completed initialisation and is ready</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Prg running</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A program is currently executing</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Prg paused</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program execution is paused</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Motion held</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot motion is held (via Hold signal)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">At perch</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feedback - Robot is at the defined perch (home) position</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TP enabled</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Teach pendant is currently enabled</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Batt alarm</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Battery alarm — backup battery voltage is low</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Busy</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot controller is busy processing a request</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ACK1/SNO1</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acknowledge bit 1 / Style number feedback bit 1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ACK2/SNO2</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acknowledge bit 2 / Style number feedback bit 2</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ACK3/SNO3</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acknowledge bit 3 / Style number feedback bit 3</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ACK4/SNO4</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acknowledge bit 4 / Style number feedback bit 4</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ACK5/SNO5</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acknowledge bit 5 / Style number feedback bit 5</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ACK6/SNO6</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acknowledge bit 6 / Style number feedback bit 6</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ACK7/SNO7</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acknowledge bit 7 / Style number feedback bit 7</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ACK8/SNO8</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acknowledge bit 8 / Style number feedback bit 8</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">19</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SNACK</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Style number acknowledge — confirms style number was received</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reserved</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reserved for future use</p></td>
 </tr>
 </tbody>
 </table>
@@ -832,67 +786,67 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Z1_ANGLE</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Programmed bending angle for the Z1 axis received from press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RA_POS_CMD</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Right-angle position command value received from press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ShftdFrame_Mac_Y</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine frame Y-axis offset sent from press brake for frame shifting</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ShftdFrame_Mac_X</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine frame X-axis offset sent from press brake for frame shifting</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ShftdFrame_Mac_R</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine frame R (rotation) offset sent from press brake for frame shifting</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ShftdFrame_Mac_Z1</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine frame Z1-axis offset sent from press brake for frame shifting</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ShftdFrame_Mac_Z2</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine frame Z2-axis offset sent from press brake for frame shifting</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ROB_GO_Shft_TCPX</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TCP X-axis position correction received from press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ROB_GO_Shft_TCPY</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TCP Y-axis position correction received from press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ROB_GO_Shft_TCPZ</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TCP Z-axis position correction received from press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ROB_GO_Shft_TCPW</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TCP W-axis orientation correction received from press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ROB_GO_Shft_TCPP</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TCP P-axis orientation correction received from press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ROB_GO_Shft_TCPR</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TCP R-axis orientation correction received from press brake</p></td>
 </tr>
 </tbody>
 </table>
@@ -916,72 +870,72 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Z2_DIFF</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z2 axis offset/difference value sent to press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ROBOT_POS_FB</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot position feedback sent to press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Z1_Analog</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z1 backgauge analog position value sent to press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Z2_Analog</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z2 backgauge analog position value sent to press brake</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FECaT_GI_PR71RotAng</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PR[71] rotation angle sent to press brake via EtherCAT</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FECaT_GI_PR71_X</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PR[71] X-position sent to press brake via EtherCAT</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FECaT_GI_PR71_Y</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PR[71] Y-position sent to press brake via EtherCAT</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FECaT_GI_PR71_Z</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PR[71] Z-position sent to press brake via EtherCAT</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FECaT_GI_CurTCPX</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current TCP X-position sent to press brake via EtherCAT</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FECaT_GI_CurTCPY</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current TCP Y-position sent to press brake via EtherCAT</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FECaT_GI_CurTCPZ</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current TCP Z-position sent to press brake via EtherCAT</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FECaT_GI_CurTCPW</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current TCP W-orientation sent to press brake via EtherCAT</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FECaT_GI_CurTCPP</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current TCP P-orientation sent to press brake via EtherCAT</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FECaT_GI_CurTCPR</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current TCP R-orientation sent to press brake via EtherCAT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1030,7 +984,7 @@
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2023 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

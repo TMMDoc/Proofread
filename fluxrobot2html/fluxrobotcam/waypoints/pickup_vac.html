@@ -11,12 +11,12 @@
   <link rel="stylesheet" href="../../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title>PickupPallet</title>
+  <title>Pickup Pallet</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
         <div id="header-logo"><img src="../../img/logo.png" width="123" height="50" /></div>
-        <div><p>FluxRobot</p></div>
+        <div><p>FluxRobot Reference Manual</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
@@ -92,7 +92,7 @@
      <button class="tree open"></button>
      <a href="index.html">Motion sequences</a>
      <ul>
-      <li><button class="tree blank"></button><a class="active" href="pickup_vac.html">PickupPallet</a></li>
+      <li><button class="tree blank"></button><a class="active" href="pickup_vac.html">Pickup Pallet</a></li>
       <li><button class="tree blank"></button><a href="centering.html">CenteringTable</a></li>
       <li><button class="tree blank"></button><a href="bendpos.html">Bend Positioning</a></li>
       <li><button class="tree blank"></button><a href="deposit.html">Deposit</a></li>
@@ -100,11 +100,12 @@
     </li>
     <li><button class="tree blank"></button><a href="../samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="../postprocessor.html">Post Processor</a></li>
+    <li><button class="tree blank"></button><a href="../test.html">Program Sttructure</a></li>
    </ul>
   </li>
   <li>
    <button class="tree closed"></button>
-   <a href="../../forreference/index.html">FOR REFERENCE</a>
+   <a href="../../forreference/index.html">For Reference</a>
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
@@ -318,17 +319,16 @@
  </div>
  <div>/</div>
  <div>
-  <a href="pickup_vac.html">PickupPallet</a>
+  <a href="pickup_vac.html">Pickup Pallet</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>PickupPallet</h1>
+                        <h1>Pickup Pallet</h1>
 <table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col>
 <col>
 <col>
 <col>
@@ -340,56 +340,49 @@
 <th class="tableblock halign-center valign-top">Image</th>
 <th class="tableblock halign-center valign-top">Flux output</th>
 <th class="tableblock halign-center valign-top">Motion Coordinates</th>
-<th class="tableblock halign-center valign-top">PostProcessor output</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Pre Pickup Safe</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/pickup/pre-pickupsafe.png" alt="Pre pickupSafe" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Gripper moves from home
 position to a safe distance from the maximum stack height.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Approach</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/pickup/approach.png" alt="Approach" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Minimum of  50 mm
 above the calculated stack height.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Contact</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/pickup/contact.png" alt="Contact" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Gripper contacts the sheet which
 is at the top of the stack. Once the sheet is detected, the vaccum gets turned ON and the part gets suctioned.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Separate</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/pickup/separate.png" alt="Separate" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Gripper picks the sheet at the top of the stack then moves from stack
 to a certain mm to separate it.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LiftClear</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/pickup/liftclear.png" alt="Liftclear" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">After separating phase, the
 gripper moves to a safe height in a linear motion.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Pickup transition swing</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/pickup/aloft-pickuptransitionswing.png" alt="Aloft pickuptransitionswing" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">From lift clear position, the gripper begins the transition from pickup pallet to centering table.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
@@ -413,7 +406,7 @@ gripper moves to a safe height in a linear motion.</p></td>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2023 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

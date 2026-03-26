@@ -16,7 +16,7 @@
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
         <div id="header-logo"><img src="../../img/logo.png" width="123" height="50" /></div>
-        <div><p>FluxRobot</p></div>
+        <div><p>FluxRobot Reference Manual</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
@@ -92,7 +92,7 @@
      <button class="tree open"></button>
      <a href="index.html">Motion sequences</a>
      <ul>
-      <li><button class="tree blank"></button><a href="pickup_vac.html">PickupPallet</a></li>
+      <li><button class="tree blank"></button><a href="pickup_vac.html">Pickup Pallet</a></li>
       <li><button class="tree blank"></button><a href="centering.html">CenteringTable</a></li>
       <li><button class="tree blank"></button><a href="bendpos.html">Bend Positioning</a></li>
       <li><button class="tree blank"></button><a class="active" href="deposit.html">Deposit</a></li>
@@ -100,11 +100,12 @@
     </li>
     <li><button class="tree blank"></button><a href="../samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="../postprocessor.html">Post Processor</a></li>
+    <li><button class="tree blank"></button><a href="../test.html">Program Sttructure</a></li>
    </ul>
   </li>
   <li>
    <button class="tree closed"></button>
-   <a href="../../forreference/index.html">FOR REFERENCE</a>
+   <a href="../../forreference/index.html">For Reference</a>
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
@@ -332,7 +333,6 @@
 <col>
 <col>
 <col>
-<col>
 </colgroup>
 <thead>
 <tr>
@@ -340,45 +340,39 @@
 <th class="tableblock halign-center valign-top">Image</th>
 <th class="tableblock halign-center valign-top">Flux output</th>
 <th class="tableblock halign-center valign-top">Motion Coordinates</th>
-<th class="tableblock halign-center valign-top">PostProcessor output</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Deposit Approach</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/deposit/depositapproach.png" alt="Depositapproach" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">From Post bend Safe 2 positon, the gripper transits to deposit approach position which is few mm away from the deposit pallet.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Deposit</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/deposit/deposit.png" alt="Deposit" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The gripper moves closer the deposit pallet, once it reaches this deposit position, the vaccum gets turned OFF and the part gets released from the gripper.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Clear</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/deposit/clear.png" alt="Clear" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">After releasing the part, the gripper moves moves away from deposit pallet by a certain
 distance to avoid collision.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JC</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Deposit Transition Swing</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/deposit/deposittransitionswing.png" alt="Deposittransitionswing" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The gripper swivels to the transition swing position to reach home position.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JJ</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Home</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/deposit/home.png" alt="Home" width="150"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The gripper moves from the deposit transition swing position to the home position, ready for the next cycle.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JJ</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
@@ -402,7 +396,7 @@ distance to avoid collision.</p></td>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2023 by Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">
