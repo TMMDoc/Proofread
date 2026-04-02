@@ -98,6 +98,7 @@
       <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/deposit.html">Deposit</a></li>
      </ul>
     </li>
+    <li><button class="tree blank"></button><a href="../../fluxrobotcam/bestpractices.html">Best Practices</a></li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/postprocessor.html">Post Processor</a></li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/test.html">Program Sttructure</a></li>
@@ -327,340 +328,71 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Robot Mode Enable</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p><mark>Prerequisite for robot mode enablement:</mark></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_robot_logic">Robot Logic</h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>The complete Robot Logic will be active, if the license for “<strong>Robot Interface</strong>” is activated and then the
-parameter “<strong>Robot Option</strong>” is ON in the PLC options page.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/robotlogicimg1.png" alt="RobotLogicImg1" width="250"></span>
-<span class="image"><img src="img/robotlogicimg2.png" alt="RobotLogicImg2" width="550"></span></p>
-</div>
+<p>Switch ON the Robot Mode key in the bending machine.</p>
 </li>
-<li>
-<p>When the “<strong>Robot Option</strong>” is selected in the PLC, then the input “<strong>Robot Auto
-Mode</strong>” will activate the robot functions. If Laser Safe is connected, then the
-Bend Guard mute is also activated.</p>
-</li>
-<li>
-<p>If all the axes are homed and “<strong>Robot Auto Mode</strong>” input is active, a message
-“<strong>Robot mode key is active</strong>” will be displayed, then the controller goes to “<strong>Stop
-Mode</strong>” and “<strong>Start Button</strong>” control in the machine is transferred to Robot control
-of “<strong>Program Start</strong>” input.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/robotlogicimg3.png" alt="RobotLogicImg3" width="600"></span></p>
-</div>
-</li>
-<li>
-<p>The input “<strong>UDP_MoveEnable</strong>” from the Robot will be used as “<strong>Foot Pedal Open</strong>”
-signal in order to reset the errors, move the RAM to UDP under error condition
-etc., except during “<strong>Opening Phase</strong>”.</p>
-</li>
-<li>
-<p>The “<strong>Press OK</strong>” output signal from the NC will be ON, if Homing of all the axes
-are completed, no errors, Program in Auto mode and “<strong>Robot Auto Mode</strong>” is active.</p>
-</li>
-<li>
-<p>The “<strong>NC Start</strong>” output signal from the NC will be ON, if “<strong>Program Start</strong>” input
-from Robot controller is ON and the controller goes to “Start Mode” (Green
-Colour LED is ON in the Panel).</p>
-</li>
-<li>
-<p>During this step, if “<strong>Program Start</strong>” input from Robot controller is ON, there
-are 3 possibilities of errors as follows:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha">
-<li>
-<p>If program in Semi mode, then there is error message “<strong>Machine not in Auto
-Mode</strong>”:</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/robotlogicimg4.png" alt="RobotLogicImg4" width="600"></span></p>
-</div>
-</li>
-<li>
-<p>If below the UDP position, then there is error message “<strong>Move RAM to UDP
-position</strong>”:</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/robotlogicimg5.png" alt="RobotLogicImg5" width="600"></span></p>
-</div>
-</li>
-<li>
-<p>If start axes is not selected as “<strong>TDC External</strong>”, then there is error message
-“<strong>Step Change External not selected</strong>”:</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/robotlogicimg6.png" alt="RobotLogicImg6" width="600"></span></p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Once all the above conditions are met and the machine is in start mode, the
-Foot pedal “<strong>Close &amp; Open</strong>” signals are not valid hereafter and the machine waits
-for the Robot move signals.</p>
-<div class="paragraph">
-<p>Foot pedal Close Deactive = “<strong>NC Start</strong>” is active;<br>
-Foot pedal Open Deactive = “<strong>NC Start</strong>” is active</p>
-</div>
-</li>
-<li>
-<p>Now the program will be waiting for “<strong>Step change</strong>” signal from the Robot
-controller to initiate the Backguage movements.</p>
-</li>
-<li>
-<p>If this bend cycle is the first bend, then “<strong>First Bend Active</strong>” signal is
-high, else if last bend then “<strong>Last Bend Active</strong>” signal is high, else both the
-signals will be low. If the program consist only one bend,  then both the
-signals are active.</p>
-</li>
-<li>
-<p>When the “<strong>Step change</strong>” signal is ON, then the Backguage axes are positioned
-and the “<strong>Backguage InPos</strong>” signal is set to High, now the machine will be waiting
-for the “<strong>Fast Down Enable</strong>” or “<strong>Clamp Move Enable</strong>” signal from the robot
-controller. In this step, the “<strong>RAM Moving</strong>” signal will be always low.</p>
-</li>
-<li>
-<p>When the “<strong>Fast Down Enable</strong>” signal is ON, the RAM moves to mute point and the
-“<strong>Below Mute point</strong>” signal is set to High, now the machine will be waiting for
-the “<strong>Clamp Move Enable</strong>” signal from the robot controller.</p>
-</li>
-<li>
-<p>When the “<strong>Clamp Move Enable</strong>” signal is ON, the RAM moves to pinch point and
-the “<strong>Clamping point</strong>” signal is set to High, now the machine will be waiting for
-the “<strong>LDP Move Enable</strong>” signal from the robot controller.</p>
-</li>
-<li>
-<p>When the “<strong>LDP Move Enable</strong>” signal is ON, the RAM moves to LDP point and the
-“<strong>LDP reached</strong>” signal is set to High, now the machine will go to dwell state and
-waits here until the completion of Dwell time set in the current bend cycle.</p>
-</li>
-<li>
-<p>When the dwell time is completed and “<strong>LDP Move Enable</strong>” signal is again ON, the
-RAM is moved up to the decompression point and the “<strong>EoD_Point</strong>” signal is set to
-High, now the machine will be waiting for the “<strong>UDP Move Enable</strong>” signal from
-the robot controller.</p>
-</li>
-<li>
-<p>When the “<strong>UDP Move Enable</strong>” signal is ON, the RAM moves to UDP point and the
-“<strong>UDP reached</strong>” signal is set to High, now the machine will be waiting for “<strong>Step
-change</strong>” signal from the Robot controller to initiate the Backguage movements for
-next bend cycle and continuous from step 6 to step 11.</p>
-</li>
-<li>
-<p>From step 7 to step 11, the “<strong>RAM Moving</strong>” signal will be high during Ram
-movement and low at the end of each step, to enable the Robot controller to
-issue the different steps of move command to machine.</p>
-</li>
-<li>
-<p>During any of the above bend step, if the “<strong>Program Abort</strong>” signal from Robot
-controller is set High, then all the moving axes (including RAM) are quick
-stopped and the “<strong>Press OK</strong>” &amp; “<strong>NC Start</strong>” signal is deactivated, with the
-following message display:</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/robotlogicimg7.png" alt="RobotLogicImg7" width="600"></span></p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_operating_modes">Operating Modes</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_manual_mode">Manual mode</h3>
-<div class="paragraph">
-<p>For manual feeding, manual mode must be selected using the key switch. The press
-brake is controlled with the control desk by this means. During manual mode
-without BendGuard or another active optoelectronic safety device, the press beam
-moves with a working speed as the machine data (See machine operators manual).
-With an active optoelectronic safety device, it can move with a rapid downward
-speed also as shown in the table below.</p>
-</div>
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"></th>
-<th class="tableblock halign-left valign-top">Working speed (closing movement)</th>
-<th class="tableblock halign-left valign-top">Rapid downward movement</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B41 TruBend 1320</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">9 mm/s</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">110 mm/s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B41 TruBend 1225</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">12 mm/s</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">170 mm/s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B41 TruBend 1150</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">14 mm/s</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">180 mm/s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B41 TruBend 1100</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">15 mm/s</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">220 mm/s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B41 TruBend 1060</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">20 mm/s</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">180 mm/s</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"></th>
-<th class="tableblock halign-left valign-top">Working speed (closing movement)</th>
-<th class="tableblock halign-left valign-top">Rapid downward movement</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B42 TruBend 1320</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">9 mm/s</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">110 mm/s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B42 TruBend 1225</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">10 mm/s</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">170 mm/s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B42 TruBend 1150</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">10 mm/s</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">180 mm/s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B42 TruBend 1100</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">10 mm/s</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">220 mm/s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B42 TruBend 1060</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">10 mm/s</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">180 mm/s</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_robot_mode">Robot mode</h3>
-<div class="paragraph">
-<p>During operation with the robot, the press brake is sheet loaded by the robot.
-In "TruBend with robot" operating mode, the foot switch must not be removed.</p>
+</ul>
 </div>
 <div class="paragraph">
-<p>If operating mode "TruBend with robot" is selected, the <strong>Press Beam Down</strong> foot
-switch is inactive. It is therefore not possible in robot mode to use the <strong>Press
-Beam Down</strong> foot switch to trigger a downward movement of the press beam.</p>
+<p>image:..</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Special mode disparity" message pops up in RA once the Robot mode switch is ON.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/robot%20mode.png" alt="robot mode" width="350"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Press Up foot pedal to clear up the above diaplayed message.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The <strong>Press Beam Up</strong> foot switch and the <strong>Emergency Stop</strong> push-button on the foot
-switch function continually. The bending program can also be selected, started
-and stopped manually. The hydraulic system can always be switched on and off
-manually.</p>
+<p><strong>Enable the Robot</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hold the deadman switch and <mark>reset the <strong>fault</strong> indication</mark>.</p>
+</li>
+<li>
+<p>"Robot mode is active" message pops up  in RA when deadman switch is enabled.</p>
+<div class="paragraph">
+<p>image:..</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If deadman switch is released, "Robot mode is deactivated" message pops up.</p>
+<div class="paragraph">
+<p>image:..</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/image4.png" alt="image4" width="576" height="375"></span></p>
+<p>NOTE:</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/image5.png" alt="image5" width="576" height="375"></span></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_teach_mode">Teach mode</h3>
-<div class="paragraph">
-<p>Usually, the bending cell is always working in the auto mode. But when the
-operator needs to perform certain activities in bending cell, like robot
-teach-in, press-brake status checking etc., the press brake and the robot needs
-to move with safety speed. In this case, the bending cell is operating in Teach
-mode.</p>
-</div>
-<div class="paragraph">
-<p>The teach mode of the press brake is automatically activated when any of the
-bending cell&#8217;s safety door is opened. This safety door&#8217;s signal is passed to
-press brake via PIN 30 (Robot Automatic Contact 1) and 31 (Robot Automatic
-Contact 2).</p>
-</div>
-<div class="paragraph">
-<p>And the teach mode of the press brake can be realized via the following
-processing sequence:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/image6.png" alt="image6" width="593" height="387"></span></p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/image7.png" alt="image7" width="584" height="381"></span></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_auto_mode">Auto mode</h3>
-<div class="paragraph">
-<p>When the safety doors of the bending cell are all closed, the press brake will
-automatically switch back to the automatic operation mode with high speed. And
-the processing sequence is realized as follows:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/image8.png" alt="image8" width="586" height="343"></span></p>
-</div>
-</div>
-</div>
+<p>When the Robot mode key and the deadman switch are both enabled, the "Field Muted
+Mode" will be activated by default. In this mode, the RAM will until</p>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc">
- <h3>Contents</h3>
- <ul>
-  <li level="1">
-   <a href="#_robot_logic">Robot Logic</a>
-  </li>
-  <li level="1">
-   <a href="#_operating_modes">Operating Modes</a>
-  </li>
-  <li level="2">
-   <a href="#_manual_mode">Manual mode</a>
-  </li>
-  <li level="2">
-   <a href="#_robot_mode">Robot mode</a>
-  </li>
-  <li level="2">
-   <a href="#_teach_mode">Teach mode</a>
-  </li>
-  <li level="2">
-   <a href="#_auto_mode">Auto mode</a>
-  </li>
- </ul>
-</aside>
-
+                    <aside id="site-toc"></aside>
                 </div>
             </div>
             <nav class="pagination">

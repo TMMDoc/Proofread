@@ -98,6 +98,7 @@
       <li><button class="tree blank"></button><a href="deposit.html">Deposit</a></li>
      </ul>
     </li>
+    <li><button class="tree blank"></button><a href="../bestpractices.html">Best Practices</a></li>
     <li><button class="tree blank"></button><a href="../samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="../postprocessor.html">Post Processor</a></li>
     <li><button class="tree blank"></button><a href="../test.html">Program Sttructure</a></li>
@@ -344,9 +345,25 @@
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pre-bend safe (Not applicable for bend
+1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/prebendsafe.png" alt="PreBendSafe" width="150"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The gripper moves away from the
+machine to this safe position to proceed the next bend</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">JJ</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station Front (Not applicable for bend
+1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/stationfront.png" alt="StationFront" width="150"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It is a ready position where the
+gripper holds the part in front of the bending machine.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Part Insert</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/partinsert.png" alt="PartInsert" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">From Centering transition swing position, the gripper moves to
+<td class="tableblock halign-left valign-top"><p class="tableblock">The gripper moves to
 the part insert position which is approximately 50 to 100 mm away from the
 bending machine&#8217;s tool.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JC</p></td>
@@ -354,88 +371,102 @@ bending machine&#8217;s tool.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Part Insert 2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/partinsert2.png" alt="PartInsert2" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The gripper holds the part and positions it between the bending machine&#8217;s tool.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The gripper holds the
+part and positions it between the bending machine&#8217;s tool.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Mute point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/mutepoint.png" alt="Mutepoint" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The gripper places the part on the die tool against the backgauge.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The gripper places the part
+on the die tool against the backgauge.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Pinch point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/pinchpoint.png" alt="Pinchpoint" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The part&#8217;s bend line gets placed accurately on the middle of die tool&#8217;s V width and
-the punch tool contacts the part after backgauge alignment.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The part&#8217;s bend line gets
+placed accurately on the middle of die tool&#8217;s V width and the punch tool
+contacts the part after backgauge alignment.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Retract gauges</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/retractgauges.png" alt="RetractGauges" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">After reaching pinch point, the backgauge gets retracted.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">After reaching
+pinch point, the backgauge gets retracted.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bending</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/bending.png" alt="Bending" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">During this phase, Syncronized bending process occurs.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">During this phase, Syncronized
+bending process occurs.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Over Bending</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/overbending.png" alt="Overbending" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The part is overbent to compensate springback.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The part is overbent to
+compensate springback.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Retract</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/retract.png" alt="Retract" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">After overbending, The gripper releases the part and retracts.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">After overbending, The gripper
+releases the part and retracts.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Swivel 1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/swivel1.png" alt="Swivel1" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Post retraction, the gripper swivels to the next position.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Post retraction, the gripper
+swivels to the next position.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Swivel 2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/swivel2.png" alt="Swivel2" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">From Swivel 1, gripper moves towards the part to perform regripping.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">From Swivel 1, gripper moves
+towards the part to perform regripping.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Contact</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/contact.png" alt="Contact" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The gripper moves towards the part to make contact, the vaccum gets turned ON and the part gets suctioned.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The gripper moves towards the
+part to make contact, the vaccum gets turned ON and the part gets suctioned.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Decompress</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/decompress.png" alt="Decompress" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RAM moves slightly upwards causing the sheet to deflect. To compensate
-the deflection, the gripper moves backwards.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RAM moves slightly upwards
+causing the sheet to deflect. To compensate the deflection, the gripper moves
+backwards.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Opening</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/opening.png" alt="Opening" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RAM goes fully up, gripper then lifts the part above the die tool.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RAM goes fully up, gripper then
+lifts the part above the die tool.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Post Bend Safe</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/postbendsafe.png" alt="PostBendSafe" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Gripper holding the part moves little away from the machine.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gripper holding the
+part moves little away from the machine.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Post Bend Safe 2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/bendpositioning/postbendsafe2.png" alt="PostBendSafe2" width="150"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Gripper moves away from the machine to this safe position
-to proceed transition from bending to deposit phase.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gripper moves
+away from the machine to this safe position to proceed transition from bending
+to next phase.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JJ</p></td>
 </tr>
 </tbody>
@@ -447,9 +478,11 @@ to proceed transition from bending to deposit phase.</p></td>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-In the above table, the
-regripping process occurs during the Retract phase and Contact phase. These simulation phases occurs only when regripping is chosen. If the part can be bent without regripping, then the Retract phase
-to Contact phase gets skipped and the simulation occurs from Overbending phase to Decompress phase.
+In the above table, the regripping process occurs during the Retract phase
+and Contact phase. These simulation phases occurs only when regripping is
+chosen. If the part can be bent without regripping, then the Retract phase to
+Contact phase gets skipped and the simulation occurs from Overbending phase to
+Decompress phase.
 </td>
 </tr>
 </table>
