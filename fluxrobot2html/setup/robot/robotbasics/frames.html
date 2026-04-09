@@ -45,6 +45,8 @@
        <ul>
         <li><button class="tree blank"></button><a href="basiccoordinatesystems.html">Coordinate Systems</a></li>
         <li><button class="tree blank"></button><a class="active" href="frames.html">Frames</a></li>
+        <li><button class="tree blank"></button><a href="calibration.html">Frame Calibration</a></li>
+        <li><button class="tree blank"></button><a href="bestpractices.html">Best Practices</a></li>
        </ul>
       </li>
       <li><button class="tree blank"></button><a href="../wiredconnection.html">Field Elements Wired Connection Overview</a></li>
@@ -102,6 +104,20 @@
     <li><button class="tree blank"></button><a href="../../../fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="../../../fluxrobotcam/postprocessor.html">Post Processor</a></li>
     <li><button class="tree blank"></button><a href="../../../fluxrobotcam/test.html">Program Sttructure</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../package/index.html">FluxRobot Package</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../package/macros.html">Macros</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../rightangle/index.html">Right Angle Robotic Bending</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../rightangle/programloading.html">Operations</a></li>
    </ul>
   </li>
   <li>
@@ -335,38 +351,17 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Frames is a coordinate system that helps the robot to understand where things
-are placed in its workspace. They tell the robot how to move in the correct
-direction during working in the different setups.</p>
-</div>
-<div class="paragraph">
-<p>Frames tell the robot where the origin is, and which way is X, Y, and Z. Using
-frames allows you to program the robot easily and accurately in different
-scenarios.</p>
+<p>Frames is a reference coordinate system that helps the robot to understand where
+things are placed in its workspace. They tell the robot how to move in the
+correct direction during working in the different setups.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_types_of_frames">Types of Frames</h2>
 <div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Tool Frame (UTOOL)</p>
-</li>
-<li>
-<p>User Frame (UFRAME)</p>
-</li>
-<li>
-<p>Jog Frame</p>
-</li>
-<li>
-<p>Cell Frame</p>
-</li>
-</ol>
-</div>
 <div class="sect2">
-<h3 id="_tool_frame">Tool Frame</h3>
+<h3 id="_1_tool_frame_utool">1. Tool Frame (UTOOL)</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -375,7 +370,7 @@ scenarios.</p>
 </li>
 <li>
 <p>The TCP is a specific point in space that represents the tip of the tool.
-Since the robot only knows its wrist position, user need to calculate the TCP to
+Since the robot only knows its wrist position, the user needs to calculate the TCP to
 tell the robot where the tool tip is located.</p>
 </li>
 <li>
@@ -386,95 +381,38 @@ accurately for tasks like picking, welding, or cutting.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_user_frame">User Frame</h3>
+<h3 id="_2_user_frame_uframe">2. User Frame (UFRAME)</h3>
 <div class="paragraph">
-<p>External to the robot - stays fixed on the floor, machine, or part.</p>
-</div>
-<div class="sect3">
-<h4 id="_teaching_the_user_frame">Teaching the User Frame</h4>
-<div class="paragraph">
-<p>When setting a User Frame, user can teach:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The origin point (zero position) of the table or part.</p>
-</li>
-<li>
-<p>The X and Y directions to define the frame orientation.
-Even if the X and Y angles are not perfectly aligned, it will not affect the
-robot&#8217;s working as long as the frame is set properly for the process.</p>
-</li>
-</ul>
-</div>
+<p>External components such as the bending machine, pickup pallet, centering table,
+and deposit are calibrated with User Frames. Each of these components have their
+own coordinate systems. These frames help the robot understand where these
+components are located in the workspace and how to interact with them. During
+operation, the robot switches the User Frame based on the current process,
+allowing it to move and perform tasks accurately relative to the specific
+component it is working with.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_jog_frame">Jog Frame</h3>
+<h3 id="_3_jog_frame">3. Jog Frame</h3>
 <div class="paragraph">
-<p>Used for manual movement in custom directions</p>
+<p>Used for manually jogging the robot, the Jog Frame allows the user to move the
+robot in a specific coordinate system. This is particularly useful for tasks
+like teaching or programming the robot manually. When the robot is in Jog
+Coordinate System, it will move according to the selected jog frame&#8217;s coordinate
+system, allowing for precise control during setup and adjustments.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_how_to_setup_or_verify_frames_in_fanuc_robot_using_the_teach_pendant_tp">How to Setup or Verify Frames in FANUC Robot Using the Teach Pendant (TP)</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To setup or verify frames in the robot, follow these steps on the Teach Pendant
-(TP):</p>
-</div>
-<div class="sect2">
-<h3 id="_steps">Steps</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Press the MENU button on the Teach Pendant.</p>
-</li>
-<li>
-<p>Navigate to SETUP → Frames.</p>
-</li>
-<li>
-<p>Press F1 (Type) or select Others to view the list of available frame types.</p>
-</li>
-<li>
-<p>The following frame options will appear:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Tool Frame (UTOOL)</p>
-</li>
-<li>
-<p>User Frame (UFRAME)</p>
-</li>
-<li>
-<p>Jog Frame</p>
-</li>
-<li>
-<p>Cell Frame</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Select the frame you need to setup or verify.</p>
-</li>
-<li>
-<p>Click on Method and select the calibration method that is most suitable for
-your setup.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Choose between 3-point, 4-point (XY/XZ), or 6-point for TCP calibration.</p>
-</li>
-<li>
-<p>For User Frames, select 3-point or 4-point method based on frame like machine
-or Tilt pallet or Centering Table.</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<mark>See the <a href="#Calibration</mark>">Calibration of robots and elements</a> for
+more details on how to calibrate the User Frame for each external component.#
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -490,19 +428,13 @@ or Tilt pallet or Centering Table.</p>
    <a href="#_types_of_frames">Types of Frames</a>
   </li>
   <li level="2">
-   <a href="#_tool_frame">Tool Frame</a>
+   <a href="#_1_tool_frame_utool">1. Tool Frame (UTOOL)</a>
   </li>
   <li level="2">
-   <a href="#_user_frame">User Frame</a>
+   <a href="#_2_user_frame_uframe">2. User Frame (UFRAME)</a>
   </li>
   <li level="2">
-   <a href="#_jog_frame">Jog Frame</a>
-  </li>
-  <li level="1">
-   <a href="#_how_to_setup_or_verify_frames_in_fanuc_robot_using_the_teach_pendant_tp">How to Setup or Verify Frames in FANUC Robot Using the Teach Pendant (TP)</a>
-  </li>
-  <li level="2">
-   <a href="#_steps">Steps</a>
+   <a href="#_3_jog_frame">3. Jog Frame</a>
   </li>
  </ul>
 </aside>
@@ -511,7 +443,7 @@ or Tilt pallet or Centering Table.</p>
             </div>
             <nav class="pagination">
  <span class="prev"><a href="basiccoordinatesystems.html">Coordinate Systems</a></span>
- <span class="next"><a href="../wiredconnection.html">Field Elements Wired Connection Overview</a></span>
+ <span class="next"><a href="calibration.html">Frame Calibration</a></span>
 </nav>
 
         </div>

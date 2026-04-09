@@ -45,6 +45,8 @@
        <ul>
         <li><button class="tree blank"></button><a class="active" href="basiccoordinatesystems.html">Coordinate Systems</a></li>
         <li><button class="tree blank"></button><a href="frames.html">Frames</a></li>
+        <li><button class="tree blank"></button><a href="calibration.html">Frame Calibration</a></li>
+        <li><button class="tree blank"></button><a href="bestpractices.html">Best Practices</a></li>
        </ul>
       </li>
       <li><button class="tree blank"></button><a href="../wiredconnection.html">Field Elements Wired Connection Overview</a></li>
@@ -102,6 +104,20 @@
     <li><button class="tree blank"></button><a href="../../../fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="../../../fluxrobotcam/postprocessor.html">Post Processor</a></li>
     <li><button class="tree blank"></button><a href="../../../fluxrobotcam/test.html">Program Sttructure</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../package/index.html">FluxRobot Package</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../package/macros.html">Macros</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../rightangle/index.html">Right Angle Robotic Bending</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../rightangle/programloading.html">Operations</a></li>
    </ul>
   </li>
   <li>
@@ -360,16 +376,16 @@ space:</p>
 <p><span class="image"><img src="img/orange.png" alt="Orange" width="20"></span> &#8594; Tool Coordinate System</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/green.png" alt="Green" width="20"></span> &#8594; Coordinate System of UserFrame1 (Bending Machine)</p>
+<p><span class="image"><img src="img/green.png" alt="Green" width="20"></span> &#8594; Coordinate System of Bending Machine (UserFrame1)</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/red.png" alt="Red" width="20"></span> &#8594; Coordinate System of UserFrame2 (Pickup Pallet)</p>
+<p><span class="image"><img src="img/red.png" alt="Red" width="20"></span> &#8594; Coordinate System of Pickup Pallet (UserFrame2)</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/purple.png" alt="Purple" width="20"></span> &#8594; Coordinate System of UserFrame3 (Centering Table)</p>
+<p><span class="image"><img src="img/purple.png" alt="Purple" width="20"></span> &#8594; Coordinate System of Centering Table (UserFrame3)</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/pink.png" alt="Pink" width="20"></span> &#8594; Coordinate System of UserFrame4 (Deposit)</p>
+<p><span class="image"><img src="img/pink.png" alt="Pink" width="20"></span> &#8594; Coordinate System of Deposit (UserFrame4)</p>
 </div>
 </div>
 </div>
@@ -377,7 +393,7 @@ space:</p>
 <h2 id="_robot_coordinates">Robot Coordinates</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_world_coordinate_system">World Coordinate System</h3>
+<h3 id="_robot_world_coordinate_system">Robot World Coordinate System</h3>
 <div class="paragraph">
 <p>It is the global coordinate system of the robot. The
 origin point (0,0,0) of the robot is defined at the intersection of joints J1
@@ -399,26 +415,13 @@ determine the orientation of the coordinate axes.
 <div class="paragraph">
 <p><span class="image"><img src="img/worldcos.png" alt="WorldCOS" width="300"></span></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>X-Axis</strong> - Represents horizontal movement along the front-back direction.</p>
-</li>
-<li>
-<p><strong>Y-Axis</strong> - Represents horizontal movement along the side-to-side direction.</p>
-</li>
-<li>
-<p><strong>Z-Axis</strong> - Represents vertical movement along up-down direction.</p>
-</li>
-</ul>
-</div>
 </div>
 <div class="sect2">
-<h3 id="_joint_coordinate_system">Joint coordinate system</h3>
+<h3 id="_joint_coordinate_system">Joint Coordinate System</h3>
 <div class="paragraph">
 <p>In the joint coordinate system, a robot operates by controlling each joint
-individually based on its own axis of rotation or translation. This method is especially useful for tasks like teaching or
-programming the robot manually.</p>
+individually based on its own axis of rotation or translation. This method is
+especially useful for tasks like teaching or programming the robot manually.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="img/jointcos.png" alt="JointCOS"></span></p>
@@ -437,20 +440,6 @@ System.</p>
 <div class="paragraph">
 <p><span class="image"><img src="img/toolcos.png" alt="ToolCOS" width="300"></span></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>X-Axis</strong> - Represents forward/backward movement of the tool.</p>
-</li>
-<li>
-<p><strong>Y-Axis</strong> - Represents lateral movement (left/right).</p>
-</li>
-<li>
-<p><strong>Z-Axis</strong> - Represents vertical movement downward or upward depending on tool
-orientation.</p>
-</li>
-</ul>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_user_coordinate_system">User Coordinate System</h3>
@@ -464,19 +453,28 @@ System.</p>
 etc., has their own coordinate system.  Represented below are the coordinates of
 our UserFrame components:</p>
 </div>
+<div class="exampleblock">
+<div class="title">Example 1. <strong>UserFrame1 (Bending Machine) coordinates</strong></div>
+<div class="content">
+<div class="paragraph">
+<p><mark><span class="image"><img src="img/userframe1.png" alt="UserFrame1" width="300"></span></mark></p>
 </div>
-<div class="sect2">
-<h3 id="_userframe1_bending_machine">UserFrame1 (Bending Machine)</h3>
+<div class="paragraph">
+<p>Bending Machine&#8217;s coordinate system is defined as follows:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>X-Axis</strong> - Represents horizontal movement along the side-to-side direction.</p>
+<p>Origin point is located at the center of the bending machine.</p>
 </li>
 <li>
-<p><strong>Y-Axis</strong> - Represents horizontal movement along the front-back direction.</p>
+<p>X-axis: left and right direction from the origin point.</p>
 </li>
 <li>
-<p><strong>Z-Axis</strong> - Represents vertical movement along up-down direction.</p>
+<p>Y-axis: front and back direction from the origin point.</p>
+</li>
+<li>
+<p>Z-axis: up and down direction from the origin point.</p>
 </li>
 </ul>
 </div>
@@ -494,71 +492,6 @@ all other UserFrames.
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_userframe2_pickup_pallet">UserFrame2 (Pickup Pallet)</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>X-Axis</strong> - Represents side-to-side direction.</p>
-</li>
-<li>
-<p><strong>Y-Axis</strong> - Represents front-back direction.</p>
-</li>
-<li>
-<p><strong>Z-Axis</strong> - Represents up-down direction.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_userframe3_centering_table">UserFrame3 (Centering Table)</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>X-Axis</strong> - Represents side-to-side direction.</p>
-</li>
-<li>
-<p><strong>Y-Axis</strong> - Represents front-back direction.</p>
-</li>
-<li>
-<p><strong>Z-Axis</strong> - Represents up-down direction.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_userframe4_deposit">UserFrame4 (Deposit)</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>X-Axis</strong> - Represents side-to-side direction.</p>
-</li>
-<li>
-<p><strong>Y-Axis</strong> - Represents front-back direction.</p>
-</li>
-<li>
-<p><strong>Z-Axis</strong> - Represents up-down direction.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-We have a standardized way to calibrate all UserFrame components with the
-calibration plate. The frames are experimentally measured with a calibration
-plate which has a coordinate system 50mm from its border. Thus all calibration
-points are easily reachable.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>+
-<span class="image"><img src="img/calibplate.png" alt="Calibplate"></span></p>
 </div>
 </div>
 </div>
@@ -569,10 +502,29 @@ points are easily reachable.
 <div class="paragraph">
 <p>Jog frames help to move the Robot aligned with components. The robot will move
 in the selected jog frame&#8217;s coordinate system when it is in Jog Coordinate
-System.  If it is in this mode, the robot will move in the selected jog frame’s coordinate system.</p>
+System.  If it is in this mode, the robot will move in the selected jog frame&#8217;s
+coordinate system.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="img/jog.png" alt="jog"></span></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+It is important to check the best practices sectionfor robot
+coordinate systems. Please refer to the <a href="bestpractices.html">Best Practices</a>
+for more details.
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -587,28 +539,16 @@ System.  If it is in this mode, the robot will move in the selected jog frame’
    <a href="#_robot_coordinates">Robot Coordinates</a>
   </li>
   <li level="2">
-   <a href="#_world_coordinate_system">World Coordinate System</a>
+   <a href="#_robot_world_coordinate_system">Robot World Coordinate System</a>
   </li>
   <li level="2">
-   <a href="#_joint_coordinate_system">Joint coordinate system</a>
+   <a href="#_joint_coordinate_system">Joint Coordinate System</a>
   </li>
   <li level="2">
    <a href="#_tool_coordinate_system">Tool Coordinate System</a>
   </li>
   <li level="2">
    <a href="#_user_coordinate_system">User Coordinate System</a>
-  </li>
-  <li level="2">
-   <a href="#_userframe1_bending_machine">UserFrame1 (Bending Machine)</a>
-  </li>
-  <li level="2">
-   <a href="#_userframe2_pickup_pallet">UserFrame2 (Pickup Pallet)</a>
-  </li>
-  <li level="2">
-   <a href="#_userframe3_centering_table">UserFrame3 (Centering Table)</a>
-  </li>
-  <li level="2">
-   <a href="#_userframe4_deposit">UserFrame4 (Deposit)</a>
   </li>
   <li level="1">
    <a href="#_jog_coordinate_system_jgfrm">Jog coordinate system (JGFRM)</a>
