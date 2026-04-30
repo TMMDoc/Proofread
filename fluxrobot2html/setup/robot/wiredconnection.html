@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title>Field Elements Wired Connection Overview</title>
+  <title>Cell Inputs/Outputs Connection Overview</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -49,7 +49,7 @@
         <li><button class="tree blank"></button><a href="robotbasics/bestpractices.html">Best Practices</a></li>
        </ul>
       </li>
-      <li><button class="tree blank"></button><a class="active" href="wiredconnection.html">Field Elements Wired Connection Overview</a></li>
+      <li><button class="tree blank"></button><a class="active" href="wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="busconnection.html">Field Bus Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="safetyconnection.html">Safety Connection Overview</a></li>
      </ul>
@@ -103,7 +103,6 @@
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/bestpractices.html">Best Practices</a></li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/postprocessor.html">Post Processor</a></li>
-    <li><button class="tree blank"></button><a href="../../fluxrobotcam/test.html">Program Sttructure</a></li>
    </ul>
   </li>
   <li>
@@ -111,6 +110,17 @@
    <a href="../../package/index.html">FluxRobot Package</a>
    <ul class="hide">
     <li><button class="tree blank"></button><a href="../../package/macros.html">Macros</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../package/robothmi/index.html">Robot HMI</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../package/robothmi/setup.html">Webpage Setup in Teach Pendant</a></li>
+      <li><button class="tree blank"></button><a href="../../package/robothmi/browser.html">Browser</a></li>
+      <li><button class="tree blank"></button><a href="../../package/robothmi/io.html">Input/Output Signals</a></li>
+      <li><button class="tree blank"></button><a href="../../package/robothmi/homing.html">Homing</a></li>
+      <li><button class="tree blank"></button><a href="../../package/robothmi/register.html">Register</a></li>
+     </ul>
+    </li>
    </ul>
   </li>
   <li>
@@ -336,14 +346,14 @@
  </div>
  <div>/</div>
  <div>
-  <a href="wiredconnection.html">Field Elements Wired Connection Overview</a>
+  <a href="wiredconnection.html">Cell Inputs/Outputs Connection Overview</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Field Elements Wired Connection Overview</h1>
+                        <h1>Cell Inputs/Outputs Connection Overview</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -474,8 +484,8 @@ Manifold when this signal is active in DO.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Vacuum_GripON\OFF</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DO &#8594; Robot Arm</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark>Signal to activate/deactivate the
-suction of the vaccum gripper.</mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signal to activate/deactivate the
+suction of the vaccum gripper.</p></td>
 </tr>
 </tbody>
 </table>
@@ -506,13 +516,13 @@ suction of the vaccum gripper.</mark></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark>Z1_Analog</mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z1_Analog</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bending Machine (Backgauge Z1) &#8594; AI</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Feedback of the Z1 probe&#8217;s potentiometer.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark>Z2_Analog</mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z2_Analog</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bending Machine (Backgauge Z2) &#8594; AI</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Feedback of the Z2 probe&#8217;s potentiometer.</p></td>
 </tr>
@@ -603,8 +613,8 @@ Manifold when this signal is active in DO.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">PDISP_VacuumON\OFF</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DO &#8594; Part Dispenser</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark>Signal to turn on/off vacuum
-suction of the part dispenser.</mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signal to turn on/off vacuum
+suction of the part dispenser.</p></td>
 </tr>
 </tbody>
 </table>
@@ -624,8 +634,18 @@ suction of the part dispenser.</mark></p></td>
 The safety port is a dedicated connection point on the robot controller to
 receive signals from safety fence.</p>
 </div>
-<div class="paragraph">
-<p><mark>See Safety connection overview section for more details.</mark></p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+See <a href="../robot/safetyconnection.html">Safety Connection Overview</a> section for more
+details.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -655,52 +675,22 @@ teach mode or in auto mode.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Relay4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tower Lamp &#8594; DO</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Relay5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tower Lamp &#8594; DO</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Relay6</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tower Lamp &#8594; DO</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Relay1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tower Lamp &#8594; DO</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Relay2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tower Lamp &#8594; DO</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TL_Green</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tower Lamp &#8594; DO</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signal to activate the green light of the tower lamp.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TL_Red</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tower Lamp &#8594; DO</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signal to activate the red light of the tower lamp.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">19</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TL_Amber</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tower Lamp &#8594; DO</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signal to activate the amber light of the tower lamp.</p></td>
 </tr>
 </tbody>
 </table>

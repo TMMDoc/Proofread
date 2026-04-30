@@ -49,7 +49,7 @@
         <li><button class="tree blank"></button><a href="../setup/robot/robotbasics/bestpractices.html">Best Practices</a></li>
        </ul>
       </li>
-      <li><button class="tree blank"></button><a href="../setup/robot/wiredconnection.html">Field Elements Wired Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../setup/robot/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../setup/robot/busconnection.html">Field Bus Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../setup/robot/safetyconnection.html">Safety Connection Overview</a></li>
      </ul>
@@ -103,7 +103,6 @@
     <li><button class="tree blank"></button><a href="../fluxrobotcam/bestpractices.html">Best Practices</a></li>
     <li><button class="tree blank"></button><a href="../fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="../fluxrobotcam/postprocessor.html">Post Processor</a></li>
-    <li><button class="tree blank"></button><a href="../fluxrobotcam/test.html">Program Sttructure</a></li>
    </ul>
   </li>
   <li>
@@ -111,6 +110,17 @@
    <a href="../package/index.html">FluxRobot Package</a>
    <ul class="hide">
     <li><button class="tree blank"></button><a href="../package/macros.html">Macros</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../package/robothmi/index.html">Robot HMI</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../package/robothmi/setup.html">Webpage Setup in Teach Pendant</a></li>
+      <li><button class="tree blank"></button><a href="../package/robothmi/browser.html">Browser</a></li>
+      <li><button class="tree blank"></button><a href="../package/robothmi/io.html">Input/Output Signals</a></li>
+      <li><button class="tree blank"></button><a href="../package/robothmi/homing.html">Homing</a></li>
+      <li><button class="tree blank"></button><a href="../package/robothmi/register.html">Register</a></li>
+     </ul>
+    </li>
    </ul>
   </li>
   <li>
@@ -373,7 +383,7 @@ physical work:</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Robot Arm</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Executes all pick, center, feed, and deposit motions inside the cell.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Executes all pick, center and deposit motions inside the cell.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Robot Controller</p></td>
@@ -387,7 +397,7 @@ and lower tool.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RA Controller</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Press brake controller. Acts as the master: drives the machine and coordinates
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press brake controller. It drives the machine and coordinates
 timing with the robot controller.</p></td>
 </tr>
 <tr>
@@ -398,7 +408,7 @@ interlocks.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Peripheral Stations</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pickup pallet, centering table, and deposit station — all enclosed within the
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pickup pallet, Centering table, and Deposit station — all enclosed within the
 robot safety fence.</p></td>
 </tr>
 </tbody>

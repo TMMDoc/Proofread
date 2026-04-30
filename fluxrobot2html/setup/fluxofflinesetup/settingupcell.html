@@ -49,7 +49,7 @@
         <li><button class="tree blank"></button><a href="../robot/robotbasics/bestpractices.html">Best Practices</a></li>
        </ul>
       </li>
-      <li><button class="tree blank"></button><a href="../robot/wiredconnection.html">Field Elements Wired Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../robot/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../robot/busconnection.html">Field Bus Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../robot/safetyconnection.html">Safety Connection Overview</a></li>
      </ul>
@@ -103,7 +103,6 @@
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/bestpractices.html">Best Practices</a></li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/postprocessor.html">Post Processor</a></li>
-    <li><button class="tree blank"></button><a href="../../fluxrobotcam/test.html">Program Sttructure</a></li>
    </ul>
   </li>
   <li>
@@ -111,6 +110,17 @@
    <a href="../../package/index.html">FluxRobot Package</a>
    <ul class="hide">
     <li><button class="tree blank"></button><a href="../../package/macros.html">Macros</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../package/robothmi/index.html">Robot HMI</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../package/robothmi/setup.html">Webpage Setup in Teach Pendant</a></li>
+      <li><button class="tree blank"></button><a href="../../package/robothmi/browser.html">Browser</a></li>
+      <li><button class="tree blank"></button><a href="../../package/robothmi/io.html">Input/Output Signals</a></li>
+      <li><button class="tree blank"></button><a href="../../package/robothmi/homing.html">Homing</a></li>
+      <li><button class="tree blank"></button><a href="../../package/robothmi/register.html">Register</a></li>
+     </ul>
+    </li>
    </ul>
   </li>
   <li>
@@ -348,11 +358,18 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter explains how to configure the machine cell and update robot and pallet
-calibration values so FlexCell CAM can generate correct NC output.</p>
+calibration values so FluxRobot CAM can generate correct NC output.</p>
 </div>
 <div class="paragraph">
-<p>Follow the steps below carefully - incorrect values may produce wrong NC code and
-cause collisions or damage.</p>
+<p>In standard robot setups, calibration is performed from the robot&#8217;s perspective
+to locate the machine. FluxRobot CAM, however, uses the machine as the reference
+frame and requires the positions of the robot and other cell components
+expressed relative to the machine coordinate system.</p>
+</div>
+<div class="paragraph">
+<p>Follow the steps below carefully to set up the cell correctly. Incorrect
+calibration can lead to collisions or damage to the machine, robot, or
+workpieces.</p>
 </div>
 </div>
 </div>
@@ -362,7 +379,7 @@ cause collisions or damage.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Start FlexCell CAM.</p>
+<p>Start FluxRobot CAM.</p>
 </li>
 <li>
 <p>Navigate to View &#8594; Calibration Tool.</p>
@@ -419,7 +436,7 @@ MInR.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Update these RInM values to let FlexCell CAM know the exact position of
+<p>Update these RInM values to let FluxRobot CAM know the exact position of
 the robot origin relative to the machine zero-point.</p>
 </div>
 <div class="sect3">
@@ -427,7 +444,7 @@ the robot origin relative to the machine zero-point.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Start FlexCell CAM.</p>
+<p>Start FluxRobot CAM.</p>
 </li>
 <li>
 <p>Install the required machine via <strong>Database &#8594;
@@ -446,7 +463,7 @@ Machines</strong> option from the command bar on the left.</p>
 </div>
 </li>
 <li>
-<p><strong>Save</strong> the values and restart FlexCell CAM for the changes to take effect.</p>
+<p><strong>Save</strong> the values and restart FluxRobot CAM for the changes to take effect.</p>
 </li>
 </ul>
 </div>
@@ -456,7 +473,7 @@ Machines</strong> option from the command bar on the left.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Start FlexCell CAM.</p>
+<p>Start FluxRobot CAM.</p>
 </li>
 <li>
 <p>Open a simple part and tool it up.</p>
@@ -475,7 +492,7 @@ Y, Z Rot.</p>
 </div>
 </li>
 <li>
-<p><strong>Save</strong> the values and restart FlexCell CAM.</p>
+<p><strong>Save</strong> the values and restart FluxRobot CAM.</p>
 </li>
 </ul>
 </div>
@@ -524,7 +541,7 @@ PInR.</p>
 </li>
 <li>
 <p>Update these PInM values in the corresponding pallet panel (Pickup Pallet,
-Centering Table, Chute) in order to let FlexCell CAM know the exact position of
+Centering Table, Chute) in order to let FluxRobot CAM know the exact position of
 the pallet origin relative to the machine zero-point.</p>
 </li>
 </ul>
@@ -534,7 +551,7 @@ the pallet origin relative to the machine zero-point.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Start FlexCell CAM.</p>
+<p>Start FluxRobot CAM.</p>
 </li>
 <li>
 <p>Open a simple part and tool it up.</p>

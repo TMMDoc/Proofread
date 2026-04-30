@@ -49,7 +49,7 @@
         <li><button class="tree blank"></button><a href="../setup/robot/robotbasics/bestpractices.html">Best Practices</a></li>
        </ul>
       </li>
-      <li><button class="tree blank"></button><a href="../setup/robot/wiredconnection.html">Field Elements Wired Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../setup/robot/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../setup/robot/busconnection.html">Field Bus Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../setup/robot/safetyconnection.html">Safety Connection Overview</a></li>
      </ul>
@@ -103,7 +103,6 @@
     <li><button class="tree blank"></button><a href="../fluxrobotcam/bestpractices.html">Best Practices</a></li>
     <li><button class="tree blank"></button><a href="../fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
     <li><button class="tree blank"></button><a href="../fluxrobotcam/postprocessor.html">Post Processor</a></li>
-    <li><button class="tree blank"></button><a href="../fluxrobotcam/test.html">Program Sttructure</a></li>
    </ul>
   </li>
   <li>
@@ -111,6 +110,17 @@
    <a href="index.html">FluxRobot Package</a>
    <ul>
     <li><button class="tree blank"></button><a class="active" href="macros.html">Macros</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="robothmi/index.html">Robot HMI</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="robothmi/setup.html">Webpage Setup in Teach Pendant</a></li>
+      <li><button class="tree blank"></button><a href="robothmi/browser.html">Browser</a></li>
+      <li><button class="tree blank"></button><a href="robothmi/io.html">Input/Output Signals</a></li>
+      <li><button class="tree blank"></button><a href="robothmi/homing.html">Homing</a></li>
+      <li><button class="tree blank"></button><a href="robothmi/register.html">Register</a></li>
+     </ul>
+    </li>
    </ul>
   </li>
   <li>
@@ -356,7 +366,7 @@ behaviors and reuse them across different parts of your program.</p>
 <h2 id="_initialize_macro">Initialize Macro</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="macros&amp;bglogi/m_initialize.ls">M_INITIALIZE.LS</a></p>
+<p><a href="macrosbglogi/m_initialize.ls">M_INITIALIZE.LS</a></p>
 </div>
 <div class="paragraph">
 <p>Initialize macro resets all machine outputs before initializing bending.
@@ -382,7 +392,7 @@ not interfere with the new part.
 <h2 id="_gripper_macro">Gripper Macro</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="macros&amp;bglogi/m_funccombigripper.ls">M_FUNCCOMBIGRIPPER.LS</a></p>
+<p><a href="macrosbglogi/m_funccombigripper.ls">M_FUNCCOMBIGRIPPER.LS</a></p>
 </div>
 <div class="paragraph">
 <p>This macro is a gripper control macro, that accepts three arguments to determine
@@ -398,54 +408,56 @@ outputs to execute the requested gripper operation.</p>
 <h2 id="_sheet_alignment_macro">Sheet Alignment Macro</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><mark><a href="macros&amp;bglogi/m_funcalignsheet.ls">M_FUNCALIGNSHEET.LS</a></mark></p>
+<p><a href="macrosbglogi/m_sa_align.ls">M_SA_ALIGN.LS</a></p>
 </div>
 <div class="paragraph">
-<p>Sheet Alignment macro aligns the sheet on the centering table before bending.</p>
+<p>Sheet Alignment macro performs the sheet alignment process using the backgauge.
+It moves the backgauge to the specified position, then moves the robot to align
+the sheet against the backgauge. The macro uses sensor feedback to ensure proper
+alignment before proceeding with the bending operation.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_frame_set_macro">Frame Set Macro</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p><a href="macros&amp;bglogi/m_saframeset.ls">M_SAFRAMESET.LS</a></p>
+<p><span class="image"><img src="img/sheetalignment.png" alt="SheetAlignment"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_frame_set_macro">Frame Set Macro</h3>
+<div class="paragraph">
+<p><a href="macrosbglogi/m_saframeset.ls">M_SAFRAMESET.LS</a></p>
 </div>
 <div class="paragraph">
 <p>Frame Set macro calculates and updates the backgauge user frame based on the current backgauge position.
 It applies the position shifts received from the PLC and writes the updated frame back to the robot controller.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_twist_adjust_macro">Twist Adjust Macro</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_twist_adjust_macro">Twist Adjust Macro</h3>
 <div class="paragraph">
-<p><a href="macros&amp;bglogi/m_satwistadjust.ls">M_SATWISTADJUST.LS</a></p>
+<p><a href="macrosbglogi/m_satwistadjust.ls">M_SATWISTADJUST.LS</a></p>
 </div>
 <div class="paragraph">
-<p>Twist Adjust macro applies the twist correction to the tool frame during bending.
-It reads the twist correction values from the PLC, applies them to the tool frame, and updates the tool frame in the robot controller to ensure accurate bending operations.</p>
+<p>Twist Adjust macro applies the twist correction to the tool frame during
+bending.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_tool_info_macro">Tool Info Macro</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p><a href="macros&amp;bglogi/m_toolinfo.ls">M_TOOLINFO.LS</a></p>
+<p>It reads the twist correction values from the PLC, applies them to the tool
+frame, and updates the tool frame in the robot controller to ensure accurate
+bending operations.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tool_info_macro">Tool Info Macro</h3>
+<div class="paragraph">
+<p><a href="macrosbglogi/m_toolinfo.ls">M_TOOLINFO.LS</a></p>
 </div>
 <div class="paragraph">
 <p>Tool Info macro reads the active tool data and sends the TCP values and current TCP position to the PLC.
 It is called before a twist correction to synchronize the tool data with the PLC.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_get_shift_tcp_macro">Get Shift TCP Macro</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_get_shift_tcp_macro">Get Shift TCP Macro</h3>
 <div class="paragraph">
-<p><a href="macros&amp;bglogi/m_getshift_tcp.ls">M_GETSHIFT_TCP.LS</a></p>
+<p><a href="macrosbglogi/m_getshift_tcp.ls">M_GETSHIFT_TCP.LS</a></p>
 </div>
 <div class="paragraph">
 <p>Get Shift TCP macro reads the TCP shift values sent by the PLC and stores them in the robot controller.
@@ -453,11 +465,12 @@ It is called before updating the tool frame during a twist correction.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="_sub_stack_search_macro">Sub Stack Search Macro</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="macros&amp;bglogi/m_sub_stacksearch.ls">M_SUB_STACKSEARCH.LS</a></p>
+<p><a href="macrosbglogi/m_sub_stacksearch.ls">M_SUB_STACKSEARCH.LS</a></p>
 </div>
 <div class="paragraph">
 <p>Sub Stack Search macro locates the top of the part stack on the pickup pallet.
@@ -470,7 +483,7 @@ It then activates the vacuum gripper for part pickup.</p>
 <h2 id="_frame_correction_macro">Frame Correction Macro</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="macros&amp;bglogi/m_framecorrection.ls">M_FRAMECORRECTION.LS</a></p>
+<p><a href="macrosbglogi/m_framecorrection.ls">M_FRAMECORRECTION.LS</a></p>
 </div>
 <div class="paragraph">
 <p>Frame Correction macro applies positional correction offsets to the position register based on the selected station.
@@ -495,16 +508,16 @@ The correction values are read from the robot registers and added to the positio
   <li level="1">
    <a href="#_sheet_alignment_macro">Sheet Alignment Macro</a>
   </li>
-  <li level="1">
+  <li level="2">
    <a href="#_frame_set_macro">Frame Set Macro</a>
   </li>
-  <li level="1">
+  <li level="2">
    <a href="#_twist_adjust_macro">Twist Adjust Macro</a>
   </li>
-  <li level="1">
+  <li level="2">
    <a href="#_tool_info_macro">Tool Info Macro</a>
   </li>
-  <li level="1">
+  <li level="2">
    <a href="#_get_shift_tcp_macro">Get Shift TCP Macro</a>
   </li>
   <li level="1">
@@ -520,7 +533,7 @@ The correction values are read from the robot registers and added to the positio
             </div>
             <nav class="pagination">
  <span class="prev"><a href="index.html">FluxRobot Package</a></span>
- <span class="next"><a href="../rightangle/index.html">Right Angle Robotic Bending</a></span>
+ <span class="next"><a href="robothmi/index.html">Robot HMI</a></span>
 </nav>
 
         </div>
