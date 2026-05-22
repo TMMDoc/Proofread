@@ -64,9 +64,17 @@
        <a href="../fluxofflinesetup/settingupgripper/index.html">Setting Up Gripper</a>
        <ul class="hide">
         <li><button class="tree blank"></button><a href="../fluxofflinesetup/settingupgripper/creategripper.html">Create a gripper</a></li>
-        <li><button class="tree blank"></button><a href="../fluxofflinesetup/settingupgripper/importgripper.html">Import gripper from DXF</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../fluxofflinesetup/settingupgripper/importgripper/index.html">= Import Gripper</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../fluxofflinesetup/settingupgripper/importgripper/dxf.html">Import gripper from DXF</a></li>
+          <li><button class="tree blank"></button><a href="../fluxofflinesetup/settingupgripper/importgripper/stl.html">Import Gripper from STL file</a></li>
+         </ul>
+        </li>
        </ul>
       </li>
+      <li><button class="tree blank"></button><a href="../fluxofflinesetup/settingupcellcomp.html">Setting up Cell Components</a></li>
      </ul>
     </li>
     <li>
@@ -127,7 +135,15 @@
    <button class="tree closed"></button>
    <a href="../../rightangle/index.html">Right Angle Robotic Bending</a>
    <ul class="hide">
-    <li><button class="tree blank"></button><a href="../../rightangle/programloading.html">Operations</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../rightangle/operations/index.html">Operations</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../rightangle/operations/teachmode.html">Teach Mode</a></li>
+      <li><button class="tree blank"></button><a href="../../rightangle/operations/automode.html">Auto Mode</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../rightangle/troubleshooting.html">Troubleshooting</a></li>
    </ul>
   </li>
   <li>
@@ -354,65 +370,21 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Robot Mode Enable</h1>
-<div class="ulist">
-<ul>
-<li>
-<p>Switch ON the Robot Mode key in the bending machine.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Turn the Robot Key ON in the bend machine to enable robot mode. The following
+message will appear on the HMI: "Robot Mode Key is Active".</p>
 </div>
 <div class="paragraph">
-<p>image:..</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>"Special mode disparity" message pops up in RA once the Robot mode switch is ON.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/robot%20mode.png" alt="robot mode" width="350"></span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Press Up foot pedal to clear up the above diaplayed message.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
+<p><mark><span class="image"><img src="img/robotmode1.png" alt="robotmode1"></span></mark></p>
 </div>
 <div class="paragraph">
-<p><strong>Enable the Robot</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Hold the deadman switch and <mark>reset the <strong>fault</strong> indication</mark>.</p>
-</li>
-<li>
-<p>"Robot mode is active" message pops up  in RA when deadman switch is enabled.</p>
-<div class="paragraph">
-<p>image:..</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>If deadman switch is released, "Robot mode is deactivated" message pops up.</p>
-<div class="paragraph">
-<p>image:..</p>
+<p>The "Special mode disparity" message will appear on the Right Angle. This
+message is just a warning to make the user aware that the machine is in Robot
+Mode and the safety parameters set in machine&#8217;s manual mode will not work in
+Robot Mode. Click on the message to clear it.</p>
 </div>
 <div class="paragraph">
-<p>NOTE:</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When the Robot mode key and the deadman switch are both enabled, the "Field Muted
-Mode" will be activated by default. In this mode, the RAM will until</p>
+<p><mark><span class="image"><img src="img/robotmode2.png" alt="robotmode2"></span></mark></p>
 </div>
 
                     </article>
@@ -434,7 +406,7 @@ Mode" will be activated by default. In this mode, the RAM will until</p>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by Trumpf Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

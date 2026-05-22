@@ -64,9 +64,17 @@
        <a href="../setup/fluxofflinesetup/settingupgripper/index.html">Setting Up Gripper</a>
        <ul class="hide">
         <li><button class="tree blank"></button><a href="../setup/fluxofflinesetup/settingupgripper/creategripper.html">Create a gripper</a></li>
-        <li><button class="tree blank"></button><a href="../setup/fluxofflinesetup/settingupgripper/importgripper.html">Import gripper from DXF</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../setup/fluxofflinesetup/settingupgripper/importgripper/index.html">= Import Gripper</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../setup/fluxofflinesetup/settingupgripper/importgripper/dxf.html">Import gripper from DXF</a></li>
+          <li><button class="tree blank"></button><a href="../setup/fluxofflinesetup/settingupgripper/importgripper/stl.html">Import Gripper from STL file</a></li>
+         </ul>
+        </li>
        </ul>
       </li>
+      <li><button class="tree blank"></button><a href="../setup/fluxofflinesetup/settingupcellcomp.html">Setting up Cell Components</a></li>
      </ul>
     </li>
     <li>
@@ -127,7 +135,15 @@
    <button class="tree closed"></button>
    <a href="../rightangle/index.html">Right Angle Robotic Bending</a>
    <ul class="hide">
-    <li><button class="tree blank"></button><a href="../rightangle/programloading.html">Operations</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../rightangle/operations/index.html">Operations</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../rightangle/operations/teachmode.html">Teach Mode</a></li>
+      <li><button class="tree blank"></button><a href="../rightangle/operations/automode.html">Auto Mode</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../rightangle/troubleshooting.html">Troubleshooting</a></li>
    </ul>
   </li>
   <li>
@@ -552,6 +568,20 @@ to provide the bend support points in flux.</p>
 <div class="paragraph">
 <p><mark>BEND1_RamPts.txt[]</mark></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Ensure that the Bend support points provided in Flux is same as in Right
+Angle&#8217;s Bend support points for the respective part. Otherwise, it may lead to
+synchronization issues during the bending operation.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -592,7 +622,7 @@ to provide the bend support points in flux.</p>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf Metamation. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by Trumpf Metamation. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">
