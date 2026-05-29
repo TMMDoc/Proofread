@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../../../../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title>Import Gripper from STL file</title>
+  <title>Frames</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -36,52 +36,52 @@
    <a href="../../../index.html">Setup</a>
    <ul>
     <li>
-     <button class="tree closed"></button>
-     <a href="../../../robot/index.html">Robot</a>
-     <ul class="hide">
+     <button class="tree open"></button>
+     <a href="../../index.html">Robot</a>
+     <ul>
       <li>
-       <button class="tree closed"></button>
-       <a href="../../../robot/robotbasics/index.html">Robot Basics</a>
-       <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../../robot/robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
+       <button class="tree open"></button>
+       <a href="../index.html">Robot Basics</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="../basiccoordinatesystems.html">Coordinate Systems</a></li>
         <li>
-         <button class="tree closed"></button>
-         <a href="../../../robot/robotbasics/frames/index.html">Frames</a>
-         <ul class="hide">
-          <li><button class="tree blank"></button><a href="../../../robot/robotbasics/frames/userframe.html">User Frame</a></li>
-          <li><button class="tree blank"></button><a href="../../../robot/robotbasics/frames/toolframe.html">Tool Frame</a></li>
+         <button class="tree open"></button>
+         <a class="active" href="index.html">Frames</a>
+         <ul>
+          <li><button class="tree blank"></button><a href="userframe.html">User Frame</a></li>
+          <li><button class="tree blank"></button><a href="toolframe.html">Tool Frame</a></li>
          </ul>
         </li>
-        <li><button class="tree blank"></button><a href="../../../robot/robotbasics/calibration.html">Frame Calibration</a></li>
-        <li><button class="tree blank"></button><a href="../../../robot/robotbasics/bestpractices.html">Best Practices</a></li>
+        <li><button class="tree blank"></button><a href="../calibration.html">Frame Calibration</a></li>
+        <li><button class="tree blank"></button><a href="../bestpractices.html">Best Practices</a></li>
        </ul>
       </li>
-      <li><button class="tree blank"></button><a href="../../../robot/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
-      <li><button class="tree blank"></button><a href="../../../robot/busconnection.html">Field Bus Connection Overview</a></li>
-      <li><button class="tree blank"></button><a href="../../../robot/safetyconnection.html">Safety Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../busconnection.html">Field Bus Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../safetyconnection.html">Safety Connection Overview</a></li>
      </ul>
     </li>
     <li>
-     <button class="tree open"></button>
-     <a href="../../index.html">Flux Offline Setup</a>
-     <ul>
-      <li><button class="tree blank"></button><a href="../../settingupcell.html">Setting Up the Cell</a></li>
+     <button class="tree closed"></button>
+     <a href="../../../fluxofflinesetup/index.html">Flux Offline Setup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../fluxofflinesetup/settingupcell.html">Setting Up the Cell</a></li>
       <li>
-       <button class="tree open"></button>
-       <a href="../index.html">Setting Up Gripper</a>
-       <ul>
-        <li><button class="tree blank"></button><a href="../creategripper.html">Create a gripper</a></li>
+       <button class="tree closed"></button>
+       <a href="../../../fluxofflinesetup/settingupgripper/index.html">Setting Up Gripper</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../fluxofflinesetup/settingupgripper/creategripper.html">Create a gripper</a></li>
         <li>
-         <button class="tree open"></button>
-         <a href="index.html">Import Gripper</a>
-         <ul>
-          <li><button class="tree blank"></button><a href="dxf.html">Import gripper from DXF</a></li>
-          <li><button class="tree blank"></button><a class="active" href="stl.html">Import Gripper from STL file</a></li>
+         <button class="tree closed"></button>
+         <a href="../../../fluxofflinesetup/settingupgripper/importgripper/index.html">Import Gripper</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../fluxofflinesetup/settingupgripper/importgripper/dxf.html">Import gripper from DXF</a></li>
+          <li><button class="tree blank"></button><a href="../../../fluxofflinesetup/settingupgripper/importgripper/stl.html">Import Gripper from STL file</a></li>
          </ul>
         </li>
        </ul>
       </li>
-      <li><button class="tree blank"></button><a href="../../settingupcellcomp.html">Setting up Cell Components</a></li>
+      <li><button class="tree blank"></button><a href="../../../fluxofflinesetup/settingupcellcomp.html">Setting up Cell Components</a></li>
      </ul>
     </li>
     <li>
@@ -365,85 +365,86 @@
  </div>
  <div>/</div>
  <div>
-  <a href="../../index.html">Flux Offline Setup</a>
+  <a href="../../index.html">Robot</a>
  </div>
  <div>/</div>
  <div>
-  <a href="../index.html">Setting Up Gripper</a>
+  <a href="../index.html">Robot Basics</a>
  </div>
  <div>/</div>
  <div>
-  <a href="index.html">Import Gripper</a>
- </div>
- <div>/</div>
- <div>
-  <a href="stl.html">Import Gripper from STL file</a>
+  <a href="index.html">Frames</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Import Gripper from STL file</h1>
-<div class="sect1">
-<h2 id="_gripper_folder">Gripper folder</h2>
+                        <h1>Frames</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><mark><span class="image"><img src="img/gripper_folder.png" alt="gripper folder"></span></mark></p>
-</div>
-<div class="paragraph">
-<p>Create a folder with the respective gripper name. The gripper folder should
-contain the following files:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>STL file: The 3D model of the gripper in STL format.</p>
-</li>
-<li>
-<p>DAT file: The gripper configuration file in DAT format.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Ensure that the DAT and STL files are placed in the same folder. Both DAT and
-STL files must have the same name as the gripper folder name.
-</td>
-</tr>
-</table>
+<p>A frame is a reference coordinate system that defines the position and
+orientation of an object in the robot&#8217;s workspace. Frames translate one
+coordinate system into another, enabling the robot to move correctly relative to
+tools, workpieces, and external components. Each component in the cell can have its
+own coordinate system, and frames connect these coordinate systems so all parts work
+together accurately.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_dat_file">DAT file</h2>
+<h2 id="_types_of_frames">Types of Frames</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>The DAT file should have the following details:</p>
-</div>
+<div class="sect2">
+<h3 id="_1_tool_frame">1. Tool Frame</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>The name of the gripper.</p>
+<p>The Tool Frame defines the position and orientation of the <strong>Tool Center Point
+(TCP)</strong> relative to the robot&#8217;s wrist flange.</p>
 </li>
 <li>
-<p>The model name of the suction cup used with the gripper.</p>
+<p>The TCP is a specific point in space that represents the tip of the tool.
+Without a Tool Frame, the robot only knows the position of its flange center, so
+the user needs to calibrate the TCP to teach the robot where the tool tip is
+located.</p>
 </li>
 <li>
-<p>The suction cup&#8217;s Z position value</p>
-</li>
-<li>
-<p>The number of suction cups used with the gripper.</p>
-</li>
-<li>
-<p>The X and Y positions of each suction cup relative to the gripper&#8217;s origin.</p>
+<p>Setting the Tool Frame ensures the robot moves and rotates the tool
+accurately for tasks like picking, bending, depositing etc.</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_user_frame">2. User Frame</h3>
+<div class="paragraph">
+<p>A User Frame defines the coordinate system of an external component in the
+robot&#8217;s workspace. Each component such as the press brake, pickup pallet,
+centering table, or deposit has its own User Frame. The user can calibrate each
+frame individually and teach the robot where the component is located.</p>
+</div>
+<div class="paragraph">
+<p>During operation, the robot program switches the active User Frame based on the
+current process step. This allows the robot to move and perform tasks accurately
+relative to the specific component it is interacting with.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_jog_frame">3. Jog Frame</h3>
+<div class="paragraph">
+<p>Used for manually jogging the robot, the Jog Frame allows the user to move the
+robot in a specific coordinate system. This is particularly useful for tasks
+like teaching or programming the robot manually. When the robot is in Jog
+Coordinate System, it will move according to the selected jog frame&#8217;s coordinate
+system, allowing for precise control during setup and adjustments.</p>
+</div>
+<div class="paragraph">
+<p>Unlike the User Frame, the Jog Frame is used only for manual jogging and does
+<strong>not</strong> affect programmed robot motions. Jog Frames are useful for Teaching
+positions where the component axes do not align with the World or User
+coordinate system.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -452,34 +453,11 @@ STL files must have the same name as the gripper folder name.
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-The gripper&#8217;s origin is the point where the robot&#8217;s end effector connects
-to the gripper. The X, Y and Z positions of the suction cups are defined with
-respect to the gripper&#8217;s origin point. So make sure while creating a 3D gripper CAD
-model, the <em>origin point of the gripper</em> is set correctly.
+See the <a href="../calibration.html">Frame Calibration</a> for more details on how
+to calibrate the User or Tool Frame for each external component.
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p><mark>SAMPLE FILE</mark></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_stl_file">STL file</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The gripper is created in a CAD software and exported as an STL file.</p>
-</div>
-<div class="sect2">
-<h3 id="_importing_stl_file_into_fluxrobot_cam">Importing STL file into FluxRobot CAM</h3>
-<div class="paragraph">
-<p>The exported STL file can be imported into the FluxRobot CAM by following the
-steps below:</p>
-</div>
-<div class="paragraph">
-<p>In the FluxRobot CAM, go to Database &#8594; Bend Grippers &#8594; Import &#8594; select and
-import the STL file.</p>
 </div>
 </div>
 </div>
@@ -492,16 +470,16 @@ import the STL file.</p>
  <h3>Contents</h3>
  <ul>
   <li level="1">
-   <a href="#_gripper_folder">Gripper folder</a>
-  </li>
-  <li level="1">
-   <a href="#_dat_file">DAT file</a>
-  </li>
-  <li level="1">
-   <a href="#_stl_file">STL file</a>
+   <a href="#_types_of_frames">Types of Frames</a>
   </li>
   <li level="2">
-   <a href="#_importing_stl_file_into_fluxrobot_cam">Importing STL file into FluxRobot CAM</a>
+   <a href="#_1_tool_frame">1. Tool Frame</a>
+  </li>
+  <li level="2">
+   <a href="#_2_user_frame">2. User Frame</a>
+  </li>
+  <li level="2">
+   <a href="#_3_jog_frame">3. Jog Frame</a>
   </li>
  </ul>
 </aside>
@@ -509,8 +487,8 @@ import the STL file.</p>
                 </div>
             </div>
             <nav class="pagination">
- <span class="prev"><a href="dxf.html">Import gripper from DXF</a></span>
- <span class="next"><a href="../../settingupcellcomp.html">Setting up Cell Components</a></span>
+ <span class="prev"><a href="../basiccoordinatesystems.html">Coordinate Systems</a></span>
+ <span class="next"><a href="userframe.html">User Frame</a></span>
 </nav>
 
         </div>

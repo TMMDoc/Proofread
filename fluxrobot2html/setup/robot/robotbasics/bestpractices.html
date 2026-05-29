@@ -44,7 +44,14 @@
        <a href="index.html">Robot Basics</a>
        <ul>
         <li><button class="tree blank"></button><a href="basiccoordinatesystems.html">Coordinate Systems</a></li>
-        <li><button class="tree blank"></button><a href="frames.html">Frames</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="frames/index.html">Frames</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="frames/userframe.html">User Frame</a></li>
+          <li><button class="tree blank"></button><a href="frames/toolframe.html">Tool Frame</a></li>
+         </ul>
+        </li>
         <li><button class="tree blank"></button><a href="calibration.html">Frame Calibration</a></li>
         <li><button class="tree blank"></button><a class="active" href="bestpractices.html">Best Practices</a></li>
        </ul>
@@ -66,7 +73,7 @@
         <li><button class="tree blank"></button><a href="../../fluxofflinesetup/settingupgripper/creategripper.html">Create a gripper</a></li>
         <li>
          <button class="tree closed"></button>
-         <a href="../../fluxofflinesetup/settingupgripper/importgripper/index.html">= Import Gripper</a>
+         <a href="../../fluxofflinesetup/settingupgripper/importgripper/index.html">Import Gripper</a>
          <ul class="hide">
           <li><button class="tree blank"></button><a href="../../fluxofflinesetup/settingupgripper/importgripper/dxf.html">Import gripper from DXF</a></li>
           <li><button class="tree blank"></button><a href="../../fluxofflinesetup/settingupgripper/importgripper/stl.html">Import Gripper from STL file</a></li>
@@ -378,12 +385,11 @@
 <p><strong>Calibration Plate</strong>:
 We have a standardized way to calibrate all UserFrame components with the
 calibration plate. The frames are experimentally measured with a calibration
-plate which has a coordinate system 50mm from its border. Thus all calibration
+plate which has a coordinate system (50,50)mm in x and y from its edge. Thus all calibration
 points are easily reachable.</p>
 </div>
 <div class="paragraph">
-<p>+
-<span class="image"><img src="img/calibplate.png" alt="Calibplate"></span></p>
+<p><span class="image"><img src="img/calibplate.png" alt="Calibplate"></span></p>
 </div>
 
                     </article>
