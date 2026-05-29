@@ -376,105 +376,127 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The motion sequence starts and ends with the home position.
-All motion steps have a unique name that the customer could modify / teach points.</p>
+<p>This section describes the complete motion sequence that the robot follows
+during an automated bending cycle. A single cycle consists of four main phases,
+executed in order:</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Home position is (90 0 -20 0 20 0) for the start of each cycle.
-</td>
-</tr>
-</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Pickup</strong> — The gripper picks a sheet from the pickup pallet.</p>
+</li>
+<li>
+<p><strong>Centering</strong> — The sheet is placed on and re-picked from the centering table
+for accurate positioning.</p>
+</li>
+<li>
+<p><strong>Bend Positioning</strong> — The gripper inserts the part into the bending machine,
+the bend is performed, and the gripper regrips if needed.</p>
+</li>
+<li>
+<p><strong>Deposit</strong> — The finished part is placed on the deposit pallet and the
+gripper returns to the home position.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>When you load a new component with the "add" menu, then you could select the usage of the component in the "advanced" section.</p>
+<p>The diagram below shows the full motion timeline from Home to Home, including
+all transition swings between phases:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="img/configuration.png" alt="Configuration">
+<img src="img/motion_overview.png" alt="Motion overview" width="800">
 </div>
-</div>
-<div class="paragraph">
-<p>The transition swing separates two motion blocks (e.t. Pickup-Bending). It contains</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A safe travel to the next motion block</p>
-</li>
-<li>
-<p>Switching of frames</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The overall sequence is broken down in sub sequences:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/motion_overview.png" alt="Motion overview"></span></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_motions">Motions</h2>
+<h2 id="_motion_coordinate_types">Motion coordinate types</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>It is most safe to do motions in 50mm steps in Joint motions with Joint coordinates (no singularities) but we want to give the operator on the machine the chance to fine adjust pickups etc. Therefore we do the final motion before we close the gripper in a adjusted user / tool coordinate system to adjust.</p>
+<p>Each waypoint in the motion sequence uses one of the following coordinate types:</p>
 </div>
-<div class="paragraph">
-<p>Refer to ..\basics\fanucframes.adoc[frames] for more information for frames</p>
-</div>
-<div class="paragraph">
-<p>The nomenclature on the next pages are:</p>
-</div>
-<div class="paragraph">
-<p>JJ = Joint motion in Joint coordinates</p>
-</div>
-<div class="paragraph">
-<p>LJ = Linear motion in Joint coordinates</p>
-</div>
-<div class="paragraph">
-<p>JC = Joint motion in Cartesian coordinates in</p>
-</div>
-<div class="paragraph">
-<p>LC = Linear motion in Cartesian coordinates</p>
-</div>
-<div class="paragraph">
-<p>UF = UserFrame</p>
-</div>
-<div class="paragraph">
-<p>TF = ToolFrame</p>
-</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JC</strong> (Joint motion in Cartesian coordinates)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The robot moves in joint motion mode but the waypoints are defined in Cartesian
+coordinates.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LC</strong> (Linear motion in Cartesian coordinates)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The robot moves in a straight line but the waypoints are defined in Cartesian
+coordinates.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JJ</strong> (Joint motion in Joint coordinates)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The robot moves in joint motion mode but the waypoints are defined in joint
+coordinates.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LJ</strong> (Linear motion in Joint coordinates)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The robot moves in a straight line but the waypoints are defined in joint coordinates.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_sub_sequences">Sub-sequences</h2>
+<h2 id="_phase_overview">Phase overview</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>The overall cycle is split into the following sub-sequences, described on the
-pages below:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="pickup_vac.html">Pickup from Pallet</a></p>
-</li>
-<li>
-<p><a href="centering.html">Centering Table</a></p>
-</li>
-<li>
-<p><a href="bendpos.html">Bend Positioning</a></p>
-</li>
-<li>
-<p><a href="deposit.html">Deposit</a></p>
-</li>
-</ul>
-</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Phase</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Waypoints</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="pickup_vac.html">Pickup Pallet</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gripper moves from home to the pickup pallet, contacts and suctions the top
+sheet, separates it from the stack, lifts clear, and transitions toward the
+centering table.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="centering.html">Centering Table</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gripper drops the sheet on the centering table for alignment, lifts away, then
+re-approaches and picks the centered sheet before transitioning to the bending
+machine.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="bendpos.html">Bend Positioning</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gripper inserts the part into the bending machine, aligns it against the
+backgauge, and the synchronized bending process occurs. Includes optional
+regrip phases when the part needs to be re-grasped between bends.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="deposit.html">Deposit</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">After the final bend, the gripper transitions to the deposit pallet, releases
+the finished part, and returns to the home position ready for the next cycle.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -485,10 +507,10 @@ pages below:</p>
  <h3>Contents</h3>
  <ul>
   <li level="1">
-   <a href="#_motions">Motions</a>
+   <a href="#_motion_coordinate_types">Motion coordinate types</a>
   </li>
   <li level="1">
-   <a href="#_sub_sequences">Sub-sequences</a>
+   <a href="#_phase_overview">Phase overview</a>
   </li>
  </ul>
 </aside>

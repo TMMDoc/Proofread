@@ -377,14 +377,212 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Auto Mode</h1>
-
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section provides the procedure to perform robotic bending operation in Auto
+Mode.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_procedure_to_perform_robotic_bending_in_auto_mode">Procedure to perform robotic bending in Auto Mode</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set the robot to "Auto Mode" in Robot Controller and close the fence. If the
+fence is open, the "Fence Open" message will appear on the TP. Close the fence
+to clear the message.</p>
+</li>
+<li>
+<p>If robot is set in Auto mode and teach pendant is OFF, then RA displays the
+"Robot interface Auto mode is active" message.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/automode1.png" alt="automode1"></span></p>
+</div>
+</li>
+<li>
+<p>Turn ON teach pendant, Go to Select program &#8594; open PNS (inbuilt program)
+specifically for Auto mode. From PNS, go to Insert &#8594; Call &#8594; select the main
+program. Keep the overide speed as per requirement.</p>
+</li>
+<li>
+<p>Turn OFF the TP and deselect the step mode.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In Auto mode, Teach pendant should be turned OFF when starting the
+program. If Teach pendant is ON, RA displays the "Robot interface Auto mode is
+Deactive" message. The program will not start until the Teach pendant is
+turned OFF.</p>
+</div>
+<div class="paragraph">
+<p>image: automode2.png[]</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Release E-Stop if it is pressed. Press up foot pedal until it displays "Program
+not started in robot" message.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/automode3.png" alt="automode3"></span></p>
+</div>
+</li>
+<li>
+<p>Press the green illuminated button to start the program in Auto mode.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/greenlight.png" alt="GreenLight" width="200"></span></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Ensure that the PNS program is selected in TP before pressing start button. If
+not, press up foot pedal to call the PNS program.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_auto_mode_bending_operation">Auto mode bending operation</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Teach Pendant will be turned off during the bending operation in Auto mode.</p>
+</li>
+<li>
+<p>Once the program is started, the same operation will be performed as in Teach
+mode. But in Auto mode, the robot will move continuously without waiting for any
+user confirmation for every operation except during bending operation.</p>
+</li>
+<li>
+<p>During bending operation, every RAM movement has to be confirmed by pressing the
+down foot pedal as the machine requires acknowledgement till the bend is
+completed.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>When RA displays the "Waiting for RAM below Mute point, Press down pedal"
+message, press the down foot pedal for RAM movement. Until the sheet gets
+aligned, The RAM will wait at the mute point and the down foot pedal has to be
+continuously pressed to move the RAM down.</p>
+</li>
+<li>
+<p>Once the RAM reaches the mute point, the message changes to "Waiting for RAM
+below Pinch point, Press down pedal". Only after the sheet gets aligned against
+bckgauges, the RAM is allowed to move down further to the pinch point.</p>
+</li>
+<li>
+<p>Once the RAM reaches the pinch point, the synchronized bending operation starts.
+Until the bend is completed, The down foot pedal needs to be continuously
+pressed.</p>
+</li>
+<li>
+<p>After the synchronized bending is completed, the program continues to
+execute the next steps in the program.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_stop_the_robot_in_case_of_emergency">How to stop the robot in case of emergency</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>To stop the robot in case of emergency, press E-Stop in either Teach pendant
+or Robot Controller. Release the E-Stop and press up foot pedal and press the
+green button to continue the robot movement.</p>
+</li>
+<li>
+<p>To stop the machine and robot, press E-Stop on the foot pedal station. Release the
+E-Stop and press up foot pedal and press the green button to continue the robot
+movement.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_abort_the_robot_program"><mark>How to abort the robot program</mark></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>To abort the robot program, Press the Abort (red) illuminated button.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/redlight.png" alt="RedLight" width="200"></span></p>
+</div>
+</li>
+<li>
+<p>Once pressed, the "Cycle aborted by robot" message will appear. Press up foot pedal and press the
+green button to continue the robot movement.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/cycleabort.png" alt="cycleabort" width="500"></span></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>After the program is aborted, do Auto homing to bring the machine to the home
+position. Then the program can be restarted from the beginning.</p>
+</div>
+<div class="paragraph">
+<p><mark>Refer the robot HMI for how to do Auto homing.</mark></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
                     <aside id="site-toc">
  <h3>Contents</h3>
- <ul></ul>
+ <ul>
+  <li level="1">
+   <a href="#_procedure_to_perform_robotic_bending_in_auto_mode">Procedure to perform robotic bending in Auto Mode</a>
+  </li>
+  <li level="2">
+   <a href="#_auto_mode_bending_operation">Auto mode bending operation</a>
+  </li>
+  <li level="2">
+   <a href="#_how_to_stop_the_robot_in_case_of_emergency">How to stop the robot in case of emergency</a>
+  </li>
+  <li level="2">
+   <a href="#_how_to_abort_the_robot_program"><mark>How to abort the robot program</mark></a>
+  </li>
+ </ul>
 </aside>
 
                 </div>

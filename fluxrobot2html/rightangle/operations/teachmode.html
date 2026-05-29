@@ -377,14 +377,286 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Teach Mode</h1>
-
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section provides the procedure to perform robotic bending operation in
+Teach Mode.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_procedure_to_perform_robotic_bending_in_manual_run_robot_in_teach_mode">Procedure to perform robotic bending in Manual Run (Robot in Teach Mode)</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set the robot to T2 Mode and activate Step Mode in the Teach Pendant (TP).
+The message "Robot in Manual test mode T1/T2 mode" appears.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/teachmode1.png" alt="teachmode1"></span></p>
+</div>
+</li>
+<li>
+<p>Enable the Deadman switch and reset TP. The message "Robot Auto Mode Active"
+appears in RA.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/teachmode2.png" alt="teachmode2"></span></p>
+</div>
+</li>
+<li>
+<p>To acknowledge the message, press the up foot pedal. Once acknowledged, the
+"Program not started in robot" message appears on the HMI.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/teachmode3.png" alt="teachmode3"></span></p>
+</div>
+</li>
+<li>
+<p>Select the main .LS program in the TP and press shift + forward command to start the
+program.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Shift + forward command has to be given throughout the program execution
+to keep the robot moving. If shift is released, the robot will stop and wait for
+the next command. So press Shift + forward command to continue the robot
+movement.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If deadman is released, the robot will stop and the "Robot Auto Mode
+is deactivated" message will appear on the HMI. Enable the Deadman switch and
+reset TP. To acknowledge the message, press the up foot pedal. Then give shift
++ forward command to continue the robot movement.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/teachmode4.png" alt="teachmode4"></span></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+During Bending operation, the robot should not be in step mode. So,
+once the robot reaches the Mute point, turn off the step mode to allow the robot
+to move continuously until the bend is completed, as the robot movement is
+synchronized with the bending operation.. After the bend is completed, step mode
+can be turned on again for the next steps. This is applicable for each bend in
+the program.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_teach_mode_bending_operation">Teach mode bending operation</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Once the program is started, the robot approaches the pickup pallet, when
+sheet is detected, the robot picks the sheet and moves to the aloft
+position</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The robot stays idle at the aloft position until the backgauges get
+positioned for the bend.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>The backgauges are positioned for the 1st bend and the robot moves to part
+insert waypoint and moves further to the mute
+waypoint and places the part on the die.</p>
+</li>
+<li>
+<p>After the robot reaches the mute waypoint, turn off
+step mode to allow the robot to move in a continuous motion for syncronized
+robotic bending.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The sheet alignment process starts and the "Waiting for RAM below Mute point,
+Press down pedal" message appears on the HMI. Press the
+down foot pedal for RAM movement.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The "No movement detected due to
+proportional valves" message appears as the RAM is not allowed to move down
+further before the sheet gets aligned.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Until the sheet gets alligned, The RAM will wait at the mute point and the
+down foot pedal has to be continuously pressed to move the RAM down.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Once the RAM reaches the mute point, the message changes to "Waiting for RAM
+below Pinch point, Press down pedal". Only after the sheet gets aligned against
+bckgauges, the RAM is allowed to move down further to the pinch point.</p>
+</li>
+<li>
+<p>Once the RAM reaches the pinch point, the synchronized bending operation
+starts. Until the bend is completed, The down foot pedal needs to be continuously
+pressed.</p>
+</li>
+<li>
+<p>After the synchronized bending is completed, turn ON step mode again.</p>
+</li>
+<li>
+<p>Continue to execute the program in Step mode. The RAM moves to UDP and robot
+moves to post bend safe waypoint.</p>
+</li>
+<li>
+<p>If there are more bends, the robot moves to the next bend&#8217;s part insert
+waypoint and the same procedure is followed for each bend.</p>
+</li>
+<li>
+<p>Once all the bends are completed, the robot transitions to the Deposit,
+places the part down, and returns to the Home Position, with each step executed
+manually via the Teach Pendant.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_stop_the_robot_in_case_of_emergency">How to stop the robot in case of emergency</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Release the Deadman switch or hold it firmly to immediately stop the robot in
+case of emergency. The "Robot Auto Mode is deactivated" message will appear on
+the HMI. Hold deadman and fault reset to clear the error in TP and press the up foot
+pedal to reset the message. Then give shift + forward command to continue the
+robot movement.</p>
+</li>
+<li>
+<p>Press E-Stop in either Teach pendant/ Robot controller to stop the robot.
+Release the E-Stop, and then hold dead-man and reset to clear the error in TP
+and press up foot pedal. Then give shift + forward command to continue the robot
+movement.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_stop_the_machine_in_case_of_emergency">How to stop the machine in case of emergency</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Press E-Stop on the foot pedal station or on the machine or on the HMI to stop
+the machine. Hold dead-man and fault reset to clear the error. Release the
+E-Stop and press up foot pedal. Then give shift + forward command to continue
+the robot movement.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_abort_the_robot_program"><mark>How to abort the robot program</mark></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Press the Abort (red) illuminated button to abort the robot program. Hold
+deadman and fault reset to clear the error. Press up foot pedal. Then give shift
++ forward command to continue the robot movement.</p>
+</li>
+<li>
+<p>In TP, go to function &#8594; Abort. This will also abort the robot program. Give shift<br>
+forward command to continue the robot movement.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+After the program is aborted, make sure to bring the machine to the
+home position and then the program can be restarted from the beginning.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
                     <aside id="site-toc">
  <h3>Contents</h3>
- <ul></ul>
+ <ul>
+  <li level="1">
+   <a href="#_procedure_to_perform_robotic_bending_in_manual_run_robot_in_teach_mode">Procedure to perform robotic bending in Manual Run (Robot in Teach Mode)</a>
+  </li>
+  <li level="2">
+   <a href="#_teach_mode_bending_operation">Teach mode bending operation</a>
+  </li>
+  <li level="2">
+   <a href="#_how_to_stop_the_robot_in_case_of_emergency">How to stop the robot in case of emergency</a>
+  </li>
+  <li level="2">
+   <a href="#_how_to_stop_the_machine_in_case_of_emergency">How to stop the machine in case of emergency</a>
+  </li>
+  <li level="2">
+   <a href="#_how_to_abort_the_robot_program"><mark>How to abort the robot program</mark></a>
+  </li>
+ </ul>
 </aside>
 
                 </div>
