@@ -107,6 +107,66 @@
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
+     <a href="../../../../fluxrobotcam/howtouse/index.html">FluxRobot CAM</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/navigator.html">Bend navigator</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../../fluxrobotcam/howtouse/pickup/index.html">Part pickup</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/pickup/frompallet.html">Pickup from pallet</a></li>
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/pickup/centeringtable.html">Centering table</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../../fluxrobotcam/howtouse/bending/index.html">Robotic bending</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/bending/insertion.html">Insertion</a></li>
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/bending/bending.html">Bending</a></li>
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/bending/extraction.html">Extraction</a></li>
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/bending/advanced.html">Advanced</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../../fluxrobotcam/howtouse/regrip/index.html">Regripping</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/regrip/regrippanel.html">Regrip panel</a></li>
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/regrip/addregrip.html">Add/Remove regrip</a></li>
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/regrip/gripperpanel.html">Gripper Panel</a></li>
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../../fluxrobotcam/howtouse/deposit/index.html">Part deposit</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/deposit/deposit.html">Deposit panel</a></li>
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/deposit/deposittabs.html">Deposit Tabs</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../../fluxrobotcam/howtouse/advanced/index.html">Advanced</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/advanced/waypoints.html">Waypoints</a></li>
+        <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/advanced/cellconfig.html">Cell configuration</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../../fluxrobotcam/howtouse/advanced/gripperdb/index.html">Gripper database</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+          <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/troubleshoot.html">Troubleshooting</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
      <a href="../../../../fluxrobotcam/waypoints/index.html">Motion sequences</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/waypoints/pickup_vac.html">Pickup Pallet</a></li>
@@ -124,7 +184,16 @@
    <button class="tree closed"></button>
    <a href="../../../../package/index.html">FluxRobot Package</a>
    <ul class="hide">
-    <li><button class="tree blank"></button><a href="../../../../package/macros.html">Macros</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../package/macros/index.html">Macros</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../package/macros/gripper.html">Gripper</a></li>
+      <li><button class="tree blank"></button><a href="../../../../package/macros/sheetalignment.html">Sheet Alignment</a></li>
+      <li><button class="tree blank"></button><a href="../../../../package/macros/framecorrection.html">Frame Correction</a></li>
+      <li><button class="tree blank"></button><a href="../../../../package/macros/substacksearch.html">Sub Stack Search Macro</a></li>
+     </ul>
+    </li>
     <li>
      <button class="tree closed"></button>
      <a href="../../../../package/robothmi/index.html">Robot HMI</a>
@@ -386,7 +455,7 @@
                     <article id="article">
                         <h1>Tool Frame</h1>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 1. Default Tool Frames in FluxRobot</caption>
+<caption class="title">Default Tool Frames in FluxRobot</caption>
 <colgroup>
 <col>
 <col>
@@ -407,45 +476,35 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tool Frame 1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Straight Pointer</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Calibration tool used for calibrating User Frames.</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/straightpointer.png" alt="StraightPointer"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It is a Calibration tool used for calibrating User Frames.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">180, 0, 0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tool Frame 2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Combi Gripper (Vacuum)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Combi gripper uses Vacuum suction for picking the part from the Pickup pallet to placing it on the Centering table.</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/combigrippervacuum.png" alt="CombiGripperVacuum"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Combi gripper uses Vacuum suction for picking the part from the Pickup pallet to
+placing it on the Centering table.</p>
+<p class="tableblock">NOTE: Combi gripper (a combination of jaw-type and vacuum suction gripper).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0, 0, 0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tool Frame 3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Combi Gripper (Pinch)</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/combigripperpinch.png" alt="CombiGripperPinch"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Once positioned, pinch gripper takes the part from Centering table to perform the bending operation and deposition.</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90, 0, 90</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tool Frame 4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Vacuum Gripper</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/vacuumgripper.png" alt="VacuumGripper"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">This gripper uses Vacuum suction for complete handling of the part from Pickup pallet to deposition.</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0, 0, 0</p></td>
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Combi gripper (a combination of jaw-type and vacuum suction gripper) is used in FluxRobot for bending operations.
-</td>
-</tr>
-</table>
-</div>
 
                     </article>
                 </div>
