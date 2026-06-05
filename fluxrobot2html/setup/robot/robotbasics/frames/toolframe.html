@@ -107,7 +107,7 @@
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
-     <a href="../../../../fluxrobotcam/howtouse/index.html">FluxRobot CAM</a>
+     <a href="../../../../fluxrobotcam/howtouse/index.html">FluxRobot CAM (User Guide)</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../../../../fluxrobotcam/howtouse/navigator.html">Bend navigator</a></li>
       <li>
@@ -454,9 +454,18 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Tool Frame</h1>
+<div class="paragraph">
+<p>This section describes the default tool frames used in the FluxRobot system. The
+images in the table below show the tool frame shift from the robot&#8217;s end flange (Tool
+Zero) to the tool&#8217;s tip.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/toolcoord.png" alt="toolcoord" width="300"></span></p>
+</div>
 <table class="tableblock frame-all grid-all fit-content">
 <caption class="title">Default Tool Frames in FluxRobot</caption>
 <colgroup>
+<col>
 <col>
 <col>
 <col>
@@ -468,6 +477,7 @@
 <th class="tableblock halign-left valign-top">Frame number in TP</th>
 <th class="tableblock halign-left valign-top">Tool</th>
 <th class="tableblock halign-left valign-top">Image</th>
+<th class="tableblock halign-left valign-top">Frame shift (Tool Zero → Tool tip)</th>
 <th class="tableblock halign-left valign-top">Description</th>
 <th class="tableblock halign-left valign-top">Typical Values (W P R)</th>
 </tr>
@@ -476,31 +486,45 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tool Frame 1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Straight Pointer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/straightpointer.png" alt="StraightPointer"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/straightpointer.png" alt="StraightPointer" width="500"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>X+ → X+</code><br>
+<code>Y+ → Y-</code><br>
+<code>Z+ → Z-</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">It is a Calibration tool used for calibrating User Frames.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">180, 0, 0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tool Frame 2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Combi Gripper (Vacuum)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/combigrippervacuum.png" alt="CombiGripperVacuum"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/combigrippervacuum.png" alt="CombiGripperVacuum" width="500"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>X+ → X+</code><br>
+<code>Y+ → Y+</code><br>
+<code>Z+ → Z+</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Combi gripper uses Vacuum suction for picking the part from the Pickup pallet to
 placing it on the Centering table.</p>
-<p class="tableblock">NOTE: Combi gripper (a combination of jaw-type and vacuum suction gripper).</p></td>
+<p class="tableblock">NOTE: Combi gripper is a combination of jaw-type and vacuum suction gripper.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0, 0, 0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tool Frame 3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Combi Gripper (Pinch)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/combigripperpinch.png" alt="CombiGripperPinch"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Once positioned, pinch gripper takes the part from Centering table to perform the bending operation and deposition.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/combigripperpinch.png" alt="CombiGripperPinch" width="500"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>X+ →</code><br>
+<code>Y+ →</code><br>
+<code>Z+ →</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Combi&#8217;s Pinch gripper takes the part from Centering table to perform
+the bending operation and deposition.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">90, 0, 90</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tool Frame 4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Vacuum Gripper</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/vacuumgripper.png" alt="VacuumGripper"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This gripper uses Vacuum suction for complete handling of the part from Pickup pallet to deposition.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/vacuumgripper.png" alt="VacuumGripper" width="500"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>X+ → X+</code><br>
+<code>Y+ → Y+</code><br>
+<code>Z+ → Z+</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This gripper uses Vacuum suction for complete handling of the part from Pickup
+to deposition.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0, 0, 0</p></td>
 </tr>
 </tbody>
