@@ -32,33 +32,34 @@
    </ul>
   </li>
   <li>
+   <button class="tree closed"></button>
+   <a href="../../robotbasics/index.html">Robot Basics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotbasics/frames/index.html">Frames</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotbasics/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="../../robotbasics/frames/toolframe.html">Tool Frame</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../robotbasics/calibration.html">Frame Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../robotbasics/bestpractices.html">Best Practices</a></li>
+   </ul>
+  </li>
+  <li>
    <button class="tree open"></button>
    <a href="../index.html">Setup</a>
    <ul>
     <li>
      <button class="tree closed"></button>
-     <a href="../robot/index.html">Robot</a>
+     <a href="../cellsetup/index.html">Cell Setup</a>
      <ul class="hide">
-      <li>
-       <button class="tree closed"></button>
-       <a href="../robot/robotbasics/index.html">Robot Basics</a>
-       <ul class="hide">
-        <li><button class="tree blank"></button><a href="../robot/robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
-        <li>
-         <button class="tree closed"></button>
-         <a href="../robot/robotbasics/frames/index.html">Frames</a>
-         <ul class="hide">
-          <li><button class="tree blank"></button><a href="../robot/robotbasics/frames/userframe.html">User Frame</a></li>
-          <li><button class="tree blank"></button><a href="../robot/robotbasics/frames/toolframe.html">Tool Frame</a></li>
-         </ul>
-        </li>
-        <li><button class="tree blank"></button><a href="../robot/robotbasics/calibration.html">Frame Calibration</a></li>
-        <li><button class="tree blank"></button><a href="../robot/robotbasics/bestpractices.html">Best Practices</a></li>
-       </ul>
-      </li>
-      <li><button class="tree blank"></button><a href="../robot/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
-      <li><button class="tree blank"></button><a href="../robot/busconnection.html">Field Bus Connection Overview</a></li>
-      <li><button class="tree blank"></button><a href="../robot/safetyconnection.html">Safety Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
+      <li><button class="tree blank"></button><a href="../cellsetup/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../cellsetup/busconnection.html">Field Bus Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../cellsetup/safetyconnection.html">Safety Connection Overview</a></li>
      </ul>
     </li>
     <li>
@@ -196,6 +197,15 @@
     </li>
     <li>
      <button class="tree closed"></button>
+     <a href="../../package/bglogic/index.html">Background Logic</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../package/bglogic/bgcombined.html">BG Combined</a></li>
+      <li><button class="tree blank"></button><a href="../../package/bglogic/bgresethoming.html">BG Reset Homing</a></li>
+      <li><button class="tree blank"></button><a href="../../package/bglogic/homingoffset.html">Homing Offset</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
      <a href="../../package/robothmi/index.html">Robot HMI</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../../package/robothmi/setup.html">Webpage Setup in Teach Pendant</a></li>
@@ -222,6 +232,7 @@
     <li><button class="tree blank"></button><a href="../../rightangle/troubleshooting.html">Troubleshooting</a></li>
    </ul>
   </li>
+  <li><button class="tree blank"></button><a href="../../synchronousbend.html">Synchronous Bending</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="../../forreference/index.html">For Reference</a>
@@ -451,9 +462,71 @@
 <div class="paragraph">
 <p>Cell components like pickup pallet, deposit pallet etc can also be customized as
 per the user requirements. The components can be created in a CAD software and
-imported into the FluxRobot CAM as STL or STEP files. The following sections
-explain the process of importing the created cell components into the FluxRobot
+imported into the FluxRobot CAM as STL or STEP files. The following section
+explains the process of importing the created cell components into the FluxRobot
 CAM.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_cell_components">Creating Cell Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The cell components can be created in any CAD software. The created component
+must be saved as a STEP file.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_folder_structure_for_cell_component">Folder Structure for Cell Component</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Create a folder with the respective cell component name. The created cell
+component folder must have the following files:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+All the files must have the same name as the cell component name.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/cellcompfolder.png" alt="CellCompFolder" width="350"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>STEP file: The 3D model of the cell component in STEP format.</p>
+</li>
+<li>
+<p>INI file: The configuration file in INI format. This file has to be created by
+the user. The INI file must contain:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The "Type=Pallet" for the system to treat it as a
+pallet.</p>
+</li>
+<li>
+<p>The Xmin/Ymin and Xmax/Ymax values indicating the boundary areas.</p>
+</li>
+<li>
+<p>The "Z" value indicating the height of the cell component.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Sample INI File</div>
+<p><a href="img/pickuppalletmodel.ini">Sample Cell Component Model.ini</a></p>
 </div>
 </div>
 </div>
@@ -467,36 +540,33 @@ steps below:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The created cell component must be exported as an STL or STEP file from the CAD
-software.</p>
-</li>
-<li>
 <p>In the FluxRobot CAM, go to File &#8594; Import &#8594; Bend Cell Components &#8594; select
 and import the STL or STEP file.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/bendcellcompimport.png" alt="BendCellCompImport" width="600"></span></p>
+</div>
 </li>
 <li>
 <p>The imported cell component will be available in the database.</p>
 </li>
 <li>
-<p>Click the cell component. for example, if the pickup pallet is imported, click
-on "Pickup Pallet", in the pallet panel dropdown, select the imported cell
-component from the list.</p>
+<p>Click the cell component. For example, if the pickup pallet is imported, click
+on "Pickup Pallet", in the pallet panel&#8217;s "Name" dropdown, select the imported
+pickup pallet.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/pickup.png" alt="pickup" width="250"></span></p>
+</div>
+</li>
+<li>
+<p>Once the cell component is imported, remove the default cell component by clicking
+on the it &#8594; click "Remove".</p>
+</li>
+<li>
+<p>Calibrate the newly imported cell component as per the instructions given in the
+<a href="settingupcell.html#<em>pallet_in_robot_coordinate_system</em>(pinr)">PInR and PInM</a> section
+of the documentation.</p>
 </li>
 </ul>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-After importing the cell component, click "Recompute" to create a new
-solution with the imported cell component. This will ensure that the new
-solution uses the imported cell component instead of the default one.
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
@@ -507,6 +577,12 @@ solution uses the imported cell component instead of the default one.
                     <aside id="site-toc">
  <h3>Contents</h3>
  <ul>
+  <li level="1">
+   <a href="#_creating_cell_components">Creating Cell Components</a>
+  </li>
+  <li level="1">
+   <a href="#_folder_structure_for_cell_component">Folder Structure for Cell Component</a>
+  </li>
   <li level="1">
    <a href="#_importing_cell_components_into_fluxrobot_cam">Importing Cell Components into FluxRobot CAM</a>
   </li>

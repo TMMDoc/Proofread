@@ -32,33 +32,34 @@
    </ul>
   </li>
   <li>
+   <button class="tree closed"></button>
+   <a href="../../../../robotbasics/index.html">Robot Basics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../robotbasics/frames/index.html">Frames</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../robotbasics/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="../../../../robotbasics/frames/toolframe.html">Tool Frame</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../../robotbasics/calibration.html">Frame Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../../../robotbasics/bestpractices.html">Best Practices</a></li>
+   </ul>
+  </li>
+  <li>
    <button class="tree open"></button>
    <a href="../../../index.html">Setup</a>
    <ul>
     <li>
      <button class="tree closed"></button>
-     <a href="../../../robot/index.html">Robot</a>
+     <a href="../../../cellsetup/index.html">Cell Setup</a>
      <ul class="hide">
-      <li>
-       <button class="tree closed"></button>
-       <a href="../../../robot/robotbasics/index.html">Robot Basics</a>
-       <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../../robot/robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
-        <li>
-         <button class="tree closed"></button>
-         <a href="../../../robot/robotbasics/frames/index.html">Frames</a>
-         <ul class="hide">
-          <li><button class="tree blank"></button><a href="../../../robot/robotbasics/frames/userframe.html">User Frame</a></li>
-          <li><button class="tree blank"></button><a href="../../../robot/robotbasics/frames/toolframe.html">Tool Frame</a></li>
-         </ul>
-        </li>
-        <li><button class="tree blank"></button><a href="../../../robot/robotbasics/calibration.html">Frame Calibration</a></li>
-        <li><button class="tree blank"></button><a href="../../../robot/robotbasics/bestpractices.html">Best Practices</a></li>
-       </ul>
-      </li>
-      <li><button class="tree blank"></button><a href="../../../robot/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
-      <li><button class="tree blank"></button><a href="../../../robot/busconnection.html">Field Bus Connection Overview</a></li>
-      <li><button class="tree blank"></button><a href="../../../robot/safetyconnection.html">Safety Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../../cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
+      <li><button class="tree blank"></button><a href="../../../cellsetup/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../../cellsetup/busconnection.html">Field Bus Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../../cellsetup/safetyconnection.html">Safety Connection Overview</a></li>
      </ul>
     </li>
     <li>
@@ -196,6 +197,15 @@
     </li>
     <li>
      <button class="tree closed"></button>
+     <a href="../../../../package/bglogic/index.html">Background Logic</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../package/bglogic/bgcombined.html">BG Combined</a></li>
+      <li><button class="tree blank"></button><a href="../../../../package/bglogic/bgresethoming.html">BG Reset Homing</a></li>
+      <li><button class="tree blank"></button><a href="../../../../package/bglogic/homingoffset.html">Homing Offset</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
      <a href="../../../../package/robothmi/index.html">Robot HMI</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../../../../package/robothmi/setup.html">Webpage Setup in Teach Pendant</a></li>
@@ -222,6 +232,7 @@
     <li><button class="tree blank"></button><a href="../../../../rightangle/troubleshooting.html">Troubleshooting</a></li>
    </ul>
   </li>
+  <li><button class="tree blank"></button><a href="../../../../synchronousbend.html">Synchronous Bending</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="../../../../forreference/index.html">For Reference</a>
@@ -458,7 +469,8 @@
 <h2 id="_gripper_folder">Gripper folder</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><mark><span class="image"><img src="img/gripper_folder.png" alt="gripper folder"></span></mark></p>
+<div class="title">Gripper folder structure</div>
+<p><span class="image"><img src="img/gripper_folder.png" alt="gripper folder" width="200"></span></p>
 </div>
 <div class="paragraph">
 <p>Create a folder with the respective gripper name. The gripper folder should
@@ -467,10 +479,10 @@ contain the following files:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>STL file: The 3D model of the gripper in STL format.</p>
+<p><strong>STL file</strong>: The 3D model of the gripper in STL format.</p>
 </li>
 <li>
-<p>DAT file: The gripper configuration file in DAT format.</p>
+<p><strong>DAT file</strong>: The gripper configuration file in DAT format.</p>
 </li>
 </ul>
 </div>
@@ -487,11 +499,20 @@ STL files must have the same name as the gripper folder name.
 </tr>
 </table>
 </div>
+<div class="sect2">
+<h3 id="_dat_file">DAT file</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+DAT file has to be created by the user.
+</td>
+</tr>
+</table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_dat_file">DAT file</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>The DAT file should have the following details:</p>
 </div>
@@ -530,26 +551,27 @@ model, the <em>origin point of the gripper</em> is set correctly.
 </table>
 </div>
 <div class="paragraph">
-<p><mark>SAMPLE FILE</mark></p>
+<div class="title">Sample File</div>
+<p><a href="../importgripper/img/al_vac.dat">Al_Vac.DAT</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_stl_file">STL file</h3>
+<div class="paragraph">
+<p>The gripper is created in a CAD software and saved as an STL file.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_stl_file">STL file</h2>
+<h2 id="_importing_stl_file_into_fluxrobot_cam">Importing STL file into FluxRobot CAM</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The gripper is created in a CAD software and exported as an STL file.</p>
-</div>
-<div class="sect2">
-<h3 id="_importing_stl_file_into_fluxrobot_cam">Importing STL file into FluxRobot CAM</h3>
-<div class="paragraph">
-<p>The exported STL file can be imported into the FluxRobot CAM by following the
-steps below:</p>
+<p>The STL file can be imported into the FluxRobot CAM by navigating to Database &#8594;
+Bend Grippers &#8594; Import &#8594; select and import the STL file.</p>
 </div>
 <div class="paragraph">
-<p>In the FluxRobot CAM, go to Database &#8594; Bend Grippers &#8594; Import &#8594; select and
-import the STL file.</p>
-</div>
+<p><span class="image"><img src="img/importstl.png" alt="ImportSTL"></span></p>
 </div>
 </div>
 </div>
@@ -563,13 +585,13 @@ import the STL file.</p>
   <li level="1">
    <a href="#_gripper_folder">Gripper folder</a>
   </li>
-  <li level="1">
+  <li level="2">
    <a href="#_dat_file">DAT file</a>
   </li>
-  <li level="1">
+  <li level="2">
    <a href="#_stl_file">STL file</a>
   </li>
-  <li level="2">
+  <li level="1">
    <a href="#_importing_stl_file_into_fluxrobot_cam">Importing STL file into FluxRobot CAM</a>
   </li>
  </ul>

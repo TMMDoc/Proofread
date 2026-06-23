@@ -33,32 +33,33 @@
   </li>
   <li>
    <button class="tree closed"></button>
+   <a href="../robotbasics/index.html">Robot Basics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotbasics/frames/index.html">Frames</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotbasics/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="../robotbasics/frames/toolframe.html">Tool Frame</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../robotbasics/calibration.html">Frame Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../robotbasics/bestpractices.html">Best Practices</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
    <a href="../setup/index.html">Setup</a>
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
-     <a href="../setup/robot/index.html">Robot</a>
+     <a href="../setup/cellsetup/index.html">Cell Setup</a>
      <ul class="hide">
-      <li>
-       <button class="tree closed"></button>
-       <a href="../setup/robot/robotbasics/index.html">Robot Basics</a>
-       <ul class="hide">
-        <li><button class="tree blank"></button><a href="../setup/robot/robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
-        <li>
-         <button class="tree closed"></button>
-         <a href="../setup/robot/robotbasics/frames/index.html">Frames</a>
-         <ul class="hide">
-          <li><button class="tree blank"></button><a href="../setup/robot/robotbasics/frames/userframe.html">User Frame</a></li>
-          <li><button class="tree blank"></button><a href="../setup/robot/robotbasics/frames/toolframe.html">Tool Frame</a></li>
-         </ul>
-        </li>
-        <li><button class="tree blank"></button><a href="../setup/robot/robotbasics/calibration.html">Frame Calibration</a></li>
-        <li><button class="tree blank"></button><a href="../setup/robot/robotbasics/bestpractices.html">Best Practices</a></li>
-       </ul>
-      </li>
-      <li><button class="tree blank"></button><a href="../setup/robot/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
-      <li><button class="tree blank"></button><a href="../setup/robot/busconnection.html">Field Bus Connection Overview</a></li>
-      <li><button class="tree blank"></button><a href="../setup/robot/safetyconnection.html">Safety Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
+      <li><button class="tree blank"></button><a href="../setup/cellsetup/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../setup/cellsetup/busconnection.html">Field Bus Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../setup/cellsetup/safetyconnection.html">Safety Connection Overview</a></li>
      </ul>
     </li>
     <li>
@@ -196,6 +197,15 @@
     </li>
     <li>
      <button class="tree closed"></button>
+     <a href="../package/bglogic/index.html">Background Logic</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../package/bglogic/bgcombined.html">BG Combined</a></li>
+      <li><button class="tree blank"></button><a href="../package/bglogic/bgresethoming.html">BG Reset Homing</a></li>
+      <li><button class="tree blank"></button><a href="../package/bglogic/homingoffset.html">Homing Offset</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
      <a href="../package/robothmi/index.html">Robot HMI</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../package/robothmi/setup.html">Webpage Setup in Teach Pendant</a></li>
@@ -222,6 +232,7 @@
     <li><button class="tree blank"></button><a href="../rightangle/troubleshooting.html">Troubleshooting</a></li>
    </ul>
   </li>
+  <li><button class="tree blank"></button><a href="../synchronousbend.html">Synchronous Bending</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="../forreference/index.html">For Reference</a>
@@ -523,13 +534,14 @@ robot safety fence.</p></td>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Flux Offline Software (FluxCell CAM)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flux Offline Software (FluxRobot CAM)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The offline programming environment. Users define the bend sequence and robot
 motion. Flux generates a <code>.rbc</code> file containing all motion data and ram points.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Right-Angle Control Software</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">It is Human machine interface. Manages the bending machine operations and coordinates timing with the robot controller.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It is Human machine interface. Manages the bending machine operations and
+coordinates timing with the robot controller.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Post-Processor</p></td>
@@ -599,7 +611,7 @@ bending machine execute the programmed sequence in synchronisation.</p>
             </div>
             <nav class="pagination">
  <span class="prev"><a href="fluxrobotcell.html">FluxRobot Cell</a></span>
- <span class="next"><a href="../setup/index.html">Setup</a></span>
+ <span class="next"><a href="../robotbasics/index.html">Robot Basics</a></span>
 </nav>
 
         </div>

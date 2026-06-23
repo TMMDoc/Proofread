@@ -1,0 +1,650 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="res/bento.css">
+  <link rel="stylesheet" href="res/site.css">
+  <link rel="stylesheet" href="res/tree.css">
+  <link rel="stylesheet" href="res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Synchronous Bending</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="img/logo.png" width="123" height="50" /></div>
+        <div><p>FluxRobot Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="index.html">Welcome to FluxRobot</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="systemoverview/index.html">System Overview</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="systemoverview/fluxrobotcell.html">FluxRobot Cell</a></li>
+    <li><button class="tree blank"></button><a href="systemoverview/architecture.html">Architecture</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="robotbasics/index.html">Robot Basics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="robotbasics/frames/index.html">Frames</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="robotbasics/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="robotbasics/frames/toolframe.html">Tool Frame</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="robotbasics/calibration.html">Frame Calibration</a></li>
+    <li><button class="tree blank"></button><a href="robotbasics/bestpractices.html">Best Practices</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="setup/index.html">Setup</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="setup/cellsetup/index.html">Cell Setup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
+      <li><button class="tree blank"></button><a href="setup/cellsetup/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="setup/cellsetup/busconnection.html">Field Bus Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="setup/cellsetup/safetyconnection.html">Safety Connection Overview</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="setup/fluxofflinesetup/index.html">Flux Offline Setup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="setup/fluxofflinesetup/settingupcell.html">Setting Up the Cell</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="setup/fluxofflinesetup/settingupgripper/index.html">Setting Up Gripper</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="setup/fluxofflinesetup/settingupgripper/creategripper.html">Create a gripper</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="setup/fluxofflinesetup/settingupgripper/importgripper/index.html">Import Gripper</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="setup/fluxofflinesetup/settingupgripper/importgripper/dxf.html">Import gripper from DXF</a></li>
+          <li><button class="tree blank"></button><a href="setup/fluxofflinesetup/settingupgripper/importgripper/stl.html">Import Gripper from STL file</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="setup/fluxofflinesetup/settingupcellcomp.html">Setting up Cell Components</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="setup/rasoftwaresetup/index.html">RA Software Setup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="setup/rasoftwaresetup/robotmodeenable.html">Robot Mode Enable</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="setup/rasoftwaresetup/connectiontorobot/index.html">Connection to Robot</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="setup/rasoftwaresetup/connectiontorobot/hardwareio.html">Hardware IO</a></li>
+        <li><button class="tree blank"></button><a href="setup/rasoftwaresetup/connectiontorobot/ethercatinterface.html">EtherCAT Interface</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="fluxrobotcam/index.html">FluxRobot CAM</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="fluxrobotcam/howtouse/index.html">FluxRobot CAM (User Guide)</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/navigator.html">Bend navigator</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="fluxrobotcam/howtouse/pickup/index.html">Part pickup</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/pickup/frompallet.html">Pickup from pallet</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/pickup/centeringtable.html">Centering table</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="fluxrobotcam/howtouse/bending/index.html">Robotic bending</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/bending/insertion.html">Insertion</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/bending/bending.html">Bending</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/bending/extraction.html">Extraction</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/bending/advanced.html">Advanced</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="fluxrobotcam/howtouse/regrip/index.html">Regripping</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/regrip/regrippanel.html">Regrip panel</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/regrip/addregrip.html">Add/Remove regrip</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/regrip/gripperpanel.html">Gripper Panel</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="fluxrobotcam/howtouse/deposit/index.html">Part deposit</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/deposit/deposit.html">Deposit panel</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/deposit/deposittabs.html">Deposit Tabs</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="fluxrobotcam/howtouse/advanced/index.html">Advanced</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/advanced/waypoints.html">Waypoints</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/advanced/cellconfig.html">Cell configuration</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="fluxrobotcam/howtouse/advanced/gripperdb/index.html">Gripper database</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+          <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/troubleshoot.html">Troubleshooting</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="fluxrobotcam/waypoints/index.html">Motion sequences</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/pickup_vac.html">Pickup Pallet</a></li>
+      <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/centering.html">CenteringTable</a></li>
+      <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/bendpos.html">Bend Positioning</a></li>
+      <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/deposit.html">Deposit</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="fluxrobotcam/bestpractices.html">Best Practices</a></li>
+    <li><button class="tree blank"></button><a href="fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
+    <li><button class="tree blank"></button><a href="fluxrobotcam/postprocessor.html">Post Processor</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="package/index.html">FluxRobot Package</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="package/macros/index.html">Macros</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="package/macros/gripper.html">Gripper</a></li>
+      <li><button class="tree blank"></button><a href="package/macros/sheetalignment.html">Sheet Alignment</a></li>
+      <li><button class="tree blank"></button><a href="package/macros/framecorrection.html">Frame Correction</a></li>
+      <li><button class="tree blank"></button><a href="package/macros/substacksearch.html">Sub Stack Search Macro</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="package/bglogic/index.html">Background Logic</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="package/bglogic/bgcombined.html">BG Combined</a></li>
+      <li><button class="tree blank"></button><a href="package/bglogic/bgresethoming.html">BG Reset Homing</a></li>
+      <li><button class="tree blank"></button><a href="package/bglogic/homingoffset.html">Homing Offset</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="package/robothmi/index.html">Robot HMI</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="package/robothmi/setup.html">Webpage Setup in Teach Pendant</a></li>
+      <li><button class="tree blank"></button><a href="package/robothmi/browser.html">Browser</a></li>
+      <li><button class="tree blank"></button><a href="package/robothmi/io.html">Input/Output Signals</a></li>
+      <li><button class="tree blank"></button><a href="package/robothmi/homing.html">Homing</a></li>
+      <li><button class="tree blank"></button><a href="package/robothmi/register.html">Register</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="rightangle/index.html">Right Angle Robotic Bending</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="rightangle/operations/index.html">Operations</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="rightangle/operations/teachmode.html">Teach Mode</a></li>
+      <li><button class="tree blank"></button><a href="rightangle/operations/automode.html">Auto Mode</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="rightangle/troubleshooting.html">Troubleshooting</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a class="active" href="synchronousbend.html">Synchronous Bending</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="forreference/index.html">For Reference</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="forreference/1_introduction/index.html">Introduction</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="forreference/1_introduction/2_system.html">System overview</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="forreference/1_introduction/1_coupling/index.html">Types of robot couplings</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="forreference/1_introduction/1_coupling/digitaliocoupling/index.html">Digital coupling</a></li>
+        <li><button class="tree blank"></button><a href="forreference/1_introduction/1_coupling/loosesyncronizedcoupling/index.html">Loose syncronized coupling</a></li>
+        <li><button class="tree blank"></button><a href="forreference/1_introduction/1_coupling/thightsyncronized/index.html">Thight syncronized coupling with FluxRobot</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="forreference/1_introduction/3_safety.html">Safety</a></li>
+      <li><button class="tree blank"></button><a href="forreference/1_introduction/3_post.html">Postprocessor and Files</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="forreference/4_robotbasics/index.html">Robot basics</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="forreference/4_robotbasics/5_frames/index.html">Basics</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="forreference/4_robotbasics/5_frames/coordsystems.html">Basic Coordinate Systems</a></li>
+        <li><button class="tree blank"></button><a href="forreference/4_robotbasics/5_frames/fanuccoords.html">Robot Coordinates</a></li>
+        <li><button class="tree blank"></button><a href="forreference/4_robotbasics/5_frames/fanuctoolframes.html">Tool frames</a></li>
+        <li><button class="tree blank"></button><a href="forreference/4_robotbasics/5_frames/fanucuserframes.html">User frames</a></li>
+        <li><button class="tree blank"></button><a href="forreference/4_robotbasics/5_frames/fanuccordmove.html">Fanuc Motion commands</a></li>
+        <li><button class="tree blank"></button><a href="forreference/4_robotbasics/5_frames/fanucaxlimits.html">Fanuc Axlimits</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="forreference/4_robotbasics/6_frames/index.html">Frames</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="forreference/4_robotbasics/6_frames/frame_ra25.html">UF RA 25kg 45deg</a></li>
+        <li><button class="tree blank"></button><a href="forreference/4_robotbasics/6_frames/frame_racell.html">UF RA FlexCell</a></li>
+        <li><button class="tree blank"></button><a href="forreference/4_robotbasics/6_frames/frame_flexcell.html">UF Starmatik FlexCell</a></li>
+        <li><button class="tree blank"></button><a href="forreference/4_robotbasics/6_frames/framecoord.html">Use of frame coords</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="forreference/4_robotbasics/6_calibration.html">Calibration</a></li>
+      <li><button class="tree blank"></button><a href="forreference/4_robotbasics/7_io.html">IO & mappings (elec & pneu)</a></li>
+      <li><button class="tree blank"></button><a href="forreference/4_robotbasics/8_fencing.html">Fencing & Cell safety</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="forreference/9_flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="forreference/9_flux/10_overview.html">Overview</a></li>
+      <li><button class="tree blank"></button><a href="forreference/9_flux/11_installation.html">Installation of machines / tools</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="forreference/9_flux/12_workflow/index.html">Motion sequences</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="forreference/9_flux/12_workflow/pickup_pinch.html">PickupDispenser</a></li>
+        <li><button class="tree blank"></button><a href="forreference/9_flux/12_workflow/pickup_vac.html">PickupPallet</a></li>
+        <li><button class="tree blank"></button><a href="forreference/9_flux/12_workflow/partseparator.html">PartSeparator</a></li>
+        <li><button class="tree blank"></button><a href="forreference/9_flux/12_workflow/doublesheet.html">DoublesheetDetector</a></li>
+        <li><button class="tree blank"></button><a href="forreference/9_flux/12_workflow/regrip.html">Regrip</a></li>
+        <li><button class="tree blank"></button><a href="forreference/9_flux/12_workflow/centering.html">CenteringTable</a></li>
+        <li><button class="tree blank"></button><a href="forreference/9_flux/12_workflow/bendpos.html">BendPositioning</a></li>
+        <li><button class="tree blank"></button><a href="forreference/9_flux/12_workflow/deposit.html">Deposit</a></li>
+        <li><button class="tree blank"></button><a href="forreference/9_flux/12_workflow/toolchanger.html">ToolChanger</a></li>
+        <li><button class="tree blank"></button><a href="forreference/9_flux/12_workflow/gripperchanger.html">GripperChanger</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="forreference/9_flux/13_calibration.html">Calibration tool in flux usage</a></li>
+      <li><button class="tree blank"></button><a href="forreference/9_flux/14_gripper.html">Gripper design / import</a></li>
+      <li><button class="tree blank"></button><a href="forreference/9_flux/15_part.html">Part creation and simulation</a></li>
+      <li><button class="tree blank"></button><a href="forreference/9_flux/16_troubleshooting.html">Troubleshooting for flux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="forreference/12_robopack/index.html">Robopackage</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="forreference/12_robopack/36_overview.html">Overview</a></li>
+      <li><button class="tree blank"></button><a href="forreference/12_robopack/postc2.html">Post Processor</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="forreference/12_robopack/38_preinstall/index.html">Fanuc functions & macros</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="forreference/12_robopack/38_preinstall/operation.html">General operation procedure</a></li>
+        <li><button class="tree blank"></button><a href="forreference/12_robopack/38_preinstall/fr_bgallign.html">FR_BgAllign</a></li>
+        <li><button class="tree blank"></button><a href="forreference/12_robopack/38_preinstall/fr_stacksearch.html">FR_StackSearch</a></li>
+        <li><button class="tree blank"></button><a href="forreference/12_robopack/38_preinstall/fr_scale.html">FFR_Scale</a></li>
+        <li><button class="tree blank"></button><a href="forreference/12_robopack/38_preinstall/fr_gripclose.html">FR_GRipClose</a></li>
+        <li><button class="tree blank"></button><a href="forreference/12_robopack/38_preinstall/communication.html">Communication</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="forreference/12_robopack/39_hmi/index.html">HMI</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="forreference/12_robopack/39_hmi/38_home.html">Home page</a></li>
+        <li><button class="tree blank"></button><a href="forreference/12_robopack/39_hmi/39_frame.html">Frame correction and reseting frame</a></li>
+        <li><button class="tree blank"></button><a href="forreference/12_robopack/39_hmi/40_homing.html">Homing using macros prgm</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="forreference/17_fluxrobotbasic/index.html">FluxRobot Basic</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="forreference/17_fluxrobotbasic/21_macro.html">Alignment macro</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="forreference/17_fluxrobotbasic/18_workflow/index.html">Bend Workflow</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="forreference/17_fluxrobotbasic/18_workflow/wfasync.html">Asynchronous Bending</a></li>
+        <li><button class="tree blank"></button><a href="forreference/17_fluxrobotbasic/18_workflow/wfsync.html">Synchronous Bending</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="forreference/17_fluxrobotbasic/19_program.html">Program structure</a></li>
+      <li><button class="tree blank"></button><a href="forreference/17_fluxrobotbasic/20_teach.html">Teach in</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="forreference/22_fluxrobotadvanced/index.html">FluxRobot Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="forreference/22_fluxrobotadvanced/23_workflow.html">Workflow</a></li>
+      <li><button class="tree blank"></button><a href="forreference/22_fluxrobotadvanced/24_post.html">Post Processor</a></li>
+      <li><button class="tree blank"></button><a href="forreference/22_fluxrobotadvanced/21_macro.html">Macros provided</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="forreference/25_bestpractisesfluxrobot/index.html">Best practices</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="forreference/25_bestpractisesfluxrobot/layout.html">Follow the proposed Layout concept</a></li>
+      <li><button class="tree blank"></button><a href="forreference/25_bestpractisesfluxrobot/gripper.html">A good gripper is most important</a></li>
+      <li><button class="tree blank"></button><a href="forreference/25_bestpractisesfluxrobot/reach.html">Avoid collisions by good components</a></li>
+      <li><button class="tree blank"></button><a href="forreference/25_bestpractisesfluxrobot/corrections.html">Manual Corrections</a></li>
+      <li><button class="tree blank"></button><a href="forreference/25_bestpractisesfluxrobot/tilted.html">Tilted robot</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="forreference/26_rightangle/index.html">Right Angle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="forreference/26_rightangle/27_ra.html">RA & machine overview</a></li>
+      <li><button class="tree blank"></button><a href="forreference/26_rightangle/28_machine.html">Machine settings — parameters, limits,Machine Id</a></li>
+      <li><button class="tree blank"></button><a href="forreference/26_rightangle/29_ra.html">RA ↔ Machine communications</a></li>
+      <li><button class="tree blank"></button><a href="forreference/26_rightangle/30_machine-to-robot.html">Machine-to-Robot communication (signals, I/O mapping, Ecat)</a></li>
+      <li><button class="tree blank"></button><a href="forreference/26_rightangle/31_program.html">Program loading — from Flux to RA</a></li>
+      <li><button class="tree blank"></button><a href="forreference/26_rightangle/32_post-processor.html">Post-processor program loading in TP</a></li>
+      <li><button class="tree blank"></button><a href="forreference/26_rightangle/33_manual.html">Manual bend — step mode procedure</a></li>
+      <li><button class="tree blank"></button><a href="forreference/26_rightangle/34_auto.html">Auto bend</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="forreference/30_operation/index.html">Operation</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="forreference/30_operation/workflow.html">Workflow</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/startup.html">Startup of the robot</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/pointer.html">Calibrate Pointer</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/pinchgripper.html">Calibrate Pinch Gripper</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/vacuumgripper.html">Calibrate Vacuum Gripper</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/calib_gauge.html">Calibrate Gauge</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/setuprobot.html">Setup Robot to Machine</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/pallet.html">Setup Pallet</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/dispenser.html">Setup Dispenser</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/partseparator.html">Setup PartSeparator</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/doublesheet.html">Setup DoublesheetDetector</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/regrip.html">Setup Regrip</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/centering.html">Setup CenteringTable</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/deposit.html">Setup Deposit</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/toolchanger.html">ToolChanger</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/gripperchanger.html">GripperChanger</a></li>
+      <li><button class="tree blank"></button><a href="forreference/30_operation/connectionhmi.html">HMI PC -> Robot</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="forreference/35_tweak/index.html">Flux: Tweeak Components</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="forreference/35_tweak/cellcomponents.html">Flux: Cell components</a></li>
+      <li><button class="tree blank"></button><a href="forreference/35_tweak/pinch.html">Adjust Pinch gripper offset</a></li>
+      <li><button class="tree blank"></button><a href="forreference/35_tweak/gripper.html">Tweak a gripper CAD geometry</a></li>
+      <li><button class="tree blank"></button><a href="forreference/35_tweak/dispenser.html">Change dispenser geometry</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="synchronousbend.html">Synchronous Bending</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Synchronous Bending</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes the method used to synchronize the robot bending motion
+with the RAM/Sheet motion during bend. The synchronisation is achieved by
+predetermining the positions of the robot during bending with respect to
+position moved by the ram from pinch point and commanding the robot dynamically
+to move to the position where its expected to be for the current ram position.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_synchro_bending_basic_concept">Synchro Bending Basic Concept</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The objective of syncro bending is to support the sheet during the bending
+process, to achieve this the robot should match/synchronize with the bending
+motion of the sheet metal.</p>
+</div>
+<div class="paragraph">
+<p>The Offline programming i.e, FluxRobot CAM software gives the advantage of
+determining the motion of the sheet during bend and the robots pose which
+corresponds to the sheet motion at a specific instance of bend. So basically the
+entire motion of the sheet metal during bend is divided into instances based on
+the total distance travelled by the Bending Beam from Pinch point to the LDP
+point(start to completion of bend) divided by the number of instances required.</p>
+</div>
+<div class="paragraph">
+<p>For example, Lets assume the distance between Pinch Point and LDP is 5.12 mm
+and number of instances required is 20, then</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  5.12
+--------- = 0.256 mm
+   20</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, the robot&#8217;s pose is computed for every 0.256mm movement of the Bending
+beam which bends the sheet. As a result we will have 20 robot poses for the
+bend each corresponding to the distance moved by the Bending beam which intern
+corresponds to the angular movement of the sheet metal during bend.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/syncbend.png" alt="syncbend" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>So, this can be used to command the robot in real time from RA controller, to
+be at a specific pose at a specific instance. The Flux offline programming
+software out put all the pose values for the required instances.</p>
+</div>
+<div class="paragraph">
+<p>These values are loaded in to the FANUC robot tp program and can be dynamically
+commanded based on the position of the Bending Beam.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/syncbend2.png" alt="syncbend2">
+</div>
+<div class="title">Robot pose output from FLUX for each instance</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">45:  !Dynamic motion cmd for sync      ;
+46:L PR[R[35]] R[40]deg/sec CNT100 ACC80 Skip,LBL[2]    ;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This code block commands the robot dynamically based on the Bending Beam
+position, for example when Bending Beam moves 0.256 mm from Pinch point towards
+LDP as in above mentioned example the R[35] register receives “1” meaning to
+command the robot to move to pose one corresponding to the Beam motion and so
+on until “20”.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_velocity_factor_of_bending_beam">Velocity Factor of Bending Beam</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The next challenge is, synchronous motion dependence on the velocity of the
+Bending Beam. The robot has to follow the sheet with respect to the bending
+velocity.</p>
+</div>
+<div class="paragraph">
+<p>With our setup the bending speed can be varied from 5mm/s to 10mm/s. And we
+can achieve good synchronous motion in all velocity ranges. This is achieved by
+using the advantage of FANUC robots angular velocity command.</p>
+</div>
+<div class="paragraph">
+<p>During the bend the sheet metal moves with an angular velocity with respect to
+the vertical motion velocity of the bending beam. This can be determined and
+used as the command value for the robot motion during bend enabling the robot
+to always move in same velocity of the motion of the sheet metal during bend.</p>
+</div>
+<div class="paragraph">
+<p>The angular velocity is calculated by following method,</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/syncbend3.png" alt="syncbend3" width="400">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>So, <strong>α = innerangle - 180/2</strong> this will be the angle moved by sheet. From the
+machine controller we can get the time taken to reach the angle.</p>
+</li>
+<li>
+<p>Now, <strong>Angular velocity = α/time taken</strong>.</p>
+</li>
+<li>
+<p>The FANUC robot has a feature to use angular velocity as the motion command
+velocity parameter.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">	45:  !Dynamic motion cmd for sync      ;
+	46:L PR[R[35]] R[40]deg/sec CNT100 ACC80 Skip,LBL[2]    ;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>This means that the robot tcp is now commanded at with the calculated angular
+velocity. Like the previous approach the robot lead motion can be controlled by
+adjusting the filter value in the controller which affects the rate at which
+the robot is commanded.</p>
+</li>
+<li>
+<p><strong>This method provides a control over the velocity of both robot and sheet
+movement so ensuring good synchronisation</strong>.</p>
+</li>
+<li>
+<p>We have observed good synchronisation results with this method. The motion can
+be further improved by having dynamic angular velocity command, matching the
+acceleration of the ram movement.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_synchro_bending_basic_concept">Synchro Bending Basic Concept</a>
+  </li>
+  <li level="1">
+   <a href="#_velocity_factor_of_bending_beam">Velocity Factor of Bending Beam</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="rightangle/troubleshooting.html">Troubleshooting</a></span>
+ <span class="next"><a href="forreference/index.html">For Reference</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by Trumpf Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="res/index.js"></script>
+    <script src="res/files.js"></script>
+    <script src="res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

@@ -33,32 +33,33 @@
   </li>
   <li>
    <button class="tree closed"></button>
+   <a href="../../robotbasics/index.html">Robot Basics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotbasics/frames/index.html">Frames</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotbasics/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="../../robotbasics/frames/toolframe.html">Tool Frame</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../robotbasics/calibration.html">Frame Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../robotbasics/bestpractices.html">Best Practices</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
    <a href="../../setup/index.html">Setup</a>
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
-     <a href="../../setup/robot/index.html">Robot</a>
+     <a href="../../setup/cellsetup/index.html">Cell Setup</a>
      <ul class="hide">
-      <li>
-       <button class="tree closed"></button>
-       <a href="../../setup/robot/robotbasics/index.html">Robot Basics</a>
-       <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../setup/robot/robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
-        <li>
-         <button class="tree closed"></button>
-         <a href="../../setup/robot/robotbasics/frames/index.html">Frames</a>
-         <ul class="hide">
-          <li><button class="tree blank"></button><a href="../../setup/robot/robotbasics/frames/userframe.html">User Frame</a></li>
-          <li><button class="tree blank"></button><a href="../../setup/robot/robotbasics/frames/toolframe.html">Tool Frame</a></li>
-         </ul>
-        </li>
-        <li><button class="tree blank"></button><a href="../../setup/robot/robotbasics/calibration.html">Frame Calibration</a></li>
-        <li><button class="tree blank"></button><a href="../../setup/robot/robotbasics/bestpractices.html">Best Practices</a></li>
-       </ul>
-      </li>
-      <li><button class="tree blank"></button><a href="../../setup/robot/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
-      <li><button class="tree blank"></button><a href="../../setup/robot/busconnection.html">Field Bus Connection Overview</a></li>
-      <li><button class="tree blank"></button><a href="../../setup/robot/safetyconnection.html">Safety Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
+      <li><button class="tree blank"></button><a href="../../setup/cellsetup/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../setup/cellsetup/busconnection.html">Field Bus Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../setup/cellsetup/safetyconnection.html">Safety Connection Overview</a></li>
      </ul>
     </li>
     <li>
@@ -196,6 +197,15 @@
     </li>
     <li>
      <button class="tree closed"></button>
+     <a href="../bglogic/index.html">Background Logic</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../bglogic/bgcombined.html">BG Combined</a></li>
+      <li><button class="tree blank"></button><a href="../bglogic/bgresethoming.html">BG Reset Homing</a></li>
+      <li><button class="tree blank"></button><a href="../bglogic/homingoffset.html">Homing Offset</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
      <a href="../robothmi/index.html">Robot HMI</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../robothmi/setup.html">Webpage Setup in Teach Pendant</a></li>
@@ -222,6 +232,7 @@
     <li><button class="tree blank"></button><a href="../../rightangle/troubleshooting.html">Troubleshooting</a></li>
    </ul>
   </li>
+  <li><button class="tree blank"></button><a href="../../synchronousbend.html">Synchronous Bending</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="../../forreference/index.html">For Reference</a>
@@ -699,6 +710,60 @@ current TCP positon from the new backgauge frame to the PLC.</p>
 <p>Get Shift TCP macro reads the new tool frame values calculated by the PLC. The
 PLC writes the calculated TCP shift values into Registers from R[81] to R[86].
 Then writes these values into position register PR[73].</p>
+</div>
+<div class="sect3">
+<h4 id="_how_tcp_shift_works">How TCP Shift Works</h4>
+<div class="paragraph">
+<p>When the sheet approaches either Z1 or Z2 backgauge:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Based on the backgauges values from the registers, the Sheet Alignment macro
+determines which backgauge is contacted first.</p>
+</li>
+<li>
+<p>Then, the PLC calculates a TCP shift that moves the tool center point from its
+original position to the center of the contacted backgauge flat.</p>
+</li>
+<li>
+<p>By relocating the TCP to the contacted side, the robot can twist the sheet
+in the opposite direction — correcting the angular misalignment.</p>
+</li>
+<li>
+<p>The robot then advances again, and the loop repeats until both sides are
+in contact.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The TCP is shifted toward the side that made contact first. If Z1 touches
+first, the TCP moves to flat 1&#8217;s center; if Z2 touches first, it moves to
+flat 2&#8217;s center.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Twist adjustment only applies when one side of the sheet is contacting
+the backgauge. If both sides make contact simultaneously, the TCP shift is
+zero and no twist correction is performed.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
