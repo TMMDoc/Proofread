@@ -1,0 +1,649 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="res/bento.css">
+  <link rel="stylesheet" href="res/site.css">
+  <link rel="stylesheet" href="res/tree.css">
+  <link rel="stylesheet" href="res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Safety Precautions</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="img/logo.png" width="123" height="50" /></div>
+        <div><p>FluxRobot Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="index.html">Welcome to FluxRobot</a></li>
+  <li><button class="tree blank"></button><a class="active" href="safety.html">Safety Precautions</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="systemoverview/index.html">System Overview</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="systemoverview/fluxrobotcell.html">FluxRobot Cell</a></li>
+    <li><button class="tree blank"></button><a href="systemoverview/architecture.html">Architecture</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="robotbasics/index.html">Robot Basics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="robotbasics/frames/index.html">Frames</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="robotbasics/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="robotbasics/frames/toolframe.html">Tool Frame</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="robotbasics/calibration.html">Frame Calibration</a></li>
+    <li><button class="tree blank"></button><a href="robotbasics/bestpractices.html">Best Practices</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="setup/index.html">Setup</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="setup/cellsetup/index.html">Cell Setup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
+      <li><button class="tree blank"></button><a href="setup/cellsetup/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="setup/cellsetup/busconnection.html">Field Bus Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="setup/cellsetup/safetyconnection.html">Safety Connection Overview</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="setup/fluxofflinesetup/index.html">FluxRobot CAM Setup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="setup/fluxofflinesetup/settingupcell.html">Setting Up the Cell</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="setup/fluxofflinesetup/settingupgripper/index.html">Setting Up Gripper</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="setup/fluxofflinesetup/settingupgripper/creategripper.html">Create a gripper</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="setup/fluxofflinesetup/settingupgripper/importgripper/index.html">Import Gripper</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="setup/fluxofflinesetup/settingupgripper/importgripper/dxf.html">Import gripper from DXF</a></li>
+          <li><button class="tree blank"></button><a href="setup/fluxofflinesetup/settingupgripper/importgripper/stl.html">Import Gripper from STL file</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="setup/fluxofflinesetup/settingupcellcomp.html">Setting up Cell Components</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="setup/rasoftwaresetup/index.html">RA Software Setup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="setup/rasoftwaresetup/robotmodeenable.html">Robot Mode Enable</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="setup/rasoftwaresetup/connectiontorobot/index.html">Connection to Robot</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="setup/rasoftwaresetup/connectiontorobot/hardwareio.html">Hardware IO</a></li>
+        <li><button class="tree blank"></button><a href="setup/rasoftwaresetup/connectiontorobot/ethercatinterface.html">EtherCAT Interface</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="fluxrobotcam/index.html">FluxRobot CAM</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="fluxrobotcam/howtouse/index.html">FluxRobot CAM (User Guide)</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/navigator.html">Bend navigator</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="fluxrobotcam/howtouse/pickup/index.html">Part pickup</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/pickup/frompallet.html">Pickup from pallet</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/pickup/centeringtable.html">Centering table</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="fluxrobotcam/howtouse/bending/index.html">Robotic bending</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/bending/insertion.html">Insertion</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/bending/bending.html">Bending</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/bending/extraction.html">Extraction</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/bending/advanced.html">Advanced</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="fluxrobotcam/howtouse/regrip/index.html">Regripping</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/regrip/regrippanel.html">Regrip panel</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/regrip/addregrip.html">Add/Remove regrip</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/regrip/gripperpanel.html">Gripper Panel</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="fluxrobotcam/howtouse/deposit/index.html">Part deposit</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/deposit/deposit.html">Deposit panel</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/deposit/deposittabs.html">Deposit Tabs</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="fluxrobotcam/howtouse/advanced/index.html">Advanced</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/advanced/waypoints.html">Waypoints</a></li>
+        <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/advanced/cellconfig.html">Cell configuration</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="fluxrobotcam/howtouse/advanced/gripperdb/index.html">Gripper database</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+          <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="fluxrobotcam/howtouse/troubleshoot.html">Troubleshooting</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="fluxrobotcam/waypoints/index.html">Motion sequences</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/pickup_vac.html">Pickup Pallet</a></li>
+      <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/centering.html">CenteringTable</a></li>
+      <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/bendpos.html">Bend Positioning</a></li>
+      <li><button class="tree blank"></button><a href="fluxrobotcam/waypoints/deposit.html">Deposit</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="fluxrobotcam/bestpractices.html">Best Practices</a></li>
+    <li><button class="tree blank"></button><a href="fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
+    <li><button class="tree blank"></button><a href="fluxrobotcam/postprocessor.html">Post Processor</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="package/index.html">FluxRobot Package</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="package/macros/index.html">Macros</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="package/macros/gripper.html">Gripper</a></li>
+      <li><button class="tree blank"></button><a href="package/macros/sheetalignment.html">Sheet Alignment</a></li>
+      <li><button class="tree blank"></button><a href="package/macros/framecorrection.html">Frame Correction</a></li>
+      <li><button class="tree blank"></button><a href="package/macros/substacksearch.html">Sub Stack Search Macro</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="package/bglogic/index.html">Background Logic</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="package/bglogic/bgcombined.html">BG Combined</a></li>
+      <li><button class="tree blank"></button><a href="package/bglogic/bgresethoming.html">BG Reset Homing</a></li>
+      <li><button class="tree blank"></button><a href="package/bglogic/homingoffset.html">Homing Offset</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="package/robothmi/index.html">Robot HMI</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="package/robothmi/setup.html">Webpage Setup in TP</a></li>
+      <li><button class="tree blank"></button><a href="package/robothmi/browser.html">Browser</a></li>
+      <li><button class="tree blank"></button><a href="package/robothmi/io.html">Input/Output Signals</a></li>
+      <li><button class="tree blank"></button><a href="package/robothmi/homing.html">Homing</a></li>
+      <li><button class="tree blank"></button><a href="package/robothmi/register.html">Register</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="rightangle/index.html">Right Angle Robotic Bending</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="rightangle/operations/index.html">Operations</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="rightangle/operations/teachmode.html">Teach Mode</a></li>
+      <li><button class="tree blank"></button><a href="rightangle/operations/automode.html">Auto Mode</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="rightangle/troubleshooting.html">Troubleshooting</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="synchronousbend.html">Synchronous Bending</a></li>
+  <li><button class="tree blank"></button><a href="appendix.html">Appendix</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="safety.html">Safety Precautions</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Safety Precautions</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Read and understand all safety precautions in this document before operating,
+programming, or performing maintenance on the robot cell. Failure to follow
+these precautions may result in serious injury or death.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This chapter defines the safety precautions applicable to the entire FluxRobot
+documentation set. These precautions cover all aspects of the system - from
+initial setup and calibration through day-to-day operation, offline programming,
+and maintenance. The FluxRobot cell consists of a FANUC robot arm, a press
+brake machine, and associated peripheral stations enclosed within a safety fence.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_personnel_safety">Personnel Safety</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_authorized_personnel_only">Authorized Personnel Only</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Only trained and authorized personnel are permitted to operate, program, or
+maintain the robot cell.</p>
+</li>
+<li>
+<p>Operators must complete robot-specific safety training before working with
+or near the cell.</p>
+</li>
+<li>
+<p>Unauthorized personnel must not enter the fenced robot work area under any
+circumstances.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_personal_protective_equipment_ppe">Personal Protective Equipment (PPE)</h3>
+<div class="paragraph">
+<p>Wear appropriate PPE at all times when working near the robot cell:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Safety shoes to protect against falling objects.</p>
+</li>
+<li>
+<p>Protective gloves when handling sheet metal or tooling.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_working_near_the_robot">Working Near the Robot</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Never stand in the path of a moving robot arm or within its reach envelope
+unless the robot is in a safe, stopped state.</p>
+</li>
+<li>
+<p>Always be aware of the robot&#8217;s programmed motion path before entering the
+work area.</p>
+</li>
+<li>
+<p>Never assume the robot is stopped - verify the robot status on the teach
+pendant before approaching.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_emergency_stop">Emergency Stop</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_emergency_stop_locations">Emergency Stop Locations</h3>
+<div class="paragraph">
+<p><strong>Emergency buttons</strong> are red and mushroom-shaped for easy identification. The
+FluxRobot Cell is equipped with multiple emergency stop buttons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Teach Pendant E-Stop</p>
+</li>
+<li>
+<p>Controller E-Stop</p>
+</li>
+<li>
+<p>Press Brake E-Stop</p>
+</li>
+<li>
+<p>Foot Pedal E-Stop</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_activating_emergency_stop">Activating Emergency Stop</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Press any emergency stop button immediately if a hazardous situation arises.</p>
+</li>
+<li>
+<p>The robot will enter <strong>Immediate Stop</strong> mode and all motion will
+cease.</p>
+</li>
+<li>
+<p>The stack light will indicate <strong>RED</strong> when the emergency stop is active.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_recovering_from_emergency_stop">Recovering from Emergency Stop</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Before releasing an emergency stop, ensure the cause of the stop has been
+identified and resolved. Never release an emergency stop without understanding
+why it was activated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Identify and eliminate the cause of the emergency stop.</p>
+</li>
+<li>
+<p>Twist and release the activated emergency stop button to reset it.</p>
+</li>
+<li>
+<p>Acknowledge any fault messages on the teach pendant.</p>
+</li>
+<li>
+<p>Press the <strong>RESET</strong> button on the teach pendant to clear errors.</p>
+</li>
+<li>
+<p>Resume operation only after confirming the FluxRobot Cell is safe.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_safety_fence">Safety Fence</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_general_rules">General Rules</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Keep all fence doors <strong>closed and latched</strong> during auto mode operation.</p>
+</li>
+<li>
+<p>Inspect the fence and door switches for damage before each shift. Report
+any damage immediately and do not operate the FluxRobot Cell until repaired.</p>
+</li>
+<li>
+<p>Do not reach through the fence mesh or openings while the robot is in
+auto mode.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_entering_the_fenced_area">Entering the Fenced Area</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Switch the robot to <strong>T1 mode</strong> before entering the fenced area.</p>
+</li>
+<li>
+<p>Inform other personnel that you are entering the fenced area.</p>
+</li>
+<li>
+<p>Carry the teach pendant with the deadman switch engaged.</p>
+</li>
+<li>
+<p>Perform only the required task, then exit and close the fence door.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_press_brake_safety">Press Brake Safety</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Never place hands or fingers inside the press brake bending area during
+operation.</p>
+</li>
+<li>
+<p>The press brake and robot operate in a coordinated sequence - do not
+interrupt or manually override the press brake while the robot is holding
+a part.</p>
+</li>
+<li>
+<p>Ensure the press brake emergency stops are functional before starting
+production.</p>
+</li>
+<li>
+<p>Do not override or disable the press brake guards or safety devices.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general_dos_and_donts">General Do&#8217;s and Don&#8217;ts</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_dos">Do&#8217;s</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Always verify the robot status before entering the work area.</p>
+</li>
+<li>
+<p>Keep the teach pendant accessible at all times during manual operation.</p>
+</li>
+<li>
+<p>Report any unusual robot behaviour, sounds, or vibrations to a supervisor
+immediately.</p>
+</li>
+<li>
+<p>Keep the cell floor around the robot dry and free of obstacles.</p>
+</li>
+<li>
+<p>Ensure all personnel are aware when a program is about to start.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_donts">Don&#8217;ts</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Do not disable or bypass any safety device, interlock, or guard.</p>
+</li>
+<li>
+<p>Do not operate the robot while fatigued, distracted, or impaired.</p>
+</li>
+<li>
+<p>Do not allow non-authorised personnel to operate or enter the robot cell.</p>
+</li>
+<li>
+<p>Do not make modifications to the robot program without proper authorisation
+and documentation.</p>
+</li>
+<li>
+<p>Do not ignore alarms or fault messages - investigate and resolve them before
+resuming operation.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For full safety specifications and regulatory compliance details, refer to
+the FANUC Robot Series R-30iB/R-30iB Plus Controller Operator&#8217;s Manual and
+the relevant press brake manufacturer&#8217;s safety documentation.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_personnel_safety">Personnel Safety</a>
+  </li>
+  <li level="2">
+   <a href="#_authorized_personnel_only">Authorized Personnel Only</a>
+  </li>
+  <li level="2">
+   <a href="#_personal_protective_equipment_ppe">Personal Protective Equipment (PPE)</a>
+  </li>
+  <li level="2">
+   <a href="#_working_near_the_robot">Working Near the Robot</a>
+  </li>
+  <li level="1">
+   <a href="#_emergency_stop">Emergency Stop</a>
+  </li>
+  <li level="2">
+   <a href="#_emergency_stop_locations">Emergency Stop Locations</a>
+  </li>
+  <li level="2">
+   <a href="#_activating_emergency_stop">Activating Emergency Stop</a>
+  </li>
+  <li level="2">
+   <a href="#_recovering_from_emergency_stop">Recovering from Emergency Stop</a>
+  </li>
+  <li level="1">
+   <a href="#_safety_fence">Safety Fence</a>
+  </li>
+  <li level="2">
+   <a href="#_general_rules">General Rules</a>
+  </li>
+  <li level="2">
+   <a href="#_entering_the_fenced_area">Entering the Fenced Area</a>
+  </li>
+  <li level="1">
+   <a href="#_press_brake_safety">Press Brake Safety</a>
+  </li>
+  <li level="1">
+   <a href="#_general_dos_and_donts">General Do&#8217;s and Don&#8217;ts</a>
+  </li>
+  <li level="2">
+   <a href="#_dos">Do&#8217;s</a>
+  </li>
+  <li level="2">
+   <a href="#_donts">Don&#8217;ts</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Welcome to FluxRobot</a></span>
+ <span class="next"><a href="systemoverview/index.html">System Overview</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by Trumpf Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="res/index.js"></script>
+    <script src="res/files.js"></script>
+    <script src="res/site.js"></script>
+
+    
+</body>
+</html>
