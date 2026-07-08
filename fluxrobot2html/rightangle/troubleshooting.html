@@ -30,6 +30,7 @@
    <ul class="hide">
     <li><button class="tree blank"></button><a href="../systemoverview/fluxrobotcell.html">FluxRobot Cell</a></li>
     <li><button class="tree blank"></button><a href="../systemoverview/architecture.html">Architecture</a></li>
+    <li><button class="tree blank"></button><a href="../systemoverview/workflow.html">Design to Production Workflow</a></li>
    </ul>
   </li>
   <li>
@@ -259,37 +260,76 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Troubleshooting</h1>
+<div class="sect1">
+<h2 id="_e_stop_auto_mode">E-stop (Auto mode)</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Press E-Stop immediately if you encounter any of the following issues:</p>
+<p>While working in Auto mode, press E-Stop immediately if you encounter any of the following issues:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
 <colgroup>
+<col>
 <col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Issue</th>
+<th class="tableblock halign-left valign-top">Action to take</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">When Gripper unexpectedly loses contact with the part during synchronous
 bending.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press E-stop.<br>
+Abort Program and do Auto-Homing.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When the robot does not place the part correcctly on the expected position on
-the die during bending.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When the backgauge does not properly aligned</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When the robot does not place the part correctly on the expected position on
+the die.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press E-stop.<br>
+Either abort the program and do Auto-Homing, or continue the program in Manual
+mode to place the part correctly on the die.</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_regripping_issues">Regripping Issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When regripping after a bend is not proper, check the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Check the gripper.</p>
+</li>
+<li>
+<p>Check the regrip waypoints in the FluxRobot CAM program and compare them with
+the actual robot position.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc"></aside>
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_e_stop_auto_mode">E-stop (Auto mode)</a>
+  </li>
+  <li level="1">
+   <a href="#_regripping_issues">Regripping Issues</a>
+  </li>
+ </ul>
+</aside>
+
                 </div>
             </div>
             <nav class="pagination">

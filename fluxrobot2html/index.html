@@ -30,6 +30,7 @@
    <ul class="hide">
     <li><button class="tree blank"></button><a href="systemoverview/fluxrobotcell.html">FluxRobot Cell</a></li>
     <li><button class="tree blank"></button><a href="systemoverview/architecture.html">Architecture</a></li>
+    <li><button class="tree blank"></button><a href="systemoverview/workflow.html">Design to Production Workflow</a></li>
    </ul>
   </li>
   <li>
@@ -255,69 +256,108 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Welcome to FluxRobot</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p><strong>FluxRobot</strong> is a robotic bending automation system that integrates a robot arm,
 press brake, and associated hardware and software to perform automated bending
 operations.</p>
 </div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/roboticcell.png" alt="FluxRobot Cell" width="800">
+</div>
+</div>
 <div class="paragraph">
 <p>This documentation is the complete reference guide for setting up and operating
-the FluxRobot system using <strong>FluxRobot CAM</strong> and <strong>Right-Angle</strong> control software.
-It is intended for engineers and operators involved in installation,
-configuration, and day-to-day production use.</p>
+the FluxRobot system using  <strong>FluxRobot CAM</strong> and <strong>Right-Angle</strong> software.</p>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>The guide is organized into the following sections that follow the natural
-progression from understanding the system to putting it into production.</p>
+<p><strong>New here?</strong> Start with <a href="safety.html">Safety Precautions</a>, then follow the
+<a href="systemoverview/index.html">System Overview</a> to understand the cell before
+configuring anything.</p>
 </div>
-<div class="paragraph">
-<p>The entire documentation is structured as follows:</p>
+</td>
+</tr>
+</table>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong><a href="safety.html">Safety Precautions</a></strong> - Important safety guidelines that must be
-read before operating or working with the FluxRobot cell.</p>
-</li>
-<li>
-<p><strong><a href="systemoverview/index.html">System Overview</a></strong> - Physical layout and
-architecture of the FluxRobot cell.</p>
-</li>
-<li>
-<p><strong><a href="setup/index.html">Setup</a></strong> - Installation and configuration of the robot
-hardware, FluxRobot CAM software, and Right-Angle control software.</p>
-</li>
-<li>
-<p><strong><a href="robotbasics/index.html">Robot Basics</a></strong> - Coordinate systems, Tool Frames,
-and User Frames that govern robot motion.</p>
-</li>
-<li>
-<p><strong><a href="fluxrobotcam/index.html">FluxRobot CAM</a></strong> - Offline programming environment
-for generating robot bend programs.</p>
-</li>
-<li>
-<p><strong><a href="package/index.html">FluxRobot Package</a></strong> - Macros and subprograms used in
-FluxRobot production applications.</p>
-</li>
-<li>
-<p><strong><a href="rightangle/index.html">Right-Angle Robotic Bending</a></strong> - Setup and operation
-for Right-Angle bending configurations.</p>
-</li>
-<li>
-<p><strong><a href="synchronousbend.html">Synchronous Bending</a></strong> - Coordinated robot and press
-brake motion during the bending process.</p>
-</li>
-<li>
-<p><strong><a href="appendix.html">Appendix</a></strong> - Glossary of terms, abbreviations, and
-additional reference information.</p>
-</li>
-</ul>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_documentation_map">Documentation Map</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Section</th>
+<th class="tableblock halign-left valign-top">What You&#8217;ll Find</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="safety.html">Safety Precautions</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical safety guidelines - read before operating or working on the FluxRobot cell.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="systemoverview/index.html">System Overview</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Physical layout, component architecture, and how everything connects.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="setup/index.html">Setup</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Step-by-step installation of the robot hardware, FluxRobot CAM, and Right-Angle software.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="robotbasics/index.html">Robot Basics</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coordinate systems, Tool Frames, and User Frames that govern robot motion.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="fluxrobotcam/index.html">FluxRobot CAM</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offline programming environment for creating and managing robot bend programs.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="package/index.html">FluxRobot Package</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Macros and subprograms used in production applications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="rightangle/index.html">Right-Angle Robotic Bending</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Setup and operation for Right-Angle bending configurations.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="synchronousbend.html">Synchronous Bending</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coordinated robot and press brake motion during the bending process.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="appendix.html">Appendix</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Glossary of terms, abbreviations, and additional reference material.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc"></aside>
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_documentation_map">Documentation Map</a>
+  </li>
+ </ul>
+</aside>
+
                 </div>
             </div>
             <nav class="pagination">
@@ -336,7 +376,7 @@ additional reference information.</p>
         </div>
         <div class="middle"></div>
         <div class="right">
-            <p>Compiled 2026.07.03 by Bento 58</p>
+            <p>Compiled 2026.07.08 by Bento 58</p>
             <img src="res/bento.png" />
         </div>
     </footer>

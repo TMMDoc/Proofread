@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title>Robot Basics</title>
+  <title>Design to Production Workflow</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -25,29 +25,29 @@
   <li><button class="tree blank"></button><a href="../index.html">Welcome to FluxRobot</a></li>
   <li><button class="tree blank"></button><a href="../safety.html">Safety Precautions</a></li>
   <li>
-   <button class="tree closed"></button>
-   <a href="../systemoverview/index.html">System Overview</a>
-   <ul class="hide">
-    <li><button class="tree blank"></button><a href="../systemoverview/fluxrobotcell.html">FluxRobot Cell</a></li>
-    <li><button class="tree blank"></button><a href="../systemoverview/architecture.html">Architecture</a></li>
-    <li><button class="tree blank"></button><a href="../systemoverview/workflow.html">Design to Production Workflow</a></li>
+   <button class="tree open"></button>
+   <a href="index.html">System Overview</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="fluxrobotcell.html">FluxRobot Cell</a></li>
+    <li><button class="tree blank"></button><a href="architecture.html">Architecture</a></li>
+    <li><button class="tree blank"></button><a class="active" href="workflow.html">Design to Production Workflow</a></li>
    </ul>
   </li>
   <li>
-   <button class="tree open"></button>
-   <a class="active" href="index.html">Robot Basics</a>
-   <ul>
-    <li><button class="tree blank"></button><a href="basiccoordinatesystems.html">Coordinate Systems</a></li>
+   <button class="tree closed"></button>
+   <a href="../robotbasics/index.html">Robot Basics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
     <li>
      <button class="tree closed"></button>
-     <a href="frames/index.html">Frames</a>
+     <a href="../robotbasics/frames/index.html">Frames</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="frames/userframe.html">User Frame</a></li>
-      <li><button class="tree blank"></button><a href="frames/toolframe.html">Tool Frame</a></li>
+      <li><button class="tree blank"></button><a href="../robotbasics/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="../robotbasics/frames/toolframe.html">Tool Frame</a></li>
      </ul>
     </li>
-    <li><button class="tree blank"></button><a href="calibration.html">Frame Calibration</a></li>
-    <li><button class="tree blank"></button><a href="bestpractices.html">Best Practices</a></li>
+    <li><button class="tree blank"></button><a href="../robotbasics/calibration.html">Frame Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../robotbasics/bestpractices.html">Best Practices</a></li>
    </ul>
   </li>
   <li>
@@ -248,34 +248,20 @@
   </button>
  </div>
  <div>
-  <a href="index.html">Robot Basics</a>
+  <a href="index.html">System Overview</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="workflow.html">Design to Production Workflow</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Robot Basics</h1>
+                        <h1>Design to Production Workflow</h1>
 <div class="paragraph">
-<p>This chapter introduces the fundamental spatial concepts needed to understand
-how the robot navigates its environment - the coordinate systems assigned to
-each station in the cell and the tool and user frames that govern robot motion.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="basiccoordinatesystems.html">Coordinate Systems</a></p>
-</li>
-<li>
-<p><a href="frames/index.html">Frames</a></p>
-</li>
-<li>
-<p><a href="calibration.html">Frame Calibration</a></p>
-</li>
-<li>
-<p><a href="bestpractices.html">Best Practices</a></p>
-</li>
-</ul>
+<p><span class="image"><img src="img/designtoprodworkflow.png" alt="Design to Production Workflow" width="700"></span></p>
 </div>
 
                     </article>
@@ -285,8 +271,8 @@ each station in the cell and the tool and user frames that govern robot motion.<
                 </div>
             </div>
             <nav class="pagination">
- <span class="prev"><a href="../systemoverview/workflow.html">Design to Production Workflow</a></span>
- <span class="next"><a href="basiccoordinatesystems.html">Coordinate Systems</a></span>
+ <span class="prev"><a href="architecture.html">Architecture</a></span>
+ <span class="next"><a href="../robotbasics/index.html">Robot Basics</a></span>
 </nav>
 
         </div>
