@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../res/bento.css">
   <link rel="stylesheet" href="../../res/site.css">
   <link rel="stylesheet" href="../../res/tree.css">
@@ -42,11 +42,20 @@
      <button class="tree open"></button>
      <a class="active" href="index.html">Frames</a>
      <ul>
-      <li><button class="tree blank"></button><a href="userframe.html">User Frame</a></li>
       <li><button class="tree blank"></button><a href="toolframe.html">Tool Frame</a></li>
+      <li><button class="tree blank"></button><a href="userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="jogframe.html">Jog Frame</a></li>
      </ul>
     </li>
-    <li><button class="tree blank"></button><a href="../calibration.html">Frame Calibration</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../calibration/index.html">Frame Calibration</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../calibration/toolframecalib.html">Tool Frame (TCP) Calibration</a></li>
+      <li><button class="tree blank"></button><a href="../calibration/userjogframecalib.html">User and Jog Frame Calibration</a></li>
+      <li><button class="tree blank"></button><a href="../calibration/directentry.html">Direct Entry</a></li>
+     </ul>
+    </li>
     <li><button class="tree blank"></button><a href="../bestpractices.html">Best Practices</a></li>
    </ul>
   </li>
@@ -58,10 +67,10 @@
      <button class="tree closed"></button>
      <a href="../../setup/cellsetup/index.html">Cell Setup</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
       <li><button class="tree blank"></button><a href="../../setup/cellsetup/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../../setup/cellsetup/busconnection.html">Field Bus Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../../setup/cellsetup/safetyconnection.html">Safety Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
      </ul>
     </li>
     <li>
@@ -110,76 +119,76 @@
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
-     <a href="../../fluxrobotcam/howtouse/index.html">FluxRobot CAM (User Guide)</a>
+     <a href="../../fluxrobotcam/userguide/index.html">User Guide</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/navigator.html">Bend navigator</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/navigator.html">Bend navigator</a></li>
       <li>
        <button class="tree closed"></button>
-       <a href="../../fluxrobotcam/howtouse/pickup/index.html">Part pickup</a>
+       <a href="../../fluxrobotcam/userguide/pickup/index.html">Part pickup</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/pickup/frompallet.html">Pickup from pallet</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/pickup/centeringtable.html">Centering table</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/pickup/frompallet.html">Pickup from pallet</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/pickup/centeringtable.html">Centering table</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="../../fluxrobotcam/howtouse/bending/index.html">Robotic bending</a>
+       <a href="../../fluxrobotcam/userguide/bending/index.html">Robotic bending</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/bending/insertion.html">Insertion</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/bending/bending.html">Bending</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/bending/extraction.html">Extraction</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/bending/advanced.html">Advanced</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/bending/insertion.html">Insertion</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/bending/bending.html">Bending</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/bending/extraction.html">Extraction</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/bending/advanced.html">Advanced</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="../../fluxrobotcam/howtouse/regrip/index.html">Regripping</a>
+       <a href="../../fluxrobotcam/userguide/regrip/index.html">Regripping</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/regrip/regrippanel.html">Regrip panel</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/regrip/addregrip.html">Add/Remove regrip</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/regrip/gripperpanel.html">Gripper Panel</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/regrip/regrippanel.html">Regrip panel</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/regrip/addregrip.html">Add/Remove regrip</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/regrip/gripperpanel.html">Gripper Panel</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/regrip/rgstationpanel.html">RG-Stations panel</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="../../fluxrobotcam/howtouse/deposit/index.html">Part deposit</a>
+       <a href="../../fluxrobotcam/userguide/deposit/index.html">Part deposit</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/deposit/deposit.html">Deposit panel</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/deposit/deposittabs.html">Deposit Tabs</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/deposit/deposit.html">Deposit panel</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/deposit/deposittabs.html">Deposit Tabs</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="../../fluxrobotcam/howtouse/advanced/index.html">Advanced</a>
+       <a href="../../fluxrobotcam/userguide/advanced/index.html">Advanced</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/advanced/waypoints.html">Waypoints</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/advanced/cellconfig.html">Cell configuration</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/advanced/waypoints.html">Waypoints</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/advanced/cellconfig.html">Cell configuration</a></li>
         <li>
          <button class="tree closed"></button>
-         <a href="../../fluxrobotcam/howtouse/advanced/gripperdb/index.html">Gripper database</a>
+         <a href="../../fluxrobotcam/userguide/advanced/gripperdb/index.html">Gripper database</a>
          <ul class="hide">
-          <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
-          <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+          <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+          <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
          </ul>
         </li>
        </ul>
       </li>
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/troubleshoot.html">Troubleshooting</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/troubleshoot.html">Troubleshooting</a></li>
      </ul>
     </li>
     <li>
      <button class="tree closed"></button>
-     <a href="../../fluxrobotcam/waypoints/index.html">Motion sequences</a>
+     <a href="../../fluxrobotcam/waypoints/index.html">Motion Sequences</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/pickup_vac.html">Pickup Pallet</a></li>
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/centering.html">CenteringTable</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/centering.html">Centering Table</a></li>
       <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/bendpos.html">Bend Positioning</a></li>
       <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/deposit.html">Deposit</a></li>
      </ul>
     </li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/bestpractices.html">Best Practices</a></li>
-    <li><button class="tree blank"></button><a href="../../fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxrobotcam/samplepgrmdscrpt.html">.LS Program Structure</a></li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/postprocessor.html">Post Processor</a></li>
    </ul>
   </li>
@@ -260,114 +269,40 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Frames</h1>
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph">
 <p>A frame is a reference coordinate system that defines the position and
 orientation of an object in the robot&#8217;s workspace. Frames translate one
 coordinate system into another, enabling the robot to move correctly relative to
-tools, workpieces, and external components. Each component in the cell can have its
-own coordinate system, and frames connect these coordinate systems so all parts work
-together accurately.</p>
+tools, workpieces, and external components. Each component in the cell can have
+its own coordinate system, and frames connect these coordinate systems so all
+parts work together accurately.</p>
 </div>
+<div class="paragraph">
+<p>The following frames are explained in this section:</p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_types_of_frames">Types of Frames</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_1_tool_frame">1. Tool Frame</h3>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>The Tool Frame defines the position and orientation of the <strong>Tool Center Point
-(TCP)</strong> relative to the robot&#8217;s wrist flange.</p>
+<p><a href="toolframe.html">Tool Frame</a></p>
 </li>
 <li>
-<p>The TCP is a specific point in space that represents the tip of the tool.
-Without a Tool Frame, the robot only knows the position of its flange center, so
-the user needs to calibrate the TCP to teach the robot where the tool tip is
-located.</p>
+<p><a href="userframe.html">User Frame</a></p>
 </li>
 <li>
-<p>Setting the Tool Frame ensures the robot moves and rotates the tool
-accurately for tasks like picking, bending, depositing etc.</p>
+<p><a href="jogframe.html">Jog Frame</a></p>
 </li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_2_user_frame">2. User Frame</h3>
-<div class="paragraph">
-<p>A User Frame defines the coordinate system of an external component in the
-robot&#8217;s workspace. Each component such as the press brake, pickup pallet,
-centering table, or deposit has its own User Frame. The user can calibrate each
-frame individually and teach the robot where the component is located.</p>
-</div>
-<div class="paragraph">
-<p>During operation, the robot program switches the active User Frame based on the
-current process step. This allows the robot to move and perform tasks accurately
-relative to the specific component it is interacting with.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_3_jog_frame">3. Jog Frame</h3>
-<div class="paragraph">
-<p>Used for manually jogging the robot, the Jog Frame allows the user to move the
-robot in a specific coordinate system. This is particularly useful for tasks
-like teaching or programming the robot manually. When the robot is in Jog
-Coordinate System, it will move according to the selected jog frame&#8217;s coordinate
-system, allowing for precise control during setup and adjustments.</p>
-</div>
-<div class="paragraph">
-<p>Unlike the User Frame, the Jog Frame is used only for manual jogging and does
-<strong>not</strong> affect programmed robot motions. Jog Frames are useful for Teaching
-positions where the component axes do not align with the World or User
-coordinate system.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-See the <a href="../calibration.html">Frame Calibration</a> for more details on how
-to calibrate the User or Tool Frame for each external component.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
+</ol>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc">
- <h3>Contents</h3>
- <ul>
-  <li level="1">
-   <a href="#_types_of_frames">Types of Frames</a>
-  </li>
-  <li level="2">
-   <a href="#_1_tool_frame">1. Tool Frame</a>
-  </li>
-  <li level="2">
-   <a href="#_2_user_frame">2. User Frame</a>
-  </li>
-  <li level="2">
-   <a href="#_3_jog_frame">3. Jog Frame</a>
-  </li>
- </ul>
-</aside>
-
+                    <aside id="site-toc"></aside>
                 </div>
             </div>
             <nav class="pagination">
  <span class="prev"><a href="../basiccoordinatesystems.html">Coordinate Systems</a></span>
- <span class="next"><a href="userframe.html">User Frame</a></span>
+ <span class="next"><a href="toolframe.html">Tool Frame</a></span>
 </nav>
 
         </div>

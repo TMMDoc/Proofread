@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../res/bento.css">
   <link rel="stylesheet" href="../../res/site.css">
   <link rel="stylesheet" href="../../res/tree.css">
   <link rel="stylesheet" href="../../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title>CenteringTable</title>
+  <title>Centering Table</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -42,11 +42,20 @@
      <button class="tree closed"></button>
      <a href="../../robotbasics/frames/index.html">Frames</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../robotbasics/frames/userframe.html">User Frame</a></li>
       <li><button class="tree blank"></button><a href="../../robotbasics/frames/toolframe.html">Tool Frame</a></li>
+      <li><button class="tree blank"></button><a href="../../robotbasics/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="../../robotbasics/frames/jogframe.html">Jog Frame</a></li>
      </ul>
     </li>
-    <li><button class="tree blank"></button><a href="../../robotbasics/calibration.html">Frame Calibration</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotbasics/calibration/index.html">Frame Calibration</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotbasics/calibration/toolframecalib.html">Tool Frame (TCP) Calibration</a></li>
+      <li><button class="tree blank"></button><a href="../../robotbasics/calibration/userjogframecalib.html">User and Jog Frame Calibration</a></li>
+      <li><button class="tree blank"></button><a href="../../robotbasics/calibration/directentry.html">Direct Entry</a></li>
+     </ul>
+    </li>
     <li><button class="tree blank"></button><a href="../../robotbasics/bestpractices.html">Best Practices</a></li>
    </ul>
   </li>
@@ -58,10 +67,10 @@
      <button class="tree closed"></button>
      <a href="../../setup/cellsetup/index.html">Cell Setup</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
       <li><button class="tree blank"></button><a href="../../setup/cellsetup/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../../setup/cellsetup/busconnection.html">Field Bus Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../../setup/cellsetup/safetyconnection.html">Safety Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
      </ul>
     </li>
     <li>
@@ -110,76 +119,76 @@
    <ul>
     <li>
      <button class="tree closed"></button>
-     <a href="../howtouse/index.html">FluxRobot CAM (User Guide)</a>
+     <a href="../userguide/index.html">User Guide</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../howtouse/navigator.html">Bend navigator</a></li>
+      <li><button class="tree blank"></button><a href="../userguide/navigator.html">Bend navigator</a></li>
       <li>
        <button class="tree closed"></button>
-       <a href="../howtouse/pickup/index.html">Part pickup</a>
+       <a href="../userguide/pickup/index.html">Part pickup</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../howtouse/pickup/frompallet.html">Pickup from pallet</a></li>
-        <li><button class="tree blank"></button><a href="../howtouse/pickup/centeringtable.html">Centering table</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/pickup/frompallet.html">Pickup from pallet</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/pickup/centeringtable.html">Centering table</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="../howtouse/bending/index.html">Robotic bending</a>
+       <a href="../userguide/bending/index.html">Robotic bending</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../howtouse/bending/insertion.html">Insertion</a></li>
-        <li><button class="tree blank"></button><a href="../howtouse/bending/bending.html">Bending</a></li>
-        <li><button class="tree blank"></button><a href="../howtouse/bending/extraction.html">Extraction</a></li>
-        <li><button class="tree blank"></button><a href="../howtouse/bending/advanced.html">Advanced</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/bending/insertion.html">Insertion</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/bending/bending.html">Bending</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/bending/extraction.html">Extraction</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/bending/advanced.html">Advanced</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="../howtouse/regrip/index.html">Regripping</a>
+       <a href="../userguide/regrip/index.html">Regripping</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../howtouse/regrip/regrippanel.html">Regrip panel</a></li>
-        <li><button class="tree blank"></button><a href="../howtouse/regrip/addregrip.html">Add/Remove regrip</a></li>
-        <li><button class="tree blank"></button><a href="../howtouse/regrip/gripperpanel.html">Gripper Panel</a></li>
-        <li><button class="tree blank"></button><a href="../howtouse/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/regrip/regrippanel.html">Regrip panel</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/regrip/addregrip.html">Add/Remove regrip</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/regrip/gripperpanel.html">Gripper Panel</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/regrip/rgstationpanel.html">RG-Stations panel</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="../howtouse/deposit/index.html">Part deposit</a>
+       <a href="../userguide/deposit/index.html">Part deposit</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../howtouse/deposit/deposit.html">Deposit panel</a></li>
-        <li><button class="tree blank"></button><a href="../howtouse/deposit/deposittabs.html">Deposit Tabs</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/deposit/deposit.html">Deposit panel</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/deposit/deposittabs.html">Deposit Tabs</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="../howtouse/advanced/index.html">Advanced</a>
+       <a href="../userguide/advanced/index.html">Advanced</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../howtouse/advanced/waypoints.html">Waypoints</a></li>
-        <li><button class="tree blank"></button><a href="../howtouse/advanced/cellconfig.html">Cell configuration</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/advanced/waypoints.html">Waypoints</a></li>
+        <li><button class="tree blank"></button><a href="../userguide/advanced/cellconfig.html">Cell configuration</a></li>
         <li>
          <button class="tree closed"></button>
-         <a href="../howtouse/advanced/gripperdb/index.html">Gripper database</a>
+         <a href="../userguide/advanced/gripperdb/index.html">Gripper database</a>
          <ul class="hide">
-          <li><button class="tree blank"></button><a href="../howtouse/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
-          <li><button class="tree blank"></button><a href="../howtouse/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+          <li><button class="tree blank"></button><a href="../userguide/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+          <li><button class="tree blank"></button><a href="../userguide/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
          </ul>
         </li>
        </ul>
       </li>
-      <li><button class="tree blank"></button><a href="../howtouse/troubleshoot.html">Troubleshooting</a></li>
+      <li><button class="tree blank"></button><a href="../userguide/troubleshoot.html">Troubleshooting</a></li>
      </ul>
     </li>
     <li>
      <button class="tree open"></button>
-     <a href="index.html">Motion sequences</a>
+     <a href="index.html">Motion Sequences</a>
      <ul>
       <li><button class="tree blank"></button><a href="pickup_vac.html">Pickup Pallet</a></li>
-      <li><button class="tree blank"></button><a class="active" href="centering.html">CenteringTable</a></li>
+      <li><button class="tree blank"></button><a class="active" href="centering.html">Centering Table</a></li>
       <li><button class="tree blank"></button><a href="bendpos.html">Bend Positioning</a></li>
       <li><button class="tree blank"></button><a href="deposit.html">Deposit</a></li>
      </ul>
     </li>
     <li><button class="tree blank"></button><a href="../bestpractices.html">Best Practices</a></li>
-    <li><button class="tree blank"></button><a href="../samplepgrmdscrpt.html">Sample LS Program Description</a></li>
+    <li><button class="tree blank"></button><a href="../samplepgrmdscrpt.html">.LS Program Structure</a></li>
     <li><button class="tree blank"></button><a href="../postprocessor.html">Post Processor</a></li>
    </ul>
   </li>
@@ -252,18 +261,18 @@
  </div>
  <div>/</div>
  <div>
-  <a href="index.html">Motion sequences</a>
+  <a href="index.html">Motion Sequences</a>
  </div>
  <div>/</div>
  <div>
-  <a href="centering.html">CenteringTable</a>
+  <a href="centering.html">Centering Table</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>CenteringTable</h1>
+                        <h1>Centering Table</h1>
 <table class="tableblock frame-all grid-all fit-content">
 <colgroup>
 <col>
@@ -282,20 +291,20 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">PreCenter Safe</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/precentersafe.png" alt="PreCentersafe" width="150"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><a class="image" href="img/Centeringtable/PreCentersafe.png" target="_blank" rel="noopener"><img src="img/centeringtable/precentersafe.png" alt="PreCentersafe" width="150"></a></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Before approaching centering table, the gripper along with part reaches its centering safe position.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JJ<br>
 (UF-3, TF-3)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center Approach</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centerapproach.png" alt="CenterApproach" width="150"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><a class="image" href="img/Centeringtable/CenterApproach.png" target="_blank" rel="noopener"><img src="img/centeringtable/centerapproach.png" alt="CenterApproach" width="150"></a></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The gripper begins to approach the centering table.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center Drop</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centerdrop.png" alt="CenterDrop" width="150"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><a class="image" href="img/Centeringtable/CenterDrop.png" target="_blank" rel="noopener"><img src="img/centeringtable/centerdrop.png" alt="CenterDrop" width="150"></a></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Gripper reaches the center drop phase to drop the part on the centering table,
 Vaccum gets turned OFF after it reaches the drop phase, so the part gets
 dropped on the centering table.</p></td>
@@ -303,41 +312,53 @@ dropped on the centering table.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center LiftClear</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centerliftclear.png" alt="CenterLiftClear" width="150"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><a class="image" href="img/Centeringtable/CenterLiftClear.png" target="_blank" rel="noopener"><img src="img/centeringtable/centerliftclear.png" alt="CenterLiftClear" width="150"></a></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">After dropping the part, the gripper moves away from the centering table to a
 certain mm distance in a linear manner.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center Approach 2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centerapproach2.png" alt="CenterApproach2" width="150"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><a class="image" href="img/Centeringtable/CenterApproach2.png" target="_blank" rel="noopener"><img src="img/centeringtable/centerapproach2.png" alt="CenterApproach2" width="150"></a></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">From lift clear position, the gripper begins to approach the centering table
 again.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center Pickup</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centerpickup.png" alt="CenterPickup" width="150"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><a class="image" href="img/Centeringtable/CenterPickup.png" target="_blank" rel="noopener"><img src="img/centeringtable/centerpickup.png" alt="CenterPickup" width="150"></a></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">After reaching the centering table, the gripper moves to the center pickup
 position and the vaccum gets turned ON and the part gets suctioned.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Center LiftClear 2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centerliftclear2.png" alt="CenterLiftClear2" width="150"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><a class="image" href="img/Centeringtable/CenterLiftClear2.png" target="_blank" rel="noopener"><img src="img/centeringtable/centerliftclear2.png" alt="CenterLiftClear2" width="150"></a></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">After picking up the part, the gripper moves to lift clear position which is a
 certain mm distance away from the centering table.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">LC</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Center Transition swing</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><img src="img/centeringtable/centertransitionswing.png" alt="CenterTransitionswing" width="150"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Center Transition Swing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image center"><a class="image" href="img/Centeringtable/CenterTransitionswing.png" target="_blank" rel="noopener"><img src="img/centeringtable/centertransitionswing.png" alt="CenterTransitionswing" width="150"></a></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">From lift clear position, the gripper begins the
 transition from centering table to the machine for bending.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JJ</p></td>
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Images in the above table are not updated since the centering table implementation is still in progress. The images will be updated once the implementation is completed.
+</td>
+</tr>
+</table>
+</div>
 
                     </article>
                 </div>

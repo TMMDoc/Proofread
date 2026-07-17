@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../res/bento.css">
   <link rel="stylesheet" href="../../res/site.css">
   <link rel="stylesheet" href="../../res/tree.css">
@@ -42,11 +42,20 @@
      <button class="tree closed"></button>
      <a href="../../robotbasics/frames/index.html">Frames</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../robotbasics/frames/userframe.html">User Frame</a></li>
       <li><button class="tree blank"></button><a href="../../robotbasics/frames/toolframe.html">Tool Frame</a></li>
+      <li><button class="tree blank"></button><a href="../../robotbasics/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="../../robotbasics/frames/jogframe.html">Jog Frame</a></li>
      </ul>
     </li>
-    <li><button class="tree blank"></button><a href="../../robotbasics/calibration.html">Frame Calibration</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotbasics/calibration/index.html">Frame Calibration</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotbasics/calibration/toolframecalib.html">Tool Frame (TCP) Calibration</a></li>
+      <li><button class="tree blank"></button><a href="../../robotbasics/calibration/userjogframecalib.html">User and Jog Frame Calibration</a></li>
+      <li><button class="tree blank"></button><a href="../../robotbasics/calibration/directentry.html">Direct Entry</a></li>
+     </ul>
+    </li>
     <li><button class="tree blank"></button><a href="../../robotbasics/bestpractices.html">Best Practices</a></li>
    </ul>
   </li>
@@ -58,10 +67,10 @@
      <button class="tree open"></button>
      <a href="index.html">Cell Setup</a>
      <ul>
-      <li><button class="tree blank"></button><a class="active" href="cellcalibprocedure.html">Cell Calibration Procedure</a></li>
       <li><button class="tree blank"></button><a href="wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="busconnection.html">Field Bus Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="safetyconnection.html">Safety Connection Overview</a></li>
+      <li><button class="tree blank"></button><a class="active" href="cellcalibprocedure.html">Cell Calibration Procedure</a></li>
      </ul>
     </li>
     <li>
@@ -110,76 +119,76 @@
    <ul class="hide">
     <li>
      <button class="tree closed"></button>
-     <a href="../../fluxrobotcam/howtouse/index.html">FluxRobot CAM (User Guide)</a>
+     <a href="../../fluxrobotcam/userguide/index.html">User Guide</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/navigator.html">Bend navigator</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/navigator.html">Bend navigator</a></li>
       <li>
        <button class="tree closed"></button>
-       <a href="../../fluxrobotcam/howtouse/pickup/index.html">Part pickup</a>
+       <a href="../../fluxrobotcam/userguide/pickup/index.html">Part pickup</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/pickup/frompallet.html">Pickup from pallet</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/pickup/centeringtable.html">Centering table</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/pickup/frompallet.html">Pickup from pallet</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/pickup/centeringtable.html">Centering table</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="../../fluxrobotcam/howtouse/bending/index.html">Robotic bending</a>
+       <a href="../../fluxrobotcam/userguide/bending/index.html">Robotic bending</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/bending/insertion.html">Insertion</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/bending/bending.html">Bending</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/bending/extraction.html">Extraction</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/bending/advanced.html">Advanced</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/bending/insertion.html">Insertion</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/bending/bending.html">Bending</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/bending/extraction.html">Extraction</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/bending/advanced.html">Advanced</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="../../fluxrobotcam/howtouse/regrip/index.html">Regripping</a>
+       <a href="../../fluxrobotcam/userguide/regrip/index.html">Regripping</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/regrip/regrippanel.html">Regrip panel</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/regrip/addregrip.html">Add/Remove regrip</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/regrip/gripperpanel.html">Gripper Panel</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/regrip/regrippanel.html">Regrip panel</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/regrip/addregrip.html">Add/Remove regrip</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/regrip/gripperpanel.html">Gripper Panel</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/regrip/rgstationpanel.html">RG-Stations panel</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="../../fluxrobotcam/howtouse/deposit/index.html">Part deposit</a>
+       <a href="../../fluxrobotcam/userguide/deposit/index.html">Part deposit</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/deposit/deposit.html">Deposit panel</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/deposit/deposittabs.html">Deposit Tabs</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/deposit/deposit.html">Deposit panel</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/deposit/deposittabs.html">Deposit Tabs</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="../../fluxrobotcam/howtouse/advanced/index.html">Advanced</a>
+       <a href="../../fluxrobotcam/userguide/advanced/index.html">Advanced</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/advanced/waypoints.html">Waypoints</a></li>
-        <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/advanced/cellconfig.html">Cell configuration</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/advanced/waypoints.html">Waypoints</a></li>
+        <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/advanced/cellconfig.html">Cell configuration</a></li>
         <li>
          <button class="tree closed"></button>
-         <a href="../../fluxrobotcam/howtouse/advanced/gripperdb/index.html">Gripper database</a>
+         <a href="../../fluxrobotcam/userguide/advanced/gripperdb/index.html">Gripper database</a>
          <ul class="hide">
-          <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
-          <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+          <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+          <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
          </ul>
         </li>
        </ul>
       </li>
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/howtouse/troubleshoot.html">Troubleshooting</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/userguide/troubleshoot.html">Troubleshooting</a></li>
      </ul>
     </li>
     <li>
      <button class="tree closed"></button>
-     <a href="../../fluxrobotcam/waypoints/index.html">Motion sequences</a>
+     <a href="../../fluxrobotcam/waypoints/index.html">Motion Sequences</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/pickup_vac.html">Pickup Pallet</a></li>
-      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/centering.html">CenteringTable</a></li>
+      <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/centering.html">Centering Table</a></li>
       <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/bendpos.html">Bend Positioning</a></li>
       <li><button class="tree blank"></button><a href="../../fluxrobotcam/waypoints/deposit.html">Deposit</a></li>
      </ul>
     </li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/bestpractices.html">Best Practices</a></li>
-    <li><button class="tree blank"></button><a href="../../fluxrobotcam/samplepgrmdscrpt.html">Sample LS Program Description</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxrobotcam/samplepgrmdscrpt.html">.LS Program Structure</a></li>
     <li><button class="tree blank"></button><a href="../../fluxrobotcam/postprocessor.html">Post Processor</a></li>
    </ul>
   </li>
@@ -294,119 +303,209 @@ obstructions.</p>
 <div class="paragraph">
 <p>The following procedure is followed to calibrate the robot cell:</p>
 </div>
+<div class="sect2">
+<h3 id="_1_pointed_tool_calibration">1. Pointed Tool Calibration</h3>
+<div class="paragraph">
+<p>Firstly, the calibration tool (Pointed Tool) has to be calibrated. Finding its
+Tool Center Point (TCP) is essential because this calibration tool is used for
+calibrating the User frames in the cell.</p>
+</div>
+<div class="paragraph">
+<p><strong>Pre-setup</strong>: <a href="../../robotbasics/calibration/toolframecalib.html#_pre_setup_for_tcp_calibration">Pre-setup
+for TCP Calibration</a> has to be done before recording any TCP points.</p>
+</div>
+<div class="paragraph">
+<p><strong>Setup</strong>: <a href="../../robotbasics/calibration/toolframecalib.html#_setup">Setup</a> has to be done to set the Tool
+frame as zero tool.</p>
+</div>
+<div class="paragraph">
+<p><strong>TCP Calibration using Three-Point Method</strong>:</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>Pointed Tool Calibration</strong>: Firstly, the calibration tool (Pointed Tool) has to be calibrated. Finding its Tool Center Point (TCP) is essential
-because this calibration tool is used for calibrating the User frames in the
-cell.</p>
+<p>In the Teach Pendant, go to Menu &#8594; Setup &#8594; Frames &#8594; Other &#8594; Tool Frame.</p>
+</li>
+<li>
+<p>Navigate to Tool Frame 1 in the Teach Pendant. The TCP of the calibration tool will be stored here.</p>
+</li>
+<li>
+<p>Slowly jog the robot until the calibration tool tip touches the reference tool tip precisely. Press <strong>SHIFT + RECORD</strong> to save Approach Point 1.</p>
+</li>
+<li>
+<p>Move away, then <strong>change the robot&#8217;s wrist/arm angle clearly</strong> before approaching again — do not approach from the same direction.</p>
+</li>
+<li>
+<p>Repeat the steps c and d for Approach Point 2 and Approach Point 3. While
+saving the points, ensure that it is being recorded at the respective approach
+point space in the selected tool frame.</p>
+</li>
+<li>
+<p>The robot will automatically calculate the TCP once all three points are recorded.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The 3 approach points must be coplanar and non-collinear. If they are collinear, the TCP values (X, Y, Z, W, P, R) will all be zero.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_machine_frame_user_frame_1_calibration">2. Machine Frame (User Frame-1) Calibration</h3>
 <div class="paragraph">
-<p>To find the TCP of the calibration tool, follow these steps:</p>
+<p>After finding the TCP of the calibration tool, calibrate the machine frame.</p>
 </div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p><a href="../../robotbasics/calibration.html#_pre_setup_for_tcp_calibration">Pre-setup
-for TCP Calibration</a> has to be done before recording any TCP points.</p>
+<p>Ensure the calibration tool is mounted on the robot.</p>
 </li>
 <li>
-<p><a href="../../robotbasics/calibration.html#_setup">Setup</a> has to be done to set the Tool
-frame as zero tool.</p>
+<p>Press <strong>SHIFT + COORD</strong> on the Teach Pendant, select <strong>Tool</strong>, then press <strong>1</strong> to set the active tool frame to Tool Frame 1 (where the calibration tool&#8217;s TCP is stored).</p>
 </li>
 <li>
-<p>Navigate to Tool&#8217;s Frame number 1 in Teach Pendant. The TCP values of the
-calibration tool will be stored in Frame 1.</p>
+<p>Place the <a href="../../robotbasics/bestpractices.html">Machine&#8217;s calibration plate</a> exactly at the center of the bending machine.</p>
 </li>
 <li>
-<p>Use the
-<a href="../../robotbasics/calibration.html#_three_point_method_for_tool_frame">Three-Point
-Method For Tool Frame</a> to calculate the TCP of the calibration tool.</p>
+<p>In the Teach Pendant, go to Menu &#8594; Setup &#8594; Frames &#8594; Other &#8594; User Frame. Navigate to User Frame 1.</p>
+</li>
+<li>
+<p>Place the calibration tool tip precisely at the <strong>origin point</strong> of the machine frame. Press <strong>SHIFT + RECORD</strong> to save the Orient Origin Point.</p>
+</li>
+<li>
+<p>Move the tool tip approximately 100 mm along the desired <strong>X direction</strong>. Press <strong>SHIFT + RECORD</strong> to save the X-Direction Point.</p>
+</li>
+<li>
+<p>Return to the origin point (press <strong>SHIFT + MOVETO</strong> on the recorded origin point), then move ~100 mm along the desired <strong>Y direction</strong>. Press <strong>SHIFT + RECORD</strong> to save the Y-Direction Point.</p>
+</li>
+<li>
+<p>The robot will automatically calculate User Frame 1.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+While recording all three points, ensure the calibration tool tip is perpendicular to the calibration plate surface.
+</td>
+</tr>
+</table>
+</div>
 </li>
 </ol>
 </div>
-</li>
-<li>
-<p><strong>Machine Frame (User Frame-1) Calibration</strong>: After finding the TCP of the
-calibration tool, the next step is to calibrate the machine frame (User
-Frame-1) using the calibration tool.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Make sure that the calibration tool is mounted on the robot.</p>
-</li>
-<li>
-<p>Press Shift + Coord to set the tool frame
-as 1 since the TCP of the calibration tool is stored in Tool Frame 1.</p>
-</li>
-<li>
-<p>Place the <a href="../../robotbasics/bestpractices.html">Machine&#8217;s calibration plate</a>
-exactly at the center of the machine.</p>
-</li>
-<li>
-<p>Navigate to User Frame-1 in Teach Pendant. The machine frame will be stored in User Frame-1.</p>
-</li>
-<li>
-<p>Use the
-<a href="../../robotbasics/calibration.html#_three_point_method_for_user_jog_frame">Three-Point
-Method For User Frame</a> to calibrate the machine frame (User Frame-1).</p>
-</li>
-</ol>
 </div>
+<div class="sect2">
+<h3 id="_3_pickup_pallet_user_frame_2_calibration">3. Pickup Pallet (User Frame-2) Calibration</h3>
+<div class="paragraph">
+<p>After calibrating the machine frame, calibrate the pickup pallet frame.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure the calibration tool is mounted on the robot.</p>
 </li>
 <li>
-<p><strong>Pickup Pallet (User Frame-2) Calibration</strong>: After calibrating the machine frame, the next step is to calibrate the pickup pallet frame (User Frame-2) using the calibration tool.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<p>Press <strong>SHIFT + COORD</strong> on the Teach Pendant, select <strong>Tool</strong>, then press <strong>1</strong> to set the active tool frame to Tool Frame 1 (where the calibration tool&#8217;s TCP is stored).</p>
+</li>
 <li>
 <p>Place the <a href="../../robotbasics/bestpractices.html">Pickup Pallet&#8217;s calibration
-plate</a> exactly on top of the pickup pallet.</p>
+plate</a> plate exactly on top of the pickup pallet.</p>
 </li>
 <li>
-<p>Navigate to User Frame-2 in Teach Pendant. The pickup pallet frame will be stored in User Frame-2.</p>
+<p>In the Teach Pendant, go to Menu &#8594; Setup &#8594; Frames &#8594; Other &#8594; User Frame.Navigate to User Frame 2 in the Teach Pendant.</p>
 </li>
 <li>
-<p>Use the <a href="../../robotbasics/calibration.html#_three_point_method_for_user_jog_frame">Three-Point
-Method For User Frame</a> to calibrate the pickup pallet frame (User Frame-2).</p>
+<p>Place the calibration tool tip at the <strong>origin point</strong> of the pallet frame. Press <strong>SHIFT + RECORD</strong> to save the Orient Origin Point.</p>
+</li>
+<li>
+<p>Move ~100 mm along the desired <strong>X direction</strong>. Press <strong>SHIFT + RECORD</strong> to save the X-Direction Point.</p>
+</li>
+<li>
+<p>Return to the origin, then move ~100 mm along the desired <strong>Y direction</strong>. Press <strong>SHIFT + RECORD</strong> to save the Y-Direction Point.</p>
+</li>
+<li>
+<p>The robot will automatically calculate User Frame 2.</p>
 </li>
 </ol>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_4_centering_table_user_frame_3_calibration">4. Centering Table (User Frame-3) Calibration</h3>
+<div class="paragraph">
+<p>After calibrating the pickup pallet frame, calibrate the centering table frame.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure the calibration tool is mounted on the robot.</p>
 </li>
 <li>
-<p><strong>Centering Table (User Frame-3) Calibration</strong>: After calibrating the pickup pallet frame, the next step is to calibrate the centering table frame (User Frame-3) using the calibration tool.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<p>Press <strong>SHIFT + COORD</strong> on the Teach Pendant, select <strong>Tool</strong>, then press <strong>1</strong> to set the active tool frame to Tool Frame 1 (where the calibration tool&#8217;s TCP is stored).</p>
+</li>
 <li>
 <p>Place the <a href="../../robotbasics/bestpractices.html">Centering Table&#8217;s calibration plate</a> exactly on top of the centering table.</p>
 </li>
 <li>
-<p>Navigate to User Frame-3 in Teach Pendant. The centering table frame will be stored in User Frame-3.</p>
+<p>In the Teach Pendant, go to Menu &#8594; Setup &#8594; Frames &#8594; Other &#8594; User Frame.Navigate to User Frame 3 in the Teach Pendant.</p>
 </li>
 <li>
-<p>Use the
-<a href="../../robotbasics/calibration.html#_three_point_method_for_user_jog_frame">Three-Point
-Method For User Frame</a> to calibrate the centering table frame (User Frame-3).</p>
+<p>Place the calibration tool tip at the <strong>origin point</strong> of the centering table frame. Press <strong>SHIFT + RECORD</strong> to save the Orient Origin Point.</p>
+</li>
+<li>
+<p>Move ~100 mm along the desired <strong>X direction</strong>. Press <strong>SHIFT + RECORD</strong> to save the X-Direction Point.</p>
+</li>
+<li>
+<p>Return to the origin, then move ~100 mm along the desired <strong>Y direction</strong>. Press <strong>SHIFT + RECORD</strong> to save the Y-Direction Point.</p>
+</li>
+<li>
+<p>The robot will automatically calculate User Frame 3.</p>
 </li>
 </ol>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_5_deposit_user_frame_4_calibration">5. Deposit (User Frame-4) Calibration</h3>
+<div class="paragraph">
+<p>After calibrating the centering table frame, calibrate the deposit frame.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure the calibration tool is mounted on the robot.</p>
 </li>
 <li>
-<p><strong>Deposit (User Frame-4) Calibration</strong>: After calibrating the centering table frame, the next step is to calibrate the deposit frame (User Frame-4) using the calibration tool.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<p>Press <strong>SHIFT + COORD</strong> on the Teach Pendant, select <strong>Tool</strong>, then press <strong>1</strong> to set the active tool frame to Tool Frame 1 (where the calibration tool&#8217;s TCP is stored).</p>
+</li>
 <li>
 <p>Place the <a href="../../robotbasics/bestpractices.html">Deposit&#8217;s calibration plate</a> exactly on top of the deposit.</p>
 </li>
 <li>
-<p>Navigate to User Frame-4 in Teach Pendant. The deposit frame will be stored in User Frame-4.</p>
+<p>In the Teach Pendant, go to Menu &#8594; Setup &#8594; Frames &#8594; Other &#8594; User Frame.Navigate to User Frame 4 in the Teach Pendant.</p>
 </li>
 <li>
-<p>Use the <a href="../../robotbasics/calibration.html#_three_point_method_for_user_jog_frame">Three-Point
-Method For User Frame</a> to calibrate the deposit frame (User Frame-4).</p>
+<p>Place the calibration tool tip at the <strong>origin point</strong> of the deposit frame. Press <strong>SHIFT + RECORD</strong> to save the Orient Origin Point.</p>
+</li>
+<li>
+<p>Move ~100 mm along the desired <strong>X direction</strong>. Press <strong>SHIFT + RECORD</strong> to save the X-Direction Point.</p>
+</li>
+<li>
+<p>Return to the origin, then move ~100 mm along the desired <strong>Y direction</strong>. Press <strong>SHIFT + RECORD</strong> to save the Y-Direction Point.</p>
+</li>
+<li>
+<p>The robot will automatically calculate User Frame 4.</p>
 </li>
 </ol>
 </div>
-</li>
-</ol>
 </div>
 </div>
 </div>
@@ -423,14 +522,29 @@ Method For User Frame</a> to calibrate the deposit frame (User Frame-4).</p>
   <li level="1">
    <a href="#_procedure">Procedure</a>
   </li>
+  <li level="2">
+   <a href="#_1_pointed_tool_calibration">1. Pointed Tool Calibration</a>
+  </li>
+  <li level="2">
+   <a href="#_2_machine_frame_user_frame_1_calibration">2. Machine Frame (User Frame-1) Calibration</a>
+  </li>
+  <li level="2">
+   <a href="#_3_pickup_pallet_user_frame_2_calibration">3. Pickup Pallet (User Frame-2) Calibration</a>
+  </li>
+  <li level="2">
+   <a href="#_4_centering_table_user_frame_3_calibration">4. Centering Table (User Frame-3) Calibration</a>
+  </li>
+  <li level="2">
+   <a href="#_5_deposit_user_frame_4_calibration">5. Deposit (User Frame-4) Calibration</a>
+  </li>
  </ul>
 </aside>
 
                 </div>
             </div>
             <nav class="pagination">
- <span class="prev"><a href="index.html">Cell Setup</a></span>
- <span class="next"><a href="wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></span>
+ <span class="prev"><a href="safetyconnection.html">Safety Connection Overview</a></span>
+ <span class="next"><a href="../fluxofflinesetup/index.html">FluxRobot CAM Setup</a></span>
 </nav>
 
         </div>

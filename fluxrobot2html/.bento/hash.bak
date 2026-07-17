@@ -1,20 +1,20 @@
 Version=58
 LANGUAGE=EN
-Folders=26
-Pages=89
+Folders=27
+Pages=93
 UIXlate=False, DebugUIXlate=False, Language=EN
 
 Appendix.adoc • Appendix
 contents.txt • 264303.064352
 Index.adoc • Welcome to FluxRobot
-manifest.txt • 263322.093317
+manifest.txt • 261417.121428
 Safety.adoc • Safety Precautions
 SynchronousBend.adoc • Synchronous Bending
 FluxRobotCAM\BestPractices.adoc • Best Practices
-FluxRobotCAM\contents.txt • 262430.032458
+FluxRobotCAM\contents.txt • 260616.030639
 FluxRobotCAM\Index.adoc • FluxRobot CAM
 FluxRobotCAM\PostProcessor.adoc • Post Processor
-FluxRobotCAM\SamplePgrmDscrpt.adoc • Sample LS Program Description
+FluxRobotCAM\SamplePgrmDscrpt.adoc • .LS Program Structure
 ForReference\contents.txt • 263520.013547
 ForReference\doc.txt
 ForReference\DOKUSketches.pptx
@@ -26,26 +26,26 @@ RightAngle\Index.adoc • Right Angle Robotic Bending
 RightAngle\Troubleshooting.adoc • Troubleshooting
 RobotBasics\BasicCoordinateSystems.adoc • Coordinate Systems
 RobotBasics\BestPractices.adoc • Best Practices
-RobotBasics\Calibration.adoc • Frame Calibration
-RobotBasics\contents.txt • 265128.035138
+RobotBasics\contents.txt • 265617.025616
 RobotBasics\Index.adoc • Robot Basics
-Setup\contents.txt • 262018.112018
+Setup\contents.txt • 260916.010919
 Setup\Index.adoc • Setup
 SystemOverview\Architecture.adoc • Architecture
 SystemOverview\contents.txt • 265507.125537
 SystemOverview\FluxRobotCell.adoc • FluxRobot Cell
 SystemOverview\Index.adoc • System Overview
 SystemOverview\Workflow.adoc • Design to Production Workflow
-FluxRobotCAM\HowToUse\contents.txt • 264305.094317
-FluxRobotCAM\HowToUse\Index.adoc • FluxRobot CAM (User Guide)
-FluxRobotCAM\HowToUse\Navigator.adoc • Bend navigator
-FluxRobotCAM\HowToUse\Troubleshoot.adoc • Troubleshooting
+FluxRobotCAM\Files\Sample cmd_ftp.txt
 FluxRobotCAM\img\0_Sub_Pickup.LS
+FluxRobotCAM\UserGuide\contents.txt • 264305.094317
+FluxRobotCAM\UserGuide\Index.adoc • User Guide
+FluxRobotCAM\UserGuide\Navigator.adoc • Bend navigator
+FluxRobotCAM\UserGuide\Troubleshoot.adoc • Troubleshooting
 FluxRobotCAM\Waypoints\BendPos.adoc • Bend Positioning
-FluxRobotCAM\Waypoints\Centering.adoc • CenteringTable
-FluxRobotCAM\Waypoints\contents.txt • 262511.052529
-FluxRobotCAM\Waypoints\deposit.adoc • Deposit
-FluxRobotCAM\Waypoints\index.adoc • Motion sequences
+FluxRobotCAM\Waypoints\Centering.adoc • Centering Table
+FluxRobotCAM\Waypoints\contents.txt • 261017.111012
+FluxRobotCAM\Waypoints\Deposit.adoc • Deposit
+FluxRobotCAM\Waypoints\index.adoc • Motion Sequences
 FluxRobotCAM\Waypoints\Pickup_vac.adoc • Pickup Pallet
 ForReference\12_Robopack\36_Overview.adoc • Overview
 ForReference\12_Robopack\37_Setup.adoc • Setup
@@ -165,13 +165,19 @@ RightAngle\Operations\AutoMode.adoc • Auto Mode
 RightAngle\Operations\contents.txt • 265819.025849
 RightAngle\Operations\Index.adoc • Operations
 RightAngle\Operations\TeachMode.adoc • Teach Mode
-RobotBasics\Frames\contents.txt • 261727.121706
+RobotBasics\Calibration\contents.txt • 265317.025347
+RobotBasics\Calibration\DirectEntry.adoc • Direct Entry
+RobotBasics\Calibration\Index.adoc • Frame Calibration
+RobotBasics\Calibration\ToolFrameCalib.adoc • Tool Frame (TCP) Calibration
+RobotBasics\Calibration\UserJogFrameCalib.adoc • User and Jog Frame Calibration
+RobotBasics\Frames\contents.txt • 260117.040120
 RobotBasics\Frames\Index.adoc • Frames
+RobotBasics\Frames\JogFrame.adoc • Jog Frame
 RobotBasics\Frames\ToolFrame.adoc • Tool Frame
 RobotBasics\Frames\UserFrame.adoc • User Frame
 Setup\CellSetup\BusConnection.adoc • Field Bus Connection Overview
 Setup\CellSetup\CellCalibProcedure.adoc • Cell Calibration Procedure
-Setup\CellSetup\contents.txt • 262418.112412
+Setup\CellSetup\contents.txt • 260916.010936
 Setup\CellSetup\Index.adoc • Cell Setup
 Setup\CellSetup\SafetyConnection.adoc • Safety Connection Overview
 Setup\CellSetup\WiredConnection.adoc • Cell Inputs/Outputs Connection Overview
@@ -202,37 +208,37 @@ FluxRobotCAM\Files\PostProcessor\BEND2SUB.LS
 FluxRobotCAM\Files\PostProcessor\BEND2_RamPts.txt
 FluxRobotCAM\Files\PostProcessor\Sub_Deposit.LS
 FluxRobotCAM\Files\PostProcessor\Sub_Pickup.LS
-FluxRobotCAM\HowToUse\Advanced\CellConfig.adoc • Cell configuration
-FluxRobotCAM\HowToUse\Advanced\contents.txt • 264305.094317
-FluxRobotCAM\HowToUse\Advanced\Index.adoc • Advanced
-FluxRobotCAM\HowToUse\Advanced\Waypoints.adoc • Waypoints
-FluxRobotCAM\HowToUse\Bending\Advanced.adoc • Advanced
-FluxRobotCAM\HowToUse\Bending\Bending.adoc • Bending
-FluxRobotCAM\HowToUse\Bending\contents.txt • 264305.094317
-FluxRobotCAM\HowToUse\Bending\Extraction.adoc • Extraction
-FluxRobotCAM\HowToUse\Bending\Index.adoc • Robotic bending
-FluxRobotCAM\HowToUse\Bending\Insertion.adoc • Insertion
-FluxRobotCAM\HowToUse\Deposit\contents.txt • 264305.094317
-FluxRobotCAM\HowToUse\Deposit\Deposit.adoc • Deposit panel
-FluxRobotCAM\HowToUse\Deposit\DepositTabs.adoc • Deposit Tabs
-FluxRobotCAM\HowToUse\Deposit\Index.adoc • Part deposit
-FluxRobotCAM\HowToUse\Deposit\LockPartRest.adoc • Lock part-rest
-FluxRobotCAM\HowToUse\Deposit\Patterns.adoc • Deposit pattern types
-FluxRobotCAM\HowToUse\Deposit\Repeat.adoc • Repeat and sequence
-FluxRobotCAM\HowToUse\Deposit\SeparatorSheet.adoc • Add separator sheets
-FluxRobotCAM\HowToUse\Pickup\CenteringTable.adoc • Centering table
-FluxRobotCAM\HowToUse\Pickup\contents.txt • 264305.094317
-FluxRobotCAM\HowToUse\Pickup\FromDispenser.adoc • Pickup from dispenser
-FluxRobotCAM\HowToUse\Pickup\FromPallet.adoc • Pickup from pallet
-FluxRobotCAM\HowToUse\Pickup\Index.adoc • Part pickup
-FluxRobotCAM\HowToUse\Regrip\AddRegrip.adoc • Add/Remove regrip
-FluxRobotCAM\HowToUse\Regrip\contents.txt • 264305.094317
-FluxRobotCAM\HowToUse\Regrip\EditRegrip.adoc • Edit regrip
-FluxRobotCAM\HowToUse\Regrip\GripperPanel.adoc • Gripper Panel
-FluxRobotCAM\HowToUse\Regrip\Index.adoc • Regripping
-FluxRobotCAM\HowToUse\Regrip\JawRegrip.adoc • Regrip with jaw
-FluxRobotCAM\HowToUse\Regrip\RegripPanel.adoc • Regrip panel
-FluxRobotCAM\HowToUse\Regrip\RGStationPanel.adoc • RG-Stations panel
+FluxRobotCAM\UserGuide\Advanced\CellConfig.adoc • Cell configuration
+FluxRobotCAM\UserGuide\Advanced\contents.txt • 264305.094317
+FluxRobotCAM\UserGuide\Advanced\Index.adoc • Advanced
+FluxRobotCAM\UserGuide\Advanced\Waypoints.adoc • Waypoints
+FluxRobotCAM\UserGuide\Bending\Advanced.adoc • Advanced
+FluxRobotCAM\UserGuide\Bending\Bending.adoc • Bending
+FluxRobotCAM\UserGuide\Bending\contents.txt • 264305.094317
+FluxRobotCAM\UserGuide\Bending\Extraction.adoc • Extraction
+FluxRobotCAM\UserGuide\Bending\Index.adoc • Robotic bending
+FluxRobotCAM\UserGuide\Bending\Insertion.adoc • Insertion
+FluxRobotCAM\UserGuide\Deposit\contents.txt • 264305.094317
+FluxRobotCAM\UserGuide\Deposit\Deposit.adoc • Deposit panel
+FluxRobotCAM\UserGuide\Deposit\DepositTabs.adoc • Deposit Tabs
+FluxRobotCAM\UserGuide\Deposit\Index.adoc • Part deposit
+FluxRobotCAM\UserGuide\Deposit\LockPartRest.adoc • Lock part-rest
+FluxRobotCAM\UserGuide\Deposit\Patterns.adoc • Deposit pattern types
+FluxRobotCAM\UserGuide\Deposit\Repeat.adoc • Repeat and sequence
+FluxRobotCAM\UserGuide\Deposit\SeparatorSheet.adoc • Add separator sheets
+FluxRobotCAM\UserGuide\Pickup\CenteringTable.adoc • Centering table
+FluxRobotCAM\UserGuide\Pickup\contents.txt • 264305.094317
+FluxRobotCAM\UserGuide\Pickup\FromDispenser.adoc • Pickup from dispenser
+FluxRobotCAM\UserGuide\Pickup\FromPallet.adoc • Pickup from pallet
+FluxRobotCAM\UserGuide\Pickup\Index.adoc • Part pickup
+FluxRobotCAM\UserGuide\Regrip\AddRegrip.adoc • Add/Remove regrip
+FluxRobotCAM\UserGuide\Regrip\contents.txt • 264305.094317
+FluxRobotCAM\UserGuide\Regrip\EditRegrip.adoc • Edit regrip
+FluxRobotCAM\UserGuide\Regrip\GripperPanel.adoc • Gripper Panel
+FluxRobotCAM\UserGuide\Regrip\Index.adoc • Regripping
+FluxRobotCAM\UserGuide\Regrip\JawRegrip.adoc • Regrip with jaw
+FluxRobotCAM\UserGuide\Regrip\RegripPanel.adoc • Regrip panel
+FluxRobotCAM\UserGuide\Regrip\RGStationPanel.adoc • RG-Stations panel
 ForReference\12_Robopack\30_Tools\contents.txt • 263520.013547
 ForReference\12_Robopack\30_Tools\Grippertool.adoc • Gripper tool
 ForReference\12_Robopack\30_Tools\Index.adoc • Cell Components
@@ -293,10 +299,10 @@ Setup\RASoftwareSetup\ConnectionToRobot\contents.txt • 262805.092812
 Setup\RASoftwareSetup\ConnectionToRobot\EtherCATInterface.adoc • EtherCAT Interface
 Setup\RASoftwareSetup\ConnectionToRobot\HardwareIO.adoc • Hardware IO
 Setup\RASoftwareSetup\ConnectionToRobot\Index.adoc • Connection to Robot
-FluxRobotCAM\HowToUse\Advanced\GripperDB\contents.txt • 264305.094315
-FluxRobotCAM\HowToUse\Advanced\GripperDB\CreateGripper.adoc • Create a gripper
-FluxRobotCAM\HowToUse\Advanced\GripperDB\ImportGripper.adoc • Import gripper from DXF
-FluxRobotCAM\HowToUse\Advanced\GripperDB\Index.adoc • Gripper database
+FluxRobotCAM\UserGuide\Advanced\GripperDB\contents.txt • 264305.094315
+FluxRobotCAM\UserGuide\Advanced\GripperDB\CreateGripper.adoc • Create a gripper
+FluxRobotCAM\UserGuide\Advanced\GripperDB\ImportGripper.adoc • Import gripper from DXF
+FluxRobotCAM\UserGuide\Advanced\GripperDB\Index.adoc • Gripper database
 ForReference\1_Introduction\1_Coupling\DigitalIOcoupling\contents.txt • 263520.013547
 ForReference\1_Introduction\1_Coupling\DigitalIOcoupling\index.adoc • Digital coupling
 ForReference\1_Introduction\1_Coupling\Loosesyncronizedcoupling\contents.txt • 263520.013547

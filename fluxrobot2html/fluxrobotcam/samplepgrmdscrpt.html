@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../res/bento.css">
   <link rel="stylesheet" href="../res/site.css">
   <link rel="stylesheet" href="../res/tree.css">
   <link rel="stylesheet" href="../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title>Sample LS Program Description</title>
+  <title>.LS Program Structure</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -42,11 +42,20 @@
      <button class="tree closed"></button>
      <a href="../robotbasics/frames/index.html">Frames</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../robotbasics/frames/userframe.html">User Frame</a></li>
       <li><button class="tree blank"></button><a href="../robotbasics/frames/toolframe.html">Tool Frame</a></li>
+      <li><button class="tree blank"></button><a href="../robotbasics/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="../robotbasics/frames/jogframe.html">Jog Frame</a></li>
      </ul>
     </li>
-    <li><button class="tree blank"></button><a href="../robotbasics/calibration.html">Frame Calibration</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotbasics/calibration/index.html">Frame Calibration</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotbasics/calibration/toolframecalib.html">Tool Frame (TCP) Calibration</a></li>
+      <li><button class="tree blank"></button><a href="../robotbasics/calibration/userjogframecalib.html">User and Jog Frame Calibration</a></li>
+      <li><button class="tree blank"></button><a href="../robotbasics/calibration/directentry.html">Direct Entry</a></li>
+     </ul>
+    </li>
     <li><button class="tree blank"></button><a href="../robotbasics/bestpractices.html">Best Practices</a></li>
    </ul>
   </li>
@@ -58,10 +67,10 @@
      <button class="tree closed"></button>
      <a href="../setup/cellsetup/index.html">Cell Setup</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
       <li><button class="tree blank"></button><a href="../setup/cellsetup/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../setup/cellsetup/busconnection.html">Field Bus Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../setup/cellsetup/safetyconnection.html">Safety Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
      </ul>
     </li>
     <li>
@@ -110,76 +119,76 @@
    <ul>
     <li>
      <button class="tree closed"></button>
-     <a href="howtouse/index.html">FluxRobot CAM (User Guide)</a>
+     <a href="userguide/index.html">User Guide</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="howtouse/navigator.html">Bend navigator</a></li>
+      <li><button class="tree blank"></button><a href="userguide/navigator.html">Bend navigator</a></li>
       <li>
        <button class="tree closed"></button>
-       <a href="howtouse/pickup/index.html">Part pickup</a>
+       <a href="userguide/pickup/index.html">Part pickup</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="howtouse/pickup/frompallet.html">Pickup from pallet</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/pickup/centeringtable.html">Centering table</a></li>
+        <li><button class="tree blank"></button><a href="userguide/pickup/frompallet.html">Pickup from pallet</a></li>
+        <li><button class="tree blank"></button><a href="userguide/pickup/centeringtable.html">Centering table</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="howtouse/bending/index.html">Robotic bending</a>
+       <a href="userguide/bending/index.html">Robotic bending</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="howtouse/bending/insertion.html">Insertion</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/bending/bending.html">Bending</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/bending/extraction.html">Extraction</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/bending/advanced.html">Advanced</a></li>
+        <li><button class="tree blank"></button><a href="userguide/bending/insertion.html">Insertion</a></li>
+        <li><button class="tree blank"></button><a href="userguide/bending/bending.html">Bending</a></li>
+        <li><button class="tree blank"></button><a href="userguide/bending/extraction.html">Extraction</a></li>
+        <li><button class="tree blank"></button><a href="userguide/bending/advanced.html">Advanced</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="howtouse/regrip/index.html">Regripping</a>
+       <a href="userguide/regrip/index.html">Regripping</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="howtouse/regrip/regrippanel.html">Regrip panel</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/regrip/addregrip.html">Add/Remove regrip</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/regrip/gripperpanel.html">Gripper Panel</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+        <li><button class="tree blank"></button><a href="userguide/regrip/regrippanel.html">Regrip panel</a></li>
+        <li><button class="tree blank"></button><a href="userguide/regrip/addregrip.html">Add/Remove regrip</a></li>
+        <li><button class="tree blank"></button><a href="userguide/regrip/gripperpanel.html">Gripper Panel</a></li>
+        <li><button class="tree blank"></button><a href="userguide/regrip/rgstationpanel.html">RG-Stations panel</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="howtouse/deposit/index.html">Part deposit</a>
+       <a href="userguide/deposit/index.html">Part deposit</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="howtouse/deposit/deposit.html">Deposit panel</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/deposit/deposittabs.html">Deposit Tabs</a></li>
+        <li><button class="tree blank"></button><a href="userguide/deposit/deposit.html">Deposit panel</a></li>
+        <li><button class="tree blank"></button><a href="userguide/deposit/deposittabs.html">Deposit Tabs</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="howtouse/advanced/index.html">Advanced</a>
+       <a href="userguide/advanced/index.html">Advanced</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="howtouse/advanced/waypoints.html">Waypoints</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/advanced/cellconfig.html">Cell configuration</a></li>
+        <li><button class="tree blank"></button><a href="userguide/advanced/waypoints.html">Waypoints</a></li>
+        <li><button class="tree blank"></button><a href="userguide/advanced/cellconfig.html">Cell configuration</a></li>
         <li>
          <button class="tree closed"></button>
-         <a href="howtouse/advanced/gripperdb/index.html">Gripper database</a>
+         <a href="userguide/advanced/gripperdb/index.html">Gripper database</a>
          <ul class="hide">
-          <li><button class="tree blank"></button><a href="howtouse/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
-          <li><button class="tree blank"></button><a href="howtouse/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+          <li><button class="tree blank"></button><a href="userguide/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+          <li><button class="tree blank"></button><a href="userguide/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
          </ul>
         </li>
        </ul>
       </li>
-      <li><button class="tree blank"></button><a href="howtouse/troubleshoot.html">Troubleshooting</a></li>
+      <li><button class="tree blank"></button><a href="userguide/troubleshoot.html">Troubleshooting</a></li>
      </ul>
     </li>
     <li>
      <button class="tree closed"></button>
-     <a href="waypoints/index.html">Motion sequences</a>
+     <a href="waypoints/index.html">Motion Sequences</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="waypoints/pickup_vac.html">Pickup Pallet</a></li>
-      <li><button class="tree blank"></button><a href="waypoints/centering.html">CenteringTable</a></li>
+      <li><button class="tree blank"></button><a href="waypoints/centering.html">Centering Table</a></li>
       <li><button class="tree blank"></button><a href="waypoints/bendpos.html">Bend Positioning</a></li>
       <li><button class="tree blank"></button><a href="waypoints/deposit.html">Deposit</a></li>
      </ul>
     </li>
     <li><button class="tree blank"></button><a href="bestpractices.html">Best Practices</a></li>
-    <li><button class="tree blank"></button><a class="active" href="samplepgrmdscrpt.html">Sample LS Program Description</a></li>
+    <li><button class="tree blank"></button><a class="active" href="samplepgrmdscrpt.html">.LS Program Structure</a></li>
     <li><button class="tree blank"></button><a href="postprocessor.html">Post Processor</a></li>
    </ul>
   </li>
@@ -252,20 +261,20 @@
  </div>
  <div>/</div>
  <div>
-  <a href="samplepgrmdscrpt.html">Sample LS Program Description</a>
+  <a href="samplepgrmdscrpt.html">.LS Program Structure</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Sample LS Program Description</h1>
+                        <h1>.LS Program Structure</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The .LS files generated by the postprocessor is described as the sample files.
-This page explains the .LS file structure and the sample code are
-provided for illustration purpose.</p>
+<p>This page describes the structure of the <code>.LS</code> program files generated by the
+Post-Processor. Each file handles a specific phase of the robot cycle - pickup,
+centering, bending, and deposit. Sample files are provided for reference.</p>
 </div>
 </div>
 </div>
@@ -273,7 +282,8 @@ provided for illustration purpose.</p>
 <h2 id="_file_structure">File Structure</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The file structure of the .LS files are as follows:</p>
+<p>Following is the file structure generated by Post Processor for
+a respective robot program created in FluxRobot CAM.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="img/lsfilestructure.png" alt="lsfilestructure" width="200"></span></p>
@@ -285,19 +295,24 @@ provided for illustration purpose.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="paragraph">
-<p>This is a sample .LS file structure generated by Post Processor for a
-respective robot program created in Flux.<br>
-Only the .LS files generated by the
+<div class="ulist">
+<ul>
+<li>
+<p>This is a .LS file structure generated by Post Processor for a
+respective robot program created in FluxRobot CAM.<br></p>
+</li>
+<li>
+<p>Only the .LS files generated by the
 Post Processor will be uploaded to the robot controller.</p>
+</li>
+</ul>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>The above .LS file structure is explained below in detail along with sample code
-from the generated .LS files.</p>
+<p>The above .LS file structure is explained below in detail along with sample codes.</p>
 </div>
 <div class="sect2">
 <h3 id="_program_execution_flow">Program Execution Flow</h3>
@@ -312,12 +327,12 @@ from start to finish:</p>
 <div class="sect2">
 <h3 id="_main_file">Main file</h3>
 <div class="paragraph">
-<p>0_200x200partV3.LS - This is main file which has the main program and it calls
-the other sub files. The .fx file name that we give in Flux will be the main .LS
+<p><strong>0_200x200partV3.LS</strong> - This is main file which has the main program and it calls
+the other sub files. The .fx file name that we give in FluxRobot CAM will be the main .LS
 file name that gets generated by default.</p>
 </div>
 <div class="paragraph">
-<p><a href="files/postprocessor/200x200_part.ls">Main File</a></p>
+<p><em><span class="red"><strong>Sample</strong></span></em>: <a href="files/postprocessor/200x200_part.ls">Main File</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -331,7 +346,7 @@ file name that gets generated by default.</p>
 <p><strong>0_Sub_Pickup.LS</strong> - It contains the code for the pickup phase of the robot,
 where the robot picks up the part from the pallet.</p>
 <div class="paragraph">
-<p><a href="files/postprocessor/sub_pickup.ls">Sub_Pickup.LS</a></p>
+<p><em><span class="red"><strong>Sample</strong></span></em>: <a href="files/postprocessor/sub_pickup.ls">Sub_Pickup.LS</a></p>
 </div>
 </li>
 <li>
@@ -345,21 +360,21 @@ centers the part on the centering table.</p>
 </td>
 <td class="content">
 <strong>0_Sub_Centering.LS</strong> file will be generated only when the centering table
-is used in flux. If the centering table is not used, then the robot will
+is used in FluxRobot CAM. If the centering table is not used, then the robot will
 directly transition from pickup to bend positioning.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><a href="files/postprocessor/sub_centering.ls">Sub_Centering.LS</a></p>
+<p><em><span class="red"><strong>Sample</strong></span></em>: <a href="files/postprocessor/sub_centering.ls">Sub_Centering.LS</a></p>
 </div>
 </li>
 <li>
 <p><strong>0_Bend1Positioning_Sub.LS</strong> - It contains the code for the bend positioning and
 post bending phase of the robot.</p>
 <div class="paragraph">
-<p><a href="files/postprocessor/bend1positioning_sub.ls">Bend1Positioning_Sub.LS</a></p>
+<p><em><span class="red"><strong>Sample</strong></span></em>: <a href="files/postprocessor/bend1positioning_sub.ls">Bend1Positioning_Sub.LS</a></p>
 </div>
 </li>
 <li>
@@ -367,7 +382,7 @@ post bending phase of the robot.</p>
 robot, where the robot performs the bending operation in a synchronized manner
 with the press brake machine.</p>
 <div class="paragraph">
-<p><a href="files/postprocessor/bend1sub.ls">BEND1SUB.LS</a></p>
+<p><em><span class="red"><strong>Sample</strong></span></em>: <a href="files/postprocessor/bend1sub.ls">BEND1SUB.LS</a></p>
 </div>
 </li>
 </ul>
@@ -393,7 +408,7 @@ and 2 Ram point files. See the file structure image above for reference.
 <p><strong>0_Sub_Deposit.LS</strong> - It contains the code for the deposit phase of the robot, where
 the robot deposits the part in the desired location after bending.</p>
 <div class="paragraph">
-<p><a href="files/postprocessor/sub_deposit.ls">Sub_Deposit.LS</a></p>
+<p><em><span class="red"><strong>Sample</strong></span></em>: <a href="files/postprocessor/sub_deposit.ls">Sub_Deposit.LS</a></p>
 </div>
 </li>
 <li>
@@ -408,13 +423,13 @@ robot to synchronize its movement with the press brake machine.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Providing <strong>bend support points</strong> in Flux determines the number of RAM points and
+<p>Providing <strong>bend support points</strong> in FluxRobot CAM determines the number of RAM points and
 Robot bend support points in BEND1_RamPts.txt file and BEND1SUB.LS file
 respectively.</p>
 </div>
 <div class="paragraph">
 <p>Navigate to Settings &#8594; Machine Defaults &#8594; Bend CAM &#8594; Bend Cell
-to provide the bend support points in flux.</p>
+to provide the bend support points in FluxRobot CAM.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="img/bendsupportpts.png" alt="BENDsupportpts" width="500"></span></p>
@@ -424,7 +439,7 @@ to provide the bend support points in flux.</p>
 </table>
 </div>
 <div class="paragraph">
-<p><a href="files/postprocessor/bend1_rampts.txt">BEND1_RamPts.txt</a></p>
+<p><em><span class="red"><strong>Sample</strong></span></em>: <a href="files/postprocessor/bend1_rampts.txt">BEND1_RamPts.txt</a></p>
 </div>
 </li>
 </ul>
@@ -436,7 +451,7 @@ to provide the bend support points in flux.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Ensure that the Bend support points provided in Flux is same as in Right
+Ensure that the Bend support points provided in FluxRobot CAM is same as in Right
 Angle&#8217;s Bend support points for the respective part. Otherwise, it may lead to
 synchronization issues during the bending operation.
 </td>

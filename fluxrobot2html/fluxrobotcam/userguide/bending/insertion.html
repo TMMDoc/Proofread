@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Insertion</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="123" height="50" /></div>
+        <div><p>FluxRobot Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Welcome to FluxRobot</a></li>
+  <li><button class="tree blank"></button><a href="../../../safety.html">Safety Precautions</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../systemoverview/index.html">System Overview</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../systemoverview/fluxrobotcell.html">FluxRobot Cell</a></li>
+    <li><button class="tree blank"></button><a href="../../../systemoverview/architecture.html">Architecture</a></li>
+    <li><button class="tree blank"></button><a href="../../../systemoverview/workflow.html">Design to Production Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../robotbasics/index.html">Robot Basics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../robotbasics/basiccoordinatesystems.html">Coordinate Systems</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../robotbasics/frames/index.html">Frames</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../robotbasics/frames/toolframe.html">Tool Frame</a></li>
+      <li><button class="tree blank"></button><a href="../../../robotbasics/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="../../../robotbasics/frames/jogframe.html">Jog Frame</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../robotbasics/calibration/index.html">Frame Calibration</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../robotbasics/calibration/toolframecalib.html">Tool Frame (TCP) Calibration</a></li>
+      <li><button class="tree blank"></button><a href="../../../robotbasics/calibration/userjogframecalib.html">User and Jog Frame Calibration</a></li>
+      <li><button class="tree blank"></button><a href="../../../robotbasics/calibration/directentry.html">Direct Entry</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../robotbasics/bestpractices.html">Best Practices</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../setup/index.html">Setup</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../setup/cellsetup/index.html">Cell Setup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../setup/cellsetup/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../../setup/cellsetup/busconnection.html">Field Bus Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../../setup/cellsetup/safetyconnection.html">Safety Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../../../setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../setup/fluxofflinesetup/index.html">FluxRobot CAM Setup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../setup/fluxofflinesetup/settingupcell.html">Setting Up the Cell</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../setup/fluxofflinesetup/settingupgripper/index.html">Setting Up Gripper</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../setup/fluxofflinesetup/settingupgripper/creategripper.html">Create a gripper</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../setup/fluxofflinesetup/settingupgripper/importgripper/index.html">Import Gripper</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../setup/fluxofflinesetup/settingupgripper/importgripper/dxf.html">Import gripper from DXF</a></li>
+          <li><button class="tree blank"></button><a href="../../../setup/fluxofflinesetup/settingupgripper/importgripper/stl.html">Import Gripper from STL file</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../../setup/fluxofflinesetup/settingupcellcomp.html">Setting up Cell Components</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../setup/rasoftwaresetup/index.html">RA Software Setup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../setup/rasoftwaresetup/robotmodeenable.html">Robot Mode Enable</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../setup/rasoftwaresetup/connectiontorobot/index.html">Connection to Robot</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../setup/rasoftwaresetup/connectiontorobot/hardwareio.html">Hardware IO</a></li>
+        <li><button class="tree blank"></button><a href="../../../setup/rasoftwaresetup/connectiontorobot/ethercatinterface.html">EtherCAT Interface</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">FluxRobot CAM</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">User Guide</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../navigator.html">Bend navigator</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../pickup/index.html">Part pickup</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../pickup/frompallet.html">Pickup from pallet</a></li>
+        <li><button class="tree blank"></button><a href="../pickup/centeringtable.html">Centering table</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Robotic bending</a>
+       <ul>
+        <li><button class="tree blank"></button><a class="active" href="insertion.html">Insertion</a></li>
+        <li><button class="tree blank"></button><a href="bending.html">Bending</a></li>
+        <li><button class="tree blank"></button><a href="extraction.html">Extraction</a></li>
+        <li><button class="tree blank"></button><a href="advanced.html">Advanced</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../regrip/index.html">Regripping</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../regrip/regrippanel.html">Regrip panel</a></li>
+        <li><button class="tree blank"></button><a href="../regrip/addregrip.html">Add/Remove regrip</a></li>
+        <li><button class="tree blank"></button><a href="../regrip/gripperpanel.html">Gripper Panel</a></li>
+        <li><button class="tree blank"></button><a href="../regrip/rgstationpanel.html">RG-Stations panel</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../deposit/index.html">Part deposit</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../deposit/deposit.html">Deposit panel</a></li>
+        <li><button class="tree blank"></button><a href="../deposit/deposittabs.html">Deposit Tabs</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../advanced/index.html">Advanced</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../advanced/waypoints.html">Waypoints</a></li>
+        <li><button class="tree blank"></button><a href="../advanced/cellconfig.html">Cell configuration</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../advanced/gripperdb/index.html">Gripper database</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+          <li><button class="tree blank"></button><a href="../advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../troubleshoot.html">Troubleshooting</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../waypoints/index.html">Motion Sequences</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../waypoints/pickup_vac.html">Pickup Pallet</a></li>
+      <li><button class="tree blank"></button><a href="../../waypoints/centering.html">Centering Table</a></li>
+      <li><button class="tree blank"></button><a href="../../waypoints/bendpos.html">Bend Positioning</a></li>
+      <li><button class="tree blank"></button><a href="../../waypoints/deposit.html">Deposit</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../bestpractices.html">Best Practices</a></li>
+    <li><button class="tree blank"></button><a href="../../samplepgrmdscrpt.html">.LS Program Structure</a></li>
+    <li><button class="tree blank"></button><a href="../../postprocessor.html">Post Processor</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../package/index.html">FluxRobot Package</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../package/macros/index.html">Macros</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../package/macros/gripper.html">Gripper</a></li>
+      <li><button class="tree blank"></button><a href="../../../package/macros/sheetalignment.html">Sheet Alignment</a></li>
+      <li><button class="tree blank"></button><a href="../../../package/macros/framecorrection.html">Frame Correction</a></li>
+      <li><button class="tree blank"></button><a href="../../../package/macros/substacksearch.html">Sub Stack Search Macro</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../package/bglogic/index.html">Background Logic</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../package/bglogic/bgcombined.html">BG Combined</a></li>
+      <li><button class="tree blank"></button><a href="../../../package/bglogic/bgresethoming.html">BG Reset Homing</a></li>
+      <li><button class="tree blank"></button><a href="../../../package/bglogic/homingoffset.html">Homing Offset</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../package/robothmi/index.html">Robot HMI</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../package/robothmi/setup.html">Webpage Setup in TP</a></li>
+      <li><button class="tree blank"></button><a href="../../../package/robothmi/browser.html">Browser</a></li>
+      <li><button class="tree blank"></button><a href="../../../package/robothmi/io.html">Input/Output Signals</a></li>
+      <li><button class="tree blank"></button><a href="../../../package/robothmi/homing.html">Homing</a></li>
+      <li><button class="tree blank"></button><a href="../../../package/robothmi/register.html">Register</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../rightangle/index.html">Right Angle Robotic Bending</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../rightangle/operations/index.html">Operations</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../rightangle/operations/teachmode.html">Teach Mode</a></li>
+      <li><button class="tree blank"></button><a href="../../../rightangle/operations/automode.html">Auto Mode</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../rightangle/troubleshooting.html">Troubleshooting</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../synchronousbend.html">Synchronous Bending</a></li>
+  <li><button class="tree blank"></button><a href="../../../appendix.html">Appendix</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">FluxRobot CAM</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">User Guide</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Robotic bending</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="insertion.html">Insertion</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Insertion</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/insertionpanel.png" alt="Insertion" width="110">
+</div>
+</div>
+<div class="paragraph">
+<p>The first section of the <strong>Robotic Strategy</strong> panel controls how the part is inserted into
+the machine before clamping and bending.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_insert_direction">Insert direction</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/insertion.png" alt="Insertion" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Insertion</strong> list lets you choose between a <strong>standard</strong> insertion,
+where the part is inserted from the front, straight into the machine or a strategy
+where the part is <em>slid in</em> from the left or the right of the punch/die station.</p>
+</div>
+<div class="paragraph">
+<p>When the part has an already bent profile that needs to go into the machine, it
+may be difficult to get enough of a ram opening to get the part in without it colliding
+with the punch or die. Even when the opening may look sufficient in the simulation,
+a collision can occur because the part will <em>droop</em> in real life, especially if the
+overhang from the gripping point is large.</p>
+</div>
+<div class="paragraph">
+<p>For such situations, inserting from the left or right will be useful. Here&#8217;s a
+couple of images showing a part being inserted from the left. Note that the beam
+opening in this example is insufficient to being in the part from the front, and
+we need to use one of these insertion directions.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/insertleft.png" alt="Insert from Left" width="690">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_insert_part_first">Insert part first</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The normal insert operation works like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/gaugefirst.png" alt="Gauge First" width="710">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The gauge is positioned a few mm <em>closer</em> to the bend line than is required for
+gauging the part.</p>
+</li>
+<li>
+<p>The part is lowered into position a few mm in front of the gauge.</p>
+</li>
+<li>
+<p>The robot pushes the part back against the gauge until the contact
+sensors in the gauge engage and indicate that the part
+is correctly positioned. Then the bending cycle begins.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Sometimes, if the part has a downward facing flange on which the gauging must happen,
+this is difficult - the flange would collide with the gauge as the part is being
+lowered into position. For these situations, FluxRobot CAM will automatically use the
+Insert part first strategy, which looks like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/partfirst.png" alt="Part First" width="752">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The part is inserted into the machine, raised so that the down-hanging flange
+clears the die.</p>
+</li>
+<li>
+<p>The part is lowered over the die, but positioned a few mm retracted back from
+the final bending position.</p>
+</li>
+<li>
+<p>The gauge moves forward, again a few mm <em>closer</em> to the bend-line than is required
+for gauging the part.</p>
+</li>
+<li>
+<p>The robot now pushes back the part a few mm until the gauge contact sensors engage,
+and the bending then happens.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This strategy is automatically selected by FluxRobot CAM when required, but
+selecting this checkbox allows you to override the default.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bg_z_before_x">BG: Z before X</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>BG: Z before X</strong> strategy creates a safer movement path for the
+backgauge in situations where the gauging position for this bend is <em>closer</em> to
+the bend line than the gauging position of the previous bend. Normally, the
+gauges will freely move from the previous gauging position to the new one once
+the bend step change happens.</p>
+</div>
+<div class="paragraph">
+<p>When this checkbox is selected, the gauges first move in the Z direction until
+they are directly aligned behind their final positions. After that, they advance
+forward in the X direction to get into position, avoiding a potential collision
+that may be caused by a <em>diagonal</em> movement.</p>
+</div>
+<div class="paragraph">
+<p>This strategy is selected automatically by FluxRobot CAM where needed, but can be
+overridden here.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_insert_direction">Insert direction</a>
+  </li>
+  <li level="1">
+   <a href="#_insert_part_first">Insert part first</a>
+  </li>
+  <li level="1">
+   <a href="#_bg_z_before_x">BG: Z before X</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Robotic bending</a></span>
+ <span class="next"><a href="bending.html">Bending</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by Trumpf Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

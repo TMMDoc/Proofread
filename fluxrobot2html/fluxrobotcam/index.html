@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../res/bento.css">
   <link rel="stylesheet" href="../res/site.css">
   <link rel="stylesheet" href="../res/tree.css">
@@ -42,11 +42,20 @@
      <button class="tree closed"></button>
      <a href="../robotbasics/frames/index.html">Frames</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../robotbasics/frames/userframe.html">User Frame</a></li>
       <li><button class="tree blank"></button><a href="../robotbasics/frames/toolframe.html">Tool Frame</a></li>
+      <li><button class="tree blank"></button><a href="../robotbasics/frames/userframe.html">User Frame</a></li>
+      <li><button class="tree blank"></button><a href="../robotbasics/frames/jogframe.html">Jog Frame</a></li>
      </ul>
     </li>
-    <li><button class="tree blank"></button><a href="../robotbasics/calibration.html">Frame Calibration</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../robotbasics/calibration/index.html">Frame Calibration</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../robotbasics/calibration/toolframecalib.html">Tool Frame (TCP) Calibration</a></li>
+      <li><button class="tree blank"></button><a href="../robotbasics/calibration/userjogframecalib.html">User and Jog Frame Calibration</a></li>
+      <li><button class="tree blank"></button><a href="../robotbasics/calibration/directentry.html">Direct Entry</a></li>
+     </ul>
+    </li>
     <li><button class="tree blank"></button><a href="../robotbasics/bestpractices.html">Best Practices</a></li>
    </ul>
   </li>
@@ -58,10 +67,10 @@
      <button class="tree closed"></button>
      <a href="../setup/cellsetup/index.html">Cell Setup</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
       <li><button class="tree blank"></button><a href="../setup/cellsetup/wiredconnection.html">Cell Inputs/Outputs Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../setup/cellsetup/busconnection.html">Field Bus Connection Overview</a></li>
       <li><button class="tree blank"></button><a href="../setup/cellsetup/safetyconnection.html">Safety Connection Overview</a></li>
+      <li><button class="tree blank"></button><a href="../setup/cellsetup/cellcalibprocedure.html">Cell Calibration Procedure</a></li>
      </ul>
     </li>
     <li>
@@ -110,76 +119,76 @@
    <ul>
     <li>
      <button class="tree closed"></button>
-     <a href="howtouse/index.html">FluxRobot CAM (User Guide)</a>
+     <a href="userguide/index.html">User Guide</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="howtouse/navigator.html">Bend navigator</a></li>
+      <li><button class="tree blank"></button><a href="userguide/navigator.html">Bend navigator</a></li>
       <li>
        <button class="tree closed"></button>
-       <a href="howtouse/pickup/index.html">Part pickup</a>
+       <a href="userguide/pickup/index.html">Part pickup</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="howtouse/pickup/frompallet.html">Pickup from pallet</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/pickup/centeringtable.html">Centering table</a></li>
+        <li><button class="tree blank"></button><a href="userguide/pickup/frompallet.html">Pickup from pallet</a></li>
+        <li><button class="tree blank"></button><a href="userguide/pickup/centeringtable.html">Centering table</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="howtouse/bending/index.html">Robotic bending</a>
+       <a href="userguide/bending/index.html">Robotic bending</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="howtouse/bending/insertion.html">Insertion</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/bending/bending.html">Bending</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/bending/extraction.html">Extraction</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/bending/advanced.html">Advanced</a></li>
+        <li><button class="tree blank"></button><a href="userguide/bending/insertion.html">Insertion</a></li>
+        <li><button class="tree blank"></button><a href="userguide/bending/bending.html">Bending</a></li>
+        <li><button class="tree blank"></button><a href="userguide/bending/extraction.html">Extraction</a></li>
+        <li><button class="tree blank"></button><a href="userguide/bending/advanced.html">Advanced</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="howtouse/regrip/index.html">Regripping</a>
+       <a href="userguide/regrip/index.html">Regripping</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="howtouse/regrip/regrippanel.html">Regrip panel</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/regrip/addregrip.html">Add/Remove regrip</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/regrip/gripperpanel.html">Gripper Panel</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+        <li><button class="tree blank"></button><a href="userguide/regrip/regrippanel.html">Regrip panel</a></li>
+        <li><button class="tree blank"></button><a href="userguide/regrip/addregrip.html">Add/Remove regrip</a></li>
+        <li><button class="tree blank"></button><a href="userguide/regrip/gripperpanel.html">Gripper Panel</a></li>
+        <li><button class="tree blank"></button><a href="userguide/regrip/rgstationpanel.html">RG-Stations panel</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="howtouse/deposit/index.html">Part deposit</a>
+       <a href="userguide/deposit/index.html">Part deposit</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="howtouse/deposit/deposit.html">Deposit panel</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/deposit/deposittabs.html">Deposit Tabs</a></li>
+        <li><button class="tree blank"></button><a href="userguide/deposit/deposit.html">Deposit panel</a></li>
+        <li><button class="tree blank"></button><a href="userguide/deposit/deposittabs.html">Deposit Tabs</a></li>
        </ul>
       </li>
       <li>
        <button class="tree closed"></button>
-       <a href="howtouse/advanced/index.html">Advanced</a>
+       <a href="userguide/advanced/index.html">Advanced</a>
        <ul class="hide">
-        <li><button class="tree blank"></button><a href="howtouse/advanced/waypoints.html">Waypoints</a></li>
-        <li><button class="tree blank"></button><a href="howtouse/advanced/cellconfig.html">Cell configuration</a></li>
+        <li><button class="tree blank"></button><a href="userguide/advanced/waypoints.html">Waypoints</a></li>
+        <li><button class="tree blank"></button><a href="userguide/advanced/cellconfig.html">Cell configuration</a></li>
         <li>
          <button class="tree closed"></button>
-         <a href="howtouse/advanced/gripperdb/index.html">Gripper database</a>
+         <a href="userguide/advanced/gripperdb/index.html">Gripper database</a>
          <ul class="hide">
-          <li><button class="tree blank"></button><a href="howtouse/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
-          <li><button class="tree blank"></button><a href="howtouse/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
+          <li><button class="tree blank"></button><a href="userguide/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
+          <li><button class="tree blank"></button><a href="userguide/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
          </ul>
         </li>
        </ul>
       </li>
-      <li><button class="tree blank"></button><a href="howtouse/troubleshoot.html">Troubleshooting</a></li>
+      <li><button class="tree blank"></button><a href="userguide/troubleshoot.html">Troubleshooting</a></li>
      </ul>
     </li>
     <li>
      <button class="tree closed"></button>
-     <a href="waypoints/index.html">Motion sequences</a>
+     <a href="waypoints/index.html">Motion Sequences</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="waypoints/pickup_vac.html">Pickup Pallet</a></li>
-      <li><button class="tree blank"></button><a href="waypoints/centering.html">CenteringTable</a></li>
+      <li><button class="tree blank"></button><a href="waypoints/centering.html">Centering Table</a></li>
       <li><button class="tree blank"></button><a href="waypoints/bendpos.html">Bend Positioning</a></li>
       <li><button class="tree blank"></button><a href="waypoints/deposit.html">Deposit</a></li>
      </ul>
     </li>
     <li><button class="tree blank"></button><a href="bestpractices.html">Best Practices</a></li>
-    <li><button class="tree blank"></button><a href="samplepgrmdscrpt.html">Sample LS Program Description</a></li>
+    <li><button class="tree blank"></button><a href="samplepgrmdscrpt.html">.LS Program Structure</a></li>
     <li><button class="tree blank"></button><a href="postprocessor.html">Post Processor</a></li>
    </ul>
   </li>
@@ -265,25 +274,40 @@ for controlling and programming the FluxRobot.</p>
 <p>The documentation is organized into several sections, each covering different
 aspects of the software and its usage:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="howtouse/index.html">FluxRobot CAM (User Guide)</a></p>
-</li>
-<li>
-<p><a href="waypoints/index.html">Motion Sequence</a></p>
-</li>
-<li>
-<p><a href="bestpractices.html">Best Practices</a></p>
-</li>
-<li>
-<p><a href="samplepgrmdscrpt.html">Sample Program Description</a></p>
-</li>
-<li>
-<p><a href="postprocessor.html">Post Processor</a></p>
-</li>
-</ul>
-</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Topic</th>
+<th class="tableblock halign-left valign-top">Overview</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="userguide/index.html">User Guide</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Step-by-step guide for automated bending in FluxRobot CAM.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="waypoints/index.html">Motion Sequence</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The complete motion sequence the robot follows during a bending cycle.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="bestpractices.html">Best Practices</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recommended practices for using FluxRobot CAM effectively.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="samplepgrmdscrpt.html">Sample LS Program Description</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Walkthrough of the <code>.LS</code> files generated by the Post-Processor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="postprocessor.html">Post Processor</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How to run the Post-Processor to convert <code>.rbc</code> files into robot-ready <code>.LS</code> programs.</p></td>
+</tr>
+</tbody>
+</table>
 
                     </article>
                 </div>
@@ -293,7 +317,7 @@ aspects of the software and its usage:</p>
             </div>
             <nav class="pagination">
  <span class="prev"><a href="../setup/rasoftwaresetup/connectiontorobot/ethercatinterface.html">EtherCAT Interface</a></span>
- <span class="next"><a href="howtouse/index.html">FluxRobot CAM (User Guide)</a></span>
+ <span class="next"><a href="userguide/index.html">User Guide</a></span>
 </nav>
 
         </div>
