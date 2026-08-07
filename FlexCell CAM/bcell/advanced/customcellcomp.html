@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
-  <title>Cell configuration</title>
+  <title>Custom Cell Components</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -178,70 +178,8 @@
    </ul>
   </li>
   <li>
-   <button class="tree closed"></button>
-   <a href="../../bcell/index.html">BendMaster CAM</a>
-   <ul class="hide">
-    <li><button class="tree blank"></button><a href="../../bcell/navigator.html">Bend navigator</a></li>
-    <li>
-     <button class="tree closed"></button>
-     <a href="../../bcell/pickup/index.html">Part pickup</a>
-     <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../bcell/pickup/frompallet.html">Pickup from pallet</a></li>
-      <li><button class="tree blank"></button><a href="../../bcell/pickup/fromdispenser.html">Pickup from dispenser</a></li>
-     </ul>
-    </li>
-    <li>
-     <button class="tree closed"></button>
-     <a href="../../bcell/bending/index.html">Robotic bending</a>
-     <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../bcell/bending/insertion.html">Insertion</a></li>
-      <li><button class="tree blank"></button><a href="../../bcell/bending/bending.html">Bending</a></li>
-      <li><button class="tree blank"></button><a href="../../bcell/bending/extraction.html">Extraction</a></li>
-     </ul>
-    </li>
-    <li>
-     <button class="tree closed"></button>
-     <a href="../../bcell/regrip/index.html">Regripping</a>
-     <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../bcell/regrip/regrippanel.html">Regrip panel</a></li>
-      <li><button class="tree blank"></button><a href="../../bcell/regrip/addregrip.html">Add regrip</a></li>
-      <li><button class="tree blank"></button><a href="../../bcell/regrip/editregrip.html">Edit regrip</a></li>
-      <li><button class="tree blank"></button><a href="../../bcell/regrip/jawregrip.html">Regrip with jaw</a></li>
-      <li><button class="tree blank"></button><a href="../../bcell/regrip/rgstationpanel.html">RG-Stations panel</a></li>
-     </ul>
-    </li>
-    <li>
-     <button class="tree closed"></button>
-     <a href="../../bcell/deposit/index.html">Part deposit</a>
-     <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../bcell/deposit/deposit.html">Deposit panel</a></li>
-      <li><button class="tree blank"></button><a href="../../bcell/deposit/repeat.html">Repeat and sequence</a></li>
-      <li><button class="tree blank"></button><a href="../../bcell/deposit/separatorsheet.html">Add separator sheets</a></li>
-      <li><button class="tree blank"></button><a href="../../bcell/deposit/lockpartrest.html">Lock part-rest</a></li>
-      <li><button class="tree blank"></button><a href="../../bcell/deposit/patterns.html">Deposit pattern types</a></li>
-     </ul>
-    </li>
-    <li>
-     <button class="tree closed"></button>
-     <a href="../../bcell/advanced/index.html">Advanced</a>
-     <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../bcell/advanced/waypoints.html">Waypoints</a></li>
-      <li><button class="tree blank"></button><a href="../../bcell/advanced/cellconfig.html">Cell configuration</a></li>
-      <li>
-       <button class="tree closed"></button>
-       <a href="../../bcell/advanced/gripperdb/index.html">Gripper database</a>
-       <ul class="hide">
-        <li><button class="tree blank"></button><a href="../../bcell/advanced/gripperdb/creategripper.html">Create a gripper</a></li>
-        <li><button class="tree blank"></button><a href="../../bcell/advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
-       </ul>
-      </li>
-     </ul>
-    </li>
-   </ul>
-  </li>
-  <li>
    <button class="tree open"></button>
-   <a href="../index.html">FlexCell CAM</a>
+   <a href="../index.html">BendMaster CAM</a>
    <ul>
     <li><button class="tree blank"></button><a href="../navigator.html">Bend navigator</a></li>
     <li>
@@ -249,7 +187,7 @@
      <a href="../pickup/index.html">Part pickup</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../pickup/frompallet.html">Pickup from pallet</a></li>
-      <li><button class="tree blank"></button><a href="../pickup/centeringtable.html">Centering table</a></li>
+      <li><button class="tree blank"></button><a href="../pickup/fromdispenser.html">Pickup from dispenser</a></li>
      </ul>
     </li>
     <li>
@@ -259,7 +197,6 @@
       <li><button class="tree blank"></button><a href="../bending/insertion.html">Insertion</a></li>
       <li><button class="tree blank"></button><a href="../bending/bending.html">Bending</a></li>
       <li><button class="tree blank"></button><a href="../bending/extraction.html">Extraction</a></li>
-      <li><button class="tree blank"></button><a href="../bending/advanced.html">Advanced</a></li>
      </ul>
     </li>
     <li>
@@ -267,8 +204,9 @@
      <a href="../regrip/index.html">Regripping</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../regrip/regrippanel.html">Regrip panel</a></li>
-      <li><button class="tree blank"></button><a href="../regrip/addregrip.html">Add/Remove regrip</a></li>
-      <li><button class="tree blank"></button><a href="../regrip/gripperpanel.html">Gripper Panel</a></li>
+      <li><button class="tree blank"></button><a href="../regrip/addregrip.html">Add regrip</a></li>
+      <li><button class="tree blank"></button><a href="../regrip/editregrip.html">Edit regrip</a></li>
+      <li><button class="tree blank"></button><a href="../regrip/jawregrip.html">Regrip with jaw</a></li>
       <li><button class="tree blank"></button><a href="../regrip/rgstationpanel.html">RG-Stations panel</a></li>
      </ul>
     </li>
@@ -277,7 +215,10 @@
      <a href="../deposit/index.html">Part deposit</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../deposit/deposit.html">Deposit panel</a></li>
-      <li><button class="tree blank"></button><a href="../deposit/deposittabs.html">Deposit Tabs</a></li>
+      <li><button class="tree blank"></button><a href="../deposit/repeat.html">Repeat and sequence</a></li>
+      <li><button class="tree blank"></button><a href="../deposit/separatorsheet.html">Add separator sheets</a></li>
+      <li><button class="tree blank"></button><a href="../deposit/lockpartrest.html">Lock part-rest</a></li>
+      <li><button class="tree blank"></button><a href="../deposit/patterns.html">Deposit pattern types</a></li>
      </ul>
     </li>
     <li>
@@ -285,7 +226,8 @@
      <a href="index.html">Advanced</a>
      <ul>
       <li><button class="tree blank"></button><a href="waypoints.html">Waypoints</a></li>
-      <li><button class="tree blank"></button><a class="active" href="cellconfig.html">Cell configuration</a></li>
+      <li><button class="tree blank"></button><a href="cellconfig.html">Cell configuration</a></li>
+      <li><button class="tree blank"></button><a class="active" href="customcellcomp.html">Custom Cell Components</a></li>
       <li>
        <button class="tree closed"></button>
        <a href="gripperdb/index.html">Gripper database</a>
@@ -296,7 +238,57 @@
       </li>
      </ul>
     </li>
-    <li><button class="tree blank"></button><a href="../troubleshoot.html">Troubleshooting</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../robotcell-wip/index.html">FlexCell CAM</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../robotcell-wip/navigator.html">Bend navigator</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/pickup/index.html">Part pickup</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/pickup/frompallet.html">Pickup from pallet</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/pickup/centeringtable.html">Centering table</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/bending/index.html">Robotic bending</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/bending/insertion.html">Insertion</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/bending/bending.html">Bending</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/bending/extraction.html">Extraction</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/bending/advanced.html">Advanced</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/regrip/index.html">Regripping</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/regrip/regrippanel.html">Regrip panel</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/regrip/addregrip.html">Add/Remove regrip</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/regrip/gripperpanel.html">Gripper Panel</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/regrip/rgstationpanel.html">RG-Stations panel</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/deposit/index.html">Part deposit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/deposit/deposit.html">Deposit panel</a></li>
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/deposit/deposittabs.html">Deposit Tabs</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../robotcell-wip/advanced/index.html">Advanced</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../robotcell-wip/advanced/waypoints.html">Waypoints</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../robotcell-wip/troubleshoot.html">Troubleshooting</a></li>
    </ul>
   </li>
   <li>
@@ -444,7 +436,7 @@
   </button>
  </div>
  <div>
-  <a href="../index.html">FlexCell CAM</a>
+  <a href="../index.html">BendMaster CAM</a>
  </div>
  <div>/</div>
  <div>
@@ -452,161 +444,20 @@
  </div>
  <div>/</div>
  <div>
-  <a href="cellconfig.html">Cell configuration</a>
+  <a href="customcellcomp.html">Custom Cell Components</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Cell configuration</h1>
+                        <h1>Custom Cell Components</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This chapter explains how to configure the machine cell and update robot and pallet
-calibration values so FlexCell CAM can generate correct NC output.</p>
+<p>Pallets can be imported as a user-defined 3D model and defined as unload. This
+requires the corresponding INI file to contain certain parameters.</p>
 </div>
-<div class="paragraph">
-<p>Follow the steps below carefully - incorrect values may produce wrong NC code and
-cause collisions or damage.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_calibration_tool">Calibration Tool</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Start FlexCell CAM.</p>
-</li>
-<li>
-<p>Navigate to View &#8594; Calibration Tool.</p>
-</li>
-<li>
-<p>Update the following calibration values in the Calibration Tool window.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/calibproxy.png" alt="Calibproxy"></span></p>
-</div>
-<div class="sect2">
-<h3 id="_machine_in_robot_coordinate_system_minr">Machine in Robot coordinate system (MInR)</h3>
-<div class="paragraph">
-<p><span class="image"><img src="img/minr.png" alt="MInR"></span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>By using the three point calibration method, the machine&#8217;s positions are
-calibrated with respect to the robot&#8217;s world coordinate system.</p>
-</li>
-<li>
-<p>The coordinate values obtained by three point calibration should be entered in
-MInR.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_robot_in_machine_coordinate_system_rinm">Robot in machine coordinate system (RInM)</h3>
-<div class="paragraph">
-<p><span class="image"><img src="img/rinm.png" alt="RInM"></span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Once you enter MInR values, RInM values are computed automatically.</p>
-</li>
-<li>
-<p>Update these values:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>X, Y, Z → in Cell Configuration settings (Track X, Y, Z Positions).</p>
-</li>
-<li>
-<p>W, P, R → in Machine Defaults settings (Robot X, Y, Z Rot).</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Update these RInM values to let FlexCell CAM know the exact position of
-the robot origin relative to the machine zero-point.</p>
-</div>
-<div class="sect3">
-<h4 id="_update_cell_configuration_settings">Update Cell Configuration Settings</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Start FlexCell CAM.</p>
-</li>
-<li>
-<p>Install the required machine via <strong>Database &#8594;
-Machines</strong> option from the command bar on the left.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/dbmachine.png" alt="DBMachine"></span></p>
-</div>
-</li>
-<li>
-<p>Go to the installed machine and select <strong>Cell Configuration</strong>.</p>
-</li>
-<li>
-<p>Update RInM&#8217;s X, Y, Z values in Track X, Y, Z Positions.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/dbcellconfig.png" alt="Cell Configuration" width="961"></span></p>
-</div>
-</li>
-<li>
-<p><strong>Save</strong> the values and restart FlexCell CAM for the changes to take effect.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_machine_default_settings">Machine Default Settings</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Start FlexCell CAM.</p>
-</li>
-<li>
-<p>Open a simple part and tool it up.</p>
-</li>
-<li>
-<p>Go to Settings &#8594; Machine Defaults from the side menu.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/machinedefsettings.png" alt="machinedefsettings"></span></p>
-</div>
-</li>
-<li>
-<p>Under Bend Cell settings, update the RInM&#8217;s W, P and R values in Robot X,
-Y, Z Rot.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/machinedefaults.png" alt="machinedefaults"></span></p>
-</div>
-</li>
-<li>
-<p><strong>Save</strong> the values and restart FlexCell CAM.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_pallet_in_robot_coordinate_system_pinr">Pallet in Robot coordinate system (PInR)</h3>
-<div class="paragraph">
-<p><span class="image"><img src="img/pinr.png" alt="PInR"></span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>By using the three point calibration method, the pallet&#8217;s positions are
-calibrated with respect to the robot&#8217;s world coordinate system.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -614,70 +465,302 @@ calibrated with respect to the robot&#8217;s world coordinate system.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The pallet could be any user component (i.e, Pickup pallet or Centering table,
-Chute etc).
+<div class="ulist">
+<ul>
+<li>
+<p>The new pallet can be imported via "<strong>File</strong>", "<strong>Import</strong>",
+"<strong>Bending cell component&#8230;&#8203;</strong>".</p>
+</li>
+<li>
+<p>After the import, these unloading methods are immediately visible as
+storage locations.</p>
+</li>
+</ul>
+</div>
 </td>
 </tr>
 </table>
 </div>
-</li>
-<li>
-<p>The coordinate values obtained by three point calibration should be entered in
-PInR.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_pallet_in_machine_coordinate_system_pinm">Pallet in machine coordinate system (PInM)</h3>
-<div class="paragraph">
-<p><span class="image"><img src="img/pinm.png" alt="PInM"></span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>After entering PInR values, PInM values are computed automatically.</p>
-</li>
-<li>
-<p>Update these PInM values in the corresponding pallet panel (Pickup Pallet,
-Centering Table, Chute) in order to let FlexCell CAM know the exact position of
-the pallet origin relative to the machine zero-point.</p>
-</li>
-</ul>
-</div>
-<div class="sect3">
-<h4 id="_updating_pallet_position">Updating Pallet Position</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Start FlexCell CAM.</p>
-</li>
-<li>
-<p>Open a simple part and tool it up.</p>
-</li>
-<li>
-<p>Select the specific Pallet panel (i.e, Pickup Pallet, Centering Table, Chute
-etc) and update the corresponding PInM&#8217;s X, Y, Z, W, P, R values.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/palletposition.png" alt="palletposition"></span></p>
-</div>
-</li>
-</ul>
-</div>
-<div class="admonitionblock warning">
-<table>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Pallet INI file parameters</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Do not change these settings unless you are sure; entering the wrong
-values here will result in an incorrect NC program, which can cause unexpected
-collisions or damage.
-</td>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Unit</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>InclinedPallet (Tilted pallet)</p>
+</li>
+<li>
+<p>Pallet (Pallet)</p>
+</li>
+<li>
+<p>Basket (Basket)</p>
+</li>
+<li>
+<p>STOPA (STOPA pallet)</p>
+</li>
+<li>
+<p>Conveyor (Conveyor belt)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Xmin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start coordinate X (always bottom left)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ymin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start coordinate Y (always bottom left)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Xmax</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">End coordinate X (always top right)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ymax</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">End coordinate Y (always top right)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Height from the floor or top edge of the deposit surface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BackWallTilt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angle of inclination of the deposit wall (optional)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">°</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FloorTilt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angle of inclination of the deposit floor (optional)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">°</p></td>
+</tr>
+</tbody>
 </table>
+<div class="paragraph">
+<p>The Xmin/Ymin and Xmax/Ymax values indicate the boundaries of the unloading
+area.</p>
 </div>
+<div class="paragraph">
+<p>The following are examples of user-defined pallets.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tilted_pallet">Tilted pallet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, the pallet must be correctly defined with the alignment shown below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/tiltedpallet.png" alt="Tilted pallet" width="700">
+</div>
+<div class="title">Special pallet for stacking</div>
+</div>
+<div class="paragraph">
+<p>Note that the point Ymin=0 should be at the "inner corner" of the pallet, as
+indicated by the yellow mark in the figure above. The height of the pallet,
+measured at this inner corner point, must also be taken into account. This must
+be set in the INI file for the pallet.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[DATA]
+Type=InclinedPallet
+Xmin=0
+Ymin=0
+Xmax=1200
+Ymax=770
+Z=151.124
+BackWallTilt=2.148
+FloorTilt=2.148</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the Z height measured in the above figure was entered in the Z
+parameter.</p>
+</div>
+<div class="paragraph">
+<p>The "FloorTilt" parameter determines the angle of inclination of the deposit
+floor to be specified in degrees (in this pallet, it is similar to the
+"BackWallTilt" angle (deposit wall angle of inclination), the inner angle here
+is 90 degrees).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/angleofinclination.png" alt="Angle of inclination" width="400">
+</div>
+<div class="title">Example of angle of inclination</div>
+</div>
+<div class="paragraph">
+<p>With this pallet, inclined stacking can be used to stack the parts correctly:</p>
+</div>
+<div class="paragraph">
+<div class="title">Special pallet for destacking, inclined stacking</div>
+<p><span class="image"><img src="img/tiltedinclinedstack1.png" alt="Tilted pallet inclined stacking 1" width="408"></span> <span class="image"><img src="img/tiltedinclinedstack2.png" alt="Tilted pallet inclined stacking 2" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>The "<strong>Pitch</strong>" was set to -80 via the
+"<strong>Auto-pitch</strong>" command, and the
+"<strong>delta shift</strong>" was manually set to 27 mm to optimize the
+stacking of the parts.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pallet">Pallet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A user-defined 3D model can be imported as a type "Pallet" and can be used for
+the pick-up and unload processes.</p>
+</div>
+<div class="paragraph">
+<p>The INI file must contain the "Type=Pallet" for the system to treat it as a
+pallet.</p>
+</div>
+<div class="paragraph">
+<p>The Xmin/Ymin and Xmax/Ymax values should indicate the boundaries of the yellow
+pick-up/unloading area.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/examplepallet.png" alt="ExamplePallet" width="700">
+</div>
+<div class="title">Example of pallet</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[DATA]
+Type=Pallet
+Xmin=0
+Ymin=0
+Xmax=1000
+Ymax=1200
+Z=145</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basket">Basket</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A user-defined 3D model can be imported as a "Basket" type and used for
+unloading. A basket model serves as the example here, the yellow area is the
+area of the basket in which the unloading can take place.</p>
+</div>
+<div class="paragraph">
+<p>The INI file must contain the "Type=Basket" so that the system treats it as a
+basket.</p>
+</div>
+<div class="paragraph">
+<p>The Xmin/Xmax and Ymin/Ymax values should indicate the boundaries of the yellow
+unloading area.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/examplebasket.png" alt="ExampleBasket" width="700">
+</div>
+<div class="title">Example of basket</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[DATA]
+Type=Basket
+Xmin=15
+Ymin=15
+Xmax=785
+Ymax=585
+Z=30</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stopa_pallet">STOPA pallet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A user-defined 3D model can be imported as a type "STOPA" and can be used for
+the pick-up and unload processes. The example here is a STOPA model, the yellow
+area is the area of the conveyor in which pick-up or unloading can be done.</p>
+</div>
+<div class="paragraph">
+<p>The INI file must contain the "Type=STOPA" for the system to treat it as a STOPA
+pallet.</p>
+</div>
+<div class="paragraph">
+<p>The Xmin/Ymin and Xmax/Ymax values should indicate the boundaries of the yellow
+pick-up/unloading area.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/examplestopa.png" alt="ExampleSTOPA" width="700">
+</div>
+<div class="title">Example of STOPA pallet</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[DATA]
+Type=STOPA
+Xmin=0
+Ymin=0
+Xmax=4150
+Ymax=1900
+Z=465</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conveyor_belt">Conveyor belt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A user-defined 3D model can be imported as a "Conveyor" type and be used for the
+pick-up and unloading processes.</p>
+</div>
+<div class="paragraph">
+<p>The INI file must contain the "Type=Conveyor" for the system to treat it as a
+conveyor belt.</p>
+</div>
+<div class="paragraph">
+<p>The X and Y values should indicate the boundaries of the yellow pick-up/unload
+area.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exampleconveyor.png" alt="ExampleConveyor" width="700">
+</div>
+<div class="title">Example of conveyor belt</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[DATA]
+Type=Conveyor
+Xmin=50
+Ymin=4450
+Xmax=1050
+Ymax=5300
+Z=850</code></pre>
 </div>
 </div>
 </div>
@@ -690,28 +773,19 @@ collisions or damage.
  <h3>Contents</h3>
  <ul>
   <li level="1">
-   <a href="#_calibration_tool">Calibration Tool</a>
+   <a href="#_tilted_pallet">Tilted pallet</a>
   </li>
-  <li level="2">
-   <a href="#_machine_in_robot_coordinate_system_minr">Machine in Robot coordinate system (MInR)</a>
+  <li level="1">
+   <a href="#_pallet">Pallet</a>
   </li>
-  <li level="2">
-   <a href="#_robot_in_machine_coordinate_system_rinm">Robot in machine coordinate system (RInM)</a>
+  <li level="1">
+   <a href="#_basket">Basket</a>
   </li>
-  <li level="3">
-   <a href="#_update_cell_configuration_settings">Update Cell Configuration Settings</a>
+  <li level="1">
+   <a href="#_stopa_pallet">STOPA pallet</a>
   </li>
-  <li level="3">
-   <a href="#_machine_default_settings">Machine Default Settings</a>
-  </li>
-  <li level="2">
-   <a href="#_pallet_in_robot_coordinate_system_pinr">Pallet in Robot coordinate system (PInR)</a>
-  </li>
-  <li level="2">
-   <a href="#_pallet_in_machine_coordinate_system_pinm">Pallet in machine coordinate system (PInM)</a>
-  </li>
-  <li level="3">
-   <a href="#_updating_pallet_position">Updating Pallet Position</a>
+  <li level="1">
+   <a href="#_conveyor_belt">Conveyor belt</a>
   </li>
  </ul>
 </aside>
@@ -719,7 +793,7 @@ collisions or damage.
                 </div>
             </div>
             <nav class="pagination">
- <span class="prev"><a href="waypoints.html">Waypoints</a></span>
+ <span class="prev"><a href="cellconfig.html">Cell configuration</a></span>
  <span class="next"><a href="gripperdb/index.html">Gripper database</a></span>
 </nav>
 
@@ -748,6 +822,12 @@ collisions or damage.
     <script src="../../res/files.js"></script>
     <script src="../../res/site.js"></script>
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
 </body>
 </html>

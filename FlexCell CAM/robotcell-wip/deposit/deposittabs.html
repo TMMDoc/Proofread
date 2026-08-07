@@ -227,6 +227,7 @@
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../../bcell/advanced/waypoints.html">Waypoints</a></li>
       <li><button class="tree blank"></button><a href="../../bcell/advanced/cellconfig.html">Cell configuration</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/advanced/customcellcomp.html">Custom Cell Components</a></li>
       <li>
        <button class="tree closed"></button>
        <a href="../../bcell/advanced/gripperdb/index.html">Gripper database</a>
@@ -285,15 +286,6 @@
      <a href="../advanced/index.html">Advanced</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../advanced/waypoints.html">Waypoints</a></li>
-      <li><button class="tree blank"></button><a href="../advanced/cellconfig.html">Cell configuration</a></li>
-      <li>
-       <button class="tree closed"></button>
-       <a href="../advanced/gripperdb/index.html">Gripper database</a>
-       <ul class="hide">
-        <li><button class="tree blank"></button><a href="../advanced/gripperdb/creategripper.html">Create a gripper</a></li>
-        <li><button class="tree blank"></button><a href="../advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
-       </ul>
-      </li>
      </ul>
     </li>
     <li><button class="tree blank"></button><a href="../troubleshoot.html">Troubleshooting</a></li>
@@ -468,32 +460,36 @@
 </div>
 <div class="paragraph">
 <p>The orientation and other settings for the parts are edited in the D1 tab.
-Use this <strong>D1</strong> to handle the part deposit settings to drop parts over the
-deposit pallet.</p>
+Use this D1 tab to handle the part deposit settings to drop parts over the
+deposit.</p>
+</div>
+<div class="paragraph">
+<p>Here, it is possible to edit either the part rotation (about Z, X and R axes) or
+Pitch, Roll and Yaw of the robot wrist.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Rotate</strong>: Rotation around the longitudinal axis (X-axis). The tool of the
-robot twists clockwise/counter-clockwise.</p>
+<p>At <strong>Rotation Z, X and R</strong> fields, part rotation angles can be set. The Z, X and
+R rotation is with respect to machine coordinates. The rotation order must be
+set in sequence: Z &#8594; X &#8594; R.</p>
 </li>
 <li>
-<p><strong>Pitch</strong>: Rotation around the lateral axis (Y-axis). The tool of the
-robot tilts forward/backward.</p>
+<p>The <strong>Pitch</strong>, <strong>Roll</strong> and <strong>Yaw</strong> can be edited using the
+<span class="image"><img src="img/depositcontrol1.png" alt="DepositControl1" width="15"></span> and <span class="image"><img src="img/depositcontrol2.png" alt="DepositControl2" width="17"></span> controls. These
+rotations are with respect to tip coordinate system. When these are edited, the
+part rotation angle (Z, X and R) values will be updated accordingly.</p>
 </li>
 <li>
-<p><strong>Yaw</strong>: Rotation around the vertical axis (Z-axis). The tool of the
-robot rotates horizontally.</p>
+<p><strong>Reset</strong> button resets the part rotation angles to default values.</p>
 </li>
 <li>
-<p><strong>Height</strong>:
-The <strong>Height</strong> parameter controls the height above the stack from
-which the part is released (the part falls by this distance when coming to rest
-on the stack).</p>
+<p>The <strong>Height</strong> parameter controls the height above the stack
+from which the part is released (the part falls by this distance when coming to
+rest on the stack).</p>
 </li>
 <li>
-<p><strong>Simulate</strong>:
-The sequence or order in which each part is placed onto the pallet can be seen
+<p>The sequence or order in which each part is placed onto the pallet can be seen
 by using the <strong>Simulate</strong> option.  The number of layers and
 grid utilized for the deposit determines what quantity is simulated.  The part
 deposit simulation can be viewed by moving the simulate slider back and forth.</p>
@@ -503,8 +499,11 @@ deposit simulation can be viewed by moving the simulate slider back and forth.</
 </div>
 </div>
 <div class="sect1">
-<h2 id="_repeat_grid_tab_r">Repeat Grid Tab (R) <span class="image right"><img src="img/repeattab.png" alt="Repeattab" width="120"></span></h2>
+<h2 id="_repeat_grid_tab_r">Repeat Grid Tab (R)</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p><span class="image right"><img src="img/repeattab.png" alt="Repeattab" width="120"></span></p>
+</div>
 <div class="paragraph">
 <p>The <strong>D1</strong> tab shown above is used to specify the orientation of the
 first part of the deposit. Then, the settings in the Repeat tab are used to
@@ -517,10 +516,6 @@ alongside shows a deposit with many of these settings changed from defaults.</p>
 <p>The <strong>Grid</strong> settings are used to set up the number of columns and rows in the
 deposit.</p>
 </li>
-</ul>
-</div>
-<div class="ulist">
-<ul>
 <li>
 <p>The <strong>Gap (Z, X)</strong> settings are used to specify the gap between
 successive columns or successive rows. If you set this to 0, the rows or columns
@@ -557,8 +552,7 @@ the previous part that was already deposited.</p>
 <li>
 <p>The <strong>Simulate</strong> settings (both the number spinner and the slider) can be used
 to scrub through the deposits to see the order in which they happen on the
-pallet. This is especially useful when adjusting the start corner and the path
-settings.</p>
+pallet.</p>
 </li>
 </ul>
 </div>
@@ -575,7 +569,7 @@ settings.</p>
    <a href="#_deposit_position_tab_d1">Deposit Position Tab (D1)</a>
   </li>
   <li level="1">
-   <a href="#_repeat_grid_tab_r">Repeat Grid Tab (R) <span class="image right"><img src="img/repeattab.png" alt="Repeattab" width="120"></span></a>
+   <a href="#_repeat_grid_tab_r">Repeat Grid Tab (R)</a>
   </li>
   <li level="1">
    <a href="#_deposit_sequence_tab_s">Deposit Sequence Tab (S)</a>

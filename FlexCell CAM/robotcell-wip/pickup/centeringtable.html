@@ -227,6 +227,7 @@
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../../bcell/advanced/waypoints.html">Waypoints</a></li>
       <li><button class="tree blank"></button><a href="../../bcell/advanced/cellconfig.html">Cell configuration</a></li>
+      <li><button class="tree blank"></button><a href="../../bcell/advanced/customcellcomp.html">Custom Cell Components</a></li>
       <li>
        <button class="tree closed"></button>
        <a href="../../bcell/advanced/gripperdb/index.html">Gripper database</a>
@@ -285,15 +286,6 @@
      <a href="../advanced/index.html">Advanced</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../advanced/waypoints.html">Waypoints</a></li>
-      <li><button class="tree blank"></button><a href="../advanced/cellconfig.html">Cell configuration</a></li>
-      <li>
-       <button class="tree closed"></button>
-       <a href="../advanced/gripperdb/index.html">Gripper database</a>
-       <ul class="hide">
-        <li><button class="tree blank"></button><a href="../advanced/gripperdb/creategripper.html">Create a gripper</a></li>
-        <li><button class="tree blank"></button><a href="../advanced/gripperdb/importgripper.html">Import gripper from DXF</a></li>
-       </ul>
-      </li>
      </ul>
     </li>
     <li><button class="tree blank"></button><a href="../troubleshoot.html">Troubleshooting</a></li>
@@ -583,35 +575,17 @@ and orientation at which the gripper picks up the part.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Use the <strong>Name</strong> choice to select a different gripper.</p>
+<p>Use the <strong>Next slot</strong> to select a different pickup slot on the centering table.
+Note that there are only 2 pickup slots in the centering table so, Next slot
+alternates pickup between these two pickup slots.</p>
 </li>
 <li>
-<p>Use the <strong>Next Heading</strong> button to rotate the gripper around
-to another side of the part (it rotates in 90° steps).</p>
+<p>Use the <strong>Position</strong> inputs to adjust the position of the gripper in X and Y to
+pick up the part from the slot.</p>
 </li>
 <li>
-<p>Use the <strong>Position</strong> inputs to move the gripper-center relative to
-the part-center, and use the <strong>Angle</strong> input to rotate the gripper, relative
-to the part&#8217;s orientation.</p>
-</li>
-<li>
-<p>Use the <strong>Swivel Neck</strong> option to rotate the Jaw Neck with
-180° rotation.</p>
-</li>
-<li>
-<p>Enabling <strong>Alt Pickup</strong> option helps to use an alternative pickup point on the
-part. Note that there are only 2 pickup slots in the centering table so, Alt
-Pickup alternates pickup between these two pickup slots.</p>
-</li>
-<li>
-<p>Use the <strong>Set Grip Plane</strong> to select a different plane to
-grip. When this option is selected, the mouse pointer will change to a blue
-color plus symbol. Hover around to see the plus symbol showing different plane
-orientation and select a desired plane.</p>
-</li>
-<li>
-<p><strong>Use Vacuum Grip</strong> option to enable vacuum suction feature for picking the part from
-the centering table.</p>
+<p>Use the <strong>Angle</strong> input to rotate the gripper around the slot to pick
+up the part at a different angle.</p>
 </li>
 </ul>
 </div>
