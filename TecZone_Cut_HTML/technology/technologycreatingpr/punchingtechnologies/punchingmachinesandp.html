@@ -1,0 +1,1820 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../../img/trumpf-icon.png">
+  <title>Punching machines and punch laser machines: Nibble processing</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/boostlogo.png" width="30" height="30" /></div>
+        <div><p>TecZone Cut reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Welcome to TecZone Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../basicsgeneral/index.html">General</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../basicsgeneral/startingandexit.html">Start/exit TruTops Boost</a></li>
+    <li><button class="tree blank"></button><a href="../../../basicsgeneral/mousegesturesan.html">Mouse and touch gestures</a></li>
+    <li><button class="tree blank"></button><a href="../../../basicsgeneral/multitouch.html">Multi-touch</a></li>
+    <li><button class="tree blank"></button><a href="../../../basicsgeneral/supportedmachin.html">Supported machines</a></li>
+    <li><button class="tree blank"></button><a href="../../../basicsgeneral/boosttechnology.html">Boost technology</a></li>
+    <li><button class="tree blank"></button><a href="../../../basicsgeneral/fileformatssupp.html">File formats</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../basicsgeneral/helpwhenproblemsaris/index.html">Help when problems arise</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../basicsgeneral/helpwhenproblemsaris/analysispackage.html">Analysis package</a></li>
+      <li><button class="tree blank"></button><a href="../../../basicsgeneral/helpwhenproblemsaris/errorscausesand.html">Errors, causes and solutions</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../configuringmachinesd/index.html">Configuring machines</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../configuringmachinesd/processruledata.html">Process rule - Data: Parameter</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuringmachinesd/technologytables.html">Technology tables</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuringmachinesd/technologytable.html">Technology table selection</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuringmachinesd/updatingmachineseria.html">Update machine serial release</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuringmachinesd/laserrulesnamingther/index.html">Laser rules</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../configuringmachinesd/configuringthe2dlase/index.html">2D laser machine</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../configuringmachinesd/configuringthe2dlase/basicmachinedata/index.html">Basic machine data</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/basicmachinedata/dialogbasicdata.html">Dimensions</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/basicmachinedata/dialogbasicdat1.html">Limit values</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/basicmachinedata/processingncout.html">NC output parameters</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/basicmachinedata/dialoglaserdata.html">Laser data 3</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../configuringmachinesd/configuringthe2dlase/workpieceandprocessing/index.html">Workpiece and processing</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/workpieceandprocessing/dialogbasicdataworkp.html">Workpiece support</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/workpieceandprocessing/dialogbasicdatastops.html">Stops</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/workpieceandprocessing/configuringunlo.html">Configuring unloading area</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../configuringmachinesd/configuringthe2dlase/machineoptions/index.html">Machine options</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/machineoptions/dialogoptionsge.html">Options: General</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/machineoptions/dialogoptionstw.html">Options: Two head</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/machineoptions/trumpffunctions.html">TRUMPF functions</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/machineoptions/importingdatato.html">Importing data</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/index.html">Automation and palletizing</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/openingtheconfi.html">System pallet types</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationlift/index.html">Automation: Lifts</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationlift/assigningthelif.html">Assigning the LiftMaster</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationlift/changingthelift.html">LiftMaster configuration</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationlift/assigningasortm.html">Assigning a SortMaster</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationlift/sortmasteroptio.html">SortMaster: Options</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationlift/changingthesort.html">SortMaster configuration</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationlift/activatingadapt.html">Activating adaptive grippers</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationlift/importingadapti.html">Importing adaptive grippers</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationpall/index.html">Automation: Palletizing</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationpall/dialogpalletspa.html">Pallets: parameters</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationpall/dialogmachinesd.html">Unloading area (palletizing)</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationpall/unloadingareaun.html">Unit parameters</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringthe2dlase/automationandpalletizing/dialogautomationpall/palletizingunlo.html">Unloading area units</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../configuringmachinesd/configuringpunchingm/index.html">Punching / punch laser</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../configuringmachinesd/configuringpunchingm/machineconfiguration/index.html">Machine configuration</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/machineconfiguration/adjustdialogpar.html">Adjust dialog: Parameters</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/machineconfiguration/ncoutputparamet.html">NC output parameters</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/machineconfiguration/dialogmachines1.html">Basic data</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/machineconfiguration/dialogmachines2.html">Tool system data</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/machineconfiguration/dialogmachinesa.html">Repositioning devices</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../configuringmachinesd/configuringpunchingm/clampsandmachineoptions/index.html">Clamps and machine options</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../configuringmachinesd/configuringpunchingm/clampsandmachineoptions/dialogmachinesadapts/index.html">Stop pin data</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/clampsandmachineoptions/dialogmachinesadapts/machinespecific.html">Machine-specific stop situations</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/clampsandmachineoptions/dialogmachinesadapts/indexpindatapar.html">Index pin data: Parameters</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/clampsandmachineoptions/dialogmachinesadapts/settingtheindex.html">Set index pin data</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/clampsandmachineoptions/dialogmachinesadaptc/index.html">Clamp data</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/clampsandmachineoptions/trupunch5000s12.html">TruPunch 5000 (S12): Retractable clamps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../configuringmachinesd/configuringpunchingm/removalandunloading/index.html">Removal and unloading</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/removalandunloading/removalofsmallpartsa.html">Small parts: removal and sorting</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/removalandunloading/dialogmachinesd.html">Unloading area (palletizing)</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/removalandunloading/unloadingareaun.html">Unloading area: Units</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/removalandunloading/trumatic1000k07.html">TruMatic 1000 / TruPunch 1000: SortMaster Compact</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/index.html">Automation components</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogautomatio.html">Automation: System pallet types</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/index.html">SheetMaster</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/parameterdata1g.html">Parameter data 1: General lift data</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/parameterdata2d.html">Parameter data 2: Dimensions and dynamics</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/parameterdata3l.html">Parameter data 3: Loading data</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/parameterdata5d.html">Parameter data 5: Unloading dimensions and dynamics</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/parameterdata6u.html">Parameter data 6: Unloading data</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/parameterdata7s.html">Parameter data 7: Stripping sheet metal</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/configuringpara.html">SheetMaster parameters</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/configuringpar1.html">Parameters: SheetMaster AK05/AK09</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/assigningsheetm.html">Assigning SheetMaster</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/assigningautoma.html">JFY T-APM automation devices</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/changingtheshee.html">SheetMaster configuration</a></li>
+          <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesdatash/changingtheposi.html">Changing prong position (tool clamp)</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuringpunchingm/automationcomponents/dialogmachinesadaptg.html">GripMaster</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../configuringmachinesd/configuretrulasercen/index.html">TruLaser Center 7030 (L26)</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../configuringmachinesd/configuretrulasercen/machineconfiguration/index.html">Machine configuration</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuretrulasercen/machineconfiguration/dialogmachinesa.html">Adapt dialog</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuretrulasercen/machineconfiguration/dialogmachines1.html">Automation components</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuretrulasercen/machineconfiguration/parameterdata7n.html">Data 7: NC output</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../configuringmachinesd/configuretrulasercen/identificationandremoval/index.html">Identification and removal</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuretrulasercen/identificationandremoval/optionpartident.html">Part identification and part removal</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../configuringmachinesd/configuretrulasercen/automationaandpalletizing/index.html">Automation and palletizing</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuretrulasercen/automationaandpalletizing/sortmasterboxli.html">SortMaster Box Linear</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuretrulasercen/automationaandpalletizing/dialogmachinesd.html">Unloading area (palletizing)</a></li>
+        <li><button class="tree blank"></button><a href="../../../configuringmachinesd/configuretrulasercen/automationaandpalletizing/dialogautomatio.html">System pallet types</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../configuringmachinesd/processrulemachinema/index.html">Machine rules: 2D laser machine</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../configuringmachinesd/processrulemachinema/managingvariable.html">Managing variables in the machine rules</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../configuringmachinesd/machinerulesforpunch/index.html">Machine rules: punching / punch laser / L26</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../configuringmachinesd/machinerulesforpunch/managingvariable.html">Managing variables in the machine rules</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../configuringmachinesd/processrulesystempro/index.html">System process rules</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../configuringmachinesd/processrulesystempro/managingvariable.html">Managing variables in the process rules</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../teczonecutbasics/index.html">TecZone Cut basics</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/teczonecutuseri.html">TecZone Cut user interface</a></li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/workingareasfor.html">Punch laser working range</a></li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/displayofclamps.html">Clamps and dead areas</a></li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/sheetoverview.html">Sheet overview</a></li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/singlesheetview.html">Single sheet view</a></li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/palletizingview.html">Palletizing view</a></li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/singlepartmode.html">Single-part mode</a></li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/measurementunit.html">Measurement units</a></li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/punchingmachine.html">Change clamping</a></li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/tablealignmentt.html">Transfer data to machine</a></li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/configuringatoo.html">Configuring toolbars</a></li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/workingrange.html">Working range setup</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../teczonecutbasics/views/index.html">Views</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../teczonecutbasics/views/2dlasermachines.html">Highlighting parts and parts groups</a></li>
+      <li><button class="tree blank"></button><a href="../../../teczonecutbasics/views/information.html">Information</a></li>
+      <li><button class="tree blank"></button><a href="../../../teczonecutbasics/views/highlightingpar.html">Highlight parts / contour sizes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/additionalequipment.html">Additional equipment</a></li>
+    <li><button class="tree blank"></button><a href="../../../teczonecutbasics/partoverview.html">Part overview</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../teczonecutbasics/colorsandsymbols/index.html">Colors and symbols</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../teczonecutbasics/colorsandsymbols/2dlasermachines.html">2D Laser Machines</a></li>
+      <li><button class="tree blank"></button><a href="../../../teczonecutbasics/colorsandsymbols/punchlasermachines.html">Punch machine/Punch laser machine</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../workflows/index.html">Workflows</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../workflows/preparingdxffil.html">Prepare DXF files</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflows/loadinganassemblyand.html">Load and break down assembly</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflows/editingthesheet.html">Edit sheet program manually</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflows/processingthesheetpr.html">Process a sheet program</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflows/creatingasheetp.html">Create sheet program profile</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflows/usingprocessing.html">Use processing samples</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../workflows/createpartidentity/index.html">Create part identification</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../workflows/createpartidentity/creatingapartid.html">For punching machines</a></li>
+      <li><button class="tree blank"></button><a href="../../../workflows/createpartidentity/creatingpartide.html">For 2D laser machines</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../workflows/skeletonfreepro.html">Skeleton-free processing</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflows/creatingtwinlin.html">Create TwinLine processing</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflows/inteczonecutnew.html">Palletizing after a part change</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflows/separatinggeome.html">Separate geometries</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflows/subsequentworks.html">Setup subsequent workstation</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflows/processingasing.html">Process single bending part</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflows/creatingexecutingand.html">Create, release bending order</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../cuttingprogram.html">Cutting program</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../nestingsettings/index.html">Nesting settings</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../nestingsettings/nestingsettingsnesti/index.html">Nesting parameters</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingsnesti/sheetdata.html">Sheet data</a></li>
+      <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingsnesti/options.html">Options</a></li>
+      <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingsnesti/partdistances.html">Part distances</a></li>
+      <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingsnesti/sheetmargins.html">Sheet margins</a></li>
+      <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingsnesti/nestingprofiles.html">Lean Nesting profile</a></li>
+      <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingsnesti/technology.html">Technology</a></li>
+      <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingsnesti/align.html">Align</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../nestingsettings/nestingsettingstechn/index.html">Technology parameters</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../nestingsettings/nestingsettingstechn/trulaser/index.html">TruLaser</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/trulaser/2-headandoptimiz.html">2-head processing & Optimization</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/trulaser/safetytrulasere.html">Safety parameters</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/trulaser/separatingcutst.html">Separating cuts</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/trulaser/repositioningtr.html">Repositioning</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/trulaser/unloadingtrulas.html">LiftMaster unloading</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/trulaser/unloadingtrula1.html">SortMaster unloading</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/trulaser/ncparameterstru.html">NC parameters</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/trulaser/twinline.html">TwinLine parameters</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../nestingsettings/nestingsettingstechn/shared/index.html">TruMatic, TruPunch, TruLaser Center</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/shared/automaticproces.html">Automatic processing</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/shared/scrapcuttingtru.html">Scrap cutting</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/shared/removaltrumatic.html">Removal</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/shared/toolstrumatictr.html">Tools</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/shared/checktrumatictr.html">Check</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/shared/optimizetrumati.html">Optimization settings</a></li>
+        <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingstechn/shared/ncparameterstr1.html">NC parameters</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../nestingsettings/nestingsettingspalle/index.html">Palletizing parameters</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingspalle/palletizationca.html">Palletizing calculation</a></li>
+      <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingspalle/stackitem.html">Stack item</a></li>
+      <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingspalle/strategy.html">Palletizing strategy</a></li>
+      <li><button class="tree blank"></button><a href="../../../nestingsettings/nestingsettingspalle/palletizingpara.html">Palletizing parameters</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../ncfileofthesheetprog/index.html">NC file of the sheet program</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../ncfileofthesheetprog/displayingandpr.html">Display/process NC program</a></li>
+    <li><button class="tree blank"></button><a href="../../../ncfileofthesheetprog/simulation.html">Simulation</a></li>
+    <li><button class="tree blank"></button><a href="../../../ncfileofthesheetprog/usingthencpostp.html">NC post-processing program</a></li>
+    <li><button class="tree blank"></button><a href="../../../ncfileofthesheetprog/punchingmachine.html">Check cycle</a></li>
+    <li><button class="tree blank"></button><a href="../../../ncfileofthesheetprog/creatinganncfileinte.html">Create NC file in TecZone Cut</a></li>
+    <li><button class="tree blank"></button><a href="../../../ncfileofthesheetprog/productionpackage.html">Production package</a></li>
+    <li><button class="tree blank"></button><a href="../../../ncfileofthesheetprog/smartcollisionpreven.html">Smart Collision Prevention</a></li>
+    <li><button class="tree blank"></button><a href="../../../ncfileofthesheetprog/toolcheckformingheig.html">Tool Check Forming Height</a></li>
+    <li><button class="tree blank"></button><a href="../../../ncfileofthesheetprog/creatingchamfersandc.html">Chamfers and countersinks</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../sheetprogramprofiles.html">Sheet program profiles</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../sheetlayout/index.html">Sheet layout</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../sheetlayout/parts.html">Parts</a></li>
+    <li><button class="tree blank"></button><a href="../../../sheetlayout/sheetlayouts.html">Sheet layouts</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../sheetlayout/nestingsettingsnesti/index.html">Nesting parameters</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../sheetlayout/nestingsettingsnesti/nestingparamete.html">Tab Sheet data</a></li>
+      <li><button class="tree blank"></button><a href="../../../sheetlayout/nestingsettingsnesti/nestingparamet1.html">Tab Options</a></li>
+      <li><button class="tree blank"></button><a href="../../../sheetlayout/nestingsettingsnesti/nestingparamet2.html">Tab Part distances</a></li>
+      <li><button class="tree blank"></button><a href="../../../sheetlayout/nestingsettingsnesti/nestingparamet3.html">Tab technology</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../sheetlayout/changingtheorderlist.html">Changing the order list</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../sheetlayout/processingsheetsofas/index.html">Processing sheets</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../sheetlayout/processingsheetsofas/addinganewsheet.html">Adding a new sheet</a></li>
+      <li><button class="tree blank"></button><a href="../../../sheetlayout/processingsheetsofas/importingasheet.html">Importing a sheet layout</a></li>
+      <li><button class="tree blank"></button><a href="../../../sheetlayout/processingsheetsofas/managingsheets.html">Managing sheets</a></li>
+      <li><button class="tree blank"></button><a href="../../../sheetlayout/processingsheetsofas/sheetdata.html">Sheet data</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../sheetprogram.html">Sheet program</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">Technology</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">Create manual processing</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../manualprocessing/index.html">Manual processing</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../manualprocessing/punchingmachine.html">Punching, punch laser</a></li>
+        <li><button class="tree blank"></button><a href="../manualprocessing/trulasercenter7.html">TruLaser Center 7030 (L26)</a></li>
+        <li><button class="tree blank"></button><a href="../manualprocessing/2dlasermachinescreat.html">2D laser machines</a></li>
+        <li><button class="tree blank"></button><a href="../manualprocessing/applyingthetool.html">Apply tool cutting edge to the element</a></li>
+        <li><button class="tree blank"></button><a href="../manualprocessing/processingoncontour.html">Processing on contour</a></li>
+        <li><button class="tree blank"></button><a href="../manualprocessing/movingapart.html">Moving a part</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../transferandedit/index.html">Transfer and edit</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../transferandedit/transferringpro.html">Transfer processing to a single part</a></li>
+        <li><button class="tree blank"></button><a href="../transferandedit/transferringpr1.html">Transfer processings to a part sample</a></li>
+        <li><button class="tree blank"></button><a href="../transferandedit/changingthetech.html">Change technology parameters</a></li>
+        <li><button class="tree blank"></button><a href="../transferandedit/adaptingsheetsi.html">Adapt sheet size to part size</a></li>
+        <li><button class="tree blank"></button><a href="../transferandedit/creatingablanksheets.html">Create a blank</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../sheetandscrap/index.html">Sheet and scrap</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../sheetandscrap/sheetcuts.html">Sheet cuts</a></li>
+        <li><button class="tree blank"></button><a href="../sheetandscrap/cuttingupscrap.html">Cutting up scrap</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Punching technologies</a>
+       <ul>
+        <li>
+         <button class="tree closed"></button>
+         <a href="punchingmachinespunc/index.html">Processing inner contours with MultiShear</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/configuringauto.html">Configure automatic processing</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/parameterinthea.html">Parameter in the area Sample</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/parameterinthe1.html">Parameter in the area Punching</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/punchlasermachi.html">Parameters in the area Laser</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/adapttheconfigu.html">Adapt the configuration</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/punchingmachine.html">Configure individual processing type</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/configuringproc.html">Configure processing samples</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/punchingmachin1.html">Setting punching parameters</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/punchingmachin2.html">Configuring removal methods</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/punchingmachin3.html">Bypassing formed sections</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/punchlasermach1.html">Setting parameters for the chamfered laser edge</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/usingatappingto.html">Using a tapping tool</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/changingthepara.html">Change the parameters for forming taps</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/creatingthreads.html">Creat threads individually</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/adaptingmultish.html">Adapt MultiShear processing</a></li>
+          <li><button class="tree blank"></button><a href="punchingmachinespunc/creatingandadju.html">Create and adjust processing with MultiShear</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a class="active" href="punchingmachinesandp.html">Punching machines and punch laser machines: Nibble processing</a></li>
+        <li><button class="tree blank"></button><a href="2dlasermachinespunch.html">2D laser machines, punching machines, punch laser machines: TwinLine processing</a></li>
+        <li><button class="tree blank"></button><a href="punchingmachine.html">Punching machines and punch laser machines: Cut to pieces</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../laserandmachinesettings/index.html">Laser and machine settings</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../laserandmachinesettings/2dlasermachinesmachi.html">Machine-dependent parameters</a></li>
+        <li><button class="tree blank"></button><a href="../laserandmachinesettings/punchlasermachi.html">Switching path correction on or off</a></li>
+        <li><button class="tree blank"></button><a href="../laserandmachinesettings/punchlasermachinesse.html">Punch laser machines: Setting the cutting start</a></li>
+        <li><button class="tree blank"></button><a href="../laserandmachinesettings/flyline.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../laserandmachinesettings/coollineoption.html">CoolLine (option)</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../advancedprocessing/index.html">Advanced processing</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../advancedprocessing/2headprocessing.html">2-head processing</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../technologyprocessing/index.html">Automated Processing</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologyprocessing/automaticprocessing/index.html">Automatic processing</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/automaticprocessing/automaticallypr.html">Automatic processing of a sheet or cutting program</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/automaticprocessing/punchingmachin1.html">Automatic processing of selected elements</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/automaticprocessing/automaticallyp1.html">Automatic processing of a sheet or cutting program</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologyprocessing/copyingprocessing/index.html">Copying processing</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/copyingprocessing/copyprocessing.html">Copy processing</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/copyingprocessing/generatecopypro.html">Generate copy processing</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/copyingprocessing/punchingmachine.html">Punching machines and punch laser machines: Make multiple copies of single strokes and rows of holes</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/copyingprocessing/punchingmachin7.html">Punching machines, punch laser machines and TruLaser Center 7030 (L26): Freely copy processing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologyprocessing/movingandediting/index.html">Moving and editing processing</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/movingandediting/movingaprocessi.html">Moving a processing operation with reference to geometry at random (tool guide)</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/movingandediting/separatingproce.html">Separating processing operations</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/movingandediting/invertprocessin.html">Invert processing</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/movingandediting/punchingmachin6.html">Punching machines and punch laser machines: Moving processing without reference to geometry</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/movingandediting/selectingoverla.html">Selecting overlapping processing operations</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologyprocessing/processingparameters/index.html">Processing parameters</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/processingparameters/2dlasermachines.html">2D laser machines: Locking processing</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/processingparameters/2dlasermachine1.html">2D laser machines: Unlocking locked processing</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/processingparameters/2dlasermachine2.html">2D laser machines: Changing the processing side</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/processingparameters/2dlasermachine10.html">2D laser machines: Processing unprocessed contours</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/processingparameters/2dlasermachines1.html">2D laser machines: Processing unprocessed parts</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/processingparameters/2dlasermachine22.html">2D laser machines: Processing part groups</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/processingparameters/processingconto3.html">Processing contours changed In TecZone Design</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/processingparameters/punchingmachin4.html">Punching machines and punch laser machines: Changing tool parameters</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/processingparameters/punchingmachin5.html">Punching machines and punch laser machines: Replacing a tool</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/processingparameters/activatingpunch.html">Activating punching tool</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologyprocessing/punchingandlaserprocessing/index.html">Punching and laser processing</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/punchingandlaserprocessing/punchingmachin1.html">Punching machines and punch laser machines: Extending single holes into nibbling paths</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/punchingandlaserprocessing/punchingmachin2.html">Punching machines and punch laser machines: Rotating the processing around the anchor point</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/punchingandlaserprocessing/punchingmachin3.html">Punching machines and punch laser machines: Rotating the processing with the mouse wheel</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/punchingandlaserprocessing/punchlasermachi.html">Punch laser machines and TruLaser Center 7030 (L26): Connecting processing</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/punchingandlaserprocessing/punchlasermach1.html">Punch laser machines and TruLaser Center 7030 (L26): Stretching laser processing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologyprocessing/deletingprocessing/index.html">Deleting processing</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/deletingprocessing/deletingprocess.html">Deleting processings of the active tool</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/deletingprocessing/deletingprocessings.html">Deleting processings</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologyprocessing/viewingprocessing/index.html">Viewing processing</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/viewingprocessing/displayinginfor.html">Displaying information</a></li>
+        <li><button class="tree blank"></button><a href="../../technologyprocessing/viewingprocessing/showinginformat.html">Showing information for a contour</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../technologylasertechn/index.html">Laser technology table (LTT) and rules</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../technologylasertechn/selectlasertech.html">Select LTT and rules</a></li>
+      <li><button class="tree blank"></button><a href="../../technologylasertechn/technologytable.html">LTT filter criteria</a></li>
+      <li><button class="tree blank"></button><a href="../../technologylasertechn/2dlasermachines.html">Filtering rules</a></li>
+      <li><button class="tree blank"></button><a href="../../technologylasertechn/copyingalaserte.html">Copying a LTT</a></li>
+      <li><button class="tree blank"></button><a href="../../technologylasertechn/changingrules.html">Changing rules</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../technologypunchingto/index.html">Punching tools</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologypunchingto/toolcreationandimport/index.html">Tool creation and import</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/toolcreationandimport/creatingapunchingtoo.html">Creating a punching tool</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/toolcreationandimport/importingpunchingtoo.html">Importing punching tool data</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologypunchingto/tooluseandmanagement/index.html">Tool use and management</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooluseandmanagement/usingapunchingtool.html">Using a punching tool</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooluseandmanagement/toollistforpunchingt.html">Tool list for punching tools</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooluseandmanagement/definingparamet.html">Defining parameters for used tools</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooluseandmanagement/selectingasheet.html">Selecting a sheet type</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooluseandmanagement/enablingdisabli.html">Enabling/disabling the punching tool</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooluseandmanagement/deletingapunchi.html">Deleting a punching tool</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooluseandmanagement/exportingpunchi.html">Exporting punching tool data</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologypunchingto/tooltypesandspecialtools/index.html">Tool types and special tools</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooltypesandspecialtools/punchingtooltyp.html">Punching tool types and punching tool dimensions</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooltypesandspecialtools/calibrationtool.html">Calibration tool with adaptive stroke calibration</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooltypesandspecialtools/tappingtool.html">Tapping tool</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooltypesandspecialtools/rollercuttingto.html">Roller cutting tool</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooltypesandspecialtools/rollerbeadingto.html">Roller beading tool</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooltypesandspecialtools/rolleroffsettin.html">Roller offsetting tool</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooltypesandspecialtools/reducingthetool.html">Reducing the tools to be used</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooltypesandspecialtools/trumpfstandardp.html">TRUMPF standard punching tool set: Show or hide tool with metric or inch dimensioning</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooltypesandspecialtools/displayingthedr.html">Displaying the drawing of a formed section</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooltypesandspecialtools/multibendsettin.html">MultiBend: Setting the angle of a formed section</a></li>
+        <li><button class="tree blank"></button><a href="../../technologypunchingto/tooltypesandspecialtools/configuringasiz.html">Configuring a size 5 slitting die</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../punchingmachinespunc.html">Punching machines, punch laser machines and TruLaser Center 7030: Technology >Compulsory sequence</a></li>
+    <li><button class="tree blank"></button><a href="../../2dlasermachinesandpu.html">2D laser machines and punch laser machines: Technology >Tool path >Approaching</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../technologytoolpathco/index.html">Technology: Tool path >Contours with approach dimple</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologytoolpathco/approachdimples/index.html">Approach dimples</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologytoolpathco/approachdimples/2dlasermachinec.html">2D laser machine: Creating an approach dimple</a></li>
+        <li><button class="tree blank"></button><a href="../../technologytoolpathco/approachdimples/punchlasermachi.html">Punch laser machine and TruLaser Center (L26): Creating an approach dimple</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologytoolpathco/cornertreatment/index.html">Corner treatment</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologytoolpathco/cornertreatment/2dlasermachines.html">2D laser machines: Corner cooling</a></li>
+        <li><button class="tree blank"></button><a href="../../technologytoolpathco/cornertreatment/roundingoffcorn.html">Rounding off corners</a></li>
+        <li><button class="tree blank"></button><a href="../../technologytoolpathco/cornertreatment/runningloopings.html">Running loopings</a></li>
+        <li><button class="tree blank"></button><a href="../../technologytoolpathco/cornertreatment/cuttingacuteang.html">Cutting acute angles</a></li>
+        <li><button class="tree blank"></button><a href="../../technologytoolpathco/cornertreatment/deletecornertre.html">Delete Corner Treatment</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../technologytoolpathco/machinespecific/index.html">Machine-specific corner treatment</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../technologytoolpathco/machinespecific/2dlasermachinecorner.html">2D laser machine: Corner treatment</a></li>
+        <li><button class="tree blank"></button><a href="../../technologytoolpathco/machinespecific/punchlasermachinesco.html">Punch laser machines: Corner treatment</a></li>
+        <li><button class="tree blank"></button><a href="../../technologytoolpathco/machinespecific/trulasercenter7030l2.html">TruLaser Center 7030 (L26): Corner treatment</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../technologytoolpathmi.html">Technology > Tool path > Microweld</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../2dlasermachinestechn/index.html">2D laser machines: Technology >Tool path >Path correction</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../2dlasermachinestechn/nanojoints/index.html">Nanojoints</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/nanojoints/nanojointsparam.html">Nanojoints: Parameters</a></li>
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/nanojoints/settingananojoi.html">Setting a nanojoint manually</a></li>
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/nanojoints/sortlineandsort.html">SortLine and SortMaster Station: Creating nanojoints automatically</a></li>
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/nanojoints/deletingananojo.html">Deleting a nanojoint</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../2dlasermachinestechn/withdrawalflags/index.html">Withdrawal flags</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/withdrawalflags/withdrawalflags.html">Withdrawal flags: Parameters</a></li>
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/withdrawalflags/creatingawithdr.html">Creating a withdrawal flag</a></li>
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/withdrawalflags/modifyingthefor.html">Modifying the form of the withdrawal flag</a></li>
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/withdrawalflags/optimizingtheen.html">Optimizing the end of cut of contour</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../2dlasermachinestechn/circlecorrection/index.html">Circle correction</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/circlecorrection/cuttingexactcir.html">Cutting exact circles: Parameters</a></li>
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/circlecorrection/cuttingcirclese.html">Cutting circles exactly</a></li>
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/circlecorrection/deletingacircle.html">Deleting a circle correction</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../2dlasermachinestechn/pathcorrection/index.html">2D laser machines: Technology >Tool path >Path correction</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/pathcorrection/2dlasermachines.html">2D laser machines: Tool path not corrected</a></li>
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/pathcorrection/cuttingatoolpat.html">Cutting a tool path without correction</a></li>
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/pathcorrection/pathcorrectiona.html">Path correction: Areas of application</a></li>
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/pathcorrection/cuttingcontours.html">Cutting contours with path correction</a></li>
+        <li><button class="tree blank"></button><a href="../../2dlasermachinestechn/pathcorrection/deletingpathcor.html">Deleting path correction</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../2dlasermachinespunch/index.html">2D laser machines, punch laser machines: Technology > Tool path, button Contour parameters</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../2dlasermachinespunch/contourparamete.html">Contour parameters: Punch laser machine and TruLaser Center 7030 (L26)</a></li>
+      <li><button class="tree blank"></button><a href="../../2dlasermachinespunch/2dcontour.html">Contour parameters: 2D laser machine</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../nccycle/index.html">NC cycle...</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../nccycle/pastingnctext.html">Pasting NC text</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../nccycle/2dlasermachines/index.html">2D laser machines: NC cycle</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../nccycle/2dlasermachines/2dlasermachines.html">2D laser machines except TruLaser Center 7030 (L26): Inserting saved NC cycle</a></li>
+        <li><button class="tree blank"></button><a href="../../nccycle/2dlasermachines/deletinga2dlasermach.html">Deleting a 2D laser machine NC cycle</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../nccycle/punchingmachines/index.html">Punching machines and punch laser machines: NC cycle</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../nccycle/punchingmachines/punchingmachine.html">Punching machines and punch laser machines: Die spray lubrication</a></li>
+        <li><button class="tree blank"></button><a href="../../nccycle/punchingmachines/punchingmachin1.html">Punching machines and punch laser machines: Calibrating sheet thickness</a></li>
+        <li><button class="tree blank"></button><a href="../../nccycle/punchingmachines/punchingmachin2.html">Punching machines and punch laser machines: Switch flap...</a></li>
+        <li><button class="tree blank"></button><a href="../../nccycle/punchingmachines/punchingmachin3.html">Punching machine, punch laser machine: Deleting NC cycle</a></li>
+        <li><button class="tree blank"></button><a href="../../nccycle/punchingmachines/trupunch5000retracta.html">TruPunch 5000: Retractable clamps</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../punchlasermachinesan.html">Punch laser machines and TruLaser Center 7030 (L26): Technology > Tool path > Measuring point</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../technologypartidenti/index.html">Technology: Part identification</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../technologypartidenti/dialogpartident.html">Dialog Part identification: Parameters</a></li>
+      <li><button class="tree blank"></button><a href="../../technologypartidenti/creatingthepart.html">Creating the part identification automatically</a></li>
+      <li><button class="tree blank"></button><a href="../../technologypartidenti/punchingmachine.html">Punching machines, punch laser machines and TruLaser Center (L26): Creating a part identification manually</a></li>
+      <li><button class="tree blank"></button><a href="../../technologypartidenti/movingapartiden.html">Moving a part identification</a></li>
+      <li><button class="tree blank"></button><a href="../../technologypartidenti/deletingapartid.html">Deleting a part identification</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../punchingmachinesandp.html">Punching machines and punch laser machines: Technology > Roller technology</a></li>
+    <li><button class="tree blank"></button><a href="../../technologyremainders.html">Technology: Remainder sheets</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../processingsample/index.html">Processing sample</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../processingsample/savingmachining.html">Saving machining as processing sample</a></li>
+      <li><button class="tree blank"></button><a href="../../processingsample/definingplaceho.html">Defining placeholders for a complex processing</a></li>
+      <li><button class="tree blank"></button><a href="../../processingsample/usingtrumpfproc.html">Using TRUMPF processing samples for threads</a></li>
+      <li><button class="tree blank"></button><a href="../../processingsample/usingprocessingsampl.html">Using processing samples</a></li>
+      <li><button class="tree blank"></button><a href="../../processingsample/groupingprocessingsa.html">Grouping processing samples</a></li>
+      <li><button class="tree blank"></button><a href="../../processingsample/deletingprocessingsa.html">Deleting processing samples from the database</a></li>
+      <li><button class="tree blank"></button><a href="../../processingsample/settingpresserfootpu.html">Setting Presser foot punching mode</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../integratedflattening.html">Integrated flattening</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../loading/index.html">Loading</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../loading/2dlasermachinesloadi/index.html">2D laser machines: Loading</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../loading/2dlasermachinesloadi/sheetposition.html">Sheet position</a></li>
+      <li><button class="tree blank"></button><a href="../../../loading/2dlasermachinesloadi/slats.html">Slats</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../loading/trulasercenter7030l2.html">TruLaser Center 7030 (L26): Loading</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../loading/punchingmachinespunc/index.html">Punching/Punch laser machines: Loading</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../loading/punchingmachinespunc/loadingparameters/index.html">Loading parameters</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../loading/punchingmachinespunc/loadingparameters/machinewithshee.html">Machine with SheetMaster</a></li>
+        <li><button class="tree blank"></button><a href="../../../loading/punchingmachinespunc/loadingparameters/machineconfigur.html">Machine without SheetMaster</a></li>
+        <li><button class="tree blank"></button><a href="../../../loading/punchingmachinespunc/loadingparameters/adjustingtheloa.html">Adjust loading position</a></li>
+        <li><button class="tree blank"></button><a href="../../../loading/punchingmachinespunc/loadingparameters/modifyingtheins.html">Modify insertion position</a></li>
+        <li><button class="tree blank"></button><a href="../../../loading/punchingmachinespunc/loadingparameters/loadingwithshee.html">Loading with SheetMaster Compact (AS18)</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../loading/punchingmachinespunc/sheetmastercomponents/index.html">SheetMaster components</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../loading/punchingmachinespunc/sheetmastercomponents/sheetmastercarr.html">Carrier suction cup</a></li>
+        <li><button class="tree blank"></button><a href="../../../loading/punchingmachinespunc/sheetmastercomponents/sheetmasterpivo.html">Pivot suction cup</a></li>
+        <li><button class="tree blank"></button><a href="../../../loading/punchingmachinespunc/sheetmastercomponents/changingthegrip.html">Changing the gripping unit</a></li>
+        <li><button class="tree blank"></button><a href="../../../loading/punchingmachinespunc/sheetmastercomponents/movingclamps.html">Moving clamps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../loading/punchingmachinespunc/machinespecific/index.html">Machine-specific loading functions</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../loading/punchingmachinespunc/machinespecific/trumatic7000onl.html">Bar 1</a></li>
+        <li><button class="tree blank"></button><a href="../../../loading/punchingmachinespunc/machinespecific/trumatic3000fib.html">Measuring material thickness with presser foot</a></li>
+        <li><button class="tree blank"></button><a href="../../../loading/punchingmachinespunc/machinespecific/trupunch5000tru.html">Release sheet tension</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../removal/index.html">Removal</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../removal/2dlasermachineremovi/index.html">2D laser machine: Removing sheet or parts</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../removal/2dlasermachineremovi/showingpartswit.html">Showing parts without removal</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../removal/2dlasermachineremovi/automaticcalculation/index.html">Automatic calculation of part removal</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../removal/2dlasermachineremovi/automaticcalculation/liftmastersortl.html">Machine specific</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/2dlasermachineremovi/automaticcalculation/automaticcalcul.html">General</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../removal/2dlasermachineremovi/sheetremoval/index.html">Sheet removal</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../removal/2dlasermachineremovi/sheetremoval/liftmasterremov.html">LiftMaster removal</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/2dlasermachineremovi/sheetremoval/liftmasterstore.html">LiftMaster Store removal</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/2dlasermachineremovi/sheetremoval/liftmasterwithscraps.html">LiftMaster with scrap skeleton separation for thin sheets</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../removal/2dlasermachineremovi/partremoval/index.html">Part removal</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../removal/2dlasermachineremovi/partremoval/liftmastersortremova.html">LiftMaster Sort removal</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/2dlasermachineremovi/partremoval/sortmasterremoval.html">SortMaster removal</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../../removal/2dlasermachineremovi/sortingguidegra.html">Sorting Guide: Graphic part separation</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../removal/punchingmachineorpun/index.html">Punching machine or punch laser machine: Removing sheets or parts</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../removal/punchingmachineorpun/sheetmaster/index.html">SheetMaster removal</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/sheetmaster/sheetmasterandgripma.html">SheetMaster and GripMaster</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/sheetmaster/trumatic5000k11ortru.html">TruMatic 5000 (K11) or TruPunch 3000 (S20) with SheetMaster (AK09)</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/sheetmaster/sheetmastercomp.html">SheetMaster Compact</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/sheetmaster/sheetmastercom1.html">SheetMaster Compact: Stripping off the scrap skeleton</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../removal/punchingmachineorpun/sortmaster/index.html">SortMaster removal</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/sortmaster/trumatic1000k07truma.html">SortMaster Compact removal</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/sortmaster/optimizingconta.html">Optimizing container arrangement</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../removal/punchingmachineorpun/partandscrapremoval/index.html">Part and scrap removal</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/partandscrapremoval/removalofpartsviapar.html">Removal of parts via part removal flap or part chute</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/partandscrapremoval/removalofpartsusingt.html">Removal of parts using the ejector tool</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../removal/punchingmachineorpun/manualandspecialremoval/index.html">Manual and special removal</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/manualandspecialremoval/manualremoval.html">Manual removal</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/manualandspecialremoval/trupunch1000trupunch.html">TruPunch 1000, TruPunch 3000 (S11), TruPunch 5000: Clamping and rotating</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/manualandspecialremoval/trupunch1000s05trupu.html">TruPunch 1000 (S05), TruPunch 3000 (S11), TruPunch 5000: Remainder strips</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../removal/punchingmachineorpun/machinespecificremoval/index.html">Machine-specific removal</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/machinespecificremoval/trumatic7000finalcut.html">TruMatic 7000: FinalCut</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/machinespecificremoval/jfytapmautomati.html">JFY T-APM automation devices: Removal</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../removal/punchingmachineorpun/managingremoval/index.html">Managing removal</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/managingremoval/changingremoval.html">Changing removal</a></li>
+        <li><button class="tree blank"></button><a href="../../../removal/punchingmachineorpun/managingremoval/deletingaremova.html">Deleting a removal</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../removal/trulasercenter7030l2.html">TruLaser Center 7030 (L26): Removing sheet or parts</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../optimization/index.html">Optimization</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../optimization/automaticoptimizatio/index.html">Automatic optimization</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../optimization/automaticoptimizatio/2dlasermachines/index.html">2D laser machines</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../optimization/automaticoptimizatio/2dlasermachines/2dlasermachines.html">Parameters</a></li>
+        <li><button class="tree blank"></button><a href="../../../optimization/automaticoptimizatio/2dlasermachines/2dlasermachine1.html">Starting the automatic optimization</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../optimization/automaticoptimizatio/punchingandpunchlasermachines/index.html">Punching and punch laser machines</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../optimization/automaticoptimizatio/punchingandpunchlasermachines/punchingmachine.html">Parameter Processing optimization</a></li>
+        <li><button class="tree blank"></button><a href="../../../optimization/automaticoptimizatio/punchingandpunchlasermachines/punchingmachin1.html">Starting automatic optimization</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../../optimization/automaticoptimizatio/trulasercenter7.html">TruLaser Center 7030 (L26)</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../optimization/optimizeinteractivel/index.html">Optimize interactively</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../optimization/optimizeinteractivel/2dlasermachines/index.html">2D Laser Machines</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../optimization/optimizeinteractivel/2dlasermachines/2dlasermachine1.html">Changing the order interactively</a></li>
+        <li><button class="tree blank"></button><a href="../../../optimization/optimizeinteractivel/2dlasermachines/2dlasermachines.html">Parameters: Changing the order interactively</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../optimization/optimizeinteractivel/punchingandpunchlasermachines/index.html">Punching / Punch laser machines</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../optimization/optimizeinteractivel/punchingandpunchlasermachines/definingthetool.html">Defining the tool sequence</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../optimization/checkingmachining/index.html">Checking machining</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../optimization/checkingmachining/2dlasermachines/index.html">2D laser machines, TruLaser Center 7030 (L26)</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../optimization/checkingmachining/2dlasermachines/2dlasermachines.html">Collision check</a></li>
+        <li><button class="tree blank"></button><a href="../../../optimization/checkingmachining/2dlasermachines/2dlasermachine1.html">Performing a collision check</a></li>
+        <li><button class="tree blank"></button><a href="../../../optimization/checkingmachining/2dlasermachines/2dlasermachine2.html">Displaying a collision log</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../optimization/checkingmachining/punchingandpunchlasermachines/index.html">Punching machines and punch laser machines</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../optimization/checkingmachining/punchingandpunchlasermachines/punchingmachine.html">Starting a check cycle manually</a></li>
+        <li><button class="tree blank"></button><a href="../../../optimization/checkingmachining/punchingandpunchlasermachines/punchingmachin1.html">Automatic testing</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../optimization/punchingmachinepunch/index.html">Positioning path</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../optimization/punchingmachinepunch/2dlasermachines/index.html">2D laser machines</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../optimization/punchingmachinepunch/2dlasermachines/2dlasermachines.html">Positioning path</a></li>
+        <li><button class="tree blank"></button><a href="../../../optimization/punchingmachinepunch/2dlasermachines/2dlasermachine1.html">Creating a positioning path automatically</a></li>
+        <li><button class="tree blank"></button><a href="../../../optimization/punchingmachinepunch/2dlasermachines/2dlasermachine2.html">Changing a positioning path manually</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../../optimization/punchingmachinepunch/trulasercenter7.html">TruLaser Center 7030 (L26)</a></li>
+      <li><button class="tree blank"></button><a href="../../../optimization/punchingmachinepunch/punchingmachine.html">Punching machines, Punch laser machines</a></li>
+      <li><button class="tree blank"></button><a href="../../../optimization/punchingmachinepunch/deletingapositi.html">Deleting a positioning path</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../optimization/punchingmachinespunc.html">Repositioning</a></li>
+    <li><button class="tree blank"></button><a href="../../../optimization/programmingrepositio.html">Programming repositioning</a></li>
+    <li><button class="tree blank"></button><a href="../../../optimization/optimizationlevels.html">Optimization levels</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../optimization/rearranging/index.html">Rearranging</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../optimization/rearranging/2dlasermachiner.html">2D laser machine</a></li>
+      <li><button class="tree blank"></button><a href="../../../optimization/rearranging/punchingmachinespunc.html">Punching machines, punch laser machines, TruLaser Center 7030 (L26)</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../palletizing/index.html">Palletizing</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../palletizing/graphicdisplay.html">Graphic display</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/changestackingm.html">Change stacking method</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/changingthepall.html">Change the palletizing parameters</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/modifyingstacki.html">Modify stack item data</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/draggingstackbe.html">Drag stack between pallets</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/addingtopallets.html">Add to pallet sheet by sheet</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/repalletizingsh.html">Repalletize sheet by sheet</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/combiningdiffer.html">Combine different stacks</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/clearingcollisi.html">Clear collisions</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/palletizingview.html">Palletizing view</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/palletizingparameter.html">Palletizing parameters</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/palletizationwithpal.html">Palletization with pallet change</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/palletizingacrossshe.html">Palletizing across sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../../palletizing/processingastack.html">Processing a stack</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../specialmachines/index.html">Special machines</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../specialmachines/programmingthet.html">TruLaser 8000 Coil Edition</a></li>
+    <li><button class="tree blank"></button><a href="../../../specialmachines/configuringandp.html">TruMatic 5000 with SheetMaster</a></li>
+    <li><button class="tree blank"></button><a href="../../../specialmachines/3axisoutputform.html">NC output formats</a></li>
+    <li><button class="tree blank"></button><a href="../../../specialmachines/punchingmachin1.html">NC file parameters</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">Technology</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Create manual processing</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Punching technologies</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="punchingmachinesandp.html">Punching machines and punch laser machines: Nibble processing</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Punching machines and punch laser machines: Nibble processing</h1>
+<div class="sect1">
+<h2 id="_setting_single_holes">Setting single holes</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In tab <em>Technology</em> &gt; <em>Creating manually</em>, press button <span class="image"><img src="../img/689581707__web.png" alt="689581707  Web" width="16"></span> <em>Single hole</em>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_trimming">Trimming</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select tab <em>Start</em> &gt; <em>Technology</em>, button <span class="image"><img src="../img/689033483__web.png" alt="689033483  Web" width="16"></span> <em>Trimming</em>.</p>
+</li>
+<li>
+<p><a href="#_defining_strategy">Define strategy.</a></p>
+</li>
+<li>
+<p><a href="#_defining_the_parameters_for_remainder_strips">Defining the parameters for remainder strips.</a></p>
+</li>
+<li>
+<p><a href="#_defining_the_depth_of_element_when_trimming_with_laser">Define depth of element for trimming with laser.</a></p>
+</li>
+<li>
+<p>If the settings in <em>Trimming</em> dialog are to be saved, so that they can be reloaded during the processing of other sheets: press the button <em>Presettings</em> &gt; <em>Save</em>.</p>
+</li>
+<li>
+<p>Press the <em>OK</em> button.</p>
+</li>
+<li>
+<p>Follow the instructions in the command line.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_defining_strategy">Defining strategy</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Number of remainder strips: 1</p>
+</li>
+<li>
+<p>The first and second remainder strips are punched up if the tool is larger than the remainder strip.</p>
+</li>
+<li>
+<p>A rectangular remainder strip is separated.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/689062667__web.png" alt="689062667  Web">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Number of remainder strips: 1</p>
+</li>
+<li>
+<p>A U-shaped remainder strip is separated.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/690172299__web.png" alt="690172299  Web">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Number of remainder strips: 2</p>
+</li>
+<li>
+<p>A rectangular remainder strip and an L-shape remainder strip will be cut off.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/689252747__web.png" alt="689252747  Web">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Number of remainder strips: 2</p>
+</li>
+<li>
+<p>An L-shape remainder strip and a rectangular remainder strip will be cut off.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/690016779__web.png" alt="690016779  Web">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Number of remainder strips: 3</p>
+</li>
+<li>
+<p>Three rectangular remainder strips are separated.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/688451211__web.png" alt="688451211  Web">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Under <em>Strategy</em>, press button <em>Modify</em>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_defining_the_depth_of_element_when_trimming_with_laser">Defining the depth of element when trimming with laser</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Under <em>Tool</em>, activate checkbox <em>Laser</em> as a tool.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When trimming, elements of a geometry that are â‰¤ the specified depth of element are processed. The depth of element is calculated based on the circumscribing rectangle of the geometry to be trimmed.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Enter value for the <em>Element depth</em>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/689104011__web.png" alt="689104011  Web" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>① Circumscribing rectangle<br>
+② Remainder strips<br>
+③ Depth of element</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modifying_the_length_of_nibbling_paths">Modifying the length of nibbling paths</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nibbling paths can be extended or shortened at the side at which no disposal is defined.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the disposal is at the end of the nibbling path, the beginning can be modified.</p>
+</li>
+<li>
+<p>If the disposal is in the center of the nibbling path, both ends can be modified.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the stroke number is not specified, the overlap value only changes minimally. New strokes are added or removed as soon as the overlap value becomes too small or too large.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The minimum values for overlaps during nibbling are set by default and can be changed in the machine&#8217;s basic data (data 5).
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Press tab <em>Technology</em> &gt; <em>Edit</em>, button <span class="image"><img src="../img/690179595__web.png" alt="690179595  Web" width="16"></span> <em>Technology</em>.</p>
+</li>
+<li>
+<p>Click on the nibbling path.</p>
+</li>
+<li>
+<p>Adjust the length by moving the yellow arrows.</p>
+</li>
+<li>
+<p>To change the overlap value when changing the length: Specify a fixed stroke number.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The input field appears as soon as one of the yellow arrows is moved.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>or</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enter the desired bend addition or bend deduction in the input field and press the <kbd>Enter</kbd> key.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inverting_nibbling_paths">Inverting nibbling paths</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../img/688515339__web.png" alt="688515339  Web" width="500">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Requirement</div>
+<div class="ulist">
+<ul>
+<li>
+<p>No "quick forming" type tool was used to generate the nibbling path.</p>
+</li>
+<li>
+<p>The nibbling path does not contain disposal or microjoints.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To change the direction of the nibbling path without rotating the tool at the same time:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the nibbling path to be inverted.</p>
+</li>
+<li>
+<p>Open the mini toolbar with the right mouse button and press <span class="image"><img src="../img/689759627__web.png" alt="689759627  Web" width="16"></span> <em>Invert processings</em>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To modify the direction of the nibbling path and to rotate the tool at the same time:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the nibbling path to be inverted.</p>
+</li>
+<li>
+<p>Open the mini toolbar with the right mouse button and press <span class="image"><img src="../img/689754763__web.png" alt="689754763  Web" width="16"></span> <em>Rotate tool simultaneously</em>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_converting_nibbling_paths_and_cutting_to_pieces_operations_into_single_strokes">Converting nibbling paths and cutting-to-pieces operations into single strokes</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Press tab <em>Technology</em> &gt; <em>Create manually</em>, button <span class="image"><img src="../img/689581707__web.png" alt="689581707  Web" width="16"></span> <em>Single hole</em>.</p>
+</li>
+<li>
+<p>If the single strokes are to be set in a compulsory sequence after conversion:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Press the <em>CONVERT</em> <span class="image"><img src="../img/689694475__web.png" alt="689694475  Web" width="16"></span> <em>Dissolve row of holes - Set compulsory sequence</em> tool guide.</p>
+</li>
+<li>
+<p>Follow the instructions in the command line.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If the single strokes are to be set without a defined order after conversion:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Press the <em>CONVERT</em> <span class="image"><img src="../img/690031371__web.png" alt="690031371  Web" width="16"></span> <em>Dissolve row of holes - Single strokes</em> tool guide.</p>
+</li>
+<li>
+<p>Follow the instructions in the command line.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dividing_and_connecting_the_nibbling_paths">Dividing and connecting the nibbling paths</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Disconnect nibbling paths:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Press tab <em>Edit</em>, button <span class="image"><img src="../img/690179595__web.png" alt="690179595  Web" width="16"></span> <em>Technology</em>.</p>
+</li>
+<li>
+<p>Press the <em>DIVIDE/JOIN</em> <span class="image"><img src="../img/689847179__web.png" alt="689847179  Web" width="16"></span> <em>Split processing</em> tool guide.</p>
+</li>
+<li>
+<p>Click on the slitting position.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Connect the nibbling paths:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Press tab <em>Edit</em>, button <span class="image"><img src="../img/690179595__web.png" alt="690179595  Web" width="16"></span> <em>Technology</em>.</p>
+</li>
+<li>
+<p>Press the <em>DIVIDE/JOIN</em> <span class="image"><img src="../img/688458507__web.png" alt="688458507  Web" width="16"></span> <em>Join processings</em> tool guide.</p>
+</li>
+<li>
+<p><em>Linear</em> connects two processings to each other in a linear fashion.</p>
+</li>
+<li>
+<p><em>Circular</em>: connects two curves with the same radius and a center to a nibbling curve.</p>
+</li>
+<li>
+<p>Follow the instructions in the command line.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_technology_parameters_surface_roughness">Technology parameters: Surface roughness</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The surface roughness indicates the maximum deviation that occurs between the production part and the designed part during nibbling; the smaller the selected roughness depth, the smaller the permissible deviation. More strokes are required for a small deviation. A small deviation usually results in a higher overlap value.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the nibbling path.</p>
+</li>
+<li>
+<p>Right click.</p>
+</li>
+<li>
+<p>In the mini toolbar, press <span class="image"><img src="../img/690256395__web.png" alt="690256395  Web" width="16"></span> <em>Change technology parameters</em>.</p>
+</li>
+<li>
+<p>Adjust value for the <em>Roughness</em>.</p>
+</li>
+<li>
+<p>Press the <em>OK</em> button.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_technology_parameters_changing_the_number_of_strokes">Technology parameters: Changing the number of strokes</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the nibbling path.</p>
+</li>
+<li>
+<p>Right click.</p>
+</li>
+<li>
+<p>In the mini toolbar, press <span class="image"><img src="../img/690256395__web.png" alt="690256395  Web" width="16"></span> <em>Change technology parameters</em>.</p>
+</li>
+<li>
+<p>Enter <em>Number of strokes</em>.</p>
+</li>
+<li>
+<p>Press the <em>OK</em> button.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_technology_parameters_changing_the_angle_for_a_punching_tool">Technology parameters: Changing the angle for a punching tool</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+These parameters are only available on rotation machines.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the nibbling path.</p>
+</li>
+<li>
+<p>Right click.</p>
+</li>
+<li>
+<p>In the mini toolbar, press <span class="image"><img src="../img/690256395__web.png" alt="690256395  Web" width="16"></span> <em>Change technology parameters</em>.</p>
+</li>
+<li>
+<p>Activate or deactivate the checkbox <em>Also rotate tool</em>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Activated: The angle specifies how many degrees the punching tool is to be rotated in the direction of processing.</p>
+</li>
+<li>
+<p>Deactivated: The specified angle defines the absolute angle at which processing is to take place.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Press the <em>OK</em> button.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_defining_the_parameters_for_remainder_strips">Defining the parameters for remainder strips</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>For machines with individually openable clamps, these can open automatically when trimming <em>Up to sheet edge</em>.</p>
+</li>
+<li>
+<p><em>Overlap at sheet edge</em>: When trimming with a punching tool, trimming is done beyond the sheet edge by the specified value. This ensures that the remainder strip is completely cut off, even when the sheet is larger than specified due to production tolerances.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_trimming_the_sheet_up_to_the_edge_of_the_part">Trimming the sheet up to the edge of the part</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Under <em>Cut off remainder strip</em> function, select <em>Up to sheet edge</em>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Overlap at sheet edge</em>: When trimming with a punching tool, trimming is done beyond the part edge by the specified value.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/690244235__web.png" alt="690244235  Web" width="600">
+</div>
+<div class="title">Example: Trimming up to the part edge</div>
+</div>
+<div class="paragraph">
+<p>① Sheet edge<br>
+② Sheet edge overlap: When trimming with a punching tool, trimming is done beyond the part edge by the specified value.<br>
+③ Trimming processing<br>
+④ U-shaped remainder strip<br>
+⑤ Part edge<br>
+⑥ Part edge overlap</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_the_trimming_tool_to_punch_out_any_remainder_strips_that_are_released_during_trimming">Use the trimming tool to punch out any remainder strips that are released during trimming</h3>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Under <em>Remove remainder strip</em>, activate checkbox <em>Cut remainder strip to pieces</em>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/689948299__web.png" alt="689948299  Web" width="600">
+</div>
+<div class="title">Example: Trimming up to the part edge without cutting off</div>
+</div>
+<div class="paragraph">
+<p>① Sheet edge<br>
+② Trimming processing<br>
+③ Part edge<br>
+④ Part edge overlap<br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_trimming_the_sheet_without_remainder_strips_coming_free">Trimming the sheet without remainder strips coming free</h3>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Under <em>Remove remainder strip</em>, activate checkbox <em>without separating</em>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_removing_remainder_strips_by_hand">Removing remainder strips by hand</h3>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Under <em>Remove remainder strip</em>, activate checkbox <em>Manual removal</em>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The machine stops during the last stroke where the remainder strip comes free. The part can be removed by hand.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_trimming_the_sheet_up_to_the_sheet_edge_at_the_clamps">Trimming the sheet up to the sheet edge at the clamps</h3>
+<div class="sect3">
+<h4 id="_trimming_the_sheet_up_to_the_sheet_edge_at_the_clamps_2">Trimming the sheet up to the sheet edge at the clamps</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Under <em>Cut off remainder strip</em> function, select <em>Up to sheet edge</em>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For machines with individually openable clamps, these can open up automatically up to the sheet edge when trimming.</p>
+</li>
+<li>
+<p><em>Overlap at sheet edge</em>: When trimming with a punching tool, trimming is done beyond the sheet edge by the specified value. This ensures that the remainder strip is completely cut off, even when the sheet is larger than specified due to production tolerances.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/688649483__web.png" alt="688649483  Web" width="600">
+</div>
+<div class="title">Example: Trimming up to the sheet edge</div>
+</div>
+<div class="paragraph">
+<p>① Trimming processing<br>
+② U-shaped remainder strip<br>
+③ Sheet edge<br>
+④ Overlap at sheet edge</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_setting_single_holes">Setting single holes</a>
+  </li>
+  <li level="1">
+   <a href="#_trimming">Trimming</a>
+  </li>
+  <li level="1">
+   <a href="#_defining_strategy">Defining strategy</a>
+  </li>
+  <li level="1">
+   <a href="#_defining_the_depth_of_element_when_trimming_with_laser">Defining the depth of element when trimming with laser</a>
+  </li>
+  <li level="1">
+   <a href="#_modifying_the_length_of_nibbling_paths">Modifying the length of nibbling paths</a>
+  </li>
+  <li level="1">
+   <a href="#_inverting_nibbling_paths">Inverting nibbling paths</a>
+  </li>
+  <li level="1">
+   <a href="#_converting_nibbling_paths_and_cutting_to_pieces_operations_into_single_strokes">Converting nibbling paths and cutting-to-pieces operations into single strokes</a>
+  </li>
+  <li level="1">
+   <a href="#_dividing_and_connecting_the_nibbling_paths">Dividing and connecting the nibbling paths</a>
+  </li>
+  <li level="1">
+   <a href="#_technology_parameters_surface_roughness">Technology parameters: Surface roughness</a>
+  </li>
+  <li level="1">
+   <a href="#_technology_parameters_changing_the_number_of_strokes">Technology parameters: Changing the number of strokes</a>
+  </li>
+  <li level="1">
+   <a href="#_technology_parameters_changing_the_angle_for_a_punching_tool">Technology parameters: Changing the angle for a punching tool</a>
+  </li>
+  <li level="1">
+   <a href="#_defining_the_parameters_for_remainder_strips">Defining the parameters for remainder strips</a>
+  </li>
+  <li level="2">
+   <a href="#_trimming_the_sheet_up_to_the_edge_of_the_part">Trimming the sheet up to the edge of the part</a>
+  </li>
+  <li level="2">
+   <a href="#_use_the_trimming_tool_to_punch_out_any_remainder_strips_that_are_released_during_trimming">Use the trimming tool to punch out any remainder strips that are released during trimming</a>
+  </li>
+  <li level="2">
+   <a href="#_trimming_the_sheet_without_remainder_strips_coming_free">Trimming the sheet without remainder strips coming free</a>
+  </li>
+  <li level="2">
+   <a href="#_removing_remainder_strips_by_hand">Removing remainder strips by hand</a>
+  </li>
+  <li level="2">
+   <a href="#_trimming_the_sheet_up_to_the_sheet_edge_at_the_clamps">Trimming the sheet up to the sheet edge at the clamps</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="punchingmachinespunc/creatingandadju.html">Create and adjust processing with MultiShear</a></span>
+ <span class="next"><a href="2dlasermachinespunch.html">2D laser machines, punching machines, punch laser machines: TwinLine processing</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co. KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>
